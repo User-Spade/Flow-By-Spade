@@ -3,46 +3,47 @@
 ## 📋 Project Overview
 **Project Name:** Webs by Spade  
 **Type:** React Native / Expo Mobile Application  
-**Framework:** Expo with TypeScript  
+**Framework:** Expo with TypeScript and Expo Router
 **Repository:** webs-by-spade-mobile  
 **Owner:** User-Spade  
+**Branch:** Fresh-Design (clean slate branch)
 
 ## 🏗️ Architecture & Tech Stack
 
 ### Core Technologies
 - **Runtime:** React Native with Expo SDK 54.0.23
 - **Language:** TypeScript
+- **Routing:** Expo Router v6.0.14 (file-based routing)
 - **Development:** Expo CLI
 - **Package Manager:** npm
+- **UI:** React Native with Safe Area Context
 
 ### Key Dependencies
 - Expo SDK 54.0.23
-- React Native
-- TypeScript
-- (Add other key dependencies as you discover them)
+- Expo Router 6.0.14 (file-based navigation)
+- React 19.1.0
+- React Native 0.81.5
+- TypeScript 5.9.2
+- React Native Safe Area Context
+- React Native Screens
+- React Native SVG (for vector graphics)
+- React Native Web (web compatibility)
 
-## 📁 Project Structure
+## 📁 Project Structure (Fresh & Clean)
 ```
 webs-by-spade-mobile/
-├── app/                    # Main app screens/pages
-│   ├── _layout.tsx        # App layout component
-│   └── index.tsx          # Main entry screen
-├── src/
-│   ├── components/        # Reusable UI components
-│   │   ├── AIPanel.tsx    # AI-related panel component
-│   │   ├── IconComponents.tsx # Icon components
-│   │   └── WebGraph.tsx   # Web graph visualization
-│   ├── constants/         # App constants
-│   │   └── index.ts
-│   ├── services/          # External services
-│   │   └── geminiService.ts # Google Gemini AI service
-│   └── types/             # TypeScript type definitions
-│       └── index.ts
-├── assets/                # Static assets (images, fonts, etc.)
-├── App.tsx               # Root app component
+├── app/                    # Expo Router pages (file-based routing)
+│   ├── _layout.tsx        # Root layout with Stack navigation
+│   └── index.tsx          # Home screen (clean welcome screen)
+├── assets/                # Static assets (images, fonts, icons)
+├── .expo/                 # Expo configuration (auto-generated)
+├── node_modules/          # Dependencies
+├── App.tsx               # Root component (for non-router setup)
 ├── app.config.ts         # Expo app configuration
 ├── package.json          # Dependencies and scripts
-└── tsconfig.json         # TypeScript configuration
+├── tsconfig.json         # TypeScript configuration
+├── PROJECT_INFO.md       # This reference file
+└── HOW_TO_RUN.md         # Development instructions
 ```
 
 ## 🚀 Development Setup
@@ -74,30 +75,47 @@ npm update expo
 
 ## 🎯 Project Goals & Features
 
-### Core Features (Add/Update as needed)
-- [ ] AI Panel Integration (AIPanel.tsx)
-- [ ] Web Graph Visualization (WebGraph.tsx)
-- [ ] Google Gemini AI Service Integration
-- [ ] Icon System (IconComponents.tsx)
-- [ ] (Add other features as they're implemented)
+### Project Status: FRESH START ✨
+**Completed:**
+- ✅ Clean project structure with Expo Router
+- ✅ TypeScript setup and configuration
+- ✅ iOS & Android compatibility via Expo
+- ✅ Basic welcome screen
+- ✅ Safe area handling
+- ✅ Dark theme baseline
+
+### Ready to Build Features:
+- [ ] Custom UI components
+- [ ] Navigation structure
+- [ ] State management
+- [ ] API integrations
+- [ ] Custom styling system
+- [ ] (Add your features here as you plan them)
 
 ### Current Development Focus
-- Setting up fresh development environment
-- (Update this section as priorities change)
+- Fresh, clean development environment ready
+- Awaiting new feature requirements and design decisions
+- All old components and data removed for clean slate
 
-## 🧩 Key Components
+## 🧩 Current Components (Fresh Start)
 
-### AIPanel.tsx
-- Purpose: (Add description of what this component does)
-- Dependencies: (List key dependencies)
+### app/index.tsx
+- **Purpose:** Welcome screen with project information
+- **Features:** Clean, minimal design with dark theme
+- **Dependencies:** React Native Safe Area Context
 
-### WebGraph.tsx  
-- Purpose: (Add description of web graph functionality)
-- Dependencies: (List key dependencies)
+### app/_layout.tsx
+- **Purpose:** Root layout with Expo Router Stack navigation
+- **Features:** Header hidden, dark background, status bar configuration
+- **Dependencies:** Expo Router
 
-### geminiService.ts
-- Purpose: Integration with Google Gemini AI API
-- Dependencies: (List API requirements)
+### Assets Ready For:
+- Custom components (components/)
+- Services (services/)
+- Utilities (utils/)
+- Types (types/)
+- Constants (constants/)
+- Hooks (hooks/)
 
 ## 🔧 Development Notes
 
@@ -131,12 +149,25 @@ npm update expo
 (Add design system information, color schemes, typography, etc.)
 
 ## 🔑 API Keys & Configuration
-(Document any API keys, environment variables, or configuration needed)
-- Google Gemini API: (Add setup notes)
+**Environment Setup:**
+- `.env.example` file available for reference
+- No API keys currently configured (fresh start)
+- (Add API configurations as features are implemented)
+
+**Configuration Files:**
+- `app.config.ts` - Expo app configuration
+- `tsconfig.json` - TypeScript compiler options
+- `package.json` - Scripts and dependencies
 
 ## 📝 Development History & Decisions
 - **2024-11-14:** Initial setup completed, Node.js installed, Expo version updated to 54.0.23
-- (Add other significant decisions or changes)
+- **2024-11-14:** PROJECT RESET - Cleaned entire project for fresh start
+  - Removed all old components, services, and data
+  - Kept essential Expo Router structure
+  - Created clean welcome screen
+  - Updated to Fresh-Design branch
+  - Maintained iOS/Android/Web compatibility
+- (Add new decisions as project develops)
 
 ## 🐛 Known Issues
 (Document any known bugs, limitations, or technical debt)
@@ -152,19 +183,29 @@ npm update expo
 ---
 
 **Last Updated:** November 14, 2024  
-**Project Status:** Active Development  
-**Current Version:** Development (no releases yet)
+**Project Status:** Fresh Start - Ready for Development  
+**Current Branch:** Fresh-Design  
+**Current Version:** Clean Slate (v0.0.0)
 
 ---
 
 ## 📞 Quick Reference for AI Assistant
 
-### Key File Paths
-- Main app entry: `app/index.tsx`
-- Root component: `App.tsx`
-- AI service: `src/services/geminiService.ts`
-- Components: `src/components/`
-- Types: `src/types/index.ts`
+### Key File Paths (Fresh Structure)
+- **Main app entry:** `app/index.tsx` (welcome screen)
+- **Root layout:** `app/_layout.tsx` (Expo Router layout)
+- **Legacy root:** `App.tsx` (not used with Expo Router)
+- **Assets:** `assets/` (images, fonts, icons)
+- **Config:** `app.config.ts`, `tsconfig.json`
+- **Documentation:** `PROJECT_INFO.md`, `HOW_TO_RUN.md`
+
+### Ready to Create:
+- `components/` - Custom UI components
+- `services/` - API and external services
+- `types/` - TypeScript type definitions
+- `utils/` - Helper functions
+- `constants/` - App constants
+- `hooks/` - Custom React hooks
 
 ### Common Tasks
 - Start development: `npx expo start`
