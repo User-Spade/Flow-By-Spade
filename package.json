@@ -11,7 +11,7 @@
   "dependencies": {
     "@google/genai": "^1.28.0",
     "@react-native-picker/picker": "2.11.1",
-    "expo": "~54.0.22",
+    "expo": "^54.0.23",
     "expo-constants": "^18.0.10",
     "expo-linking": "^8.0.8",
     "expo-router": "^6.0.14",
