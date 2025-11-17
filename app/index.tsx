@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import styled, { ThemeProvider } from 'styled-components/native';
 import { COLORS, BELT_LEVELS, BeltLevel } from '../constants/theme';
 import { useRouter } from 'expo-router';
+import { useBelt } from '../contexts/BeltContext';
 
 // ---- Styled components ----
 const Safe = styled(SafeAreaView)`
@@ -88,6 +89,7 @@ export default function WelcomeScreen() {
   const [selectedBelt, setSelectedBelt] = useState<BeltLevel | null>(null);
   const scale = useRef(new Animated.Value(1)).current;
   const router = useRouter();
+  const { setBelt } = useBelt();
 
   const onPressIn = () => {
     Animated.spring(scale, {
@@ -111,7 +113,7 @@ export default function WelcomeScreen() {
     if (!selectedBelt) return;
     
     // Save belt selection (could be saved to AsyncStorage later)
-    console.log('Selected belt:', selectedBelt);
+    setBelt(selectedBelt);
     
     // Navigate to home screen
     router.push('/home');

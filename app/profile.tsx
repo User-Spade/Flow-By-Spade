@@ -2,17 +2,21 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { Animated, TouchableWithoutFeedback, ScrollView, StatusBar, View, Text, StyleSheet, Pressable } from "react-native";
 import { useRouter } from "expo-router";
+import { useBelt } from "../contexts/BeltContext";
+import { BELT_COLORS, BELT_LEVELS, BeltLevel } from "../constants/theme";
 
 const BACKGROUND = "#222222";
 const CARD_BG = "rgba(44, 44, 49, 0.76)";
 const CARD_BORDER = "rgba(255,255,255,0.085)";
-const BLUE = "#0081A7";
 const WHITE = "#FFF";
 const GLASS_SHADOW = "#000";
 const BUTTON_BG = "rgba(44, 44, 49, 0.88)";
 
 export default function ProfileScreen() {
   const router = useRouter();
+  const { belt } = useBelt();
+  const activeBelt: BeltLevel = (belt ?? 'White') as BeltLevel;
+  const beltColor = BELT_COLORS[activeBelt];
   const scale = React.useRef(new Animated.Value(1)).current;
   const onPressIn = () => Animated.spring(scale, {
     toValue: 0.97,
@@ -39,8 +43,8 @@ export default function ProfileScreen() {
           <Ionicons name="person-circle-outline" size={98} color="#AEB0B5" />
         </View>
         <View style={styles.beltLabel}>
-          <Ionicons name="ellipse" size={18} color={BLUE} style={{ marginRight: 7 }} />
-          <Text style={styles.beltText}>Blue Belt</Text>
+          <Ionicons name="ellipse" size={18} color={beltColor} style={{ marginRight: 7 }} />
+          <Text style={[styles.beltText, { color: beltColor }]}>{activeBelt} Belt</Text>
         </View>
         <TouchableWithoutFeedback
           onPressIn={onPressIn}
@@ -130,7 +134,7 @@ const styles = StyleSheet.create({
     borderColor: CARD_BORDER,
   },
   beltText: {
-    color: BLUE,
+    color: WHITE,
     fontSize: 19,
     marginLeft: 4,
     fontWeight: '700',

@@ -13,3 +13,12 @@ export const COLORS = {
 export const BELT_LEVELS = ['White', 'Blue', 'Purple', 'Brown', 'Black'] as const;
 
 export type BeltLevel = typeof BELT_LEVELS[number];
+
+// Mapping belt levels to representative colors
+export const BELT_COLORS: Record<BeltLevel, string> = {
+  White: '#EDEDED',
+  Blue: '#1E88E5',
+  Purple: '#7E57C2',
+  Brown: '#8D6E63',
+  Black: '#000000',
+};

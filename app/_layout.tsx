@@ -1,9 +1,10 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { BeltProvider } from '../contexts/BeltContext';
 
 export default function RootLayout() {
   return (
-    <>
+    <BeltProvider>
       <StatusBar style="light" />
       <Stack
         screenOptions={{
@@ -18,6 +19,6 @@ export default function RootLayout() {
         <Stack.Screen name="library" options={{ title: 'Library' }} />
         <Stack.Screen name="profile" options={{ title: 'Profile' }} />
       </Stack>
-    </>
+    </BeltProvider>
   );
 }
