@@ -12,6 +12,7 @@ import {
   Dimensions,
 } from "react-native";
 import { useRouter } from "expo-router";
+import { COLORS } from "../constants/theme";
 
 // ----- DATA -----
 const beltLevels = [
@@ -368,6 +369,7 @@ export default function LibraryScreen() {
   const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
   const [techniquesYPosition, setTechniquesYPosition] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(0);
+  const [pageWidth, setPageWidth] = useState<number>(0);
   const router = useRouter();
   const scrollViewRef = useRef<ScrollView>(null);
   const techniqueCardRefs = useRef<Map<string, View>>(new Map());
@@ -430,11 +432,9 @@ export default function LibraryScreen() {
 
   const handleScroll = (event: any) => {
     const offsetX = event.nativeEvent.contentOffset.x;
-    const pageWidth = Dimensions.get('window').width * 0.85;
+    if (pageWidth <= 0) return;
     const page = Math.round(offsetX / pageWidth);
-    if (page !== currentPage) {
-      setCurrentPage(page);
-    }
+    if (page !== currentPage) setCurrentPage(page);
   };
 
   return (
@@ -649,11 +649,12 @@ export default function LibraryScreen() {
                       showsHorizontalScrollIndicator={false}
                       onScroll={handleScroll}
                       scrollEventThrottle={16}
+                      onLayout={(e) => setPageWidth(e.nativeEvent.layout.width)}
                       style={styles.pagesContainer}
                       contentContainerStyle={styles.pagesWrapper}
                     >
                         {/* Page 1: Video Placeholder */}
-                        <View style={styles.page}>
+                        <View style={[styles.page, { width: pageWidth || undefined }]}>
                           <View style={styles.videoPlaceholder}>
                             <Ionicons name="play-circle" size={64} color="#84DCC6" />
                             <Text style={styles.videoPlaceholderText}>Video Coming Soon</Text>
@@ -664,7 +665,7 @@ export default function LibraryScreen() {
                         </View>
 
                         {/* Page 2: Description */}
-                        <View style={styles.page}>
+                        <View style={[styles.page, { width: pageWidth || undefined }]}>
                           <View style={styles.detailsDivider} />
 
                           {/* White Belt Basics */}
@@ -846,14 +847,19 @@ const styles = StyleSheet.create({
     borderColor: "rgba(132, 220, 198, 0.2)",
   },
   techniqueCardExpanded: {
-    backgroundColor: "rgba(30, 30, 40, 0.95)",
-    borderColor: "rgba(132, 220, 198, 0.4)",
-    borderWidth: 2,
-    padding: 20,
+    backgroundColor: "rgba(44,44,49,0.92)",
+    borderColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1.5,
+    borderRadius: 16,
+    padding: 16,
     marginTop: 8,
     marginBottom: 16,
-    marginHorizontal: -8,
     minHeight: 300,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.18,
+    shadowRadius: 12,
+    elevation: 4,
   },
   techniqueCardContent: {
     flexDirection: "row",
@@ -883,7 +889,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   expandedHeader: {
-    marginBottom: 12,
+    marginBottom: 10,
+    paddingBottom: 6,
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(255,255,255,0.06)",
   },
   expandedTitleRow: {
     flexDirection: "row",
@@ -937,7 +946,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 12,
+    marginTop: 10,
     gap: 8,
   },
   paginationDot: {
@@ -948,36 +957,39 @@ const styles = StyleSheet.create({
   },
   paginationDotActive: {
     backgroundColor: "#84DCC6",
-    width: 24,
   },
   pagesContainer: {
     flex: 1,
-    marginTop: 16,
+    marginTop: 12,
   },
   pagesWrapper: {
     flexDirection: "row",
   },
   page: {
-    width: Dimensions.get('window').width * 0.85,
-    paddingRight: 20,
+    paddingRight: 0,
   },
   videoPlaceholder: {
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(132, 220, 198, 0.1)",
+    backgroundColor: "rgba(50,52,59,0.92)",
     borderRadius: 12,
-    padding: 40,
-    marginVertical: 20,
-    borderWidth: 2,
-    borderColor: "rgba(132, 220, 198, 0.3)",
+    padding: 32,
+    marginVertical: 16,
+    borderWidth: 1.5,
+    borderColor: "rgba(255,255,255,0.08)",
     borderStyle: "dashed",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 3,
   },
   videoPlaceholderText: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#84DCC6",
-    marginTop: 16,
-    marginBottom: 8,
+    color: COLORS.mint,
+    marginTop: 14,
+    marginBottom: 6,
   },
   videoPlaceholderSubtext: {
     fontSize: 14,
