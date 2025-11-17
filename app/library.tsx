@@ -576,20 +576,29 @@ export default function LibraryScreen() {
                       setSelectedTechniqueId(technique.id);
                       setCurrentPage(0);
                       
-                      // Scroll to center the card after expansion
+                      // Scroll to center the expanded card on screen (fallback to fit if too tall)
                       setTimeout(() => {
                         const cardView = techniqueCardRefs.current.get(technique.id);
-                        if (cardView) {
+                        if (cardView && scrollViewRef.current) {
                           cardView.measureLayout(
                             scrollViewRef.current as any,
                             (x, y, width, height) => {
-                              // Center the card on screen
-                              const screenHeight = Dimensions.get('window').height;
-                              const centerOffset = y - (screenHeight / 2) + (height / 2);
-                              scrollViewRef.current?.scrollTo({
-                                y: Math.max(0, centerOffset),
-                                animated: true,
-                              });
+                              const windowHeight = Dimensions.get('window').height;
+                              const topPad = 12;
+                              const bottomPad = 12;
+                              const available = windowHeight - topPad - bottomPad;
+
+                              let targetY: number;
+                              if (height >= available) {
+                                // Too tall to center: align top within padding
+                                targetY = Math.max(0, y - topPad);
+                              } else {
+                                // Center vertically within the available viewport
+                                const extra = (available - height) / 2;
+                                targetY = Math.max(0, y - topPad - extra);
+                              }
+
+                              scrollViewRef.current?.scrollTo({ y: Math.floor(targetY), animated: true });
                             },
                             () => {}
                           );
@@ -615,7 +624,14 @@ export default function LibraryScreen() {
 
                 {/* Expanded View */}
                 {isExpanded && (
-                  <View style={styles.techniqueCardExpanded}>
+                  <View
+                    style={styles.techniqueCardExpanded}
+                    ref={(ref) => {
+                      if (ref) {
+                        techniqueCardRefs.current.set(technique.id, ref as any);
+                      }
+                    }}
+                  >
                     {/* Fixed Header */}
                     <View style={styles.expandedHeader}>
                       <View style={styles.expandedTitleRow}>
