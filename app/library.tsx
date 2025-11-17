@@ -367,9 +367,11 @@ export default function LibraryScreen() {
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
   const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
   const [techniquesYPosition, setTechniquesYPosition] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState<number>(0);
   const router = useRouter();
   const scrollViewRef = useRef<ScrollView>(null);
   const techniqueCardRefs = useRef<Map<string, View>>(new Map());
+  const pageScrollRef = useRef<ScrollView>(null);
 
   // Dynamic animated scales
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
@@ -423,6 +425,15 @@ export default function LibraryScreen() {
           animated: true,
         });
       }, 100);
+    }
+  };
+
+  const handleScroll = (event: any) => {
+    const offsetX = event.nativeEvent.contentOffset.x;
+    const pageWidth = Dimensions.get('window').width * 0.85;
+    const page = Math.round(offsetX / pageWidth);
+    if (page !== currentPage) {
+      setCurrentPage(page);
     }
   };
 
@@ -551,23 +562,21 @@ export default function LibraryScreen() {
                   const layout = event.nativeEvent.layout;
                   const cardRef = techniqueCardRefs.current.get(technique.id);
                   if (cardRef) {
-                    cardRef.measure((x, y, width, height, pageX, pageY) => {
-                      // Store the position for later use
+                    cardRef.measure((x, y, width, height, px, py) => {
+                      // Store the position for later use (if needed)
                     });
                   }
                 }}
               >
-                <Pressable
-                  style={[
-                    styles.techniqueCard,
-                    isExpanded && styles.techniqueCardExpanded,
-                  ]}
-                  onPress={() => {
-                    const willExpand = !isExpanded;
-                    setSelectedTechniqueId(willExpand ? technique.id : null);
-                    
-                    // Scroll to center the card after expansion
-                    if (willExpand && scrollViewRef.current) {
+                {/* Collapsed View */}
+                {!isExpanded && (
+                  <Pressable
+                    style={styles.techniqueCard}
+                    onPress={() => {
+                      setSelectedTechniqueId(technique.id);
+                      setCurrentPage(0);
+                      
+                      // Scroll to center the card after expansion
                       setTimeout(() => {
                         const cardView = techniqueCardRefs.current.get(technique.id);
                         if (cardView) {
@@ -586,16 +595,13 @@ export default function LibraryScreen() {
                           );
                         }
                       }, 150);
-                    }
-                  }}
-                  ref={(ref) => {
-                    if (ref) {
-                      techniqueCardRefs.current.set(technique.id, ref as any);
-                    }
-                  }}
-                >
-                {/* Collapsed View */}
-                {!isExpanded && (
+                    }}
+                    ref={(ref) => {
+                      if (ref) {
+                        techniqueCardRefs.current.set(technique.id, ref as any);
+                      }
+                    }}
+                  >
                   <View style={styles.techniqueCardContent}>
                     <Ionicons name="play" size={16} color="#84DCC6" style={styles.playIcon} />
                     <View style={styles.techniqueInfo}>
@@ -604,63 +610,103 @@ export default function LibraryScreen() {
                     </View>
                     <Ionicons name="chevron-forward" size={20} color="#AEB0B5" />
                   </View>
+                  </Pressable>
                 )}
 
                 {/* Expanded View */}
                 {isExpanded && (
-                  <View style={styles.expandedContent}>
-                    {/* Header */}
+                  <View style={styles.techniqueCardExpanded}>
+                    {/* Fixed Header */}
                     <View style={styles.expandedHeader}>
                       <View style={styles.expandedTitleRow}>
-                        <Ionicons name="chevron-down" size={20} color="#84DCC6" style={styles.expandedIcon} />
+                        <Pressable
+                          onPress={() => {
+                            setSelectedTechniqueId(null);
+                            setCurrentPage(0);
+                          }}
+                          style={styles.closeButton}
+                        >
+                          <Ionicons name="chevron-down" size={20} color="#84DCC6" />
+                        </Pressable>
                         <View style={styles.expandedTitleContainer}>
                           <Text style={styles.expandedTechniqueName}>{technique.name}</Text>
                           <Text style={styles.expandedTechniqueType}>({technique.type})</Text>
                         </View>
                       </View>
+                      
+                      {/* Pagination Dots */}
+                      <View style={styles.paginationContainer}>
+                        <View style={[styles.paginationDot, currentPage === 0 && styles.paginationDotActive]} />
+                        <View style={[styles.paginationDot, currentPage === 1 && styles.paginationDotActive]} />
+                      </View>
                     </View>
 
-                    <View style={styles.detailsDivider} />
-
-                    {/* White Belt Basics */}
-                    <View style={styles.detailsSection}>
-                      <Text style={styles.detailsSectionTitle}>White Belt Basics</Text>
-                      {technique.whiteBeltBasics.map((detail, idx) => (
-                        <Text key={idx} style={styles.detailItem}>• {detail}</Text>
-                      ))}
-                    </View>
-
-                    {/* Blue/Purple Details */}
-                    {(selectedBeltId === 'blue' || selectedBeltId === 'purple' || 
-                      selectedBeltId === 'brown' || selectedBeltId === 'black' || 
-                      selectedBeltId === 'red' || !selectedBeltId) && (
-                      <>
-                        <View style={styles.detailsDivider} />
-                        <View style={styles.detailsSection}>
-                          <Text style={styles.detailsSectionTitle}>Blue/Purple Details</Text>
-                          {technique.bluePurpleDetails.map((detail, idx) => (
-                            <Text key={idx} style={styles.detailItem}>• {detail}</Text>
-                          ))}
+                    {/* Swipeable Pages Container */}
+                    <ScrollView
+                      ref={pageScrollRef}
+                      horizontal
+                      pagingEnabled
+                      showsHorizontalScrollIndicator={false}
+                      onScroll={handleScroll}
+                      scrollEventThrottle={16}
+                      style={styles.pagesContainer}
+                      contentContainerStyle={styles.pagesWrapper}
+                    >
+                        {/* Page 1: Video Placeholder */}
+                        <View style={styles.page}>
+                          <View style={styles.videoPlaceholder}>
+                            <Ionicons name="play-circle" size={64} color="#84DCC6" />
+                            <Text style={styles.videoPlaceholderText}>Video Coming Soon</Text>
+                            <Text style={styles.videoPlaceholderSubtext}>
+                              Technique demonstration will be available here
+                            </Text>
+                          </View>
                         </View>
-                      </>
-                    )}
 
-                    {/* Brown/Black Details */}
-                    {(selectedBeltId === 'brown' || selectedBeltId === 'black' || 
-                      selectedBeltId === 'red' || !selectedBeltId) && (
-                      <>
-                        <View style={styles.detailsDivider} />
-                        <View style={styles.detailsSection}>
-                          <Text style={styles.detailsSectionTitle}>Brown/Black Details</Text>
-                          {technique.brownBlackDetails.map((detail, idx) => (
-                            <Text key={idx} style={styles.detailItem}>• {detail}</Text>
-                          ))}
+                        {/* Page 2: Description */}
+                        <View style={styles.page}>
+                          <View style={styles.detailsDivider} />
+
+                          {/* White Belt Basics */}
+                          <View style={styles.detailsSection}>
+                            <Text style={styles.detailsSectionTitle}>White Belt Basics</Text>
+                            {technique.whiteBeltBasics.map((detail, idx) => (
+                              <Text key={idx} style={styles.detailItem}>• {detail}</Text>
+                            ))}
+                          </View>
+
+                          {/* Blue/Purple Details */}
+                          {(selectedBeltId === 'blue' || selectedBeltId === 'purple' || 
+                            selectedBeltId === 'brown' || selectedBeltId === 'black' || 
+                            selectedBeltId === 'red' || !selectedBeltId) && (
+                            <>
+                              <View style={styles.detailsDivider} />
+                              <View style={styles.detailsSection}>
+                                <Text style={styles.detailsSectionTitle}>Blue/Purple Details</Text>
+                                {technique.bluePurpleDetails.map((detail, idx) => (
+                                  <Text key={idx} style={styles.detailItem}>• {detail}</Text>
+                                ))}
+                              </View>
+                            </>
+                          )}
+
+                          {/* Brown/Black Details */}
+                          {(selectedBeltId === 'brown' || selectedBeltId === 'black' || 
+                            selectedBeltId === 'red' || !selectedBeltId) && (
+                            <>
+                              <View style={styles.detailsDivider} />
+                              <View style={styles.detailsSection}>
+                                <Text style={styles.detailsSectionTitle}>Brown/Black Details</Text>
+                                {technique.brownBlackDetails.map((detail, idx) => (
+                                  <Text key={idx} style={styles.detailItem}>• {detail}</Text>
+                                ))}
+                              </View>
+                            </>
+                          )}
                         </View>
-                      </>
-                    )}
+                    </ScrollView>
                   </View>
                 )}
-              </Pressable>
               </View>
             );
           })}
@@ -843,6 +889,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
+  closeButton: {
+    padding: 8,
+    marginRight: 4,
+    marginLeft: -8,
+  },
   expandedIcon: {
     marginRight: 8,
   },
@@ -881,5 +932,57 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: 6,
     paddingLeft: 4,
+  },
+  paginationContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 12,
+    gap: 8,
+  },
+  paginationDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: "rgba(132, 220, 198, 0.3)",
+  },
+  paginationDotActive: {
+    backgroundColor: "#84DCC6",
+    width: 24,
+  },
+  pagesContainer: {
+    flex: 1,
+    marginTop: 16,
+  },
+  pagesWrapper: {
+    flexDirection: "row",
+  },
+  page: {
+    width: Dimensions.get('window').width * 0.85,
+    paddingRight: 20,
+  },
+  videoPlaceholder: {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(132, 220, 198, 0.1)",
+    borderRadius: 12,
+    padding: 40,
+    marginVertical: 20,
+    borderWidth: 2,
+    borderColor: "rgba(132, 220, 198, 0.3)",
+    borderStyle: "dashed",
+  },
+  videoPlaceholderText: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#84DCC6",
+    marginTop: 16,
+    marginBottom: 8,
+  },
+  videoPlaceholderSubtext: {
+    fontSize: 14,
+    fontWeight: "400",
+    color: "#AEB0B5",
+    textAlign: "center",
   },
 });
