@@ -34,31 +34,329 @@ const positions = [
 ];
 
 // Sample techniques by position
-const techniquesData: Record<string, Array<{ id: string; name: string; type: string }>> = {
+type Technique = {
+  id: string;
+  name: string;
+  type: string;
+  whiteBeltBasics: string[];
+  bluePurpleDetails: string[];
+  brownBlackDetails: string[];
+};
+
+const techniquesData: Record<string, Array<Technique>> = {
   guard: [
-    { id: "cross-collar-choke", name: "Cross Collar Choke", type: "Submission" },
-    { id: "scissor-sweep", name: "Scissor Sweep", type: "Sweep" },
-    { id: "armbar-guard", name: "Armbar from Guard", type: "Submission" },
-    { id: "hip-bump-sweep", name: "Hip Bump Sweep", type: "Sweep" },
-    { id: "triangle-choke", name: "Triangle Choke", type: "Submission" },
-    { id: "kimura", name: "Kimura", type: "Submission" },
+    {
+      id: "cross-collar-choke",
+      name: "Cross Collar Choke",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Simple grip sequence",
+        "Posture break fundamentals",
+        "Core mistakes to avoid",
+      ],
+      bluePurpleDetails: [
+        "Angle correction",
+        "Elbow line control",
+      ],
+      brownBlackDetails: [
+        "Micro adjustments",
+        "Pressure application",
+      ],
+    },
+    {
+      id: "scissor-sweep",
+      name: "Scissor Sweep",
+      type: "Sweep",
+      whiteBeltBasics: [
+        "Hip positioning basics",
+        "Leg placement and timing",
+        "Balance breaking fundamentals",
+      ],
+      bluePurpleDetails: [
+        "Grip fighting integration",
+        "Angle adjustments mid-execution",
+      ],
+      brownBlackDetails: [
+        "Chain sweep combinations",
+        "Recovery from failed attempts",
+      ],
+    },
+    {
+      id: "armbar-guard",
+      name: "Armbar from Guard",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Hip escape mechanics",
+        "Leg positioning over head",
+        "Arm isolation basics",
+      ],
+      bluePurpleDetails: [
+        "Entry timing refinement",
+        "Finishing angle control",
+      ],
+      brownBlackDetails: [
+        "Counter prevention details",
+        "Transition to triangle/omoplata",
+      ],
+    },
+    {
+      id: "hip-bump-sweep",
+      name: "Hip Bump Sweep",
+      type: "Sweep",
+      whiteBeltBasics: [
+        "Sit-up guard fundamentals",
+        "Timing the bump",
+        "Hand placement basics",
+      ],
+      bluePurpleDetails: [
+        "Fake to other sweeps",
+        "Kimura grip integration",
+      ],
+      brownBlackDetails: [
+        "Flow between hip bump and kimura",
+        "Advanced angle creation",
+      ],
+    },
+    {
+      id: "triangle-choke",
+      name: "Triangle Choke",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Leg positioning basics",
+        "Angle adjustment fundamentals",
+        "Arm trap mechanics",
+      ],
+      bluePurpleDetails: [
+        "Hip angle optimization",
+        "Squeeze timing refinement",
+      ],
+      brownBlackDetails: [
+        "Entry variations mastery",
+        "Armbar/omoplata transitions",
+      ],
+    },
+    {
+      id: "kimura",
+      name: "Kimura",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Grip mechanics basics",
+        "Figure-four positioning",
+        "Breaking posture first",
+      ],
+      bluePurpleDetails: [
+        "Sweep integration",
+        "Transitional kimura attacks",
+      ],
+      brownBlackDetails: [
+        "Counter sequences",
+        "Back take from kimura grip",
+      ],
+    },
   ],
   mount: [
-    { id: "americana", name: "Americana", type: "Submission" },
-    { id: "cross-choke-mount", name: "Cross Choke", type: "Submission" },
-    { id: "armbar-mount", name: "Armbar from Mount", type: "Submission" },
-    { id: "s-mount", name: "S-Mount Transition", type: "Position" },
+    {
+      id: "americana",
+      name: "Americana",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Weight distribution on mount",
+        "Isolating the arm",
+        "Figure-four grip basics",
+      ],
+      bluePurpleDetails: [
+        "Preventing bridge escapes",
+        "Angle adjustments for finish",
+      ],
+      brownBlackDetails: [
+        "Transition to armbar if defended",
+        "Maintaining control under movement",
+      ],
+    },
+    {
+      id: "cross-choke-mount",
+      name: "Cross Choke",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Collar grip sequence",
+        "Elbow positioning",
+        "Weight commitment basics",
+      ],
+      bluePurpleDetails: [
+        "Grip depth optimization",
+        "Head control integration",
+      ],
+      brownBlackDetails: [
+        "Finishing against defensive frames",
+        "S-mount transition for better angle",
+      ],
+    },
+    {
+      id: "armbar-mount",
+      name: "Armbar from Mount",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Arm isolation fundamentals",
+        "Hip positioning for transition",
+        "Leg swing mechanics",
+      ],
+      bluePurpleDetails: [
+        "Preventing opponent roll",
+        "Maintaining balance during transition",
+      ],
+      brownBlackDetails: [
+        "Switching between armbar sides",
+        "Triangle backup if they pull out",
+      ],
+    },
+    {
+      id: "s-mount",
+      name: "S-Mount Transition",
+      type: "Position",
+      whiteBeltBasics: [
+        "Leg positioning basics",
+        "Balance maintenance",
+        "When to transition from mount",
+      ],
+      bluePurpleDetails: [
+        "Armbar setup from S-mount",
+        "Preventing shrimp escape",
+      ],
+      brownBlackDetails: [
+        "Flow between mount variations",
+        "Back exposure creation",
+      ],
+    },
   ],
   sidecontrol: [
-    { id: "kimura-side", name: "Kimura", type: "Submission" },
-    { id: "americana-side", name: "Americana", type: "Submission" },
-    { id: "knee-on-belly", name: "Knee on Belly", type: "Position" },
-    { id: "arm-triangle", name: "Arm Triangle", type: "Submission" },
+    {
+      id: "kimura-side",
+      name: "Kimura",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Grip establishment from side",
+        "Hip pressure maintenance",
+        "Basic finishing mechanics",
+      ],
+      bluePurpleDetails: [
+        "North-south transition",
+        "Preventing opponent turn-in",
+      ],
+      brownBlackDetails: [
+        "Back take from kimura grip",
+        "Rolling kimura variations",
+      ],
+    },
+    {
+      id: "americana-side",
+      name: "Americana",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Arm isolation from side control",
+        "Weight distribution",
+        "Basic finishing angle",
+      ],
+      bluePurpleDetails: [
+        "Switching to armbar if defended",
+        "Far side attack integration",
+      ],
+      brownBlackDetails: [
+        "Mount transition for better control",
+        "Pressure refinement details",
+      ],
+    },
+    {
+      id: "knee-on-belly",
+      name: "Knee on Belly",
+      type: "Position",
+      whiteBeltBasics: [
+        "Balance and base fundamentals",
+        "Proper knee placement",
+        "Grip control basics",
+      ],
+      bluePurpleDetails: [
+        "Switching between mount/side",
+        "Baseball bat choke setup",
+      ],
+      brownBlackDetails: [
+        "Armbar from knee on belly",
+        "Maintaining against explosive escapes",
+      ],
+    },
+    {
+      id: "arm-triangle",
+      name: "Arm Triangle",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Head and arm trap basics",
+        "Switching to opposite side",
+        "Squeezing mechanics",
+      ],
+      bluePurpleDetails: [
+        "Angle optimization for finish",
+        "Preventing space creation",
+      ],
+      brownBlackDetails: [
+        "North-south choke variations",
+        "Darce choke transitions",
+      ],
+    },
   ],
   back: [
-    { id: "rear-naked-choke", name: "Rear Naked Choke", type: "Submission" },
-    { id: "bow-arrow-choke", name: "Bow and Arrow Choke", type: "Submission" },
-    { id: "armbar-back", name: "Armbar from Back", type: "Submission" },
+    {
+      id: "rear-naked-choke",
+      name: "Rear Naked Choke",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Hook placement fundamentals",
+        "Arm positioning under chin",
+        "Squeeze mechanics basics",
+      ],
+      bluePurpleDetails: [
+        "Hand fighting to secure choke",
+        "Preventing opponent turn",
+      ],
+      brownBlackDetails: [
+        "Short choke variations",
+        "Maintaining back mount under defense",
+      ],
+    },
+    {
+      id: "bow-arrow-choke",
+      name: "Bow and Arrow Choke",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Collar grip basics",
+        "Leg positioning for leverage",
+        "Body angle fundamentals",
+      ],
+      bluePurpleDetails: [
+        "Grip fighting integration",
+        "Finishing angle refinement",
+      ],
+      brownBlackDetails: [
+        "Setting up from back control",
+        "Transition if opponent defends",
+      ],
+    },
+    {
+      id: "armbar-back",
+      name: "Armbar from Back",
+      type: "Submission",
+      whiteBeltBasics: [
+        "Arm isolation from back",
+        "Hip positioning basics",
+        "Maintaining one hook",
+      ],
+      bluePurpleDetails: [
+        "Preventing opponent stack",
+        "Triangle transition backup",
+      ],
+      brownBlackDetails: [
+        "Flow between back attacks",
+        "Maintaining dominant position throughout",
+      ],
+    },
   ],
 };
 
@@ -66,6 +364,7 @@ const techniquesData: Record<string, Array<{ id: string; name: string; type: str
 export default function LibraryScreen() {
   const [selectedBeltId, setSelectedBeltId] = useState<string | null>(null);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
+  const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
   const [techniquesYPosition, setTechniquesYPosition] = useState<number>(0);
   const router = useRouter();
   const scrollViewRef = useRef<ScrollView>(null);
@@ -240,24 +539,89 @@ export default function LibraryScreen() {
             Selected Position: {positions.find(p => p.id === selectedPositionId)?.name}
           </Text>
           
-          {techniquesData[selectedPositionId].map((technique) => (
-            <Pressable
-              key={technique.id}
-              style={styles.techniqueCard}
-              onPress={() => {
-                // TODO: Navigate to technique detail or expand
-              }}
-            >
-              <View style={styles.techniqueCardContent}>
-                <Ionicons name="play" size={16} color="#84DCC6" style={styles.playIcon} />
-                <View style={styles.techniqueInfo}>
-                  <Text style={styles.techniqueName}>{technique.name}</Text>
-                  <Text style={styles.techniqueType}>({technique.type})</Text>
-                </View>
-                <Ionicons name="chevron-forward" size={20} color="#AEB0B5" />
-              </View>
-            </Pressable>
-          ))}
+          {techniquesData[selectedPositionId].map((technique) => {
+            const isExpanded = selectedTechniqueId === technique.id;
+            
+            return (
+              <Pressable
+                key={technique.id}
+                style={[
+                  styles.techniqueCard,
+                  isExpanded && styles.techniqueCardExpanded,
+                ]}
+                onPress={() => {
+                  setSelectedTechniqueId(isExpanded ? null : technique.id);
+                }}
+              >
+                {/* Collapsed View */}
+                {!isExpanded && (
+                  <View style={styles.techniqueCardContent}>
+                    <Ionicons name="play" size={16} color="#84DCC6" style={styles.playIcon} />
+                    <View style={styles.techniqueInfo}>
+                      <Text style={styles.techniqueName}>{technique.name}</Text>
+                      <Text style={styles.techniqueType}>({technique.type})</Text>
+                    </View>
+                    <Ionicons name="chevron-forward" size={20} color="#AEB0B5" />
+                  </View>
+                )}
+
+                {/* Expanded View */}
+                {isExpanded && (
+                  <View style={styles.expandedContent}>
+                    {/* Header */}
+                    <View style={styles.expandedHeader}>
+                      <View style={styles.expandedTitleRow}>
+                        <Ionicons name="chevron-down" size={20} color="#84DCC6" style={styles.expandedIcon} />
+                        <View style={styles.expandedTitleContainer}>
+                          <Text style={styles.expandedTechniqueName}>{technique.name}</Text>
+                          <Text style={styles.expandedTechniqueType}>({technique.type})</Text>
+                        </View>
+                      </View>
+                    </View>
+
+                    <View style={styles.detailsDivider} />
+
+                    {/* White Belt Basics */}
+                    <View style={styles.detailsSection}>
+                      <Text style={styles.detailsSectionTitle}>White Belt Basics</Text>
+                      {technique.whiteBeltBasics.map((detail, idx) => (
+                        <Text key={idx} style={styles.detailItem}>• {detail}</Text>
+                      ))}
+                    </View>
+
+                    {/* Blue/Purple Details */}
+                    {(selectedBeltId === 'blue' || selectedBeltId === 'purple' || 
+                      selectedBeltId === 'brown' || selectedBeltId === 'black' || 
+                      selectedBeltId === 'red' || !selectedBeltId) && (
+                      <>
+                        <View style={styles.detailsDivider} />
+                        <View style={styles.detailsSection}>
+                          <Text style={styles.detailsSectionTitle}>Blue/Purple Details</Text>
+                          {technique.bluePurpleDetails.map((detail, idx) => (
+                            <Text key={idx} style={styles.detailItem}>• {detail}</Text>
+                          ))}
+                        </View>
+                      </>
+                    )}
+
+                    {/* Brown/Black Details */}
+                    {(selectedBeltId === 'brown' || selectedBeltId === 'black' || 
+                      selectedBeltId === 'red' || !selectedBeltId) && (
+                      <>
+                        <View style={styles.detailsDivider} />
+                        <View style={styles.detailsSection}>
+                          <Text style={styles.detailsSectionTitle}>Brown/Black Details</Text>
+                          {technique.brownBlackDetails.map((detail, idx) => (
+                            <Text key={idx} style={styles.detailItem}>• {detail}</Text>
+                          ))}
+                        </View>
+                      </>
+                    )}
+                  </View>
+                )}
+              </Pressable>
+            );
+          })}
         </View>
       )}
     </ScrollView>
@@ -393,6 +757,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(132, 220, 198, 0.2)",
   },
+  techniqueCardExpanded: {
+    backgroundColor: "rgba(30, 30, 40, 0.95)",
+    borderColor: "rgba(132, 220, 198, 0.4)",
+    borderWidth: 2,
+    padding: 20,
+    marginTop: 8,
+    marginBottom: 16,
+    marginHorizontal: -8,
+    minHeight: 300,
+  },
   techniqueCardContent: {
     flexDirection: "row",
     alignItems: "center",
@@ -416,5 +790,54 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "400",
     color: "#AEB0B5",
+  },
+  expandedContent: {
+    flex: 1,
+  },
+  expandedHeader: {
+    marginBottom: 12,
+  },
+  expandedTitleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  expandedIcon: {
+    marginRight: 8,
+  },
+  expandedTitleContainer: {
+    flex: 1,
+  },
+  expandedTechniqueName: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#FFFFFF",
+    marginBottom: 4,
+  },
+  expandedTechniqueType: {
+    fontSize: 14,
+    fontWeight: "400",
+    color: "#AEB0B5",
+  },
+  detailsDivider: {
+    height: 1,
+    backgroundColor: "rgba(132, 220, 198, 0.15)",
+    marginVertical: 16,
+  },
+  detailsSection: {
+    marginBottom: 8,
+  },
+  detailsSectionTitle: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: "#84DCC6",
+    marginBottom: 10,
+  },
+  detailItem: {
+    fontSize: 14,
+    fontWeight: "400",
+    color: "#FFFFFF",
+    lineHeight: 22,
+    marginBottom: 6,
+    paddingLeft: 4,
   },
 });
