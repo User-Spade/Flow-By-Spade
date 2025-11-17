@@ -60,19 +60,41 @@ export default function LibraryScreen() {
     positions.map((pos) => pos.techniques.map(() => new Animated.Value(1)))
   ).current;
 
-  const pressIn = (ref: Animated.Value) =>
+  // Gesture tracking to differentiate swipes from taps
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const SWIPE_THRESHOLD = 10; // pixels
+
+  const handlePressIn = (ref: Animated.Value, e: any) => {
+    const touch = e.nativeEvent;
+    touchStart.current = { x: touch.pageX, y: touch.pageY };
+    
     Animated.spring(ref, {
       toValue: 0.95,
       useNativeDriver: true,
       bounciness: 7,
     }).start();
+  };
 
-  const pressOut = (ref: Animated.Value, cb?: () => void) =>
+  const handlePressOut = (ref: Animated.Value, e: any, cb?: () => void) => {
     Animated.spring(ref, {
       toValue: 1,
       useNativeDriver: true,
       bounciness: 7,
-    }).start(() => cb && cb());
+    }).start();
+
+    if (!touchStart.current) return;
+
+    const touch = e.nativeEvent;
+    const deltaX = Math.abs(touch.pageX - touchStart.current.x);
+    const deltaY = Math.abs(touch.pageY - touchStart.current.y);
+
+    // Only trigger callback if movement is small (not a swipe)
+    if (deltaX < SWIPE_THRESHOLD && deltaY < SWIPE_THRESHOLD) {
+      cb && cb();
+    }
+
+    touchStart.current = null;
+  };
 
   return (
     <View style={styles.container}>
@@ -94,9 +116,9 @@ export default function LibraryScreen() {
           return (
             <TouchableWithoutFeedback
               key={pos.id}
-              onPressIn={() => pressIn(posScales[i])}
-              onPressOut={() =>
-                pressOut(posScales[i], () =>
+              onPressIn={(e) => handlePressIn(posScales[i], e)}
+              onPressOut={(e) =>
+                handlePressOut(posScales[i], e, () =>
                   setSelectedPositionId(isSelected ? null : pos.id)
                 )
               }
@@ -140,8 +162,8 @@ export default function LibraryScreen() {
               {selectedPos.techniques.map((tech, j) => (
                 <TouchableWithoutFeedback
                   key={tech.id}
-                  onPressIn={() => pressIn(techScales[posIndex][j])}
-                  onPressOut={() => pressOut(techScales[posIndex][j])}
+                  onPressIn={(e) => handlePressIn(techScales[posIndex][j], e)}
+                  onPressOut={(e) => handlePressOut(techScales[posIndex][j], e)}
                 >
                   <Animated.View
                     style={[
