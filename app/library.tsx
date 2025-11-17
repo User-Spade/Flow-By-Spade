@@ -367,13 +367,13 @@ export default function LibraryScreen() {
   const [selectedBeltId, setSelectedBeltId] = useState<string | null>(null);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
   const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
-  const [techniquesYPosition, setTechniquesYPosition] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [pageWidth, setPageWidth] = useState<number>(0);
   const router = useRouter();
   const scrollViewRef = useRef<ScrollView>(null);
   const techniqueCardRefs = useRef<Map<string, View>>(new Map());
   const pageScrollRef = useRef<ScrollView>(null);
+  const techniquesViewRef = useRef<View>(null);
 
   // Dynamic animated scales
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
@@ -420,13 +420,21 @@ export default function LibraryScreen() {
     setSelectedPositionId(newPositionId);
     
     // Scroll to techniques section after a short delay to let it render
-    if (newPositionId && scrollViewRef.current && techniquesYPosition > 0) {
+    if (newPositionId && scrollViewRef.current) {
       setTimeout(() => {
-        scrollViewRef.current?.scrollTo({
-          y: techniquesYPosition - 20,
-          animated: true,
-        });
-      }, 100);
+        if (techniquesViewRef.current && scrollViewRef.current) {
+          techniquesViewRef.current.measureLayout(
+            scrollViewRef.current as any,
+            (x, y) => {
+              scrollViewRef.current?.scrollTo({
+                y: Math.max(0, y - 20),
+                animated: true,
+              });
+            },
+            () => {}
+          );
+        }
+      }, 200);
     }
   };
 
@@ -542,10 +550,7 @@ export default function LibraryScreen() {
       {selectedPositionId && techniquesData[selectedPositionId] && (
         <View 
           style={styles.techniquesSection}
-          onLayout={(event) => {
-            const layout = event.nativeEvent.layout;
-            setTechniquesYPosition(layout.y - 20); // Offset by 20 for padding
-          }}
+          ref={techniquesViewRef}
         >
           <View style={styles.sectionDivider} />
           <Text style={styles.selectedPositionLabel}>
