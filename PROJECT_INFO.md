@@ -141,7 +141,7 @@ npm update expo
 - **iOS Simulator:** Press `i` (Mac only, requires Xcode)
 
 ### Network Requirements
-- Phone and computer must be on same Wi-Fi network for device testing
+- Phone and computer must be o  n same Wi-Fi network for device testing
 - Expo server runs on: `exp://[IP]:8081`
 - Web version available at: `http://localhost:8081`
 
