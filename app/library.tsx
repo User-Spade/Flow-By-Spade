@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Pressable,
   StatusBar,
+  Dimensions,
 } from "react-native";
 import { useRouter } from "expo-router";
 
@@ -368,6 +369,7 @@ export default function LibraryScreen() {
   const [techniquesYPosition, setTechniquesYPosition] = useState<number>(0);
   const router = useRouter();
   const scrollViewRef = useRef<ScrollView>(null);
+  const techniqueCardRefs = useRef<Map<string, View>>(new Map());
 
   // Dynamic animated scales
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
@@ -543,16 +545,55 @@ export default function LibraryScreen() {
             const isExpanded = selectedTechniqueId === technique.id;
             
             return (
-              <Pressable
+              <View
                 key={technique.id}
-                style={[
-                  styles.techniqueCard,
-                  isExpanded && styles.techniqueCardExpanded,
-                ]}
-                onPress={() => {
-                  setSelectedTechniqueId(isExpanded ? null : technique.id);
+                onLayout={(event) => {
+                  const layout = event.nativeEvent.layout;
+                  const cardRef = techniqueCardRefs.current.get(technique.id);
+                  if (cardRef) {
+                    cardRef.measure((x, y, width, height, pageX, pageY) => {
+                      // Store the position for later use
+                    });
+                  }
                 }}
               >
+                <Pressable
+                  style={[
+                    styles.techniqueCard,
+                    isExpanded && styles.techniqueCardExpanded,
+                  ]}
+                  onPress={() => {
+                    const willExpand = !isExpanded;
+                    setSelectedTechniqueId(willExpand ? technique.id : null);
+                    
+                    // Scroll to center the card after expansion
+                    if (willExpand && scrollViewRef.current) {
+                      setTimeout(() => {
+                        const cardView = techniqueCardRefs.current.get(technique.id);
+                        if (cardView) {
+                          cardView.measureLayout(
+                            scrollViewRef.current as any,
+                            (x, y, width, height) => {
+                              // Center the card on screen
+                              const screenHeight = Dimensions.get('window').height;
+                              const centerOffset = y - (screenHeight / 2) + (height / 2);
+                              scrollViewRef.current?.scrollTo({
+                                y: Math.max(0, centerOffset),
+                                animated: true,
+                              });
+                            },
+                            () => {}
+                          );
+                        }
+                      }, 150);
+                    }
+                  }}
+                  ref={(ref) => {
+                    if (ref) {
+                      techniqueCardRefs.current.set(technique.id, ref as any);
+                    }
+                  }}
+                >
                 {/* Collapsed View */}
                 {!isExpanded && (
                   <View style={styles.techniqueCardContent}>
@@ -620,6 +661,7 @@ export default function LibraryScreen() {
                   </View>
                 )}
               </Pressable>
+              </View>
             );
           })}
         </View>
