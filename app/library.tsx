@@ -13,52 +13,35 @@ import {
 import { useRouter } from "expo-router";
 
 // ----- DATA -----
+const beltLevels = [
+  { id: "white", label: "W", color: "#EDEDED" },
+  { id: "blue", label: "Bl", color: "#1E88E5" },
+  { id: "purple", label: "Pu", color: "#7E57C2" },
+  { id: "brown", label: "Br", color: "#8D6E63" },
+  { id: "black", label: "Bk", color: "#000000" },
+  { id: "red", label: "R", color: "#D32F2F" },
+];
+
 const positions = [
-  {
-    id: "guard",
-    name: "Closed Guard",
-    icon: "shield-checkmark-outline" as const,
-    techniques: [
-      { id: "armbar", name: "Armbar", icon: "hand-left-outline" as const },
-      { id: "kimura", name: "Kimura", icon: "move-outline" as const },
-      { id: "triangle", name: "Triangle", icon: "triangle-outline" as const },
-    ],
-  },
-  {
-    id: "mount",
-    name: "Mount",
-    icon: "ellipse-outline" as const,
-    techniques: [
-      { id: "americana", name: "Americana", icon: "reorder-four-outline" as const },
-      { id: "crosschoke", name: "Cross Choke", icon: "add-outline" as const },
-      { id: "armbar-mount", name: "Armbar", icon: "hand-left-outline" as const },
-    ],
-  },
-  {
-    id: "sidecontrol",
-    name: "Side Control",
-    icon: "podium-outline" as const,
-    techniques: [
-      { id: "kimura-side", name: "Kimura", icon: "move-outline" as const },
-      { id: "kneeonbelly", name: "Knee-on-Belly", icon: "swap-vertical-outline" as const },
-      { id: "americana-side", name: "Americana", icon: "reorder-four-outline" as const },
-    ],
-  },
+  { id: "standing", name: "Standing", icon: "man-outline" as const },
+  { id: "guard", name: "Guard", icon: "shield-checkmark-outline" as const },
+  { id: "halfguard", name: "Half Guard", icon: "git-compare-outline" as const },
+  { id: "mount", name: "Mount", icon: "ellipse-outline" as const },
+  { id: "sidecontrol", name: "Side Control", icon: "podium-outline" as const },
+  { id: "back", name: "Back", icon: "arrow-back-circle-outline" as const },
+  { id: "turtle", name: "Turtle", icon: "radio-button-off-outline" as const },
+  { id: "legs", name: "Legs", icon: "git-network-outline" as const },
 ];
 
 // ----- COMPONENT -----
 export default function LibraryScreen() {
+  const [selectedBeltId, setSelectedBeltId] = useState<string | null>(null);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
   const router = useRouter();
 
-  // Dynamic animated scales based on actual data
-  const posScales = useRef(
-    positions.map(() => new Animated.Value(1))
-  ).current;
-
-  const techScales = useRef(
-    positions.map((pos) => pos.techniques.map(() => new Animated.Value(1)))
-  ).current;
+  // Dynamic animated scales
+  const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
+  const posScales = useRef(positions.map(() => new Animated.Value(1))).current;
 
   // Gesture tracking to differentiate swipes from taps
   const touchStart = useRef<{ x: number; y: number } | null>(null);
@@ -97,20 +80,71 @@ export default function LibraryScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <StatusBar barStyle="light-content" />
+      
+      {/* Back Button */}
       <Pressable style={styles.backButton} onPress={() => router.back()}>
         <Ionicons name="arrow-back" size={28} color="#FFF" />
       </Pressable>
-      <Text style={styles.title}>Library</Text>
 
-      {/* Positions row */}
+      {/* Header */}
+      <Text style={styles.title}>Library</Text>
+      <Text style={styles.subtitle}>Explore techniques & positions freely</Text>
+
+      {/* Search Button */}
+      <Pressable style={styles.searchButton}>
+        <Ionicons name="search-outline" size={22} color="#AEB0B5" />
+        <Text style={styles.searchPlaceholder}>Search techniques</Text>
+      </Pressable>
+
+      {/* Belt Filter Section */}
+      <Text style={styles.sectionLabel}>Belt Filter</Text>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={styles.rowScroll}
-        contentContainerStyle={{ paddingLeft: 17 }}
+        style={styles.beltScroll}
+        contentContainerStyle={{ paddingRight: 20 }}
       >
+        {beltLevels.map((belt, i) => {
+          const isSelected = selectedBeltId === belt.id;
+          return (
+            <TouchableWithoutFeedback
+              key={belt.id}
+              onPressIn={(e) => handlePressIn(beltScales[i], e)}
+              onPressOut={(e) =>
+                handlePressOut(beltScales[i], e, () =>
+                  setSelectedBeltId(isSelected ? null : belt.id)
+                )
+              }
+            >
+              <Animated.View
+                style={[
+                  styles.beltChip,
+                  {
+                    transform: [{ scale: beltScales[i] }],
+                    backgroundColor: isSelected ? belt.color : "rgba(44,44,49,0.82)",
+                    borderColor: isSelected ? belt.color : "rgba(255,255,255,0.12)",
+                  },
+                ]}
+              >
+                <Text
+                  style={[
+                    styles.beltLabel,
+                    { color: isSelected ? (belt.id === "black" ? "#FFF" : "#FFF") : "#AEB0B5" },
+                  ]}
+                >
+                  {belt.label}
+                </Text>
+              </Animated.View>
+            </TouchableWithoutFeedback>
+          );
+        })}
+      </ScrollView>
+
+      {/* Positions Section */}
+      <Text style={styles.sectionLabel}>Positions</Text>
+      <View style={styles.positionsGrid}>
         {positions.map((pos, i) => {
           const isSelected = selectedPositionId === pos.id;
           return (
@@ -128,13 +162,11 @@ export default function LibraryScreen() {
                   styles.positionCard,
                   {
                     transform: [{ scale: posScales[i] }],
-                    borderColor: isSelected ? "#F18805" : "rgba(255,255,255,0.11)",
+                    borderColor: isSelected ? "#F18805" : "rgba(255,255,255,0.12)",
                   },
                 ]}
               >
-                <View style={styles.posIconWrap}>
-                  <Ionicons name={pos.icon} size={34} color="#84DCC6" />
-                </View>
+                <Ionicons name={pos.icon} size={26} color={isSelected ? "#F18805" : "#84DCC6"} />
                 <Text style={[styles.posName, isSelected && styles.posNameSelected]}>
                   {pos.name}
                 </Text>
@@ -142,49 +174,17 @@ export default function LibraryScreen() {
             </TouchableWithoutFeedback>
           );
         })}
-      </ScrollView>
+      </View>
 
-      {/* Techniques row for selected position */}
-      {selectedPositionId && (() => {
-        const selectedPos = positions.find((p) => p.id === selectedPositionId);
-        const posIndex = positions.findIndex((p) => p.id === selectedPositionId);
-        
-        if (!selectedPos) return null;
-
-        return (
-          <View style={styles.techniquesContainer}>
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              style={styles.rowScroll}
-              contentContainerStyle={{ paddingLeft: 17 }}
-            >
-              {selectedPos.techniques.map((tech, j) => (
-                <TouchableWithoutFeedback
-                  key={tech.id}
-                  onPressIn={(e) => handlePressIn(techScales[posIndex][j], e)}
-                  onPressOut={(e) => handlePressOut(techScales[posIndex][j], e)}
-                >
-                  <Animated.View
-                    style={[
-                      styles.techniqueCard,
-                      {
-                        transform: [{ scale: techScales[posIndex][j] }],
-                      },
-                    ]}
-                  >
-                    <View style={styles.techThumb}>
-                      <Ionicons name={tech.icon} size={30} color="#AEB0B5" />
-                    </View>
-                    <Text style={styles.techName}>{tech.name}</Text>
-                  </Animated.View>
-                </TouchableWithoutFeedback>
-              ))}
-            </ScrollView>
-          </View>
-        );
-      })()}
-    </View>
+      {/* Placeholder for techniques (to be shown when position selected) */}
+      {selectedPositionId && (
+        <View style={styles.techniquesPlaceholder}>
+          <Text style={styles.placeholderText}>
+            Techniques for {positions.find(p => p.id === selectedPositionId)?.name} will appear here
+          </Text>
+        </View>
+      )}
+    </ScrollView>
   );
 }
 
@@ -194,13 +194,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#222222",
     paddingTop: 56,
+    paddingHorizontal: 20,
   },
   backButton: {
     width: 44,
     height: 44,
     alignItems: "center",
     justifyContent: "center",
-    marginLeft: 10,
+    marginLeft: -8,
     marginBottom: 8,
   },
   title: {
@@ -208,81 +209,104 @@ const styles = StyleSheet.create({
     fontSize: 34,
     fontWeight: "bold",
     letterSpacing: -0.7,
-    marginLeft: 19,
-    marginBottom: 24,
+    marginBottom: 8,
   },
-  rowScroll: {
+  subtitle: {
+    color: "#AEB0B5",
+    fontSize: 16,
+    marginBottom: 20,
+  },
+  searchButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(50,52,59,0.92)",
+    borderRadius: 14,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    marginBottom: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
+  },
+  searchPlaceholder: {
+    color: "#AEB0B5",
+    fontSize: 16,
+    marginLeft: 10,
+  },
+  sectionLabel: {
+    color: "#FFF",
+    fontSize: 18,
+    fontWeight: "600",
+    marginBottom: 14,
+    marginTop: 4,
+  },
+  beltScroll: {
     flexGrow: 0,
-    minHeight: 1,
+    marginBottom: 28,
+  },
+  beltChip: {
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 12,
+    marginRight: 10,
+    borderWidth: 1.5,
+    minWidth: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  beltLabel: {
+    fontSize: 16,
+    fontWeight: "700",
+  },
+  positionsGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    marginBottom: 20,
   },
   positionCard: {
+    width: "48%",
     backgroundColor: "rgba(44,44,49,0.82)",
-    flexDirection: "column",
+    borderRadius: 16,
+    padding: 16,
+    marginBottom: 14,
+    borderWidth: 1.5,
+    flexDirection: "row",
     alignItems: "center",
-    marginRight: 16,
-    borderRadius: 24,
-    padding: 20,
-    paddingTop: 20,
-    paddingBottom: 11,
-    borderWidth: 1.7,
-    minWidth: 118,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.18,
-    shadowRadius: 20,
+    shadowRadius: 12,
     elevation: 4,
-  },
-  posIconWrap: {
-    backgroundColor: "rgba(132,220,198,0.12)",
-    padding: 12,
-    borderRadius: 19,
-    marginBottom: 9,
   },
   posName: {
     color: "#f2f4f7",
-    fontSize: 18,
-    fontWeight: "700",
+    fontSize: 15,
+    fontWeight: "600",
+    marginLeft: 10,
+    flex: 1,
   },
   posNameSelected: {
     color: "#F18805",
   },
-  techniquesContainer: {
-    marginTop: 26,
-    marginBottom: 13,
-  },
-  techniqueCard: {
+  techniquesPlaceholder: {
+    backgroundColor: "rgba(44,44,49,0.5)",
+    borderRadius: 16,
+    padding: 24,
+    marginTop: 10,
+    marginBottom: 40,
     alignItems: "center",
-    marginRight: 12,
-    backgroundColor: "rgba(44,44,49,0.82)",
-    borderRadius: 20,
-    padding: 14,
-    paddingTop: 14,
-    paddingBottom: 13,
-    paddingHorizontal: 18,
-    borderWidth: 1.2,
-    borderColor: "rgba(255,255,255,0.12)",
-    flexDirection: "column",
-    minWidth: 82,
-    minHeight: 90,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.16,
-    shadowRadius: 12,
-    elevation: 3,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
+    borderStyle: "dashed",
   },
-  techThumb: {
-    backgroundColor: "rgba(160,160,160,0.12)",
-    width: 47,
-    height: 47,
-    borderRadius: 13,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 11,
-  },
-  techName: {
-    color: "#f7f9fa",
-    fontSize: 15.5,
-    fontWeight: "600",
+  placeholderText: {
+    color: "#AEB0B5",
+    fontSize: 15,
     textAlign: "center",
   },
 });
