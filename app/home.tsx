@@ -45,6 +45,7 @@ const features = [
 
 export default function HomeScreen() {
   const router = useRouter();
+  const isNavigating = React.useRef(false);
 
   // Animation logic for each card
   const scales = features.map(() => React.useRef(new Animated.Value(1)).current);
@@ -65,7 +66,16 @@ export default function HomeScreen() {
       speed: 25,
       bounciness: 10,
     }).start(() => {
+      // Prevent multiple navigation calls
+      if (isNavigating.current) return;
+      isNavigating.current = true;
+      
       router.push(route as any);
+      
+      // Reset after navigation completes
+      setTimeout(() => {
+        isNavigating.current = false;
+      }, 1000);
     });
   };
 
