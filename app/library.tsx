@@ -33,6 +33,35 @@ const positions = [
   { id: "legs", name: "Legs", icon: "git-network-outline" as const },
 ];
 
+// Sample techniques by position
+const techniquesData: Record<string, Array<{ id: string; name: string; type: string }>> = {
+  guard: [
+    { id: "cross-collar-choke", name: "Cross Collar Choke", type: "Submission" },
+    { id: "scissor-sweep", name: "Scissor Sweep", type: "Sweep" },
+    { id: "armbar-guard", name: "Armbar from Guard", type: "Submission" },
+    { id: "hip-bump-sweep", name: "Hip Bump Sweep", type: "Sweep" },
+    { id: "triangle-choke", name: "Triangle Choke", type: "Submission" },
+    { id: "kimura", name: "Kimura", type: "Submission" },
+  ],
+  mount: [
+    { id: "americana", name: "Americana", type: "Submission" },
+    { id: "cross-choke-mount", name: "Cross Choke", type: "Submission" },
+    { id: "armbar-mount", name: "Armbar from Mount", type: "Submission" },
+    { id: "s-mount", name: "S-Mount Transition", type: "Position" },
+  ],
+  sidecontrol: [
+    { id: "kimura-side", name: "Kimura", type: "Submission" },
+    { id: "americana-side", name: "Americana", type: "Submission" },
+    { id: "knee-on-belly", name: "Knee on Belly", type: "Position" },
+    { id: "arm-triangle", name: "Arm Triangle", type: "Submission" },
+  ],
+  back: [
+    { id: "rear-naked-choke", name: "Rear Naked Choke", type: "Submission" },
+    { id: "bow-arrow-choke", name: "Bow and Arrow Choke", type: "Submission" },
+    { id: "armbar-back", name: "Armbar from Back", type: "Submission" },
+  ],
+};
+
 // ----- COMPONENT -----
 export default function LibraryScreen() {
   const [selectedBeltId, setSelectedBeltId] = useState<string | null>(null);
@@ -176,12 +205,32 @@ export default function LibraryScreen() {
         })}
       </View>
 
-      {/* Placeholder for techniques (to be shown when position selected) */}
-      {selectedPositionId && (
-        <View style={styles.techniquesPlaceholder}>
-          <Text style={styles.placeholderText}>
-            Techniques for {positions.find(p => p.id === selectedPositionId)?.name} will appear here
+      {/* Techniques Section */}
+      {selectedPositionId && techniquesData[selectedPositionId] && (
+        <View style={styles.techniquesSection}>
+          <View style={styles.sectionDivider} />
+          <Text style={styles.selectedPositionLabel}>
+            Selected Position: {positions.find(p => p.id === selectedPositionId)?.name}
           </Text>
+          
+          {techniquesData[selectedPositionId].map((technique) => (
+            <Pressable
+              key={technique.id}
+              style={styles.techniqueCard}
+              onPress={() => {
+                // TODO: Navigate to technique detail or expand
+              }}
+            >
+              <View style={styles.techniqueCardContent}>
+                <Ionicons name="play" size={16} color="#84DCC6" style={styles.playIcon} />
+                <View style={styles.techniqueInfo}>
+                  <Text style={styles.techniqueName}>{technique.name}</Text>
+                  <Text style={styles.techniqueType}>({technique.type})</Text>
+                </View>
+                <Ionicons name="chevron-forward" size={20} color="#AEB0B5" />
+              </View>
+            </Pressable>
+          ))}
         </View>
       )}
     </ScrollView>
@@ -293,20 +342,52 @@ const styles = StyleSheet.create({
   posNameSelected: {
     color: "#F18805",
   },
-  techniquesPlaceholder: {
-    backgroundColor: "rgba(44,44,49,0.5)",
-    borderRadius: 16,
-    padding: 24,
-    marginTop: 10,
-    marginBottom: 40,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-    borderStyle: "dashed",
+  techniquesSection: {
+    marginTop: 20,
+    marginBottom: 30,
   },
-  placeholderText: {
-    color: "#AEB0B5",
-    fontSize: 15,
+  sectionDivider: {
+    height: 1,
+    backgroundColor: "rgba(132, 220, 198, 0.2)",
+    marginBottom: 15,
+  },
+  selectedPositionLabel: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#84DCC6",
+    marginBottom: 15,
     textAlign: "center",
+  },
+  techniqueCard: {
+    backgroundColor: "rgba(20, 20, 30, 0.6)",
+    borderRadius: 12,
+    padding: 15,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: "rgba(132, 220, 198, 0.2)",
+  },
+  techniqueCardContent: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  playIcon: {
+    marginRight: 12,
+  },
+  techniqueInfo: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    flexWrap: "wrap",
+  },
+  techniqueName: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    marginRight: 6,
+  },
+  techniqueType: {
+    fontSize: 14,
+    fontWeight: "400",
+    color: "#AEB0B5",
   },
 });
