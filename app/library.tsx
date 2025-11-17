@@ -66,7 +66,9 @@ const techniquesData: Record<string, Array<{ id: string; name: string; type: str
 export default function LibraryScreen() {
   const [selectedBeltId, setSelectedBeltId] = useState<string | null>(null);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
+  const [techniquesYPosition, setTechniquesYPosition] = useState<number>(0);
   const router = useRouter();
+  const scrollViewRef = useRef<ScrollView>(null);
 
   // Dynamic animated scales
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
@@ -108,8 +110,27 @@ export default function LibraryScreen() {
     touchStart.current = null;
   };
 
+  const handlePositionSelect = (posId: string) => {
+    const newPositionId = posId === selectedPositionId ? null : posId;
+    setSelectedPositionId(newPositionId);
+    
+    // Scroll to techniques section after a short delay to let it render
+    if (newPositionId && scrollViewRef.current && techniquesYPosition > 0) {
+      setTimeout(() => {
+        scrollViewRef.current?.scrollTo({
+          y: techniquesYPosition - 20,
+          animated: true,
+        });
+      }, 100);
+    }
+  };
+
   return (
-    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+    <ScrollView 
+      ref={scrollViewRef}
+      style={styles.container} 
+      showsVerticalScrollIndicator={false}
+    >
       <StatusBar barStyle="light-content" />
       
       {/* Back Button */}
@@ -182,7 +203,7 @@ export default function LibraryScreen() {
               onPressIn={(e) => handlePressIn(posScales[i], e)}
               onPressOut={(e) =>
                 handlePressOut(posScales[i], e, () =>
-                  setSelectedPositionId(isSelected ? null : pos.id)
+                  handlePositionSelect(pos.id)
                 )
               }
             >
@@ -207,7 +228,13 @@ export default function LibraryScreen() {
 
       {/* Techniques Section */}
       {selectedPositionId && techniquesData[selectedPositionId] && (
-        <View style={styles.techniquesSection}>
+        <View 
+          style={styles.techniquesSection}
+          onLayout={(event) => {
+            const layout = event.nativeEvent.layout;
+            setTechniquesYPosition(layout.y - 20); // Offset by 20 for padding
+          }}
+        >
           <View style={styles.sectionDivider} />
           <Text style={styles.selectedPositionLabel}>
             Selected Position: {positions.find(p => p.id === selectedPositionId)?.name}
