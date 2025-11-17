@@ -14,12 +14,12 @@ import { useRouter } from "expo-router";
 
 // ----- DATA -----
 const beltLevels = [
-  { id: "white", label: "W", color: "#EDEDED" },
-  { id: "blue", label: "Bl", color: "#1E88E5" },
-  { id: "purple", label: "Pu", color: "#7E57C2" },
-  { id: "brown", label: "Br", color: "#8D6E63" },
-  { id: "black", label: "Bk", color: "#000000" },
-  { id: "red", label: "R", color: "#D32F2F" },
+  { id: "white", label: "White", color: "#EDEDED" },
+  { id: "blue", label: "Blue", color: "#1E88E5" },
+  { id: "purple", label: "Purple", color: "#7E57C2" },
+  { id: "brown", label: "Brown", color: "#8D6E63" },
+  { id: "black", label: "Black", color: "#000000" },
+  { id: "red", label: "Red", color: "#D32F2F" },
 ];
 
 const positions = [
@@ -131,7 +131,7 @@ export default function LibraryScreen() {
                 <Text
                   style={[
                     styles.beltLabel,
-                    { color: isSelected ? (belt.id === "black" ? "#FFF" : "#FFF") : "#AEB0B5" },
+                    { color: isSelected ? (belt.id === "white" ? "#222222" : "#FFF") : "#AEB0B5" },
                   ]}
                 >
                   {belt.label}
