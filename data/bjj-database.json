@@ -2678,12 +2678,36 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Elevate opponent with underhooks and butterfly hooks",
+            "Control opponent's posture and base",
+            "Use hooks to sweep or create angles",
+            "Transition to other guards or sweeps",
+            "Stay on your sit bones - mobility is key"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Being too flat - need to sit up",
+            "Weak underhooks allowing opponent to pass",
+            "Not using hooks actively",
+            "Letting opponent get grips without fighting"
+          ],
+          "key_details": [
+            "Feet inside opponent's thighs (butterfly hooks)",
+            "Fight for underhooks constantly",
+            "Stay off your back - sit up position",
+            "Use hooks to lift and off-balance opponent"
+          ],
+          "transitions_available": [
+            "x_guard",
+            "single_leg_x",
+            "closed_guard_bottom",
+            "back_control"
+          ],
+          "prerequisites": [
+            "open_guard_bottom",
+            "closed_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -2716,24 +2740,69 @@
         "position_id": "butterfly_guard",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "sitting_up"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling",
+          "elevating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "x_guard",
+          "single_leg_x",
+          "closed_guard_bottom",
+          "back_control"
+        ],
+        "entry_from_position_ids": [
+          "closed_guard_bottom",
+          "open_guard_bottom",
+          "half_guard_bottom"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Butterfly Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Butterfly",
+          "Hooks Guard",
+          "Sitting Guard"
+        ],
+        "description": "Dynamic sitting guard position where you use inside hooks (butterfly hooks) and underhooks to control and sweep your opponent. High mobility guard excellent for off-balancing.",
+        "key_concepts": [
+          "Underhooks provide control and sweeping power",
+          "Butterfly hooks lift and destabilize opponent",
+          "Sitting posture allows quick transitions",
+          "Mobile guard - constantly adjust angles"
+        ],
+        "entry_steps": [
+          "From closed or open guard, sit up",
+          "Insert butterfly hooks inside opponent's thighs",
+          "Fight for underhooks on both sides",
+          "Stay on sit bones with good posture"
+        ],
+        "maintenance_steps": [
+          "Maintain active butterfly hooks",
+          "Fight for and keep underhooks",
+          "Stay mobile and off your back",
+          "Constantly adjust angles and pressure"
+        ],
+        "escape_overview": "Sweep opponent or transition to other guards/positions",
+        "common_mistakes": [
+          "Being flat instead of sitting up",
+          "Passive hooks not actively lifting",
+          "Losing underhook battles",
+          "Static position without movement"
+        ],
+        "goals": [
+          "Execute butterfly sweeps",
+          "Transition to back control or X-guard",
+          "Control opponent's posture",
+          "Prevent passes while setting up attacks"
+        ]
       }
     },
     "de_la_riva": {
@@ -2747,12 +2816,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Outside hook controls opponent's leg",
+            "Far grip controls opponent's sleeve/collar",
+            "Create off-balancing angles",
+            "Prevent opponent from settling into passing position",
+            "Use to sweep or take the back"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak De La Riva hook - foot not active",
+            "Not controlling far arm/sleeve",
+            "Being flat without creating angles",
+            "Letting opponent step over the hook"
+          ],
+          "key_details": [
+            "Outside leg hooks behind opponent's near leg",
+            "Inside foot on opponent's hip",
+            "Far sleeve grip essential",
+            "Near hand can grip pants or ankle"
+          ],
+          "transitions_available": [
+            "x_guard",
+            "single_leg_x",
+            "reverse_de_la_riva",
+            "back_control"
+          ],
+          "prerequisites": [
+            "open_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -2785,24 +2877,67 @@
         "position_id": "de_la_riva",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "x_guard",
+          "single_leg_x",
+          "reverse_de_la_riva",
+          "back_control"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_bottom",
+          "closed_guard_bottom"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "De La Riva",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "DLR",
+          "De La Riva Hook"
+        ],
+        "description": "Outside leg hooks behind opponent's near leg while controlling far sleeve. Named after Ricardo De La Riva. Excellent for sweeps and back takes.",
+        "key_concepts": [
+          "Hook creates off-balance control",
+          "Far sleeve grip prevents posting",
+          "Active hook constantly pulling",
+          "Creates angles for sweeps and back takes"
+        ],
+        "entry_steps": [
+          "From open guard, opponent stands or kneels",
+          "Insert outside leg behind opponent's near leg",
+          "Place inside foot on opponent's hip",
+          "Grip far sleeve and near pants/ankle"
+        ],
+        "maintenance_steps": [
+          "Keep De La Riva hook active and tight",
+          "Maintain far sleeve control",
+          "Angle body to create off-balance",
+          "Use inside foot to manage distance"
+        ],
+        "escape_overview": "Sweep opponent or transition to X-guard/back control",
+        "common_mistakes": [
+          "Passive hook easily removed",
+          "No far sleeve grip",
+          "Being static without angles",
+          "Allowing opponent to backstep"
+        ],
+        "goals": [
+          "Execute De La Riva sweeps",
+          "Transition to X-guard variations",
+          "Take opponent's back",
+          "Off-balance and control standing opponent"
+        ]
       }
     },
     "reverse_de_la_riva": {
@@ -2816,12 +2951,36 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Inside hook controls opponent's leg",
+            "Creates powerful sweeping angles",
+            "Berimbolo and crab ride entries",
+            "Control far leg with grip",
+            "Invert to attack"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak reverse De La Riva hook",
+            "Not controlling far leg properly",
+            "Static position without inversions",
+            "Letting opponent backstep free"
+          ],
+          "key_details": [
+            "Inside leg hooks opponent's near leg (opposite of DLR)",
+            "Outside foot on hip or bicep",
+            "Far leg grip essential",
+            "Can invert for berimbolo"
+          ],
+          "transitions_available": [
+            "back_control",
+            "x_guard",
+            "de_la_riva",
+            "berimbolo"
+          ],
+          "prerequisites": [
+            "de_la_riva",
+            "open_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -2854,24 +3013,68 @@
         "position_id": "reverse_de_la_riva",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "inverting",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "back_control",
+          "x_guard",
+          "de_la_riva",
+          "single_leg_x"
+        ],
+        "entry_from_position_ids": [
+          "de_la_riva",
+          "open_guard_bottom"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Reverse De La Riva",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "RDLR",
+          "Reverse DLR",
+          "Inside Hook Guard"
+        ],
+        "description": "Inside leg hooks opponent's near leg (opposite configuration from DLR). Gateway to berimbolo, crab ride, and advanced sweeps. Popular in modern sport BJJ.",
+        "key_concepts": [
+          "Inside hook creates inversion opportunities",
+          "Far leg control prevents escape",
+          "Mobility and inversions are key",
+          "Opens berimbolo entries"
+        ],
+        "entry_steps": [
+          "From open guard or DLR",
+          "Switch to inside leg hooking near leg",
+          "Grip opponent's far leg (pants or ankle)",
+          "Outside foot controls distance"
+        ],
+        "maintenance_steps": [
+          "Active inside hook maintaining control",
+          "Strong far leg grip",
+          "Stay mobile - ready to invert",
+          "Create angles for sweeps"
+        ],
+        "escape_overview": "Invert for berimbolo or sweep opponent",
+        "common_mistakes": [
+          "Passive hook easily cleared",
+          "No far leg grip",
+          "Static without using inversions",
+          "Poor timing on entries"
+        ],
+        "goals": [
+          "Execute berimbolo to back control",
+          "Sweep opponent with RDLR sweeps",
+          "Transition to X-guard",
+          "Develop inversion skills"
+        ]
       }
     },
     "spider_guard": {
@@ -2885,12 +3088,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Control opponent's sleeves with hands",
+            "Feet on biceps for distance management",
+            "Create extension to prevent passing",
+            "Off-balance opponent for sweeps",
+            "Transition to other guards or attacks"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Letting go of sleeve grips",
+            "Feet not active on biceps",
+            "Being flat without creating angles",
+            "Too much extension - getting tired"
+          ],
+          "key_details": [
+            "Both hands grip opponent's sleeves",
+            "Feet placed on biceps/elbows",
+            "Create extension to control distance",
+            "Use legs to push/pull for off-balance"
+          ],
+          "transitions_available": [
+            "lasso_guard",
+            "collar_sleeve_guard",
+            "triangle_setup",
+            "omoplata_setup"
+          ],
+          "prerequisites": [
+            "open_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -2923,24 +3149,67 @@
         "position_id": "spider_guard",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_extended"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "pushing",
+          "pulling",
+          "hip_movement"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "lasso_guard",
+          "collar_sleeve_guard",
+          "closed_guard_bottom",
+          "open_guard_bottom"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_bottom",
+          "closed_guard_bottom"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Spider Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Spider",
+          "Biceps Control"
+        ],
+        "description": "Guard where you control both sleeves and place feet on opponent's biceps/elbows. Excellent for maintaining distance and setting up sweeps. Very effective against standing passes.",
+        "key_concepts": [
+          "Sleeve grips are mandatory",
+          "Feet create frames on biceps",
+          "Extension controls opponent's posture",
+          "Legs act as adjustable distance controllers"
+        ],
+        "entry_steps": [
+          "From open guard, grip both sleeves",
+          "Place one foot on bicep, then the other",
+          "Create extension to control posture",
+          "Adjust leg pressure to manage distance"
+        ],
+        "maintenance_steps": [
+          "Never let go of sleeve grips",
+          "Keep feet active on biceps",
+          "Adjust extension based on opponent's movement",
+          "Create angles for sweeps"
+        ],
+        "escape_overview": "Sweep opponent or transition to submissions",
+        "common_mistakes": [
+          "Releasing sleeve grips",
+          "Static feet not actively pushing",
+          "Over-extending and losing control",
+          "Not creating angles - staying centered"
+        ],
+        "goals": [
+          "Execute spider guard sweeps",
+          "Transition to triangle or omoplata",
+          "Control standing opponent effectively",
+          "Prevent guard passing"
+        ]
       }
     },
     "lasso_guard": {
@@ -2954,12 +3223,36 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Lasso controls opponent's arm by threading leg through",
+            "Creates powerful sweeping mechanics",
+            "Limits opponent's movement options",
+            "Can be combined with other guards",
+            "Use to attack or sweep"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak lasso easily removed",
+            "Not controlling opposite side",
+            "Being flat without angles",
+            "Lasso on both sides (too defensive)"
+          ],
+          "key_details": [
+            "Thread leg through opponent's arm (elbow pit)",
+            "Grip sleeve with same-side hand",
+            "Other side controls with foot/grip",
+            "Hip angle creates off-balance"
+          ],
+          "transitions_available": [
+            "spider_guard",
+            "collar_sleeve_guard",
+            "omoplata_setup",
+            "triangle_setup"
+          ],
+          "prerequisites": [
+            "spider_guard",
+            "open_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -2992,24 +3285,67 @@
         "position_id": "lasso_guard",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "leg_threaded"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "spider_guard",
+          "collar_sleeve_guard",
+          "open_guard_bottom"
+        ],
+        "entry_from_position_ids": [
+          "spider_guard",
+          "open_guard_bottom"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Lasso Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Lasso",
+          "Spider Lasso",
+          "Threaded Guard"
+        ],
+        "description": "Guard where one leg is threaded through opponent's arm creating a lasso control. Very strong control limiting opponent's options and setting up powerful sweeps.",
+        "key_concepts": [
+          "Lasso leg threads through arm pit",
+          "Creates mechanical advantage for sweeps",
+          "Limits opponent's ability to pass",
+          "Asymmetric control - one side locked"
+        ],
+        "entry_steps": [
+          "From spider or open guard",
+          "Thread one leg through opponent's arm",
+          "Grip sleeve with same-side hand",
+          "Control opposite side with foot/grip"
+        ],
+        "maintenance_steps": [
+          "Keep lasso tight through arm",
+          "Maintain sleeve grip",
+          "Create angles with hips",
+          "Control opposite side actively"
+        ],
+        "escape_overview": "Sweep opponent or attack with omoplata/triangle",
+        "common_mistakes": [
+          "Loose lasso easily removed",
+          "Forgetting to control opposite side",
+          "Static position without sweeping",
+          "Lassoing both arms (overly defensive)"
+        ],
+        "goals": [
+          "Execute lasso sweeps",
+          "Attack with omoplata from lasso",
+          "Control and frustrate opponent's passing",
+          "Transition to other guard variations"
+        ]
       }
     },
     "x_guard": {
@@ -3023,12 +3359,36 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Control both of opponent's legs with your legs",
+            "Create X shape with your legs",
+            "Elevate and off-balance opponent",
+            "Powerful sweeping position",
+            "Can stand up from here"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak X formation - legs not engaged",
+            "Not elevating opponent",
+            "Poor hand/arm control",
+            "Being flat instead of on shoulder"
+          ],
+          "key_details": [
+            "One leg hooks between opponent's legs",
+            "Other leg hooks outside opponent's thigh",
+            "Hands control opponent's legs/belt",
+            "On your side/shoulder for mobility"
+          ],
+          "transitions_available": [
+            "single_leg_x",
+            "butterfly_guard",
+            "sweep_to_top",
+            "back_take"
+          ],
+          "prerequisites": [
+            "butterfly_guard",
+            "de_la_riva"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3061,24 +3421,68 @@
         "position_id": "x_guard",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "under_opponent"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "elevating",
+          "rotating",
+          "hip_movement"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "single_leg_x",
+          "butterfly_guard",
+          "side_control",
+          "back_control"
+        ],
+        "entry_from_position_ids": [
+          "butterfly_guard",
+          "de_la_riva",
+          "reverse_de_la_riva"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "X Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "X-Guard",
+          "Cross Guard"
+        ],
+        "description": "Position where your legs form an X shape controlling both of opponent's legs. Powerful sweeping position that elevates opponent off the ground. Very effective against standing opponents.",
+        "key_concepts": [
+          "Legs form X controlling both opponent's legs",
+          "Elevation removes opponent's base",
+          "On your side for maximum control",
+          "Hands assist in controlling legs/hips"
+        ],
+        "entry_steps": [
+          "From butterfly, DLR, or RDLR",
+          "Get underneath opponent",
+          "Hook one leg between opponent's legs",
+          "Hook other leg on outside of thigh forming X"
+        ],
+        "maintenance_steps": [
+          "Keep X formation tight",
+          "Actively elevate opponent",
+          "Maintain side position",
+          "Control opponent's legs with hands"
+        ],
+        "escape_overview": "Sweep opponent or transition to single leg X",
+        "common_mistakes": [
+          "Weak hooks not elevating",
+          "Being flat on back",
+          "Poor hand control",
+          "Not staying on shoulder/side"
+        ],
+        "goals": [
+          "Execute X-guard sweeps",
+          "Stand up to single leg",
+          "Transition to leg entanglements",
+          "Control and elevate standing opponent"
+        ]
       }
     },
     "collar_sleeve_guard": {
@@ -3092,12 +3496,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Asymmetric grips - collar and opposite sleeve",
+            "Control posture and distance",
+            "Create angles for attacks",
+            "Gateway to many submissions",
+            "Fundamental open guard control"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak collar grip easily broken",
+            "Not controlling distance with legs",
+            "Being flat without angles",
+            "Letting opponent get double underhooks"
+          ],
+          "key_details": [
+            "One hand grips deep collar",
+            "Other hand controls opposite sleeve",
+            "Feet manage distance (hip and bicep)",
+            "Create angles with hip movement"
+          ],
+          "transitions_available": [
+            "triangle_setup",
+            "omoplata_setup",
+            "spider_guard",
+            "lasso_guard"
+          ],
+          "prerequisites": [
+            "open_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3130,24 +3557,67 @@
         "position_id": "collar_sleeve_guard",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling",
+          "pushing"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "spider_guard",
+          "lasso_guard",
+          "closed_guard_bottom",
+          "open_guard_bottom"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_bottom",
+          "closed_guard_bottom"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Collar Sleeve Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Collar Sleeve",
+          "Cross Collar Sleeve"
+        ],
+        "description": "Fundamental open guard using collar and opposite sleeve grips. Excellent control for setting up sweeps and submissions. Very versatile and high-percentage position.",
+        "key_concepts": [
+          "Collar grip breaks posture",
+          "Sleeve grip prevents posting",
+          "Legs create distance control",
+          "Angles open up attacks"
+        ],
+        "entry_steps": [
+          "From open or closed guard",
+          "Grip deep in opponent's collar",
+          "Grip opposite sleeve",
+          "Place feet on hip and bicep"
+        ],
+        "maintenance_steps": [
+          "Maintain deep collar grip",
+          "Keep sleeve control",
+          "Legs actively manage distance",
+          "Create angles with hip movement"
+        ],
+        "escape_overview": "Sweep or attack with triangle/omoplata",
+        "common_mistakes": [
+          "Shallow collar grip",
+          "Static feet not controlling distance",
+          "No angles - staying centered",
+          "Losing grips to opponent's grip breaks"
+        ],
+        "goals": [
+          "Execute collar sleeve sweeps",
+          "Attack triangle choke",
+          "Set up omoplata",
+          "Control and frustrate passing attempts"
+        ]
       }
     },
     "knee_shield_half_guard": {
@@ -3161,12 +3631,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Knee creates barrier between you and opponent",
+            "Maintain distance and prevent flattening",
+            "Powerful position for sweeps",
+            "Can attack or recover full guard",
+            "Active frames essential"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Passive knee shield - just blocking",
+            "Not getting underhook",
+            "Being flat on back",
+            "Letting opponent get crossface"
+          ],
+          "key_details": [
+            "Inside knee creates shield against opponent's chest",
+            "Fight for underhook on trapped leg side",
+            "Outside foot controls opponent's hip",
+            "Frame and stay on side"
+          ],
+          "transitions_available": [
+            "half_guard_bottom",
+            "closed_guard_bottom",
+            "deep_half",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "half_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3199,24 +3692,68 @@
         "position_id": "knee_shield_half_guard",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "leg_trapping"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pushing",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "half_guard_bottom",
+          "closed_guard_bottom",
+          "deep_half_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "half_guard_bottom",
+          "open_guard_bottom"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Knee Shield Half Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Knee Shield",
+          "Z-Guard Half Guard",
+          "Shield Guard"
+        ],
+        "description": "Half guard variation where inside knee creates a frame/shield against opponent's chest. Much more offensive than standard half guard with excellent sweeping options.",
+        "key_concepts": [
+          "Knee shield maintains critical distance",
+          "Underhook provides offensive control",
+          "Stay on side never flat",
+          "Active frames prevent flattening"
+        ],
+        "entry_steps": [
+          "From half guard bottom",
+          "Insert inside knee to opponent's chest/shoulder",
+          "Get underhook on trapped leg side",
+          "Outside foot on opponent's hip"
+        ],
+        "maintenance_steps": [
+          "Keep knee shield active and pressing",
+          "Maintain underhook",
+          "Stay on your side",
+          "Ready to sweep or recover guard"
+        ],
+        "escape_overview": "Sweep opponent or recover full guard",
+        "common_mistakes": [
+          "Passive knee just sitting there",
+          "Flat on back instead of side",
+          "No underhook",
+          "Accepting crossface"
+        ],
+        "goals": [
+          "Execute knee shield sweeps",
+          "Recover to full guard",
+          "Prevent being flattened",
+          "Attack from offensive half guard"
+        ]
       }
     },
     "z_guard": {
@@ -3230,12 +3767,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Legs create 'Z' shape controlling opponent",
+            "Top leg frames across opponent's body",
+            "Bottom leg controls opponent's leg",
+            "Create angles for sweeps",
+            "Maintain frames and distance"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak frames allowing pressure",
+            "Being flat without angle",
+            "Not controlling opponent's far arm",
+            "Letting opponent settle their weight"
+          ],
+          "key_details": [
+            "Top leg creates knee shield",
+            "Bottom leg traps opponent's leg",
+            "Form 'Z' shape with legs",
+            "Hands control opponent's far side"
+          ],
+          "transitions_available": [
+            "knee_shield_half_guard",
+            "deep_half_guard",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "knee_shield_half_guard",
+            "half_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3268,24 +3828,66 @@
         "position_id": "z_guard",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "leg_configuration"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pushing",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "knee_shield_half_guard",
+          "deep_half_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "knee_shield_half_guard",
+          "half_guard_bottom"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Z Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Z-Guard",
+          "93 Guard"
+        ],
+        "description": "Specific half guard variation where legs form a 'Z' shape. Top leg frames while bottom leg controls opponent's trapped leg. Very systematic approach to half guard with clear protocols.",
+        "key_concepts": [
+          "Z-shape leg configuration creates frames",
+          "Systematic approach to half guard",
+          "Top leg manages distance",
+          "Bottom leg controls trapped leg"
+        ],
+        "entry_steps": [
+          "From half guard or knee shield",
+          "Top leg across opponent's body (knee shield)",
+          "Bottom leg controls trapped leg",
+          "Create Z shape with legs"
+        ],
+        "maintenance_steps": [
+          "Maintain Z-shape configuration",
+          "Active top leg framing",
+          "Control opponent's far arm",
+          "Stay on angle not flat"
+        ],
+        "escape_overview": "Sweep opponent or recover to better guards",
+        "common_mistakes": [
+          "Collapsed frames losing Z-shape",
+          "Flat on back",
+          "No far arm control",
+          "Static without attacking"
+        ],
+        "goals": [
+          "Execute Z-guard sweeps",
+          "Maintain superior half guard position",
+          "Prevent opponent from passing",
+          "Attack systematically from Z-guard"
+        ]
       }
     },
     "lockdown": {
@@ -3299,12 +3901,34 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Triangle legs around opponent's trapped leg",
+            "Immobilize opponent's base",
+            "Control opponent's posture and movement",
+            "Set up sweeps and attacks",
+            "Eddie Bravo 10th Planet technique"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Staying in lockdown too long (static)",
+            "Not working for underhook",
+            "Letting opponent get crossface",
+            "Using lockdown defensively only"
+          ],
+          "key_details": [
+            "Bottom leg across opponent's trapped leg",
+            "Top leg triangles over bottom ankle",
+            "Creates figure-four on opponent's leg",
+            "Use to off-balance and sweep"
+          ],
+          "transitions_available": [
+            "half_guard_bottom",
+            "electric_chair",
+            "old_school_sweep"
+          ],
+          "prerequisites": [
+            "half_guard_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3337,24 +3961,64 @@
         "position_id": "lockdown",
         "min_belt": "blue",
         "category": "guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "leg_locked"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "half_guard_bottom",
+          "sweep_to_top",
+          "submission"
+        ],
+        "entry_from_position_ids": [
+          "half_guard_bottom"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Lockdown",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Lockdown Half Guard",
+          "10th Planet Lockdown"
+        ],
+        "description": "Half guard variation where you triangle your legs around opponent's trapped leg. Popularized by Eddie Bravo. Immobilizes opponent's leg creating sweeping and submission opportunities.",
+        "key_concepts": [
+          "Leg triangle immobilizes opponent's leg",
+          "Creates off-balance for sweeps",
+          "Gateway to electric chair and old school",
+          "Must be active not passive"
+        ],
+        "entry_steps": [
+          "From half guard bottom",
+          "Get bottom leg across opponent's trapped shin",
+          "Triangle top leg over bottom ankle",
+          "Lock tight around opponent's leg"
+        ],
+        "maintenance_steps": [
+          "Keep lockdown tight",
+          "Fight for underhook",
+          "Angle body for sweeps",
+          "Stay active - attack constantly"
+        ],
+        "escape_overview": "Sweep opponent or attack with electric chair",
+        "common_mistakes": [
+          "Static lockdown (stalling)",
+          "No underhook allowing crossface",
+          "Not creating angles",
+          "Defensive mindset instead of attacking"
+        ],
+        "goals": [
+          "Execute old school sweep",
+          "Attack electric chair submission",
+          "Control and off-balance opponent",
+          "Set up 10th Planet sequences"
+        ]
       }
     },
     "north_south": {
@@ -3368,12 +4032,34 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Chest-to-chest perpendicular to opponent",
+            "Head control essential",
+            "Heavy chest pressure on opponent's face/chest",
+            "Transition position and submission platform",
+            "Control hips to prevent escape"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weight too high - easy to roll",
+            "Not controlling opponent's arms",
+            "Giving opponent space to escape",
+            "Static position without attacking"
+          ],
+          "key_details": [
+            "Chest heavy on opponent's chest/face",
+            "Arms wrap under opponent's armpits or head",
+            "Hips low and heavy",
+            "Sprawl legs back for base"
+          ],
+          "transitions_available": [
+            "side_control",
+            "mount",
+            "submission_attacks"
+          ],
+          "prerequisites": [
+            "side_control"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3406,24 +4092,66 @@
         "position_id": "north_south",
         "min_belt": "blue",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "head_to_head"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "lateral_shift"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "mount",
+          "back_control"
+        ],
+        "entry_from_position_ids": [
+          "side_control",
+          "mount"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "North South",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "North-South",
+          "N/S",
+          "Head-to-Head"
+        ],
+        "description": "Top control position where you are chest-to-chest with opponent, your head near their head. Perpendicular orientation to opponent. Strong control with multiple submission options.",
+        "key_concepts": [
+          "Chest pressure is suffocating",
+          "Control opponent's arms",
+          "Low hips prevent escape",
+          "Gateway to many chokes"
+        ],
+        "entry_steps": [
+          "From side control or mount",
+          "Step over opponent's head",
+          "Drop chest heavy on opponent",
+          "Control arms and settle weight"
+        ],
+        "maintenance_steps": [
+          "Maintain heavy chest pressure",
+          "Control opponent's arms",
+          "Hips low and heavy",
+          "React to escape attempts"
+        ],
+        "escape_overview": "Attack submissions or transition to other positions",
+        "common_mistakes": [
+          "Weight too high (easy to roll)",
+          "No arm control",
+          "Space between bodies",
+          "Not using chest pressure effectively"
+        ],
+        "goals": [
+          "Attack north-south choke",
+          "Transition to mount or side control",
+          "Maintain heavy pressure",
+          "Attack kimura or arm triangle"
+        ]
       }
     },
     "technical_mount": {
@@ -3437,12 +4165,34 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "One leg across opponent's body",
+            "Other leg hooks under opponent's leg",
+            "Superior mount variation for control",
+            "Better armbar position than full mount",
+            "Prevents bridge escape"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not keeping leg tight across body",
+            "Hook too loose on bottom leg",
+            "Weight distribution wrong",
+            "Not controlling opponent's arms"
+          ],
+          "key_details": [
+            "Top leg across opponent's torso",
+            "Bottom leg hooks under their leg",
+            "Chest forward for pressure",
+            "Control opponent's far arm"
+          ],
+          "transitions_available": [
+            "mount",
+            "armbar_setup",
+            "back_control"
+          ],
+          "prerequisites": [
+            "mount"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3475,24 +4225,65 @@
         "position_id": "technical_mount",
         "min_belt": "blue",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "leg_configuration"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "forward_pressure"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "mount",
+          "armbar_finish",
+          "back_control"
+        ],
+        "entry_from_position_ids": [
+          "mount",
+          "side_control"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Technical Mount",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Technical Mount",
+          "S-Mount",
+          "Modified Mount"
+        ],
+        "description": "Mount variation with one leg across opponent's body and other leg hooking under their leg. Superior position for armbars and back takes. More stable than standard mount.",
+        "key_concepts": [
+          "Leg configuration prevents bridge",
+          "Excellent armbar setup position",
+          "More control than standard mount",
+          "Hook prevents opponent escaping"
+        ],
+        "entry_steps": [
+          "From mount when opponent turns",
+          "Bring one leg across their body",
+          "Hook other leg under their leg",
+          "Maintain chest pressure"
+        ],
+        "maintenance_steps": [
+          "Keep top leg tight across body",
+          "Maintain hook on bottom leg",
+          "Chest forward with pressure",
+          "Control far arm for armbar"
+        ],
+        "escape_overview": "Attack armbar or transition to back control",
+        "common_mistakes": [
+          "Loose leg across body",
+          "Weak hook easily cleared",
+          "Weight back instead of forward",
+          "Not isolating arm for armbar"
+        ],
+        "goals": [
+          "Execute armbar from technical mount",
+          "Transition to back control",
+          "Maintain superior mount position",
+          "Prevent bridge escapes"
+        ]
       }
     },
     "side_control_variants": {
@@ -3506,12 +4297,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Multiple side control positions exist",
+            "Kesa gatame (scarf hold)",
+            "Reverse kesa gatame",
+            "Modified side control",
+            "Each has specific uses and submissions"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not understanding which variant to use when",
+            "Poor weight distribution in variants",
+            "Not transitioning between variants",
+            "Using wrong variant for body types"
+          ],
+          "key_details": [
+            "Kesa gatame - head control, far arm trapped",
+            "Reverse kesa - facing opponent's legs",
+            "Modified - knees in tight, different base",
+            "Each variant has specific escape defenses"
+          ],
+          "transitions_available": [
+            "side_control",
+            "mount",
+            "north_south",
+            "submission_attacks"
+          ],
+          "prerequisites": [
+            "side_control"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3544,24 +4358,67 @@
         "position_id": "side_control_variants",
         "min_belt": "blue",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "perpendicular"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "lateral_shift"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "mount",
+          "north_south",
+          "back_control"
+        ],
+        "entry_from_position_ids": [
+          "side_control",
+          "half_guard_top"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Side Control Variants",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Kesa Gatame",
+          "Scarf Hold",
+          "Modified Side"
+        ],
+        "description": "Various side control positions beyond standard. Includes kesa gatame, reverse kesa, and modified variations. Each has specific applications and submission opportunities.",
+        "key_concepts": [
+          "Different variants for different situations",
+          "Kesa gatame - strong head control",
+          "Reverse kesa - different escape patterns",
+          "Modified - more mobile position"
+        ],
+        "entry_steps": [
+          "From standard side control",
+          "Transition to appropriate variant",
+          "Kesa: sit back, trap arm",
+          "Reverse: turn toward legs"
+        ],
+        "maintenance_steps": [
+          "Maintain appropriate weight distribution",
+          "Control key points for each variant",
+          "Be ready to transition variants",
+          "Attack from each position"
+        ],
+        "escape_overview": "Each variant has specific submission attacks",
+        "common_mistakes": [
+          "Not knowing when to use each variant",
+          "Poor posture in variants",
+          "Static in one variant",
+          "Wrong variant for opponent's escape"
+        ],
+        "goals": [
+          "Master multiple side control positions",
+          "Attack armbars from kesa gatame",
+          "Flow between variants",
+          "Counter different escape attempts"
+        ]
       }
     },
     "half_guard_top_variations": {
@@ -3575,12 +4432,34 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Multiple half guard passing strategies",
+            "Underhook pass",
+            "Crossface pass",
+            "Knee slice from half guard",
+            "Each counters different bottom positions"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Using same pass against all half guard types",
+            "Not recognizing which variant opponent is using",
+            "Poor pressure during pass",
+            "Giving up underhook too easily"
+          ],
+          "key_details": [
+            "Identify opponent's half guard type",
+            "Crossface critical against knee shield",
+            "Underhook dominant for standard half",
+            "Knee slice cuts through lazy half guard"
+          ],
+          "transitions_available": [
+            "side_control",
+            "mount",
+            "knee_on_belly"
+          ],
+          "prerequisites": [
+            "half_guard_top"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3613,24 +4492,65 @@
         "position_id": "half_guard_top_variations",
         "min_belt": "blue",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "leg_trapped"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "lateral_shift"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "side_control",
+          "mount",
+          "knee_on_belly"
+        ],
+        "entry_from_position_ids": [
+          "half_guard_top",
+          "open_guard_top"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Half Guard Top Variations",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Half Guard Passing Variations",
+          "Advanced Half Passing"
+        ],
+        "description": "Multiple strategies for passing different half guard variations. Includes underhook passing, crossface passing, and knee slice. Each counters specific half guard types.",
+        "key_concepts": [
+          "Different half guards need different passes",
+          "Underhook pass for standard half",
+          "Crossface crucial against knee shield",
+          "Knee slice for lazy/flat half guard"
+        ],
+        "entry_steps": [
+          "Recognize opponent's half guard type",
+          "Choose appropriate passing strategy",
+          "Establish key controls (crossface/underhook)",
+          "Execute systematic pass"
+        ],
+        "maintenance_steps": [
+          "Maintain pressure throughout pass",
+          "Don't let opponent recover full guard",
+          "Control near arm consistently",
+          "Complete pass to secure position"
+        ],
+        "escape_overview": "Complete pass to side control or mount",
+        "common_mistakes": [
+          "One-size-fits-all passing",
+          "No crossface against knee shield",
+          "Losing underhook battle",
+          "Not recognizing lockdown vs knee shield"
+        ],
+        "goals": [
+          "Pass various half guard types",
+          "Master multiple passing systems",
+          "Counter knee shield effectively",
+          "Develop systematic passing approach"
+        ]
       }
     },
     "backpack_position": {
@@ -3644,12 +4564,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Back control while opponent is on their knees/standing",
+            "Hooks in from behind",
+            "Opponent trying to stand or escape",
+            "Transition to mat or finish standing",
+            "Dynamic back control"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Losing hooks when opponent stands",
+            "Not controlling opponent's hands",
+            "Weight distribution wrong",
+            "Not finishing choke before they stand"
+          ],
+          "key_details": [
+            "Hooks maintained even as opponent rises",
+            "Seatbelt grip essential",
+            "Can attack chokes standing",
+            "Drag opponent back to mat or finish standing"
+          ],
+          "transitions_available": [
+            "back_control",
+            "rear_naked_choke",
+            "standing_back_take"
+          ],
+          "prerequisites": [
+            "back_control",
+            "turtle_top"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3682,24 +4625,65 @@
         "position_id": "backpack_position",
         "min_belt": "blue",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "behind",
+          "hooks_in"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "forward_pressure"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "back_control",
+          "submission",
+          "standing_neutral"
+        ],
+        "entry_from_position_ids": [
+          "back_control",
+          "turtle_top"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Backpack Position",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Backpack",
+          "Standing Back Control",
+          "Koala Guard"
+        ],
+        "description": "Back control position where opponent is on their knees or standing while you maintain hooks and seatbelt grip. Dynamic transition position requiring excellent hook control.",
+        "key_concepts": [
+          "Maintain hooks as opponent changes levels",
+          "Seatbelt grip never releases",
+          "Can finish standing or drag down",
+          "Very secure back control variant"
+        ],
+        "entry_steps": [
+          "From back control, opponent tries to stand",
+          "Maintain hooks as they rise",
+          "Keep seatbelt grip tight",
+          "Rise with opponent maintaining position"
+        ],
+        "maintenance_steps": [
+          "Hooks tight as opponent moves",
+          "Seatbelt grip maintained",
+          "Weight on opponent's back",
+          "Ready to attack or drag down"
+        ],
+        "escape_overview": "Finish rear naked choke or drag to mat",
+        "common_mistakes": [
+          "Losing hooks when opponent stands",
+          "Weight back instead of forward",
+          "No seatbelt grip",
+          "Not attacking choke quickly enough"
+        ],
+        "goals": [
+          "Maintain back control during transitions",
+          "Finish rear naked choke standing",
+          "Drag opponent back to mat",
+          "Develop dynamic back control"
+        ]
       }
     },
     "body_triangle": {
@@ -3713,12 +4697,34 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Triangle legs around opponent's body from back",
+            "Extremely secure back control",
+            "Frees hands for attacks",
+            "Difficult for opponent to escape",
+            "Squeeze creates pressure"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Triangling on wrong side (near hip bone)",
+            "Not maintaining seatbelt grip",
+            "Legs crossed lazily without squeeze",
+            "Forgetting to attack with hands free"
+          ],
+          "key_details": [
+            "Triangle around opponent's torso",
+            "Ankle locked in opposite knee pit",
+            "Squeeze with legs for pressure",
+            "Hands free to attack chokes"
+          ],
+          "transitions_available": [
+            "back_control",
+            "rear_naked_choke",
+            "armbar_from_back"
+          ],
+          "prerequisites": [
+            "back_control"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3751,24 +4757,64 @@
         "position_id": "body_triangle",
         "min_belt": "blue",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "behind",
+          "leg_triangle"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "squeezing"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "back_control",
+          "submission"
+        ],
+        "entry_from_position_ids": [
+          "back_control"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Body Triangle",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Body Triangle",
+          "Back Triangle",
+          "Figure Four Body Lock"
+        ],
+        "description": "Back control variation where legs are triangled around opponent's torso. Extremely secure control that frees hands for attacks. Very difficult to escape.",
+        "key_concepts": [
+          "Triangle locks around torso not just legs",
+          "Frees hands for chokes",
+          "Squeeze creates additional pressure",
+          "Almost impossible to escape when locked"
+        ],
+        "entry_steps": [
+          "From back control with hooks",
+          "Thread one leg across opponent's body",
+          "Lock ankle in opposite knee pit",
+          "Squeeze triangle tight"
+        ],
+        "maintenance_steps": [
+          "Maintain triangle lock",
+          "Keep seatbelt grip",
+          "Squeeze with legs",
+          "Attack with free hands"
+        ],
+        "escape_overview": "Attack rear naked choke or other back attacks",
+        "common_mistakes": [
+          "Triangle on hip bone (painful for you)",
+          "No squeeze just crossed legs",
+          "Forgetting to attack",
+          "Losing seatbelt while triangling"
+        ],
+        "goals": [
+          "Secure unescapable back control",
+          "Attack rear naked choke",
+          "Use freed hands for collar chokes",
+          "Maintain position indefinitely"
+        ]
       }
     },
     "turtle_top_variations": {
@@ -3782,12 +4828,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Multiple turtle attack strategies",
+            "Clock choke setup",
+            "Crucifix position",
+            "Rolling back takes",
+            "Different from basic turtle control"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Reaching too far for head (guillotine risk)",
+            "Not controlling near arm properly",
+            "Letting opponent sit back to guard",
+            "Missing back take opportunities"
+          ],
+          "key_details": [
+            "Control near arm for crucifix",
+            "Setup clock choke with lapel grip",
+            "Roll opponent for back takes",
+            "Prevent opponent returning to guard"
+          ],
+          "transitions_available": [
+            "back_control",
+            "crucifix",
+            "clock_choke",
+            "side_control"
+          ],
+          "prerequisites": [
+            "turtle_top"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3820,24 +4889,66 @@
         "position_id": "turtle_top_variations",
         "min_belt": "blue",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "perpendicular"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "lateral_shift",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "back_control",
+          "crucifix",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "turtle_top",
+          "side_control"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Turtle Top Variations",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Advanced Turtle Attacks",
+          "Turtle Finishing Positions"
+        ],
+        "description": "Advanced attacking positions from turtle including clock choke, crucifix, and rolling back takes. More sophisticated than basic turtle control.",
+        "key_concepts": [
+          "Clock choke requires lapel control",
+          "Crucifix traps both arms",
+          "Rolling back takes use momentum",
+          "Each attack counters different escapes"
+        ],
+        "entry_steps": [
+          "From basic turtle top position",
+          "Identify opponent's turtle type",
+          "Setup appropriate attack",
+          "Control key grips for chosen attack"
+        ],
+        "maintenance_steps": [
+          "Maintain top pressure",
+          "Control near arm consistently",
+          "React to opponent's movement",
+          "Execute chosen attack systematically"
+        ],
+        "escape_overview": "Finish submission or take back control",
+        "common_mistakes": [
+          "Going for head (guillotine vulnerable)",
+          "No near arm control",
+          "Missing timing on rolls",
+          "Not setting up attacks properly"
+        ],
+        "goals": [
+          "Master clock choke from turtle",
+          "Execute crucifix position",
+          "Rolling back takes",
+          "Prevent opponent escaping to guard"
+        ]
       }
     },
     "turtle_bottom_variations": {
@@ -3851,12 +4962,35 @@
           "prerequisites": []
         },
         "blue": {
-          "concepts": [],
+          "concepts": [
+            "Defensive turtle vs offensive turtle",
+            "Technical stand from turtle",
+            "Rolling through from turtle",
+            "Granby roll escapes",
+            "Turtle is temporary - have a plan"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Static turtle with no escape plan",
+            "Exposing neck to chokes",
+            "Not protecting near arm (crucifix risk)",
+            "Staying in turtle too long"
+          ],
+          "key_details": [
+            "Elbows tight to knees",
+            "Weight balanced for mobility",
+            "Head protected hands covering neck",
+            "Ready to sit to guard or stand"
+          ],
+          "transitions_available": [
+            "closed_guard_bottom",
+            "open_guard_bottom",
+            "technical_standup",
+            "granby_escape"
+          ],
+          "prerequisites": [
+            "turtle_bottom"
+          ]
         },
         "purple": {
           "concepts": [],
@@ -3889,24 +5023,67 @@
         "position_id": "turtle_bottom_variations",
         "min_belt": "blue",
         "category": "bottom_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "defending"
+        ],
+        "stability_score": 2,
+        "movement_directions_allowed": [
+          "rolling",
+          "sitting_back",
+          "standing"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "closed_guard_bottom",
+          "open_guard_bottom",
+          "standing_neutral"
+        ],
+        "entry_from_position_ids": [
+          "turtle_bottom",
+          "side_control_bottom"
+        ],
+        "risk_level": "high"
       },
       "learning": {
         "display_name": "Turtle Bottom Variations",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Advanced Turtle Escapes",
+          "Offensive Turtle",
+          "Dynamic Turtle"
+        ],
+        "description": "Advanced turtle bottom positions including technical standup, granby rolls, and offensive turtle movements. Transforms turtle from purely defensive to dynamic escape position.",
+        "key_concepts": [
+          "Turtle is transition not destination",
+          "Technical standup from turtle",
+          "Granby roll to escape and recover guard",
+          "Offensive turtle - attack from bottom"
+        ],
+        "entry_steps": [
+          "When in turtle bottom position",
+          "Assess opponent's control level",
+          "Choose escape: sit to guard, stand, or roll",
+          "Execute escape before opponent settles"
+        ],
+        "maintenance_steps": [
+          "Protect neck constantly",
+          "Keep elbows tight",
+          "Stay mobile and ready to escape",
+          "Time your escape with opponent's movement"
+        ],
+        "escape_overview": "Technical standup, sit to guard, or granby roll",
+        "common_mistakes": [
+          "Static turtle (sitting duck)",
+          "Exposing neck or near arm",
+          "No escape plan",
+          "Waiting too long to escape"
+        ],
+        "goals": [
+          "Execute technical standup from turtle",
+          "Granby roll to recover guard",
+          "Sit to guard safely",
+          "Avoid back control and submissions"
+        ]
       }
     },
     "single_leg_x": {
