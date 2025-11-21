@@ -5105,12 +5105,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Control one leg with your legs forming X",
+            "Stand up from bottom position",
+            "Off-balance opponent on one leg",
+            "Gateway to leg attacks",
+            "Transition from X-guard or DLR"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak X formation - legs not engaged",
+            "Not standing up when opportunity presents",
+            "Poor hand control on trapped leg",
+            "Sitting instead of elevating"
+          ],
+          "key_details": [
+            "One leg hooks inside opponent's leg",
+            "Other leg hooks outside same leg",
+            "Hands control opponent's trapped leg",
+            "Can stand up to finish sweep or attack"
+          ],
+          "transitions_available": [
+            "x_guard",
+            "outside_ashi_garami",
+            "standing_position",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "x_guard"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5135,24 +5158,69 @@
         "position_id": "single_leg_x",
         "min_belt": "purple",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "leg_isolated"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "elevating",
+          "standing",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "x_guard",
+          "outside_ashi_garami",
+          "standing_neutral",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "x_guard",
+          "de_la_riva",
+          "reverse_de_la_riva"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Single Leg X",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "SLX",
+          "Single Leg X-Guard",
+          "One Leg X"
+        ],
+        "description": "Position where both your legs control one of opponent's legs in an X formation. Allows you to stand up and sweep or enter leg entanglements. More dynamic than full X-guard.",
+        "key_concepts": [
+          "Legs form X on single leg",
+          "Stand up to complete sweep",
+          "Gateway to ashi garami positions",
+          "Control one leg completely"
+        ],
+        "entry_steps": [
+          "From X-guard or DLR",
+          "Isolate one of opponent's legs",
+          "Hook inside and outside of same leg",
+          "Elevate and prepare to stand"
+        ],
+        "maintenance_steps": [
+          "Keep X formation tight on leg",
+          "Hands control trapped leg",
+          "Stay mobile - ready to stand",
+          "Elevate opponent off-balance"
+        ],
+        "escape_overview": "Stand up for sweep or enter leg attacks",
+        "common_mistakes": [
+          "Static X without standing",
+          "Weak hooks easily cleared",
+          "No hand control on leg",
+          "Not following opponent's movement"
+        ],
+        "goals": [
+          "Stand up and complete sweep",
+          "Enter outside ashi garami",
+          "Control and off-balance opponent",
+          "Develop leg entanglement entries"
+        ]
       }
     },
     "outside_ashi_garami": {
@@ -5174,12 +5242,34 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Control opponent's leg from outside",
+            "Fundamental leg entanglement position",
+            "Straight ankle lock primary attack",
+            "Hip position creates control",
+            "Perpendicular to opponent"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor hip position - not perpendicular",
+            "Weak leg control allowing escape",
+            "Not controlling upper body",
+            "Crossing feet (dangerous)"
+          ],
+          "key_details": [
+            "Your legs control opponent's one leg",
+            "Hip perpendicular to opponent",
+            "Outside position on trapped leg",
+            "Hands control leg and upper body"
+          ],
+          "transitions_available": [
+            "inside_ashi_garami",
+            "50_50_guard",
+            "straight_ankle_lock"
+          ],
+          "prerequisites": [
+            "single_leg_x"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5204,24 +5294,66 @@
         "position_id": "outside_ashi_garami",
         "min_belt": "purple",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "perpendicular",
+          "leg_isolated"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "rotating",
+          "hip_movement"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "inside_ashi_garami",
+          "50_50_guard",
+          "submission"
+        ],
+        "entry_from_position_ids": [
+          "single_leg_x",
+          "x_guard"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Outside Ashi Garami",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Outside Ashi",
+          "Standard Ashi",
+          "Ashi Garami"
+        ],
+        "description": "Fundamental leg entanglement where you control opponent's leg from the outside position. Perpendicular body alignment. Primary position for straight ankle locks in IBJJF legal competition.",
+        "key_concepts": [
+          "Perpendicular hip position is key",
+          "Outside control of trapped leg",
+          "Straight ankle lock primary attack",
+          "Control prevents opponent's escape"
+        ],
+        "entry_steps": [
+          "From single leg X or X-guard",
+          "Rotate body perpendicular to opponent",
+          "Secure outside position on leg",
+          "Control with legs and hands"
+        ],
+        "maintenance_steps": [
+          "Maintain perpendicular hip position",
+          "Legs tight on trapped leg",
+          "Control opponent's upper body",
+          "Ready to attack ankle or transition"
+        ],
+        "escape_overview": "Attack straight ankle lock or transition to other leg positions",
+        "common_mistakes": [
+          "Hip alignment wrong",
+          "Weak leg control",
+          "Crossing feet under opponent",
+          "Not controlling free leg"
+        ],
+        "goals": [
+          "Execute straight ankle lock",
+          "Transition to inside ashi",
+          "Control leg completely",
+          "Develop modern leg attack system"
+        ]
       }
     },
     "inside_ashi_garami": {
@@ -5243,12 +5375,34 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Control opponent's leg from inside",
+            "More dominant than outside ashi",
+            "Heel hook position (where legal)",
+            "Better control of opponent's hip",
+            "Prevents opponent standing"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Losing inside position",
+            "Not controlling opponent's upper body",
+            "Weak leg entanglement",
+            "Allowing opponent to rotate free"
+          ],
+          "key_details": [
+            "Inside position on trapped leg",
+            "Your inside leg crosses opponent's hip",
+            "Outside leg controls trapped leg",
+            "Hands control upper body and leg"
+          ],
+          "transitions_available": [
+            "outside_ashi_garami",
+            "50_50_guard",
+            "heel_hook"
+          ],
+          "prerequisites": [
+            "outside_ashi_garami"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5273,24 +5427,66 @@
         "position_id": "inside_ashi_garami",
         "min_belt": "purple",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "perpendicular",
+          "leg_isolated"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "rotating",
+          "hip_movement"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "outside_ashi_garami",
+          "50_50_guard",
+          "submission"
+        ],
+        "entry_from_position_ids": [
+          "outside_ashi_garami",
+          "single_leg_x"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Inside Ashi Garami",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Inside Ashi",
+          "Inside Position",
+          "Cross Ashi"
+        ],
+        "description": "Superior leg entanglement position where you control opponent's leg from inside. More dominant than outside ashi. Primary position for heel hooks where legal (no-gi/advanced competition).",
+        "key_concepts": [
+          "Inside position is dominant",
+          "Leg crosses opponent's hip for control",
+          "Heel hook primary attack (where legal)",
+          "Prevents opponent escaping or standing"
+        ],
+        "entry_steps": [
+          "From outside ashi or SLX",
+          "Transition to inside position",
+          "Cross inside leg over opponent's hip",
+          "Secure trapped leg with outside leg"
+        ],
+        "maintenance_steps": [
+          "Maintain inside position",
+          "Keep legs tight on trapped leg",
+          "Control opponent's upper body",
+          "Isolate leg completely"
+        ],
+        "escape_overview": "Attack heel hook (where legal) or transition positions",
+        "common_mistakes": [
+          "Losing inside control",
+          "Weak hip cross",
+          "Not securing trapped leg",
+          "Allowing opponent to turn into you"
+        ],
+        "goals": [
+          "Master dominant leg position",
+          "Attack heel hook (where legal)",
+          "Prevent opponent's escapes",
+          "Develop modern leg lock system"
+        ]
       }
     },
     "50_50_guard": {
@@ -5312,12 +5508,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Symmetrical leg entanglement position",
+            "Both players have similar control",
+            "Tactical position - advantages for both",
+            "Requires specific escapes and attacks",
+            "Controversial position (stalling debates)"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Being passive in 50/50",
+            "Not fighting for inside position",
+            "Poor leg entanglement details",
+            "Not understanding submission opportunities"
+          ],
+          "key_details": [
+            "Both players have one leg entangled",
+            "Symmetrical position",
+            "Inside control is advantage",
+            "Can attack or be attacked"
+          ],
+          "transitions_available": [
+            "inside_ashi_garami",
+            "outside_ashi_garami",
+            "back_escape"
+          ],
+          "prerequisites": [
+            "outside_ashi_garami",
+            "inside_ashi_garami"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5342,24 +5561,66 @@
         "position_id": "50_50_guard",
         "min_belt": "purple",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "symmetrical",
+          "leg_entangled"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "rotating",
+          "hip_movement"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "inside_ashi_garami",
+          "outside_ashi_garami",
+          "standing_neutral"
+        ],
+        "entry_from_position_ids": [
+          "inside_ashi_garami",
+          "outside_ashi_garami"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "50 50 Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "50/50",
+          "Fifty Fifty",
+          "5050 Guard"
+        ],
+        "description": "Symmetrical leg entanglement position where both players have similar control. Requires specific technical knowledge to attack or escape. Popular in sport BJJ but controversial due to stalling potential.",
+        "key_concepts": [
+          "Symmetrical entanglement",
+          "Inside control is key advantage",
+          "Both can attack or defend",
+          "Technical position requiring study"
+        ],
+        "entry_steps": [
+          "From ashi garami positions",
+          "Opponent enters their leg into yours",
+          "Both legs become entangled",
+          "Fight for inside position"
+        ],
+        "maintenance_steps": [
+          "Fight for inside control",
+          "Maintain leg entanglement",
+          "Control opponent's upper body",
+          "Look for submission or escape"
+        ],
+        "escape_overview": "Establish inside control or escape to standing",
+        "common_mistakes": [
+          "Passive 50/50 (stalling)",
+          "Not fighting for inside",
+          "Poor leg positioning details",
+          "Not understanding attacks available"
+        ],
+        "goals": [
+          "Understand 50/50 mechanics",
+          "Attack from 50/50 position",
+          "Escape 50/50 when disadvantaged",
+          "Develop modern leg entanglement game"
+        ]
       }
     },
     "deep_half_guard": {
@@ -5381,12 +5642,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Get underneath opponent deep under their base",
+            "Control opponent's far leg",
+            "Create powerful sweeping angles",
+            "Invisible to opponent's attacks",
+            "Eddie Bravo 10th Planet position"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not getting deep enough under opponent",
+            "Poor head position",
+            "Not controlling far leg properly",
+            "Staying static without sweeping"
+          ],
+          "key_details": [
+            "Get deep under opponent's center",
+            "Control their far leg with hands",
+            "Your head under their near hip",
+            "Use leverage to sweep"
+          ],
+          "transitions_available": [
+            "half_guard_bottom",
+            "sweep_to_top",
+            "waiter_sweep"
+          ],
+          "prerequisites": [
+            "half_guard_bottom",
+            "knee_shield_half_guard"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5411,24 +5695,65 @@
         "position_id": "deep_half_guard",
         "min_belt": "purple",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "underneath"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "rotating",
+          "elevating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "half_guard_bottom",
+          "side_control",
+          "sweep_to_top"
+        ],
+        "entry_from_position_ids": [
+          "half_guard_bottom",
+          "knee_shield_half_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Deep Half Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Deep Half",
+          "DHG"
+        ],
+        "description": "Position where you get deep underneath opponent's base, controlling their far leg. Popularized by Eddie Bravo and Bernardo Faria. Creates powerful sweeping mechanics and is safe from most attacks.",
+        "key_concepts": [
+          "Deep position under opponent's center",
+          "Far leg control is critical",
+          "Sweeps use opponent's weight",
+          "Very safe from submissions"
+        ],
+        "entry_steps": [
+          "From half guard bottom",
+          "Dive deep under opponent's near hip",
+          "Control their far leg with hands",
+          "Head positioned under their hip"
+        ],
+        "maintenance_steps": [
+          "Stay deep under opponent",
+          "Maintain far leg control",
+          "Keep head safe under hip",
+          "Create sweeping angles"
+        ],
+        "escape_overview": "Execute waiter sweep or Homer Simpson sweep",
+        "common_mistakes": [
+          "Not deep enough (opponent can attack)",
+          "Losing far leg control",
+          "Head exposed to attacks",
+          "Static without attacking"
+        ],
+        "goals": [
+          "Master deep half sweeps",
+          "Use as safe defensive position",
+          "Develop Bernardo Faria style game",
+          "Sweep larger opponents effectively"
+        ]
       }
     },
     "tornado_guard": {
@@ -5450,12 +5775,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Dynamic spinning guard variation",
+            "Creates powerful torque for sweeps",
+            "Circular motion off-balances opponent",
+            "Lapel control enhances position",
+            "Requires timing and coordination"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor timing on spin",
+            "Not completing rotation",
+            "Weak grips during spin",
+            "Spinning without opponent's weight"
+          ],
+          "key_details": [
+            "Lapel or collar grip essential",
+            "Spin under opponent",
+            "Use momentum for sweep",
+            "Timing with opponent's movement"
+          ],
+          "transitions_available": [
+            "sweep_to_top",
+            "back_control",
+            "x_guard"
+          ],
+          "prerequisites": [
+            "de_la_riva",
+            "x_guard"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5480,24 +5828,66 @@
         "position_id": "tornado_guard",
         "min_belt": "purple",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "rotating"
+        ],
+        "stability_score": 2,
+        "movement_directions_allowed": [
+          "rotating",
+          "inverting"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "side_control",
+          "back_control",
+          "x_guard"
+        ],
+        "entry_from_position_ids": [
+          "de_la_riva",
+          "x_guard",
+          "open_guard_bottom"
+        ],
+        "risk_level": "high"
       },
       "learning": {
         "display_name": "Tornado Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Tornado",
+          "Spinning Guard"
+        ],
+        "description": "Dynamic guard using spinning/rotating motion to create torque and sweep opponent. Requires excellent timing and coordination. Creates powerful off-balancing through circular momentum.",
+        "key_concepts": [
+          "Rotation creates torque",
+          "Timing with opponent's movement",
+          "Lapel control stabilizes spin",
+          "Complete rotation for sweep"
+        ],
+        "entry_steps": [
+          "From DLR or open guard",
+          "Secure lapel or collar grip",
+          "Initiate spin under opponent",
+          "Use momentum to complete sweep"
+        ],
+        "maintenance_steps": [
+          "Maintain grips through spin",
+          "Complete full rotation",
+          "Use opponent's weight",
+          "Transition to top position"
+        ],
+        "escape_overview": "Complete spin for sweep or take back",
+        "common_mistakes": [
+          "Spinning without proper grips",
+          "Poor timing - opponent not loaded",
+          "Incomplete rotation",
+          "Not using momentum effectively"
+        ],
+        "goals": [
+          "Execute tornado sweep",
+          "Develop dynamic guard game",
+          "Master timing and coordination",
+          "Create unexpected sweep angles"
+        ]
       }
     },
     "rdlr_inverted_entries": {
@@ -5519,12 +5909,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Inversion from RDLR to enter berimbolo",
+            "Granby roll mechanics",
+            "Creates back exposure",
+            "Modern sport BJJ technique",
+            "Requires flexibility and timing"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor inversion technique",
+            "Not controlling opponent's leg",
+            "Wrong timing on entry",
+            "Incomplete rotation exposing back"
+          ],
+          "key_details": [
+            "Start from RDLR position",
+            "Control far leg firmly",
+            "Invert and rotate",
+            "Thread through for back"
+          ],
+          "transitions_available": [
+            "berimbolo_control",
+            "back_control",
+            "reverse_de_la_riva"
+          ],
+          "prerequisites": [
+            "reverse_de_la_riva",
+            "berimbolo_control"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5549,24 +5962,65 @@
         "position_id": "rdlr_inverted_entries",
         "min_belt": "purple",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "inverting"
+        ],
+        "stability_score": 2,
+        "movement_directions_allowed": [
+          "inverting",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "berimbolo_control",
+          "back_control",
+          "reverse_de_la_riva"
+        ],
+        "entry_from_position_ids": [
+          "reverse_de_la_riva"
+        ],
+        "risk_level": "high"
       },
       "learning": {
         "display_name": "Rdlr Inverted Entries",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "RDLR Inversion",
+          "Berimbolo Entry",
+          "Inverted RDLR"
+        ],
+        "description": "Advanced technique using inversion from RDLR to enter berimbolo and attack opponent's back. Requires flexibility, timing, and coordination. Hallmark of modern sport BJJ.",
+        "key_concepts": [
+          "Inversion creates back exposure",
+          "Far leg control prevents escape",
+          "Granby roll mechanics apply",
+          "Gateway to berimbolo back take"
+        ],
+        "entry_steps": [
+          "From RDLR position",
+          "Secure far leg control",
+          "Invert and begin rotation",
+          "Thread through for back take"
+        ],
+        "maintenance_steps": [
+          "Maintain far leg grip",
+          "Complete inversion",
+          "Rotate to opponent's back",
+          "Establish back control"
+        ],
+        "escape_overview": "Complete inversion to berimbolo back take",
+        "common_mistakes": [
+          "Incomplete inversion",
+          "Losing far leg grip",
+          "Poor timing getting stacked",
+          "Not rotating fully"
+        ],
+        "goals": [
+          "Master berimbolo entries",
+          "Develop inversion skills",
+          "Attack back from bottom",
+          "Compete in modern sport BJJ"
+        ]
       }
     },
     "modified_x_guard": {
@@ -5588,12 +6042,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "X-guard variation with different leg configuration",
+            "Better control against certain passes",
+            "Prevents opponent circling",
+            "More stable than traditional X",
+            "Modern X-guard evolution"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Reverting to standard X configuration",
+            "Poor leg positioning",
+            "Not using modification advantages",
+            "Weak elevation"
+          ],
+          "key_details": [
+            "Modified leg configuration",
+            "Both legs still control opponent",
+            "Better against certain escapes",
+            "Maintains elevation capability"
+          ],
+          "transitions_available": [
+            "x_guard",
+            "single_leg_x",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "x_guard",
+            "single_leg_x"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5618,24 +6095,65 @@
         "position_id": "modified_x_guard",
         "min_belt": "purple",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "under_opponent"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "elevating",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "x_guard",
+          "single_leg_x",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "x_guard",
+          "butterfly_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Modified X Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Modified X",
+          "X-Guard Variation"
+        ],
+        "description": "Variation of X-guard with modified leg configuration. Addresses certain escapes and passing strategies that work against traditional X-guard. More stable against specific movements.",
+        "key_concepts": [
+          "Modified configuration prevents escapes",
+          "Addresses traditional X weaknesses",
+          "Maintains elevation control",
+          "Modern evolution of X-guard"
+        ],
+        "entry_steps": [
+          "From traditional X-guard",
+          "Modify leg configuration",
+          "Maintain elevation and control",
+          "Adjust based on opponent's pass"
+        ],
+        "maintenance_steps": [
+          "Keep modified leg position",
+          "Elevate opponent consistently",
+          "React to passing attempts",
+          "Sweep or transition"
+        ],
+        "escape_overview": "Sweep opponent or return to traditional X",
+        "common_mistakes": [
+          "Not understanding modification purpose",
+          "Wrong configuration for situation",
+          "Losing elevation",
+          "Reverting unnecessarily"
+        ],
+        "goals": [
+          "Understand X-guard variations",
+          "Counter specific passing styles",
+          "Develop adaptive X-guard game",
+          "Master position nuances"
+        ]
       }
     },
     "collar_dlr_hybrid": {
@@ -5657,12 +6175,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Combines collar grip with DLR hook",
+            "Creates powerful control",
+            "Prevents opponent breaking grips",
+            "Hybrid position benefits",
+            "Modern guard development"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not maintaining both elements (collar + hook)",
+            "Weak collar grip easily broken",
+            "Poor DLR hook placement",
+            "Not using hybrid advantages"
+          ],
+          "key_details": [
+            "Strong collar grip",
+            "Active DLR hook",
+            "Other leg controls distance",
+            "Combined control prevents passing"
+          ],
+          "transitions_available": [
+            "de_la_riva",
+            "collar_sleeve_guard",
+            "spider_guard"
+          ],
+          "prerequisites": [
+            "de_la_riva",
+            "collar_sleeve_guard"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5687,24 +6228,65 @@
         "position_id": "collar_dlr_hybrid",
         "min_belt": "purple",
         "category": "hybrid",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "de_la_riva",
+          "collar_sleeve_guard",
+          "spider_guard"
+        ],
+        "entry_from_position_ids": [
+          "de_la_riva",
+          "collar_sleeve_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Collar Dlr Hybrid",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Collar DLR",
+          "Hybrid DLR"
+        ],
+        "description": "Modern guard hybrid combining collar sleeve grips with De La Riva hook. Creates double-layer control that's difficult to break. Represents evolution of traditional guards mixing elements.",
+        "key_concepts": [
+          "Hybrid combines strengths of both",
+          "Collar grip + DLR hook",
+          "Difficult to break both controls",
+          "Modern guard evolution"
+        ],
+        "entry_steps": [
+          "From DLR or collar sleeve",
+          "Establish collar grip",
+          "Maintain DLR hook",
+          "Other leg controls distance"
+        ],
+        "maintenance_steps": [
+          "Keep both collar and hook",
+          "Don't let opponent break either",
+          "Create angles for attacks",
+          "Transition based on opponent's reaction"
+        ],
+        "escape_overview": "Sweep or transition to other guards",
+        "common_mistakes": [
+          "Losing one element of hybrid",
+          "Static without attacking",
+          "Not understanding hybrid benefits",
+          "Poor grip management"
+        ],
+        "goals": [
+          "Master hybrid guard concepts",
+          "Develop modern guard game",
+          "Combine guard elements effectively",
+          "Create difficult-to-pass positions"
+        ]
       }
     },
     "inverted_guard": {
@@ -5726,12 +6308,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Upside down guard position",
+            "Creates unusual angles for opponent",
+            "Gateway to berimbolo and back takes",
+            "Requires flexibility",
+            "Confusing for opponent to pass"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Exposing back while inverted",
+            "Poor neck position (injury risk)",
+            "Not controlling opponent's legs",
+            "Inverting at wrong time"
+          ],
+          "key_details": [
+            "Shoulders on mat, hips elevated",
+            "Control opponent's legs/hips",
+            "Neck safe - not all weight on it",
+            "Mobile - ready to rotate"
+          ],
+          "transitions_available": [
+            "berimbolo_control",
+            "back_control",
+            "reverse_de_la_riva"
+          ],
+          "prerequisites": [
+            "reverse_de_la_riva",
+            "flexibility"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5756,24 +6361,65 @@
         "position_id": "inverted_guard",
         "min_belt": "purple",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "inverted"
+        ],
+        "stability_score": 2,
+        "movement_directions_allowed": [
+          "inverting",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "berimbolo_control",
+          "back_control",
+          "reverse_de_la_riva"
+        ],
+        "entry_from_position_ids": [
+          "reverse_de_la_riva",
+          "open_guard_bottom"
+        ],
+        "risk_level": "high"
       },
       "learning": {
         "display_name": "Inverted Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Inversion",
+          "Upside Down Guard"
+        ],
+        "description": "Advanced guard position where you are upside down with shoulders on mat. Creates unusual angles that confuse passers. Gateway to berimbolo and back attacks. Requires good flexibility and neck strength.",
+        "key_concepts": [
+          "Inversion creates confusion",
+          "Protects back with leg control",
+          "Gateway to advanced techniques",
+          "Requires mobility and flexibility"
+        ],
+        "entry_steps": [
+          "From RDLR or open guard",
+          "Initiate inversion safely",
+          "Control opponent's legs/hips",
+          "Prepare for berimbolo or recovery"
+        ],
+        "maintenance_steps": [
+          "Keep neck safe",
+          "Maintain opponent leg control",
+          "Stay mobile and ready to rotate",
+          "Don't stay inverted too long"
+        ],
+        "escape_overview": "Rotate to berimbolo or recover to guard",
+        "common_mistakes": [
+          "Too much weight on neck",
+          "Exposing back",
+          "Static inversion",
+          "Poor timing on entry"
+        ],
+        "goals": [
+          "Develop inversion skills safely",
+          "Enter berimbolo from inversion",
+          "Confuse opponent's passing",
+          "Build modern guard game"
+        ]
       }
     },
     "crab_ride": {
@@ -5795,12 +6441,34 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Ride opponent's back from side/turtle",
+            "Control both arms from the side",
+            "Transition to back control or submissions",
+            "Prevents opponent escaping turtle",
+            "Powerful control position"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not controlling both arms effectively",
+            "Weight distribution wrong",
+            "Letting opponent return to guard",
+            "Not transitioning to back or submissions"
+          ],
+          "key_details": [
+            "Ride on opponent's side from turtle",
+            "Control both arms",
+            "Chest pressure on their back",
+            "Ready to take back or submit"
+          ],
+          "transitions_available": [
+            "back_control",
+            "crucifix",
+            "submission_attacks"
+          ],
+          "prerequisites": [
+            "turtle_top_variations"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5825,24 +6493,65 @@
         "position_id": "crab_ride",
         "min_belt": "purple",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "side_control"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "lateral_shift"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "back_control",
+          "crucifix",
+          "submission"
+        ],
+        "entry_from_position_ids": [
+          "turtle_top",
+          "berimbolo_control"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Crab Ride",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Crab Ride",
+          "Side Ride"
+        ],
+        "description": "Advanced top position riding opponent's back from the side while controlling both arms. Often reached from berimbolo or turtle. Excellent control with numerous attack options.",
+        "key_concepts": [
+          "Control both arms from side",
+          "Ride opponent like a crab",
+          "Gateway to back or submissions",
+          "Prevents turtle escape"
+        ],
+        "entry_steps": [
+          "From berimbolo or turtle top",
+          "Get to opponent's side",
+          "Control both arms",
+          "Establish riding position"
+        ],
+        "maintenance_steps": [
+          "Maintain arm control",
+          "Chest pressure on back",
+          "Follow opponent's movement",
+          "Prepare for back take or submission"
+        ],
+        "escape_overview": "Transition to back control or attack submissions",
+        "common_mistakes": [
+          "Losing arm control",
+          "Poor weight distribution",
+          "Not finishing position",
+          "Allowing escape to guard"
+        ],
+        "goals": [
+          "Master crab ride control",
+          "Transition to back smoothly",
+          "Attack crucifix or submissions",
+          "Complete berimbolo sequences"
+        ]
       }
     },
     "berimbolo_control": {
@@ -5864,12 +6573,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Rolling under opponent to take back",
+            "Signature modern sport BJJ technique",
+            "Requires inversion and rotation",
+            "Creates back exposure",
+            "From RDLR or inverted guard"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Incomplete rotation",
+            "Losing leg control during roll",
+            "Not finishing back take",
+            "Poor timing on entry"
+          ],
+          "key_details": [
+            "Invert and roll under opponent",
+            "Maintain leg control throughout",
+            "Rotate to opponent's back",
+            "Establish hooks and control"
+          ],
+          "transitions_available": [
+            "back_control",
+            "crab_ride",
+            "reverse_de_la_riva"
+          ],
+          "prerequisites": [
+            "rdlr_inverted_entries",
+            "inverted_guard"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5894,24 +6626,65 @@
         "position_id": "berimbolo_control",
         "min_belt": "purple",
         "category": "transition_state",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "rotating",
+          "transitioning"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "rotating",
+          "inverting"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "back_control",
+          "crab_ride",
+          "reverse_de_la_riva"
+        ],
+        "entry_from_position_ids": [
+          "rdlr_inverted_entries",
+          "inverted_guard"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Berimbolo Control",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Berimbolo",
+          "Bolo"
+        ],
+        "description": "Dynamic technique rolling under opponent from inverted position to take their back. Signature technique of modern sport BJJ. Requires flexibility, timing, and excellent technique.",
+        "key_concepts": [
+          "Roll under to opponent's back",
+          "Inversion to back take",
+          "Modern sport BJJ hallmark",
+          "Requires significant practice"
+        ],
+        "entry_steps": [
+          "From RDLR inverted entry",
+          "Maintain far leg control",
+          "Roll under opponent",
+          "Rotate to their back"
+        ],
+        "maintenance_steps": [
+          "Keep rolling momentum",
+          "Maintain leg control",
+          "Complete rotation",
+          "Establish back control"
+        ],
+        "escape_overview": "Complete roll to back control or crab ride",
+        "common_mistakes": [
+          "Incomplete roll",
+          "Losing leg grip",
+          "Poor timing getting stacked",
+          "Not drilling enough repetitions"
+        ],
+        "goals": [
+          "Master berimbolo technique",
+          "Take back from bottom",
+          "Develop modern sport game",
+          "Build inversion skills"
+        ]
       }
     },
     "matrix_position": {
@@ -5933,12 +6706,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Extreme backward lean avoiding passes",
+            "Counter to leg drag and pressure passing",
+            "Requires back flexibility",
+            "Creates recovery opportunities",
+            "Defensive position with offensive options"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor back flexibility causing injury",
+            "No recovery plan from matrix",
+            "Staying too long in position",
+            "Not using to re-guard"
+          ],
+          "key_details": [
+            "Lean back nearly touching mat with back",
+            "Legs active creating frames",
+            "Hand posts for support",
+            "Ready to snap back up"
+          ],
+          "transitions_available": [
+            "open_guard_bottom",
+            "de_la_riva",
+            "reverse_de_la_riva"
+          ],
+          "prerequisites": [
+            "open_guard_bottom",
+            "flexibility"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -5963,24 +6759,65 @@
         "position_id": "matrix_position",
         "min_belt": "purple",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "extreme_angle"
+        ],
+        "stability_score": 2,
+        "movement_directions_allowed": [
+          "recovering",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "open_guard_bottom",
+          "de_la_riva",
+          "reverse_de_la_riva"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_bottom",
+          "de_la_riva"
+        ],
+        "risk_level": "high"
       },
       "learning": {
         "display_name": "Matrix Position",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Matrix",
+          "Extreme Backward Lean"
+        ],
+        "description": "Advanced defensive position with extreme backward lean (like the Matrix movie). Temporarily avoids pressure passes and leg drags. Requires excellent back flexibility. Not a destination - transitional position only.",
+        "key_concepts": [
+          "Extreme lean avoids passes",
+          "Temporary defensive measure",
+          "Requires flexibility",
+          "Snap back to recover guard"
+        ],
+        "entry_steps": [
+          "When opponent pressure passing",
+          "Lean back dramatically",
+          "Post hand for support",
+          "Keep legs active"
+        ],
+        "maintenance_steps": [
+          "Don't stay long (back injury risk)",
+          "Keep legs active and framing",
+          "Prepare to snap back up",
+          "Look for recovery to guard"
+        ],
+        "escape_overview": "Snap back up to recover guard position",
+        "common_mistakes": [
+          "Staying too long in matrix",
+          "No recovery plan",
+          "Poor flexibility attempting",
+          "Not keeping legs active"
+        ],
+        "goals": [
+          "Counter pressure passing",
+          "Buy time to recover guard",
+          "Develop defensive flexibility",
+          "Escape dangerous passing positions"
+        ]
       }
     },
     "headquarters_position": {
@@ -6002,12 +6839,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Pressure passing knee in middle",
+            "Control opponent's legs and hips",
+            "Systematically pass different guards",
+            "Bernardo Faria style passing",
+            "Pressure-based passing platform"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not getting knee in correct position",
+            "Poor weight distribution",
+            "Letting opponent recover guard",
+            "Not controlling hips properly"
+          ],
+          "key_details": [
+            "Knee in middle of opponent's legs",
+            "Heavy pressure on hips",
+            "Control both legs/hips",
+            "Systematically advance to pass"
+          ],
+          "transitions_available": [
+            "side_control",
+            "half_guard_top",
+            "knee_on_belly"
+          ],
+          "prerequisites": [
+            "open_guard_top",
+            "pressure_passing"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -6032,24 +6892,66 @@
         "position_id": "headquarters_position",
         "min_belt": "purple",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "passing"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "lateral_shift"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "half_guard_top",
+          "knee_on_belly"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_top",
+          "half_guard_top"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Headquarters Position",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Headquarters",
+          "HQ Position",
+          "Bernardo Pass Setup"
+        ],
+        "description": "Pressure passing position with knee in middle controlling opponent's legs and hips. Popularized by Bernardo Faria. Systematic approach to passing various guards using pressure and control.",
+        "key_concepts": [
+          "Knee in middle creates control",
+          "Heavy pressure prevents movement",
+          "Systematic guard passing",
+          "Controls multiple guard types"
+        ],
+        "entry_steps": [
+          "From open guard passing",
+          "Get knee in middle of legs",
+          "Establish hip control",
+          "Apply heavy pressure"
+        ],
+        "maintenance_steps": [
+          "Maintain knee position",
+          "Keep pressure heavy on hips",
+          "Control opponent's legs",
+          "Advance to complete pass"
+        ],
+        "escape_overview": "Systematically pass to side control",
+        "common_mistakes": [
+          "Knee position too high or low",
+          "Not enough pressure",
+          "Letting opponent re-guard",
+          "Poor hip control"
+        ],
+        "goals": [
+          "Master pressure passing",
+          "Pass various guard types",
+          "Develop Bernardo Faria style",
+          "Build systematic passing game"
+        ]
       }
     },
     "smash_pass_position": {
@@ -6071,12 +6973,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Smash opponent's legs to one side",
+            "Heavy shoulder pressure",
+            "Flatten opponent",
+            "Overwhelm with pressure",
+            "Prevent guard recovery"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not flattening opponent completely",
+            "Shoulder pressure too high",
+            "Letting legs escape to other side",
+            "Not controlling near arm"
+          ],
+          "key_details": [
+            "Legs smashed to one side",
+            "Shoulder drives into chest/face",
+            "Weight heavy and low",
+            "Near arm controlled"
+          ],
+          "transitions_available": [
+            "side_control",
+            "north_south",
+            "mount"
+          ],
+          "prerequisites": [
+            "half_guard_top",
+            "pressure_passing"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -6101,24 +7026,64 @@
         "position_id": "smash_pass_position",
         "min_belt": "purple",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "passing"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "forward_pressure"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "north_south",
+          "mount"
+        ],
+        "entry_from_position_ids": [
+          "half_guard_top",
+          "headquarters_position"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Smash Pass Position",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Smash Pass",
+          "Pressure Pass"
+        ],
+        "description": "Heavy pressure passing technique smashing opponent's legs to one side while driving shoulder into chest. Overwhelming pressure-based pass. Very effective against flexible opponents.",
+        "key_concepts": [
+          "Smash legs completely to side",
+          "Heavy shoulder pressure",
+          "Flatten opponent entirely",
+          "Pressure overwhelms technique"
+        ],
+        "entry_steps": [
+          "From half guard or headquarters",
+          "Drive legs to one side",
+          "Shoulder into chest/face",
+          "Flatten opponent completely"
+        ],
+        "maintenance_steps": [
+          "Keep legs smashed to side",
+          "Maintain shoulder pressure",
+          "Control near arm",
+          "Advance to side control"
+        ],
+        "escape_overview": "Complete pass to side control or mount",
+        "common_mistakes": [
+          "Not smashing legs completely",
+          "Shoulder too high (weak pressure)",
+          "Opponent not flattened",
+          "Giving up position during pass"
+        ],
+        "goals": [
+          "Master pressure passing",
+          "Overwhelm opponent with weight",
+          "Pass against flexible guards",
+          "Develop heavy passing style"
+        ]
       }
     },
     "leg_drag_control": {
@@ -6140,12 +7105,35 @@
           "prerequisites": []
         },
         "purple": {
-          "concepts": [],
+          "concepts": [
+            "Drag opponent's leg across body",
+            "Creates passing angle",
+            "Control hip and leg",
+            "Modern passing technique",
+            "Beats many modern guards"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not controlling hip properly",
+            "Letting opponent turn into you",
+            "Poor leg drag mechanics",
+            "Not following through to pass"
+          ],
+          "key_details": [
+            "Drag leg across opponent's body",
+            "Control hip with other hand",
+            "Create perpendicular angle",
+            "Drive through to back or pass"
+          ],
+          "transitions_available": [
+            "side_control",
+            "back_control",
+            "mount"
+          ],
+          "prerequisites": [
+            "open_guard_top",
+            "de_la_riva_passing"
+          ]
         },
         "brown": {
           "concepts": [],
@@ -6170,24 +7158,65 @@
         "position_id": "leg_drag_control",
         "min_belt": "purple",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "passing"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "lateral_shift",
+          "forward_pressure"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "back_control",
+          "mount"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_top",
+          "de_la_riva"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Leg Drag Control",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Leg Drag",
+          "Leg Drag Pass"
+        ],
+        "description": "Modern passing technique dragging opponent's leg across their body to create passing angle. Very effective against DLR and modern guards. Creates back take opportunities.",
+        "key_concepts": [
+          "Drag leg across body",
+          "Control hip to prevent turn",
+          "Create perpendicular angle",
+          "Gateway to back or side control"
+        ],
+        "entry_steps": [
+          "From open guard passing",
+          "Grip opponent's leg",
+          "Drag across their body",
+          "Control hip with other hand"
+        ],
+        "maintenance_steps": [
+          "Keep leg dragged across",
+          "Maintain hip control",
+          "Don't let opponent turn in",
+          "Advance to back or side"
+        ],
+        "escape_overview": "Complete pass or take back",
+        "common_mistakes": [
+          "Weak leg drag (easily recovered)",
+          "No hip control",
+          "Letting opponent face you",
+          "Not finishing position"
+        ],
+        "goals": [
+          "Master modern passing",
+          "Beat DLR and modern guards",
+          "Create back take opportunities",
+          "Develop leg drag system"
+        ]
       }
     },
     "k_guard": {
