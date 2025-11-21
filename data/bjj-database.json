@@ -7246,12 +7246,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Hybrid guard using lapel control",
+            "K-shape leg configuration",
+            "Creates trapping mechanics",
+            "Lapel wrapped around opponent's leg",
+            "Modern lapel guard variation"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Weak lapel control easily broken",
+            "Not maintaining K-shape configuration",
+            "Poor leg positioning",
+            "Not using lapel trap effectively"
+          ],
+          "key_details": [
+            "Lapel wrapped around opponent's leg",
+            "Legs form K-shape",
+            "Control opponent's posture",
+            "Use lapel to restrict movement"
+          ],
+          "transitions_available": [
+            "worm_guard",
+            "spider_guard",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "spider_guard",
+            "lapel_guard_basics"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7268,24 +7291,65 @@
         "position_id": "k_guard",
         "min_belt": "brown",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "worm_guard",
+          "spider_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "spider_guard",
+          "open_guard_bottom"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "K Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "K Guard",
+          "K-Shape Guard"
+        ],
+        "description": "Advanced lapel guard where legs form K-shape while controlling opponent with wrapped lapel. Modern guard variation using gi control. Creates unique trapping and sweeping opportunities.",
+        "key_concepts": [
+          "K-shape leg configuration",
+          "Lapel wrapped creates control",
+          "Restricts opponent's movement",
+          "Gateway to other lapel guards"
+        ],
+        "entry_steps": [
+          "From spider or open guard",
+          "Feed lapel around opponent's leg",
+          "Create K-shape with legs",
+          "Establish control and grips"
+        ],
+        "maintenance_steps": [
+          "Maintain lapel wrap",
+          "Keep K-shape configuration",
+          "Control opponent's posture",
+          "Create sweeping angles"
+        ],
+        "escape_overview": "Sweep opponent or transition to other guards",
+        "common_mistakes": [
+          "Lapel wrap too loose",
+          "Losing K-shape",
+          "Static without attacking",
+          "Poor lapel management"
+        ],
+        "goals": [
+          "Master lapel guard systems",
+          "Create trapping mechanics",
+          "Develop modern guard game",
+          "Sweep with lapel control"
+        ]
       }
     },
     "cross_ashi_garami": {
@@ -7315,12 +7379,36 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Crossing angle in ashi garami",
+            "Creates different finishing mechanics",
+            "Body positioned across opponent",
+            "Part of Danaher leg lock system",
+            "Advanced heel hook position"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not achieving proper crossing angle",
+            "Weak leg control",
+            "Poor hip positioning",
+            "Not understanding finishing mechanics"
+          ],
+          "key_details": [
+            "Body crosses opponent's body",
+            "Different angle than standard ashi",
+            "Heel hook finishing position",
+            "Control hips and legs"
+          ],
+          "transitions_available": [
+            "outside_ashi_garami",
+            "inside_ashi_garami",
+            "submission"
+          ],
+          "prerequisites": [
+            "outside_ashi_garami",
+            "inside_ashi_garami",
+            "heel_hook_mechanics"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7337,24 +7425,65 @@
         "position_id": "cross_ashi_garami",
         "min_belt": "brown",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "legs_entangled"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "outside_ashi_garami",
+          "inside_ashi_garami",
+          "heel_hook_finish"
+        ],
+        "entry_from_position_ids": [
+          "outside_ashi_garami",
+          "inside_ashi_garami"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Cross Ashi Garami",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Cross Ashi",
+          "Crossing Ashi Garami"
+        ],
+        "description": "Advanced leg entanglement where body crosses opponent's at different angle than standard ashi. Part of modern leg lock systems. Creates unique finishing mechanics for heel hooks and leg attacks.",
+        "key_concepts": [
+          "Crossing angle creates control",
+          "Different from standard ashi",
+          "Advanced finishing position",
+          "Part of systematic approach"
+        ],
+        "entry_steps": [
+          "From ashi garami position",
+          "Create crossing angle",
+          "Position body across opponent",
+          "Control leg and hips"
+        ],
+        "maintenance_steps": [
+          "Maintain crossing angle",
+          "Keep leg control tight",
+          "Control opponent's hips",
+          "Ready for submissions"
+        ],
+        "escape_overview": "Control and finish with leg attacks",
+        "common_mistakes": [
+          "Angle not truly crossing",
+          "Weak leg control",
+          "Not understanding system",
+          "Attempting without proper training"
+        ],
+        "goals": [
+          "Master advanced leg locks",
+          "Create finishing positions",
+          "Develop systematic approach",
+          "Finish with heel hooks"
+        ]
       }
     },
     "butterfly_x": {
@@ -7384,12 +7513,36 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Hybrid of butterfly and X-guard",
+            "Combines elements of both positions",
+            "Versatile sweeping platform",
+            "Can elevate or rotate",
+            "Modern guard evolution"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not committing to either position",
+            "Poor hook placement",
+            "Weak underhook control",
+            "Not using hybrid advantages"
+          ],
+          "key_details": [
+            "Butterfly hook on one side",
+            "X-guard configuration on other",
+            "Underhook essential",
+            "Can switch between sweep types"
+          ],
+          "transitions_available": [
+            "butterfly_guard",
+            "x_guard",
+            "single_leg_x",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "butterfly_guard",
+            "x_guard"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7406,24 +7559,67 @@
         "position_id": "butterfly_x",
         "min_belt": "brown",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "hybrid_hooks"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "elevating",
+          "rotating",
+          "hip_movement"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "butterfly_guard",
+          "x_guard",
+          "single_leg_x",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "butterfly_guard",
+          "x_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Butterfly X",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Butterfly X",
+          "Hybrid X"
+        ],
+        "description": "Advanced guard combining butterfly and X-guard elements. Uses butterfly hook on one side and X-guard configuration on other. Provides versatile sweeping options and transitions.",
+        "key_concepts": [
+          "Hybrid combines both guard strengths",
+          "Butterfly and X elements together",
+          "Versatile sweeping platform",
+          "Can adapt based on opponent"
+        ],
+        "entry_steps": [
+          "From butterfly or X-guard",
+          "Establish butterfly hook one side",
+          "Create X configuration other side",
+          "Secure underhook control"
+        ],
+        "maintenance_steps": [
+          "Maintain hybrid configuration",
+          "Keep both hooks active",
+          "Underhook provides control",
+          "Ready to sweep either direction"
+        ],
+        "escape_overview": "Sweep using butterfly or X mechanics",
+        "common_mistakes": [
+          "Not fully committing to hybrid",
+          "Weak hooks on either side",
+          "No underhook",
+          "Static without attacking"
+        ],
+        "goals": [
+          "Master hybrid guard concepts",
+          "Sweep with multiple options",
+          "Develop adaptive guard game",
+          "Transition fluidly between positions"
+        ]
       }
     },
     "baby_bolo": {
@@ -7453,12 +7649,36 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Simplified berimbolo technique",
+            "Faster execution than full berimbolo",
+            "Transition to back or top",
+            "Competition-tested technique",
+            "Modern transition system"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not creating proper angle",
+            "Slow execution",
+            "Losing momentum during roll",
+            "Not securing back control"
+          ],
+          "key_details": [
+            "Simplified berimbolo mechanics",
+            "Quick transition to back",
+            "Less rotation required",
+            "Competition-effective"
+          ],
+          "transitions_available": [
+            "back_control",
+            "de_la_riva",
+            "berimbolo_control"
+          ],
+          "prerequisites": [
+            "de_la_riva",
+            "berimbolo_control",
+            "inversion"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7475,24 +7695,66 @@
         "position_id": "baby_bolo",
         "min_belt": "brown",
         "category": "transition_state",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "transitioning",
+          "rotating"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "rotating",
+          "inverting",
+          "rolling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "back_control",
+          "de_la_riva",
+          "berimbolo_control"
+        ],
+        "entry_from_position_ids": [
+          "de_la_riva",
+          "reverse_de_la_riva"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Baby Bolo",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Baby Bolo",
+          "Mini Berimbolo"
+        ],
+        "description": "Simplified version of berimbolo transition requiring less rotation. Allows faster execution to back control. Popular in competition as efficient alternative to full berimbolo. Modern sport BJJ technique.",
+        "key_concepts": [
+          "Simplified berimbolo mechanics",
+          "Faster than full technique",
+          "Less rotation needed",
+          "Back take efficiency"
+        ],
+        "entry_steps": [
+          "From DLR or reverse DLR",
+          "Create inversion angle",
+          "Execute simplified roll",
+          "Secure back control quickly"
+        ],
+        "maintenance_steps": [
+          "Maintain momentum",
+          "Keep control during transition",
+          "Don't stop in middle",
+          "Secure position upon completion"
+        ],
+        "escape_overview": "Complete transition to back control or top position",
+        "common_mistakes": [
+          "Not enough momentum",
+          "Stopping mid-transition",
+          "Poor angle creation",
+          "Not finishing to back control"
+        ],
+        "goals": [
+          "Master efficient back takes",
+          "Develop competition skills",
+          "Use modern transitions",
+          "Simplify complex techniques"
+        ]
       }
     },
     "worm_guard": {
@@ -7522,12 +7784,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Lapel wrapped around own leg and opponent's",
+            "Keenan Cornelius signature guard",
+            "Creates powerful control",
+            "Opponent trapped in lapel system",
+            "Complex lapel guard"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Incorrect lapel wrapping sequence",
+            "Losing lapel control",
+            "Not maintaining leg configuration",
+            "Poor understanding of system"
+          ],
+          "key_details": [
+            "Lapel wrapped around your leg",
+            "Then wrapped around opponent's",
+            "Creates worm-like control",
+            "Powerful sweeping mechanics"
+          ],
+          "transitions_available": [
+            "squid_guard",
+            "ringworm_guard",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "spider_guard",
+            "lapel_guard_fundamentals"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7544,24 +7829,65 @@
         "position_id": "worm_guard",
         "min_belt": "brown",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "squid_guard",
+          "ringworm_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "spider_guard",
+          "k_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Worm Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Worm Guard",
+          "Lapel Lasso"
+        ],
+        "description": "Advanced lapel guard created by Keenan Cornelius where lapel is wrapped around your own leg then opponent's. Creates extremely strong control and sweeping mechanics. Signature modern guard.",
+        "key_concepts": [
+          "Lapel wraps your leg then opponent's",
+          "Creates worm-like entanglement",
+          "Very difficult to pass",
+          "Powerful sweep mechanics"
+        ],
+        "entry_steps": [
+          "From spider or open guard",
+          "Feed lapel around your leg",
+          "Wrap around opponent's leg",
+          "Establish worm configuration"
+        ],
+        "maintenance_steps": [
+          "Maintain lapel wraps",
+          "Keep leg configuration",
+          "Control opponent's posture",
+          "Create sweeping angles"
+        ],
+        "escape_overview": "Execute worm guard sweeps",
+        "common_mistakes": [
+          "Wrapping sequence incorrect",
+          "Lapel too loose",
+          "Not understanding system",
+          "Attempting without proper study"
+        ],
+        "goals": [
+          "Master Keenan Cornelius system",
+          "Create unpassable guard",
+          "Develop lapel guard expertise",
+          "Sweep with lapel control"
+        ]
       }
     },
     "squid_guard": {
@@ -7591,12 +7917,36 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Evolution of worm guard",
+            "Both legs entangled in lapel",
+            "Creates even stronger control",
+            "Part of Keenan system",
+            "Advanced lapel guard variation"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not establishing worm first",
+            "Poor lapel management",
+            "Losing second leg entanglement",
+            "Static position without attacks"
+          ],
+          "key_details": [
+            "Both legs in lapel system",
+            "Progression from worm guard",
+            "Extremely strong control",
+            "Sweeps and submissions available"
+          ],
+          "transitions_available": [
+            "worm_guard",
+            "ringworm_guard",
+            "sweep_to_top",
+            "triangle_setup"
+          ],
+          "prerequisites": [
+            "worm_guard",
+            "spider_guard"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7613,24 +7963,65 @@
         "position_id": "squid_guard",
         "min_belt": "brown",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_entangled"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "worm_guard",
+          "ringworm_guard",
+          "side_control",
+          "triangle_choke"
+        ],
+        "entry_from_position_ids": [
+          "worm_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Squid Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Squid Guard",
+          "Double Worm"
+        ],
+        "description": "Advanced evolution of worm guard where both legs are entangled in lapel system. Part of Keenan Cornelius's lapel guard system. Provides extremely strong control and multiple attacking options.",
+        "key_concepts": [
+          "Both legs in lapel entanglement",
+          "Evolution from worm guard",
+          "Creates maximum control",
+          "Multiple attack options"
+        ],
+        "entry_steps": [
+          "From established worm guard",
+          "Feed second leg into system",
+          "Create squid configuration",
+          "Maintain lapel control"
+        ],
+        "maintenance_steps": [
+          "Keep both legs entangled",
+          "Maintain lapel tension",
+          "Control opponent's posture",
+          "Create attacking opportunities"
+        ],
+        "escape_overview": "Sweep or submit from strong control position",
+        "common_mistakes": [
+          "Attempting without worm mastery",
+          "Losing lapel tension",
+          "Not using both legs effectively",
+          "Over-complicating position"
+        ],
+        "goals": [
+          "Master lapel guard system",
+          "Create unpassable position",
+          "Attack from strong control",
+          "Develop modern guard game"
+        ]
       }
     },
     "ringworm_guard": {
@@ -7660,12 +8051,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Circular lapel configuration",
+            "Lapel returns to your grip",
+            "Creates loop control",
+            "Part of worm guard system",
+            "Unique control mechanics"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not completing lapel loop",
+            "Losing circular configuration",
+            "Poor grip on returning lapel",
+            "Not understanding system"
+          ],
+          "key_details": [
+            "Lapel wraps and returns",
+            "Creates ring-like control",
+            "Grip returned lapel",
+            "Part of Keenan system"
+          ],
+          "transitions_available": [
+            "worm_guard",
+            "squid_guard",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "worm_guard",
+            "lapel_guard_mastery"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7682,24 +8096,65 @@
         "position_id": "ringworm_guard",
         "min_belt": "brown",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "worm_guard",
+          "squid_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "worm_guard",
+          "squid_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Ringworm Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Ringworm Guard",
+          "Loop Guard"
+        ],
+        "description": "Advanced variation of worm guard where lapel creates circular loop returning to your grip. Part of Keenan Cornelius system. Creates unique control mechanics through circular lapel configuration.",
+        "key_concepts": [
+          "Lapel creates circular loop",
+          "Returns to your control",
+          "Ring-like configuration",
+          "Unique control mechanics"
+        ],
+        "entry_steps": [
+          "From worm or squid guard",
+          "Complete lapel loop",
+          "Return lapel to your grip",
+          "Establish ringworm control"
+        ],
+        "maintenance_steps": [
+          "Maintain circular configuration",
+          "Keep lapel tension",
+          "Control with loop",
+          "Create angles for attacks"
+        ],
+        "escape_overview": "Sweep using circular control mechanics",
+        "common_mistakes": [
+          "Loop not completed properly",
+          "Losing returning lapel grip",
+          "Not using circular mechanics",
+          "Over-complicating system"
+        ],
+        "goals": [
+          "Master advanced lapel guards",
+          "Create unique control",
+          "Develop circular mechanics",
+          "Complete Keenan system"
+        ]
       }
     },
     "gubber_guard": {
@@ -7729,12 +8184,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Reverse collar grip guard",
+            "Opponent's collar fed behind their back",
+            "Creates powerful breaking mechanics",
+            "Used by multiple high-level competitors",
+            "Modern guard development"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not feeding collar deep enough",
+            "Losing collar grip",
+            "Poor leg positioning",
+            "Not using breaking mechanics"
+          ],
+          "key_details": [
+            "Collar fed behind opponent's back",
+            "Reverse grip control",
+            "Breaks down posture",
+            "Strong sweeping position"
+          ],
+          "transitions_available": [
+            "collar_sleeve_guard",
+            "spider_guard",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "collar_sleeve_guard",
+            "spider_guard"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7751,24 +8229,65 @@
         "position_id": "gubber_guard",
         "min_belt": "brown",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "collar_sleeve_guard",
+          "spider_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "collar_sleeve_guard",
+          "open_guard_bottom"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Gubber Guard",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Gubber Guard",
+          "Reverse Collar Guard"
+        ],
+        "description": "Modern guard where opponent's collar is fed behind their back with reverse grip. Creates powerful breaking mechanics and sweeping opportunities. Used by high-level competitors in sport BJJ.",
+        "key_concepts": [
+          "Collar fed behind back",
+          "Reverse grip mechanics",
+          "Breaks down posture strongly",
+          "Modern competition guard"
+        ],
+        "entry_steps": [
+          "From collar sleeve guard",
+          "Feed collar behind opponent's back",
+          "Establish reverse grip",
+          "Position legs for control"
+        ],
+        "maintenance_steps": [
+          "Maintain deep collar grip",
+          "Break down posture",
+          "Use legs for control",
+          "Create sweeping angles"
+        ],
+        "escape_overview": "Sweep using collar breaking mechanics",
+        "common_mistakes": [
+          "Collar not fed deep enough",
+          "Losing reverse grip",
+          "Not breaking posture",
+          "Static without attacking"
+        ],
+        "goals": [
+          "Master modern guard systems",
+          "Create powerful breaks",
+          "Develop competition guards",
+          "Sweep with collar control"
+        ]
       }
     },
     "reverse_x": {
@@ -7798,12 +8317,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Inverted X-guard configuration",
+            "Body positioned in reverse",
+            "Different mechanics than standard X",
+            "Advanced back take entries",
+            "Modern X-guard variation"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor hook placement",
+            "Weak positional control",
+            "Not using reverse mechanics",
+            "Losing back take opportunities"
+          ],
+          "key_details": [
+            "Hooks in reverse configuration",
+            "Body inverted relative to standard",
+            "Strong back take entries",
+            "Unique sweeping mechanics"
+          ],
+          "transitions_available": [
+            "x_guard",
+            "back_control",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "x_guard",
+            "single_leg_x"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7820,24 +8362,66 @@
         "position_id": "reverse_x",
         "min_belt": "brown",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_entangled"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "elevating",
+          "rotating",
+          "inverting"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "x_guard",
+          "back_control",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "x_guard",
+          "single_leg_x"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Reverse X",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Reverse X",
+          "Inverted X Guard"
+        ],
+        "description": "Advanced X-guard variation where body is positioned in reverse configuration. Creates different mechanics and strong back take entries. Modern development in X-guard systems.",
+        "key_concepts": [
+          "Reverse of standard X configuration",
+          "Different mechanical advantages",
+          "Strong back take entries",
+          "Modern guard evolution"
+        ],
+        "entry_steps": [
+          "From X-guard or single leg X",
+          "Invert body position",
+          "Establish reverse hooks",
+          "Create control and angles"
+        ],
+        "maintenance_steps": [
+          "Maintain reverse configuration",
+          "Keep hooks active",
+          "Control opponent's base",
+          "Create back take opportunities"
+        ],
+        "escape_overview": "Take the back or sweep to top position",
+        "common_mistakes": [
+          "Not fully inverting",
+          "Weak hook placement",
+          "Missing back take chances",
+          "Static without attacking"
+        ],
+        "goals": [
+          "Master X-guard variations",
+          "Take the back efficiently",
+          "Develop modern guard game",
+          "Use reverse mechanics"
+        ]
       }
     },
     "leg_pinning_systems": {
@@ -7867,12 +8451,36 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Systematically controlling opponent's legs",
+            "Using legs to pin opponent's legs",
+            "Creates immobility for passing",
+            "Advanced passing strategy",
+            "Leg weaving techniques"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not fully controlling legs",
+            "Weak pinning pressure",
+            "Losing leg control during pass",
+            "Not using systematic approach"
+          ],
+          "key_details": [
+            "Use your legs to pin theirs",
+            "Creates passing opportunities",
+            "Systematic leg control",
+            "Opponent's mobility restricted"
+          ],
+          "transitions_available": [
+            "side_control",
+            "mount",
+            "knee_on_belly",
+            "headquarters_position"
+          ],
+          "prerequisites": [
+            "headquarters_position",
+            "pressure_passing"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7889,24 +8497,66 @@
         "position_id": "leg_pinning_systems",
         "min_belt": "brown",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "legs_controlled"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "leg_weaving"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "mount",
+          "knee_on_belly",
+          "headquarters_position"
+        ],
+        "entry_from_position_ids": [
+          "headquarters_position",
+          "half_guard_top"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Leg Pinning Systems",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Leg Pins",
+          "Leg Weaving Systems"
+        ],
+        "description": "Advanced passing system using your legs to systematically control and pin opponent's legs. Creates immobility allowing safe passage to dominant positions. Expert-level passing strategy.",
+        "key_concepts": [
+          "Systematic leg control",
+          "Use legs to pin opponent's",
+          "Creates passing opportunities",
+          "Restricts opponent's mobility"
+        ],
+        "entry_steps": [
+          "From headquarters or half guard top",
+          "Begin leg weaving sequence",
+          "Pin opponent's legs systematically",
+          "Establish control for passing"
+        ],
+        "maintenance_steps": [
+          "Keep legs pinned",
+          "Maintain pressure",
+          "Use systematic approach",
+          "Progress to pass"
+        ],
+        "escape_overview": "Complete pass to side control or mount",
+        "common_mistakes": [
+          "Not pinning completely",
+          "Losing leg control",
+          "Rushing the pass",
+          "Not understanding system"
+        ],
+        "goals": [
+          "Master systematic passing",
+          "Control with legs",
+          "Develop advanced passing game",
+          "Pass safely and efficiently"
+        ]
       }
     },
     "double_under_pass": {
@@ -7936,12 +8586,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Both arms under opponent's legs",
+            "Powerful pressure passing",
+            "Stack and control",
+            "Wrestling-based pass",
+            "High percentage technique"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not getting deep enough under legs",
+            "Weak head position",
+            "Poor weight distribution",
+            "Not finishing to side control"
+          ],
+          "key_details": [
+            "Both arms under both legs",
+            "Head pressure on chest/belly",
+            "Stack opponent's hips",
+            "Drive forward to complete"
+          ],
+          "transitions_available": [
+            "side_control",
+            "mount",
+            "north_south"
+          ],
+          "prerequisites": [
+            "pressure_passing_fundamentals",
+            "stacking"
+          ]
         },
         "black": {
           "concepts": [],
@@ -7958,24 +8631,65 @@
         "position_id": "double_under_pass",
         "min_belt": "brown",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "passing"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "stacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "mount",
+          "north_south"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_top",
+          "half_guard_top"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Double Under Pass",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Double Under",
+          "Double Underhook Pass"
+        ],
+        "description": "Classic pressure pass with both arms under opponent's legs. Creates powerful stacking pressure and control. Wrestling-based technique with high success rate. Brown belt refinement of fundamental pass.",
+        "key_concepts": [
+          "Both arms under legs",
+          "Stack with pressure",
+          "Head drives into body",
+          "Wrestling-based passing"
+        ],
+        "entry_steps": [
+          "From open or half guard top",
+          "Get both arms under legs",
+          "Establish head pressure",
+          "Begin stacking opponent"
+        ],
+        "maintenance_steps": [
+          "Keep arms deep under legs",
+          "Maintain head pressure",
+          "Stack hips up",
+          "Drive forward to complete"
+        ],
+        "escape_overview": "Complete pass to side control or north-south",
+        "common_mistakes": [
+          "Arms not deep enough",
+          "Poor head position",
+          "Not stacking hips",
+          "Stalling in middle"
+        ],
+        "goals": [
+          "Master pressure passing",
+          "Develop wrestling-based game",
+          "Use stacking effectively",
+          "Pass with control"
+        ]
       }
     },
     "over_under_pass": {
@@ -8005,12 +8719,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "One arm over one leg, one arm under other",
+            "Asymmetric pressure passing",
+            "Creates control and leverage",
+            "Brazilian jiu-jitsu classic",
+            "High level passing technique"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not getting deep enough with over/under",
+            "Poor head position",
+            "Weak shoulder pressure",
+            "Not controlling the hip"
+          ],
+          "key_details": [
+            "One arm over, one under",
+            "Shoulder drives into hip",
+            "Control with head and arms",
+            "Pressure-based passing"
+          ],
+          "transitions_available": [
+            "side_control",
+            "north_south",
+            "mount"
+          ],
+          "prerequisites": [
+            "pressure_passing",
+            "side_control"
+          ]
         },
         "black": {
           "concepts": [],
@@ -8027,24 +8764,65 @@
         "position_id": "over_under_pass",
         "min_belt": "brown",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "passing"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "shoulder_driving"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "north_south",
+          "mount"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_top",
+          "half_guard_top"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Over Under Pass",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Over Under",
+          "Over Under Pass"
+        ],
+        "description": "Classic BJJ pressure pass with one arm over leg and one under. Creates asymmetric pressure and control. Brazilian jiu-jitsu fundamental used at highest levels. Brown belt mastery of timing and pressure.",
+        "key_concepts": [
+          "Asymmetric over/under configuration",
+          "Shoulder pressure into hip",
+          "Head controls movement",
+          "Classic BJJ passing"
+        ],
+        "entry_steps": [
+          "From open or half guard",
+          "Establish over/under grips",
+          "Drive shoulder into hip",
+          "Begin pressure passing"
+        ],
+        "maintenance_steps": [
+          "Keep over/under deep",
+          "Maintain shoulder pressure",
+          "Control with head",
+          "Drive to complete pass"
+        ],
+        "escape_overview": "Complete pass to side control or north-south",
+        "common_mistakes": [
+          "Grips not deep enough",
+          "No shoulder pressure",
+          "Head not controlling",
+          "Not finishing completely"
+        ],
+        "goals": [
+          "Master classic BJJ passing",
+          "Develop pressure game",
+          "Use timing effectively",
+          "Pass with control and pressure"
+        ]
       }
     },
     "chest_to_chest_half": {
@@ -8074,12 +8852,36 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Chest-to-chest pressure in half guard",
+            "Shoulder of justice applied",
+            "Opponent flattened and controlled",
+            "High pressure top position",
+            "Submission and pass opportunities"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not getting true chest-to-chest contact",
+            "Weak shoulder pressure",
+            "Allowing opponent to create frames",
+            "Not controlling far arm"
+          ],
+          "key_details": [
+            "Full chest contact",
+            "Shoulder into face/neck",
+            "Flatten opponent",
+            "Control far arm"
+          ],
+          "transitions_available": [
+            "side_control",
+            "mount",
+            "kimura",
+            "darce_choke"
+          ],
+          "prerequisites": [
+            "half_guard_top",
+            "pressure_passing"
+          ]
         },
         "black": {
           "concepts": [],
@@ -8096,24 +8898,65 @@
         "position_id": "chest_to_chest_half",
         "min_belt": "brown",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "chest_to_chest"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "forward_pressure",
+          "shoulder_pressure"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "mount",
+          "kimura_finish",
+          "darce_choke"
+        ],
+        "entry_from_position_ids": [
+          "half_guard_top"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Chest To Chest Half",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Chest to Chest",
+          "Heavy Half Guard Top"
+        ],
+        "description": "Dominant half guard top position with full chest-to-chest contact and shoulder pressure. Flattens opponent creating submission opportunities. High-pressure control position used by pressure passers.",
+        "key_concepts": [
+          "Full chest contact creates control",
+          "Shoulder of justice pressure",
+          "Opponent flattened completely",
+          "Multiple attack options"
+        ],
+        "entry_steps": [
+          "From half guard top",
+          "Establish chest-to-chest contact",
+          "Drive shoulder into face/neck",
+          "Control far arm and flatten"
+        ],
+        "maintenance_steps": [
+          "Maintain chest contact",
+          "Keep shoulder pressure",
+          "Don't allow frames",
+          "Control far arm continuously"
+        ],
+        "escape_overview": "Pass to mount/side or submit",
+        "common_mistakes": [
+          "Not achieving true chest contact",
+          "Shoulder pressure too weak",
+          "Allowing frames to develop",
+          "Not controlling far arm"
+        ],
+        "goals": [
+          "Master pressure half guard",
+          "Develop shoulder pressure",
+          "Submit from top half",
+          "Use weight effectively"
+        ]
       }
     },
     "tight_waist_hip_ride": {
@@ -8143,12 +8986,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Wrestling technique applied to BJJ",
+            "Controlling opponent from side/back",
+            "Tight waist grip with hip pressure",
+            "Transitions to back or turns opponent",
+            "Wrestling-based control"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Loose tight waist grip",
+            "Not using hip pressure",
+            "Poor weight distribution",
+            "Not transitioning when available"
+          ],
+          "key_details": [
+            "Tight waist around opponent",
+            "Hip drives into their hip",
+            "Wrestling control position",
+            "Creates back exposure"
+          ],
+          "transitions_available": [
+            "back_control",
+            "turtle_top",
+            "side_control"
+          ],
+          "prerequisites": [
+            "turtle_top",
+            "wrestling_fundamentals"
+          ]
         },
         "black": {
           "concepts": [],
@@ -8165,24 +9031,66 @@
         "position_id": "tight_waist_hip_ride",
         "min_belt": "brown",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "hip_to_hip"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_pressure",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "back_control",
+          "turtle_top",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "turtle_top",
+          "side_control"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Tight Waist Hip Ride",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Tight Waist",
+          "Hip Ride",
+          "Tight Waist Hip Ride"
+        ],
+        "description": "Wrestling-based control position using tight waist grip and hip pressure. Controls opponent from side allowing transitions to back or turning them. Wrestling technique adapted for BJJ.",
+        "key_concepts": [
+          "Wrestling control adapted to BJJ",
+          "Tight waist creates control",
+          "Hip pressure drives action",
+          "Creates back exposure"
+        ],
+        "entry_steps": [
+          "From turtle top or side control",
+          "Establish tight waist grip",
+          "Drive hip into opponent's hip",
+          "Control and create pressure"
+        ],
+        "maintenance_steps": [
+          "Keep tight waist secure",
+          "Maintain hip pressure",
+          "Control opponent's movement",
+          "Ready to transition"
+        ],
+        "escape_overview": "Transition to back control or flatten opponent",
+        "common_mistakes": [
+          "Tight waist too loose",
+          "No hip pressure",
+          "Static without transitions",
+          "Poor weight distribution"
+        ],
+        "goals": [
+          "Master wrestling controls",
+          "Take the back efficiently",
+          "Develop top turtle game",
+          "Use hip pressure effectively"
+        ]
       }
     },
     "seatbelt_traps": {
@@ -8212,12 +9120,35 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Using seatbelt grip to create traps",
+            "Opponent's arms trapped in system",
+            "High-level back control variation",
+            "Creates submission opportunities",
+            "Advanced back control concept"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not establishing seatbelt properly",
+            "Allowing opponent to defend arms",
+            "Not using trapping mechanics",
+            "Weak hooks"
+          ],
+          "key_details": [
+            "Seatbelt grip fundamental",
+            "Trap opponent's defensive arms",
+            "Creates submission openings",
+            "Advanced back control"
+          ],
+          "transitions_available": [
+            "back_control",
+            "rear_naked_choke",
+            "armbar_from_back"
+          ],
+          "prerequisites": [
+            "back_control",
+            "seatbelt_control"
+          ]
         },
         "black": {
           "concepts": [],
@@ -8234,24 +9165,64 @@
         "position_id": "seatbelt_traps",
         "min_belt": "brown",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "back_control",
+          "arms_trapped"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "adjusting_position",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "back_control",
+          "rear_naked_choke",
+          "armbar_from_back"
+        ],
+        "entry_from_position_ids": [
+          "back_control"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Seatbelt Traps",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Seatbelt Traps",
+          "Arm Trap Back Control"
+        ],
+        "description": "Advanced back control variation using seatbelt grip to systematically trap opponent's defensive arms. Creates submission opportunities by controlling arm defense. Expert-level back control concept.",
+        "key_concepts": [
+          "Seatbelt creates trapping system",
+          "Opponent's arms controlled",
+          "Opens submission opportunities",
+          "Advanced back control strategy"
+        ],
+        "entry_steps": [
+          "From back control position",
+          "Establish strong seatbelt",
+          "Create traps for defensive arms",
+          "Set up submissions"
+        ],
+        "maintenance_steps": [
+          "Maintain seatbelt control",
+          "Keep arms trapped",
+          "Use hooks for stability",
+          "Attack when ready"
+        ],
+        "escape_overview": "Submit opponent with trapped arms",
+        "common_mistakes": [
+          "Seatbelt not secure",
+          "Not actually trapping arms",
+          "Weak hook control",
+          "Not capitalizing on traps"
+        ],
+        "goals": [
+          "Master advanced back control",
+          "Trap opponent's defenses",
+          "Finish from back reliably",
+          "Develop systematic approach"
+        ]
       }
     },
     "arm_trapped_back_mount": {
@@ -8281,12 +9252,37 @@
           "prerequisites": []
         },
         "brown": {
-          "concepts": [],
+          "concepts": [
+            "Back mount with opponent's arm trapped",
+            "Hybrid of mount and back control",
+            "Creates unique submission opportunities",
+            "High-level control position",
+            "Advanced mount variation"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not securing trapped arm",
+            "Weak mount control",
+            "Allowing opponent to free arm",
+            "Not transitioning when needed"
+          ],
+          "key_details": [
+            "Mount position from back",
+            "One arm trapped behind",
+            "Creates submission openings",
+            "Dominant control"
+          ],
+          "transitions_available": [
+            "mount",
+            "back_control",
+            "armbar",
+            "ezekiel_choke"
+          ],
+          "prerequisites": [
+            "mount",
+            "back_control",
+            "arm_trap_mechanics"
+          ]
         },
         "black": {
           "concepts": [],
@@ -8303,24 +9299,67 @@
         "position_id": "arm_trapped_back_mount",
         "min_belt": "brown",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "arm_trapped"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "adjusting_position",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "mount",
+          "back_control",
+          "armbar_finish",
+          "ezekiel_choke"
+        ],
+        "entry_from_position_ids": [
+          "mount",
+          "back_control"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Arm Trapped Back Mount",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Arm Trap Mount",
+          "Back Mount",
+          "Trapped Arm Mount"
+        ],
+        "description": "Advanced mount position where opponent's arm is trapped while controlling from back-facing angle. Creates unique submission opportunities combining mount and back control. Expert-level position.",
+        "key_concepts": [
+          "Hybrid mount/back position",
+          "Arm trapped creates control",
+          "Multiple submission options",
+          "Dominant finishing position"
+        ],
+        "entry_steps": [
+          "From mount or back control",
+          "Trap opponent's arm behind",
+          "Establish mount from back angle",
+          "Secure control and position"
+        ],
+        "maintenance_steps": [
+          "Keep arm trapped",
+          "Maintain mount control",
+          "Control opponent's movement",
+          "Set up submissions"
+        ],
+        "escape_overview": "Submit with armbars, chokes, or other attacks",
+        "common_mistakes": [
+          "Arm not truly trapped",
+          "Weak mount control",
+          "Allowing arm to escape",
+          "Not attacking quickly"
+        ],
+        "goals": [
+          "Master advanced mount variations",
+          "Trap and control opponent",
+          "Finish with submissions",
+          "Combine position concepts"
+        ]
       }
     },
     "saddle": {
@@ -8358,12 +9397,38 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Primary leg lock finishing position",
+            "Inside sankaku on near leg",
+            "Danaher Death Squad signature position",
+            "Heel hook finishing mechanics",
+            "Master-level leg entanglement control"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not achieving proper inside sankaku",
+            "Weak leg control allowing escape",
+            "Poor hip positioning",
+            "Not understanding finishing mechanics",
+            "Attempting without expert instruction"
+          ],
+          "key_details": [
+            "Inside sankaku configuration",
+            "Near leg controlled",
+            "Optimal heel hook angle",
+            "Hip control essential",
+            "Danaher system centerpiece"
+          ],
+          "transitions_available": [
+            "outside_ashi_garami",
+            "honey_hole",
+            "heel_hook_finish"
+          ],
+          "prerequisites": [
+            "outside_ashi_garami",
+            "inside_ashi_garami",
+            "heel_hook_mastery"
+          ]
         }
       },
       "techniques": [],
@@ -8372,24 +9437,71 @@
         "position_id": "saddle",
         "min_belt": "black",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "legs_entangled"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_control",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "outside_ashi_garami",
+          "honey_hole",
+          "heel_hook_finish"
+        ],
+        "entry_from_position_ids": [
+          "outside_ashi_garami",
+          "inside_ashi_garami"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Saddle",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Saddle",
+          "411",
+          "Inside Sankaku"
+        ],
+        "description": "Primary leg lock finishing position in modern leg lock systems. Inside sankaku configuration on near leg creates optimal heel hook mechanics. Centerpiece of Danaher Death Squad system. Master-level position requiring expert understanding.",
+        "key_concepts": [
+          "Inside sankaku is key configuration",
+          "Near leg entanglement creates control",
+          "Optimal finishing position for heel hooks",
+          "Systematic approach to leg locks",
+          "Requires extensive training"
+        ],
+        "entry_steps": [
+          "From ashi garami positions",
+          "Create inside sankaku on near leg",
+          "Establish hip control",
+          "Secure saddle configuration",
+          "Prepare for heel hook finish"
+        ],
+        "maintenance_steps": [
+          "Maintain inside sankaku",
+          "Control opponent's hips",
+          "Keep near leg secured",
+          "Perfect body positioning",
+          "Ready to finish attack"
+        ],
+        "escape_overview": "Finish with heel hook or transition to other leg positions",
+        "common_mistakes": [
+          "Sankaku not truly inside position",
+          "Weak leg control",
+          "Poor hip alignment",
+          "Rushing the finish",
+          "Insufficient training before attempting"
+        ],
+        "goals": [
+          "Master modern leg locks",
+          "Develop systematic approach",
+          "Finish with heel hooks safely",
+          "Understand Danaher system",
+          "Train under expert instruction"
+        ]
       }
     },
     "double_trouble": {
@@ -8427,12 +9539,39 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Both legs entangled simultaneously",
+            "Creates maximum leg control",
+            "Advanced leg lock position",
+            "Multiple attack options available",
+            "Complex entanglement system"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not controlling both legs effectively",
+            "Weak entanglement on either leg",
+            "Poor body positioning",
+            "Not using systematic approach",
+            "Attempting without proper training"
+          ],
+          "key_details": [
+            "Both opponent's legs controlled",
+            "Complex entanglement configuration",
+            "Multiple submission options",
+            "Requires expert timing",
+            "High-level leg lock position"
+          ],
+          "transitions_available": [
+            "saddle",
+            "outside_ashi_garami",
+            "heel_hook_finish",
+            "knee_bar"
+          ],
+          "prerequisites": [
+            "saddle",
+            "outside_ashi_garami",
+            "leg_lock_mastery"
+          ]
         }
       },
       "techniques": [],
@@ -8441,24 +9580,71 @@
         "position_id": "double_trouble",
         "min_belt": "black",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "both_legs_entangled"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_control",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "saddle",
+          "outside_ashi_garami",
+          "heel_hook_finish",
+          "knee_bar"
+        ],
+        "entry_from_position_ids": [
+          "saddle",
+          "outside_ashi_garami"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Double Trouble",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Double Trouble",
+          "Both Legs Position"
+        ],
+        "description": "Advanced leg entanglement controlling both of opponent's legs simultaneously. Creates maximum control and multiple attacking options. Complex position requiring master-level understanding and training.",
+        "key_concepts": [
+          "Both legs controlled creates dominance",
+          "Complex entanglement mechanics",
+          "Multiple submission paths",
+          "Requires systematic approach",
+          "Expert-level position"
+        ],
+        "entry_steps": [
+          "From saddle or ashi positions",
+          "Capture second leg",
+          "Establish double entanglement",
+          "Secure control on both legs",
+          "Create attacking position"
+        ],
+        "maintenance_steps": [
+          "Control both legs simultaneously",
+          "Maintain entanglement integrity",
+          "Perfect body positioning",
+          "Create submission opportunities",
+          "Use systematic approach"
+        ],
+        "escape_overview": "Finish with leg attacks or transition to single leg positions",
+        "common_mistakes": [
+          "Losing control of one leg",
+          "Weak entanglement mechanics",
+          "Poor positional understanding",
+          "Not training systematically",
+          "Attempting prematurely"
+        ],
+        "goals": [
+          "Master advanced leg locks",
+          "Control both legs effectively",
+          "Develop complex entanglements",
+          "Finish with multiple attacks",
+          "Train under expert supervision"
+        ]
       }
     },
     "4_11_position": {
@@ -8496,12 +9682,39 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Numeric reference to leg configuration",
+            "Another name for saddle position",
+            "Part of Danaher terminology",
+            "Inside sankaku on near leg",
+            "Master-level finishing position"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not understanding it's saddle position",
+            "Poor inside sankaku",
+            "Weak leg control",
+            "Not using systematic approach",
+            "Confusion with terminology"
+          ],
+          "key_details": [
+            "4-11 refers to leg configuration",
+            "Inside sankaku fundamental",
+            "Same as saddle position",
+            "Danaher system terminology",
+            "Expert finishing position"
+          ],
+          "transitions_available": [
+            "saddle",
+            "outside_ashi_garami",
+            "honey_hole",
+            "heel_hook_finish"
+          ],
+          "prerequisites": [
+            "saddle",
+            "outside_ashi_garami",
+            "leg_lock_mastery"
+          ]
         }
       },
       "techniques": [],
@@ -8510,24 +9723,73 @@
         "position_id": "4_11_position",
         "min_belt": "black",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "legs_entangled"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_control",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "saddle",
+          "outside_ashi_garami",
+          "honey_hole",
+          "heel_hook_finish"
+        ],
+        "entry_from_position_ids": [
+          "outside_ashi_garami",
+          "inside_ashi_garami"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "4 11 Position",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "4-11",
+          "411",
+          "Four Eleven",
+          "Saddle"
+        ],
+        "description": "Alternative name for saddle position using numeric reference to leg configuration. Part of Danaher Death Squad terminology. Inside sankaku on near leg creating optimal heel hook mechanics. Master-level leg entanglement.",
+        "key_concepts": [
+          "Numeric reference to configuration",
+          "Same position as saddle",
+          "Inside sankaku fundamental",
+          "Part of systematic terminology",
+          "Expert finishing position"
+        ],
+        "entry_steps": [
+          "From ashi garami positions",
+          "Create inside sankaku",
+          "Establish 4-11 configuration",
+          "Control near leg and hips",
+          "Prepare for finish"
+        ],
+        "maintenance_steps": [
+          "Maintain inside sankaku",
+          "Control opponent's hips",
+          "Keep 4-11 configuration",
+          "Perfect positioning",
+          "Ready to attack"
+        ],
+        "escape_overview": "Finish with heel hook or transition",
+        "common_mistakes": [
+          "Confusion with terminology",
+          "Not recognizing saddle position",
+          "Weak inside sankaku",
+          "Poor systematic understanding",
+          "Insufficient training"
+        ],
+        "goals": [
+          "Master leg lock terminology",
+          "Understand Danaher system",
+          "Finish with heel hooks",
+          "Develop systematic approach",
+          "Train under expert guidance"
+        ]
       }
     },
     "honey_hole": {
@@ -8565,12 +9827,38 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Crossover inside sankaku position",
+            "Eddie Cummings signature position",
+            "Far leg entanglement with inside sankaku",
+            "Creates powerful heel hook mechanics",
+            "Alternative to saddle configuration"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not achieving proper crossover",
+            "Weak inside sankaku on far leg",
+            "Poor hip control",
+            "Not understanding differences from saddle",
+            "Attempting without proper training"
+          ],
+          "key_details": [
+            "Inside sankaku on far leg",
+            "Crossover configuration",
+            "Eddie Cummings specialty",
+            "Different mechanics than saddle",
+            "Powerful finishing position"
+          ],
+          "transitions_available": [
+            "saddle",
+            "outside_ashi_garami",
+            "heel_hook_finish"
+          ],
+          "prerequisites": [
+            "saddle",
+            "outside_ashi_garami",
+            "heel_hook_mastery"
+          ]
         }
       },
       "techniques": [],
@@ -8579,24 +9867,71 @@
         "position_id": "honey_hole",
         "min_belt": "black",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "legs_entangled"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_control",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "saddle",
+          "outside_ashi_garami",
+          "heel_hook_finish"
+        ],
+        "entry_from_position_ids": [
+          "outside_ashi_garami",
+          "saddle"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Honey Hole",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Honey Hole",
+          "Cross Ashi",
+          "Far Leg Saddle"
+        ],
+        "description": "Advanced leg entanglement with inside sankaku on far leg instead of near. Eddie Cummings signature position. Creates powerful heel hook mechanics with different configuration than saddle. Master-level finishing position.",
+        "key_concepts": [
+          "Inside sankaku on far leg",
+          "Crossover configuration key",
+          "Different from saddle mechanics",
+          "Eddie Cummings development",
+          "Alternative finishing position"
+        ],
+        "entry_steps": [
+          "From ashi garami or saddle",
+          "Cross to far leg",
+          "Create inside sankaku",
+          "Establish honey hole configuration",
+          "Control hips and position"
+        ],
+        "maintenance_steps": [
+          "Maintain far leg sankaku",
+          "Control opponent's hips",
+          "Keep crossover configuration",
+          "Perfect body positioning",
+          "Ready for heel hook"
+        ],
+        "escape_overview": "Finish with heel hook or transition to other positions",
+        "common_mistakes": [
+          "Not achieving true crossover",
+          "Weak far leg control",
+          "Confusion with saddle",
+          "Poor hip positioning",
+          "Insufficient systematic training"
+        ],
+        "goals": [
+          "Master leg lock variations",
+          "Understand crossover mechanics",
+          "Develop alternative finishing positions",
+          "Finish from honey hole",
+          "Train with expert instruction"
+        ]
       }
     },
     "truck": {
@@ -8634,12 +9969,38 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Eddie Bravo's signature position",
+            "Rolling crucifix control",
+            "Twister submission setup",
+            "10th Planet Jiu Jitsu signature",
+            "Master-level back attack system"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not controlling both legs properly",
+            "Weak shoulder control",
+            "Poor body positioning",
+            "Not understanding twister mechanics",
+            "Attempting without proper training"
+          ],
+          "key_details": [
+            "Rolling crucifix configuration",
+            "Both legs controlled",
+            "Shoulder trapped",
+            "Twister submission setup",
+            "Eddie Bravo system"
+          ],
+          "transitions_available": [
+            "back_control",
+            "twister_finish",
+            "calf_slicer"
+          ],
+          "prerequisites": [
+            "back_control",
+            "lockdown",
+            "rubber_guard_system"
+          ]
         }
       },
       "techniques": [],
@@ -8648,24 +10009,71 @@
         "position_id": "truck",
         "min_belt": "black",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "legs_controlled"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "rotating",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "back_control",
+          "twister_finish",
+          "calf_slicer"
+        ],
+        "entry_from_position_ids": [
+          "back_control",
+          "lockdown"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Truck",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Truck",
+          "The Truck",
+          "Rolling Crucifix"
+        ],
+        "description": "Eddie Bravo's signature control position creating rolling crucifix configuration. Primary setup for twister submission. Signature position of 10th Planet Jiu Jitsu system. Master-level back attack requiring extensive training.",
+        "key_concepts": [
+          "Rolling crucifix creates control",
+          "Eddie Bravo signature position",
+          "Twister submission setup",
+          "Both legs controlled",
+          "10th Planet system centerpiece"
+        ],
+        "entry_steps": [
+          "From back control or lockdown",
+          "Trap opponent's shoulder",
+          "Control both legs",
+          "Establish truck position",
+          "Create twister angle"
+        ],
+        "maintenance_steps": [
+          "Keep both legs controlled",
+          "Maintain shoulder trap",
+          "Control opponent's movement",
+          "Perfect body positioning",
+          "Set up twister or calf slicer"
+        ],
+        "escape_overview": "Finish with twister, calf slicer, or transition to back",
+        "common_mistakes": [
+          "Weak leg control",
+          "Poor shoulder trap",
+          "Not understanding 10th Planet system",
+          "Rushing the twister",
+          "Insufficient training"
+        ],
+        "goals": [
+          "Master 10th Planet system",
+          "Develop truck control",
+          "Finish with twister",
+          "Create unique attacks",
+          "Train under qualified instruction"
+        ]
       }
     },
     "twister_side_control": {
@@ -8703,12 +10111,38 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Side control variation leading to twister",
+            "Creates spinal lock opportunities",
+            "Eddie Bravo development",
+            "Combines side control and twister mechanics",
+            "Advanced submission position"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not controlling near arm properly",
+            "Weak leg control",
+            "Poor body positioning for twister",
+            "Not understanding submission mechanics",
+            "Attempting without proper training"
+          ],
+          "key_details": [
+            "Side control with twister setup",
+            "Near arm controlled",
+            "Leg configuration for twister",
+            "Spinal lock mechanics",
+            "10th Planet technique"
+          ],
+          "transitions_available": [
+            "side_control",
+            "twister_finish",
+            "truck"
+          ],
+          "prerequisites": [
+            "side_control",
+            "truck",
+            "twister_mechanics"
+          ]
         }
       },
       "techniques": [],
@@ -8717,24 +10151,70 @@
         "position_id": "twister_side_control",
         "min_belt": "black",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "side_control"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "adjusting_position",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "side_control",
+          "twister_finish",
+          "truck"
+        ],
+        "entry_from_position_ids": [
+          "side_control",
+          "truck"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Twister Side Control",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Twister Side Control",
+          "Side Control Twister Setup"
+        ],
+        "description": "Advanced side control variation creating twister submission opportunities. Combines traditional side control with spinal lock mechanics. Eddie Bravo development. Master-level submission position.",
+        "key_concepts": [
+          "Side control meets twister",
+          "Creates spinal lock opportunities",
+          "Unique submission position",
+          "10th Planet development",
+          "Advanced control and attack"
+        ],
+        "entry_steps": [
+          "From side control or truck",
+          "Control near arm",
+          "Establish leg positioning",
+          "Create twister angle",
+          "Set up spinal lock"
+        ],
+        "maintenance_steps": [
+          "Maintain side control",
+          "Keep arm controlled",
+          "Perfect leg positioning",
+          "Create twister mechanics",
+          "Ready to finish"
+        ],
+        "escape_overview": "Finish with twister or transition to truck",
+        "common_mistakes": [
+          "Weak arm control",
+          "Poor leg positioning",
+          "Not understanding twister mechanics",
+          "Rushing the submission",
+          "Insufficient systematic training"
+        ],
+        "goals": [
+          "Master twister submissions",
+          "Develop unique attacks",
+          "Combine position concepts",
+          "Finish with spinal locks",
+          "Train under expert guidance"
+        ]
       }
     },
     "samurai_roll_positions": {
@@ -8772,12 +10252,38 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Rolling transition from turtle/front headlock",
+            "Creates back exposure during roll",
+            "Wrestling-based transition",
+            "Multiple entries and finishes",
+            "Dynamic movement system"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor rolling mechanics",
+            "Not timing the roll correctly",
+            "Weak control during transition",
+            "Not securing back control",
+            "Stopping mid-transition"
+          ],
+          "key_details": [
+            "Rolling transition technique",
+            "Creates back exposure",
+            "Wrestling-based movement",
+            "Timing is crucial",
+            "Must complete roll"
+          ],
+          "transitions_available": [
+            "back_control",
+            "front_headlock_web",
+            "turtle_top"
+          ],
+          "prerequisites": [
+            "front_headlock_web",
+            "rolling_mechanics",
+            "back_control"
+          ]
         }
       },
       "techniques": [],
@@ -8786,24 +10292,70 @@
         "position_id": "samurai_roll_positions",
         "min_belt": "black",
         "category": "transition_state",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "transitioning",
+          "rolling"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "rolling",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "back_control",
+          "front_headlock_web",
+          "turtle_top"
+        ],
+        "entry_from_position_ids": [
+          "front_headlock_web",
+          "turtle_top"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Samurai Roll Positions",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Samurai Roll",
+          "Rolling Back Take"
+        ],
+        "description": "Dynamic rolling transition from turtle or front headlock creating back exposure. Wrestling-based technique requiring precise timing and control. Master-level transition with multiple entry and finish options.",
+        "key_concepts": [
+          "Rolling creates back exposure",
+          "Wrestling-based transition",
+          "Timing is essential",
+          "Must maintain control during roll",
+          "Dynamic movement required"
+        ],
+        "entry_steps": [
+          "From front headlock or turtle top",
+          "Establish control points",
+          "Initiate rolling motion",
+          "Maintain control throughout",
+          "Complete to back control"
+        ],
+        "maintenance_steps": [
+          "Keep control during roll",
+          "Maintain momentum",
+          "Don't stop mid-transition",
+          "Perfect timing",
+          "Secure position at completion"
+        ],
+        "escape_overview": "Complete roll to secure back control",
+        "common_mistakes": [
+          "Poor timing",
+          "Losing control during roll",
+          "Stopping mid-transition",
+          "Not securing back",
+          "Weak rolling mechanics"
+        ],
+        "goals": [
+          "Master dynamic transitions",
+          "Take back with rolls",
+          "Develop timing",
+          "Use wrestling techniques",
+          "Complete transitions smoothly"
+        ]
       }
     },
     "rolling_back_takes": {
@@ -8841,12 +10393,40 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Family of rolling transitions to back",
+            "Includes berimbolo, samurai roll, etc",
+            "Modern sport BJJ emphasis",
+            "Requires inversion and rotation",
+            "Dynamic back attack system"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor rolling mechanics",
+            "Not inverting properly",
+            "Weak grip control during rolls",
+            "Not securing hooks",
+            "Stopping momentum"
+          ],
+          "key_details": [
+            "Multiple rolling back takes",
+            "Inversion required",
+            "Grip control essential",
+            "Momentum-based",
+            "Modern competition techniques"
+          ],
+          "transitions_available": [
+            "back_control",
+            "de_la_riva",
+            "berimbolo_control",
+            "scramble_positions"
+          ],
+          "prerequisites": [
+            "berimbolo_control",
+            "inversion",
+            "de_la_riva",
+            "back_control"
+          ]
         }
       },
       "techniques": [],
@@ -8855,24 +10435,73 @@
         "position_id": "rolling_back_takes",
         "min_belt": "black",
         "category": "transition_state",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "transitioning",
+          "rolling"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "rolling",
+          "inverting",
+          "rotating"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "back_control",
+          "de_la_riva",
+          "berimbolo_control",
+          "scramble_positions"
+        ],
+        "entry_from_position_ids": [
+          "de_la_riva",
+          "berimbolo_control"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Rolling Back Takes",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Rolling Back Takes",
+          "Rolling Transitions",
+          "Back Take Rolls"
+        ],
+        "description": "Family of dynamic rolling transitions to back control. Includes berimbolo, samurai roll, and other rolling techniques. Modern sport BJJ emphasis requiring inversion and momentum. Master-level back attack system.",
+        "key_concepts": [
+          "Multiple rolling techniques",
+          "Dynamic back attacks",
+          "Inversion and rotation required",
+          "Momentum-based transitions",
+          "Modern competition emphasis"
+        ],
+        "entry_steps": [
+          "From guard or top positions",
+          "Create rolling angle",
+          "Initiate inversion/rotation",
+          "Maintain grip control",
+          "Complete to back control"
+        ],
+        "maintenance_steps": [
+          "Keep momentum throughout",
+          "Maintain grip control",
+          "Don't stop during transition",
+          "Perfect rolling mechanics",
+          "Secure hooks at completion"
+        ],
+        "escape_overview": "Complete roll to secure back control with hooks",
+        "common_mistakes": [
+          "Poor rolling mechanics",
+          "Losing grips during transition",
+          "Not maintaining momentum",
+          "Weak inversion",
+          "Not securing position"
+        ],
+        "goals": [
+          "Master dynamic back takes",
+          "Develop rolling techniques",
+          "Use modern transitions",
+          "Compete at high level",
+          "Take back efficiently"
+        ]
       }
     },
     "hybrid_lapel_inversion": {
@@ -8910,12 +10539,40 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Combining lapel guards with inversion",
+            "Creates complex control system",
+            "Modern sport BJJ development",
+            "Multiple attack and sweep options",
+            "Master-level guard complexity"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not coordinating lapel and inversion",
+            "Weak lapel control",
+            "Poor inversion mechanics",
+            "Not understanding hybrid concepts",
+            "Attempting without proper training"
+          ],
+          "key_details": [
+            "Lapel control meets inversion",
+            "Hybrid guard concept",
+            "Complex control system",
+            "Modern competition guard",
+            "Multiple attacking options"
+          ],
+          "transitions_available": [
+            "worm_guard",
+            "berimbolo_control",
+            "rolling_back_takes",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "worm_guard",
+            "inversion_mastery",
+            "berimbolo_control",
+            "lapel_guard_systems"
+          ]
         }
       },
       "techniques": [],
@@ -8924,24 +10581,73 @@
         "position_id": "hybrid_lapel_inversion",
         "min_belt": "black",
         "category": "hybrid",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "inverted"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "inverting",
+          "hip_movement",
+          "rolling"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "worm_guard",
+          "berimbolo_control",
+          "back_control",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "worm_guard",
+          "spider_guard"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Hybrid Lapel Inversion",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Hybrid Lapel Inversion",
+          "Inverted Lapel Guard",
+          "Lapel Inversion System"
+        ],
+        "description": "Master-level guard combining lapel control systems with inversion mechanics. Creates complex control and multiple attacking options. Modern sport BJJ development requiring extensive training in both systems.",
+        "key_concepts": [
+          "Hybrid of lapel and inversion",
+          "Complex control system",
+          "Modern competition guard",
+          "Multiple attack paths",
+          "Requires mastery of both elements"
+        ],
+        "entry_steps": [
+          "From lapel guard or inverted position",
+          "Establish lapel control",
+          "Create inversion",
+          "Combine both systems",
+          "Set up attacks or transitions"
+        ],
+        "maintenance_steps": [
+          "Maintain lapel control",
+          "Keep inversion mechanics",
+          "Coordinate both systems",
+          "Create attacking opportunities",
+          "Stay dynamic"
+        ],
+        "escape_overview": "Sweep, take back, or transition to other positions",
+        "common_mistakes": [
+          "Not coordinating systems",
+          "Weak lapel control",
+          "Poor inversion",
+          "Over-complicating position",
+          "Insufficient training in components"
+        ],
+        "goals": [
+          "Master hybrid guard concepts",
+          "Combine multiple systems",
+          "Develop modern guard game",
+          "Compete at highest level",
+          "Create complex attacks"
+        ]
       }
     },
     "reverse_worm_chains": {
@@ -8979,12 +10685,40 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Reverse direction worm guard variations",
+            "Chaining multiple lapel positions",
+            "Keenan Cornelius advanced system",
+            "Creates unpredictable attacks",
+            "Master-level lapel guard"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not understanding reverse mechanics",
+            "Weak lapel chains",
+            "Poor understanding of system",
+            "Not flowing between positions",
+            "Attempting without worm mastery"
+          ],
+          "key_details": [
+            "Reverse worm configurations",
+            "Chaining multiple positions",
+            "Keenan system advancement",
+            "Unpredictable attack paths",
+            "Complex lapel control"
+          ],
+          "transitions_available": [
+            "worm_guard",
+            "squid_guard",
+            "ringworm_guard",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "worm_guard",
+            "squid_guard",
+            "ringworm_guard",
+            "lapel_guard_mastery"
+          ]
         }
       },
       "techniques": [],
@@ -8993,24 +10727,74 @@
         "position_id": "reverse_worm_chains",
         "min_belt": "black",
         "category": "hybrid",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "chaining",
+          "flowing"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "worm_guard",
+          "squid_guard",
+          "ringworm_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "worm_guard",
+          "squid_guard",
+          "ringworm_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Reverse Worm Chains",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Reverse Worm Chains",
+          "Worm Chain System",
+          "Reverse Lapel Chains"
+        ],
+        "description": "Advanced extension of worm guard system using reverse configurations and chaining multiple positions. Keenan Cornelius high-level development. Creates unpredictable attack patterns. Master-level lapel guard requiring complete system understanding.",
+        "key_concepts": [
+          "Reverse worm mechanics",
+          "Chaining multiple positions",
+          "Unpredictable attack patterns",
+          "System mastery required",
+          "Keenan advanced concepts"
+        ],
+        "entry_steps": [
+          "From worm guard system positions",
+          "Create reverse configurations",
+          "Chain between positions",
+          "Maintain lapel control throughout",
+          "Create attacking opportunities"
+        ],
+        "maintenance_steps": [
+          "Flow between positions",
+          "Maintain lapel chains",
+          "Use reverse mechanics",
+          "Stay unpredictable",
+          "Create sweeping angles"
+        ],
+        "escape_overview": "Sweep from any position in chain",
+        "common_mistakes": [
+          "Not understanding reverse mechanics",
+          "Weak position chaining",
+          "Poor system comprehension",
+          "Static in positions",
+          "Attempting without complete training"
+        ],
+        "goals": [
+          "Master complete worm system",
+          "Chain positions fluidly",
+          "Create unpredictable attacks",
+          "Develop highest level lapel game",
+          "Study under Keenan system"
+        ]
       }
     },
     "false_reap": {
@@ -9048,12 +10832,37 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Legal position resembling reap",
+            "Leg positioned differently than illegal reap",
+            "Creates control without crossing centerline",
+            "IBJJF legal leg entanglement",
+            "Requires understanding of legal mechanics"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Accidentally creating illegal reap",
+            "Not understanding rule differences",
+            "Poor leg positioning",
+            "Weak control mechanics",
+            "Confusion with actual reap"
+          ],
+          "key_details": [
+            "Legal under IBJJF rules",
+            "Leg doesn't cross centerline",
+            "Resembles reap position",
+            "Creates control and attacks",
+            "Understanding legality crucial"
+          ],
+          "transitions_available": [
+            "outside_ashi_garami",
+            "saddle",
+            "straight_ankle_lock"
+          ],
+          "prerequisites": [
+            "outside_ashi_garami",
+            "understanding_reaping_rules"
+          ]
         }
       },
       "techniques": [],
@@ -9062,24 +10871,69 @@
         "position_id": "false_reap",
         "min_belt": "black",
         "category": "leg_entanglement",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_side",
+          "legs_entangled"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_control",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "outside_ashi_garami",
+          "saddle",
+          "straight_ankle_lock"
+        ],
+        "entry_from_position_ids": [
+          "outside_ashi_garami"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "False Reap",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "False Reap",
+          "Legal Reap Position"
+        ],
+        "description": "Legal leg entanglement position resembling illegal reap but with leg positioned to avoid crossing centerline. IBJJF legal position. Creates control and attacking opportunities while staying within rules. Requires understanding of reaping rules.",
+        "key_concepts": [
+          "Legal position under IBJJF",
+          "Resembles reap without illegality",
+          "Leg positioning is key",
+          "Understanding rules crucial",
+          "Creates control and attacks"
+        ],
+        "entry_steps": [
+          "From ashi garami positions",
+          "Position leg like reap",
+          "Ensure doesn't cross centerline",
+          "Maintain legal configuration",
+          "Create control and attacks"
+        ],
+        "maintenance_steps": [
+          "Keep position legal",
+          "Maintain control",
+          "Monitor leg positioning",
+          "Stay within rules",
+          "Create attacking opportunities"
+        ],
+        "escape_overview": "Attack with legal submissions or transition to other positions",
+        "common_mistakes": [
+          "Creating illegal reap accidentally",
+          "Not understanding rules",
+          "Poor leg positioning",
+          "Confusion about legality",
+          "Not monitoring position"
+        ],
+        "goals": [
+          "Master legal leg entanglements",
+          "Understand reaping rules",
+          "Create control within rules",
+          "Compete safely under IBJJF",
+          "Develop rule-compliant game"
+        ]
       }
     },
     "cross_collar_double_sleeve_hybrid": {
@@ -9117,12 +10971,39 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Hybrid of collar and sleeve guards",
+            "Multiple grip configurations",
+            "Creates versatile guard platform",
+            "Competition-tested system",
+            "Master-level grip fighting"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Poor grip management",
+            "Not understanding hybrid advantages",
+            "Weak cross collar grip",
+            "Not using sleeve control effectively",
+            "Static guard without transitions"
+          ],
+          "key_details": [
+            "Cross collar and double sleeve",
+            "Hybrid guard configuration",
+            "Multiple attack options",
+            "Versatile platform",
+            "Advanced grip fighting"
+          ],
+          "transitions_available": [
+            "collar_sleeve_guard",
+            "spider_guard",
+            "lasso_guard",
+            "sweep_to_top"
+          ],
+          "prerequisites": [
+            "collar_sleeve_guard",
+            "spider_guard",
+            "grip_fighting_mastery"
+          ]
         }
       },
       "techniques": [],
@@ -9131,24 +11012,73 @@
         "position_id": "cross_collar_double_sleeve_hybrid",
         "min_belt": "black",
         "category": "hybrid",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "legs_open"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "pulling",
+          "adjusting"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "collar_sleeve_guard",
+          "spider_guard",
+          "lasso_guard",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "collar_sleeve_guard",
+          "spider_guard"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Cross Collar Double Sleeve Hybrid",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Cross Collar Double Sleeve",
+          "Collar Sleeve Hybrid",
+          "CCDS Guard"
+        ],
+        "description": "Master-level guard combining cross collar grip with double sleeve control. Creates versatile platform with multiple attack and sweep options. Competition-tested system requiring advanced grip fighting and guard understanding.",
+        "key_concepts": [
+          "Hybrid grip configuration",
+          "Cross collar creates breaks",
+          "Double sleeve controls arms",
+          "Versatile attacking platform",
+          "Advanced grip fighting"
+        ],
+        "entry_steps": [
+          "From collar sleeve or spider guard",
+          "Establish cross collar grip",
+          "Control both sleeves",
+          "Create hybrid configuration",
+          "Set up attacks or sweeps"
+        ],
+        "maintenance_steps": [
+          "Maintain grip integrity",
+          "Use cross collar to break posture",
+          "Control arms with sleeves",
+          "Create attacking angles",
+          "Stay dynamic"
+        ],
+        "escape_overview": "Sweep or transition to other guards",
+        "common_mistakes": [
+          "Poor grip management",
+          "Weak cross collar",
+          "Not using hybrid advantages",
+          "Static without attacks",
+          "Insufficient grip fighting skills"
+        ],
+        "goals": [
+          "Master hybrid guards",
+          "Develop grip fighting",
+          "Create versatile game",
+          "Compete at highest level",
+          "Use multiple attack paths"
+        ]
       }
     },
     "front_headlock_web": {
@@ -9186,12 +11116,39 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Complex front headlock system",
+            "Multiple control points like web",
+            "Wrestling-based position",
+            "Creates submission and back take opportunities",
+            "Master-level front headlock control"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not controlling multiple points",
+            "Weak headlock grip",
+            "Poor body positioning",
+            "Not using systematic approach",
+            "Missing transition opportunities"
+          ],
+          "key_details": [
+            "Multiple control points",
+            "Front headlock fundamental",
+            "Web-like control system",
+            "Wrestling-based technique",
+            "Creates multiple options"
+          ],
+          "transitions_available": [
+            "back_control",
+            "guillotine",
+            "darce_choke",
+            "anaconda_choke"
+          ],
+          "prerequisites": [
+            "front_headlock",
+            "wrestling_controls",
+            "guillotine_mechanics"
+          ]
         }
       },
       "techniques": [],
@@ -9200,24 +11157,72 @@
         "position_id": "front_headlock_web",
         "min_belt": "black",
         "category": "top_control",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_top",
+          "head_controlled"
+        ],
+        "stability_score": 5,
+        "movement_directions_allowed": [
+          "controlling",
+          "attacking"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
+        "leads_to_position_ids": [
+          "back_control",
+          "guillotine",
+          "darce_choke",
+          "anaconda_choke"
+        ],
+        "entry_from_position_ids": [
+          "turtle_top",
+          "scramble_positions"
+        ],
         "risk_level": "low"
       },
       "learning": {
         "display_name": "Front Headlock Web",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Front Headlock Web",
+          "Web System",
+          "Front Headlock System"
+        ],
+        "description": "Advanced front headlock system with multiple control points creating web-like control. Wrestling-based position creating submission and back take opportunities. Master-level systematic approach to front headlock.",
+        "key_concepts": [
+          "Multiple control points like web",
+          "Systematic front headlock approach",
+          "Wrestling-based control",
+          "Creates multiple attack paths",
+          "Master-level position"
+        ],
+        "entry_steps": [
+          "From turtle top or scrambles",
+          "Establish front headlock",
+          "Create multiple control points",
+          "Build web-like system",
+          "Set up attacks or back take"
+        ],
+        "maintenance_steps": [
+          "Maintain headlock control",
+          "Keep multiple control points",
+          "Use systematic approach",
+          "Create attacking opportunities",
+          "Control opponent's movement"
+        ],
+        "escape_overview": "Finish with submissions or take the back",
+        "common_mistakes": [
+          "Single control point only",
+          "Weak headlock",
+          "Not using system",
+          "Missing opportunities",
+          "Poor wrestling understanding"
+        ],
+        "goals": [
+          "Master front headlock systems",
+          "Develop wrestling-based controls",
+          "Create multiple attack options",
+          "Take back or submit",
+          "Use systematic approach"
+        ]
       }
     },
     "scramble_positions": {
@@ -9255,12 +11260,40 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Chaotic transitional moments",
+            "Both competitors fighting for position",
+            "Requires reading and reaction",
+            "Wrestling-heavy situations",
+            "Mastery separates skill levels"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Panicking during scrambles",
+            "Not reading opponent's movement",
+            "Poor positioning awareness",
+            "Wasting energy unnecessarily",
+            "Not capitalizing on opportunities"
+          ],
+          "key_details": [
+            "Chaotic transitions",
+            "Requires excellent awareness",
+            "Wrestling skills important",
+            "Reading opponent crucial",
+            "Opportunities in chaos"
+          ],
+          "transitions_available": [
+            "back_control",
+            "front_headlock_web",
+            "turtle_top",
+            "guard_positions",
+            "side_control"
+          ],
+          "prerequisites": [
+            "wrestling_fundamentals",
+            "position_awareness",
+            "scrambling_practice"
+          ]
         }
       },
       "techniques": [],
@@ -9269,24 +11302,72 @@
         "position_id": "scramble_positions",
         "min_belt": "black",
         "category": "transition_state",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "transitioning",
+          "scrambling"
+        ],
+        "stability_score": 2,
+        "movement_directions_allowed": [
+          "all_directions",
+          "dynamic"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "back_control",
+          "front_headlock_web",
+          "turtle_top",
+          "guard_recovery",
+          "side_control"
+        ],
+        "entry_from_position_ids": [
+          "any_position"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Scramble Positions",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Scrambles",
+          "Scrambling",
+          "Chaotic Transitions"
+        ],
+        "description": "Chaotic transitional moments where both competitors fight for position. Requires excellent awareness, wrestling skills, and ability to read opponent's movement. Master-level scrambling separates elite from good.",
+        "key_concepts": [
+          "Chaos creates opportunities",
+          "Reading opponent is key",
+          "Wrestling skills essential",
+          "Positioning awareness crucial",
+          "Mastery through experience"
+        ],
+        "entry_steps": [
+          "Recognize scramble beginning",
+          "Stay calm and aware",
+          "Read opponent's movement",
+          "React to opportunities",
+          "Secure advantageous position"
+        ],
+        "maintenance_steps": [
+          "Maintain awareness",
+          "Don't panic",
+          "Keep moving intelligently",
+          "Create and recognize opportunities",
+          "Control chaos"
+        ],
+        "escape_overview": "Secure dominant position from scramble",
+        "common_mistakes": [
+          "Panicking",
+          "Not reading opponent",
+          "Wasting energy",
+          "Missing opportunities",
+          "Poor wrestling skills"
+        ],
+        "goals": [
+          "Master scrambling",
+          "Develop wrestling skills",
+          "Read opponent movement",
+          "Stay calm in chaos",
+          "Win scrambles consistently"
+        ]
       }
     },
     "half_inverted_retention": {
@@ -9324,12 +11405,39 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Retention system using partial inversion",
+            "Creates defensive recovery",
+            "Modern guard retention",
+            "Half inverted positioning",
+            "Master-level defensive guard"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not using inversion effectively",
+            "Poor retention mechanics",
+            "Weak hip movement",
+            "Not recovering guard properly",
+            "Staying inverted too long"
+          ],
+          "key_details": [
+            "Partial inversion for retention",
+            "Defensive guard recovery",
+            "Hip movement essential",
+            "Modern retention system",
+            "Creates space and recovery"
+          ],
+          "transitions_available": [
+            "open_guard_bottom",
+            "de_la_riva",
+            "inverted_guard",
+            "guard_recovery"
+          ],
+          "prerequisites": [
+            "inverted_guard",
+            "guard_retention",
+            "hip_movement_mastery"
+          ]
         }
       },
       "techniques": [],
@@ -9338,24 +11446,73 @@
         "position_id": "half_inverted_retention",
         "min_belt": "black",
         "category": "advanced_guard",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "on_bottom",
+          "partially_inverted"
+        ],
+        "stability_score": 3,
+        "movement_directions_allowed": [
+          "hip_movement",
+          "inverting",
+          "recovering"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "open_guard_bottom",
+          "de_la_riva",
+          "inverted_guard",
+          "closed_guard_bottom"
+        ],
+        "entry_from_position_ids": [
+          "open_guard_bottom",
+          "inverted_guard"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Half Inverted Retention",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Half Inverted Retention",
+          "Partial Inversion Defense",
+          "Inverted Guard Retention"
+        ],
+        "description": "Master-level guard retention system using partial inversion to create defensive recovery. Modern approach to preventing guard passes. Requires excellent hip movement and understanding of retention mechanics.",
+        "key_concepts": [
+          "Partial inversion creates space",
+          "Defensive recovery system",
+          "Modern retention approach",
+          "Hip movement crucial",
+          "Prevents guard passes"
+        ],
+        "entry_steps": [
+          "When guard is being passed",
+          "Create partial inversion",
+          "Use hip movement",
+          "Generate space and recovery",
+          "Return to guard position"
+        ],
+        "maintenance_steps": [
+          "Keep moving hips",
+          "Use partial inversion",
+          "Create space continuously",
+          "Don't stay inverted",
+          "Recover to better position"
+        ],
+        "escape_overview": "Recover full guard or create better position",
+        "common_mistakes": [
+          "Staying inverted too long",
+          "Weak hip movement",
+          "Not creating space",
+          "Poor retention mechanics",
+          "Not recovering to guard"
+        ],
+        "goals": [
+          "Master guard retention",
+          "Prevent passes with inversion",
+          "Develop defensive systems",
+          "Use modern retention",
+          "Maintain guard consistently"
+        ]
       }
     },
     "dynamic_leg_entanglement_transitions": {
@@ -9393,12 +11550,41 @@
           "prerequisites": []
         },
         "black": {
-          "concepts": [],
+          "concepts": [
+            "Flowing between leg entanglements",
+            "Systematic leg lock transitions",
+            "Following opponent's movements",
+            "Danaher system transitions",
+            "Master-level leg lock game"
+          ],
           "techniques": [],
-          "common_mistakes": [],
-          "key_details": [],
-          "transitions_available": [],
-          "prerequisites": []
+          "common_mistakes": [
+            "Not following opponent's movements",
+            "Staying in static position",
+            "Poor understanding of system",
+            "Weak transitional control",
+            "Not using systematic approach"
+          ],
+          "key_details": [
+            "Flow between leg positions",
+            "Systematic transitions",
+            "Follow opponent's escapes",
+            "Maintain leg control",
+            "Danaher system approach"
+          ],
+          "transitions_available": [
+            "saddle",
+            "outside_ashi_garami",
+            "inside_ashi_garami",
+            "honey_hole",
+            "50_50_guard"
+          ],
+          "prerequisites": [
+            "saddle",
+            "outside_ashi_garami",
+            "inside_ashi_garami",
+            "leg_lock_system_understanding"
+          ]
         }
       },
       "techniques": [],
@@ -9407,24 +11593,73 @@
         "position_id": "dynamic_leg_entanglement_transitions",
         "min_belt": "black",
         "category": "transition_state",
-        "opponent_relative": [],
-        "stability_score": 1,
-        "movement_directions_allowed": [],
+        "opponent_relative": [
+          "transitioning",
+          "legs_entangled"
+        ],
+        "stability_score": 4,
+        "movement_directions_allowed": [
+          "flowing",
+          "adjusting",
+          "following"
+        ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
+        "leads_to_position_ids": [
+          "saddle",
+          "outside_ashi_garami",
+          "inside_ashi_garami",
+          "honey_hole",
+          "50_50_guard"
+        ],
+        "entry_from_position_ids": [
+          "any_leg_entanglement"
+        ],
+        "risk_level": "medium"
       },
       "learning": {
         "display_name": "Dynamic Leg Entanglement Transitions",
-        "alternate_names": [],
-        "description": "",
-        "key_concepts": [],
-        "entry_steps": [],
-        "maintenance_steps": [],
-        "escape_overview": "",
-        "common_mistakes": [],
-        "goals": []
+        "alternate_names": [
+          "Dynamic Leg Transitions",
+          "Leg Lock Transitions",
+          "Flowing Leg Game"
+        ],
+        "description": "Master-level ability to flow dynamically between leg entanglements. Systematic approach following opponent's escape attempts. Centerpiece of modern leg lock systems. Requires extensive training in leg lock systems.",
+        "key_concepts": [
+          "Flow between positions",
+          "Systematic approach essential",
+          "Follow opponent's movements",
+          "Maintain control throughout",
+          "Danaher system mastery"
+        ],
+        "entry_steps": [
+          "From any leg entanglement",
+          "Read opponent's escape",
+          "Follow their movement",
+          "Transition systematically",
+          "Maintain or improve position"
+        ],
+        "maintenance_steps": [
+          "Stay dynamic not static",
+          "Follow escapes",
+          "Use systematic approach",
+          "Maintain leg control",
+          "Create finishing opportunities"
+        ],
+        "escape_overview": "Flow to finishing positions or maintain control",
+        "common_mistakes": [
+          "Being static in position",
+          "Not following movements",
+          "Poor system understanding",
+          "Weak transitional control",
+          "Attempting without training"
+        ],
+        "goals": [
+          "Master leg lock systems",
+          "Flow between positions",
+          "Follow opponent's movements",
+          "Finish from any entanglement",
+          "Train under expert instruction"
+        ]
       }
     }
   }
