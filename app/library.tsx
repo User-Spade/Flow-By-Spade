@@ -68,6 +68,7 @@ export default function LibraryScreen() {
 
   // Dynamic animated scales
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
+  const foundationScales = useRef<Animated.Value[]>([]).current;
   const [posScales, setPosScales] = useState<Animated.Value[]>([]);
 
   // Load foundations & positions from database based on selection
@@ -75,6 +76,9 @@ export default function LibraryScreen() {
     const load = () => {
       const foundationList = databaseService.getFoundations();
       setFoundations(foundationList);
+      if (foundationScales.length === 0 && foundationList.length > 0) {
+        foundationList.forEach(() => foundationScales.push(new Animated.Value(1)));
+      }
       if (selectedFoundation) {
         const filteredPositions = databaseService.getPositionsByFoundationAndBelt(selectedFoundation, selectedBeltId || null);
         const list: Array<{ id: string; name: string; category: string; icon: keyof typeof Ionicons.glyphMap }> = [];
@@ -231,13 +235,17 @@ export default function LibraryScreen() {
         })}
       </ScrollView>
 
-      {/* Foundations Section */}
-      <Text style={styles.sectionLabel}>Foundations</Text>
-      <View style={styles.positionsGrid}>
+      {/* Foundation Filter Section */}
+      <Text style={styles.sectionLabel}>Foundation Filter</Text>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.beltScroll}
+        contentContainerStyle={{ paddingRight: 20 }}
+      >
         {foundations.map((f, i) => {
           const isSelected = selectedFoundation === f.id;
-          const scaleRef = posScales[i] || new Animated.Value(1);
-          const iconName: keyof typeof Ionicons.glyphMap = isSelected ? 'shield-checkmark' : 'layers-outline';
+          const scaleRef = foundationScales[i];
           return (
             <TouchableWithoutFeedback
               key={f.id}
@@ -249,22 +257,29 @@ export default function LibraryScreen() {
             >
               <Animated.View
                 style={[
-                  styles.positionCard,
+                  styles.foundationChip,
                   {
                     transform: [{ scale: scaleRef }],
+                    backgroundColor: isSelected ? '#2E3B4E' : 'rgba(44,44,49,0.82)',
                     borderColor: isSelected ? '#F18805' : 'rgba(255,255,255,0.12)'
                   }
                 ]}
               >
-                <Ionicons name={iconName} size={26} color={isSelected ? '#F18805' : '#84DCC6'} />
-                <Text style={[styles.posName, isSelected && styles.posNameSelected]} numberOfLines={2}>
+                <Ionicons name={isSelected ? 'shield-checkmark' : 'layers-outline'} size={22} color={isSelected ? '#F18805' : '#84DCC6'} />
+                <Text
+                  style={[
+                    styles.foundationLabel,
+                    { color: isSelected ? '#F18805' : '#AEB0B5' }
+                  ]}
+                  numberOfLines={2}
+                >
                   {f.display}
                 </Text>
               </Animated.View>
             </TouchableWithoutFeedback>
           );
         })}
-      </View>
+      </ScrollView>
 
       {selectedFoundation && (
         <>
@@ -451,6 +466,28 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.15,
     shadowRadius: 8,
     elevation: 3,
+  },
+  foundationChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 12,
+    marginRight: 10,
+    borderWidth: 1.5,
+    maxWidth: 160,
+    minWidth: 120,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  foundationLabel: {
+    fontSize: 13,
+    fontWeight: '600',
+    marginLeft: 8,
+    flexShrink: 1,
   },
   beltLabel: {
     fontSize: 16,
