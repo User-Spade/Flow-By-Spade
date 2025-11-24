@@ -14,7 +14,7 @@ import {
 import { useRouter } from "expo-router";
 import { COLORS } from "../constants/theme";
 import { databaseService } from "../services/databaseService";
-import type { Position, BeltLevel } from "../data/types/database.types";
+import type { Position, BeltLevel, FoundationCategory } from "../data/types/database.types";
 
 // ----- DATA -----
 const beltLevels = [
@@ -53,10 +53,12 @@ const categoryNames: Record<string, string> = {
 export default function LibraryScreen() {
   const [selectedBeltId, setSelectedBeltId] = useState<BeltLevel | null>(null);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
+  const [selectedFoundation, setSelectedFoundation] = useState<FoundationCategory | null>(null);
   const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [pageWidth, setPageWidth] = useState<number>(0);
   const [positions, setPositions] = useState<Array<{ id: string; name: string; category: string; icon: keyof typeof Ionicons.glyphMap }>>([]);
+  const [foundations, setFoundations] = useState<Array<{ id: FoundationCategory; rank: number; display: string }>>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const router = useRouter();
   const scrollViewRef = useRef<ScrollView>(null);
@@ -68,31 +70,33 @@ export default function LibraryScreen() {
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
   const [posScales, setPosScales] = useState<Animated.Value[]>([]);
 
-  // Load positions from database
+  // Load foundations & positions from database based on selection
   useEffect(() => {
-    const loadPositions = () => {
-      const allPositions = databaseService.getPositionsByBelt(selectedBeltId);
-      const allCategories = databaseService.getCategories();
-      
-      // Convert positions to display format grouped by category
-      const positionsList: Array<{ id: string; name: string; category: string; icon: keyof typeof Ionicons.glyphMap }> = [];
-      
-      Object.entries(allPositions).forEach(([id, position]) => {
-        positionsList.push({
-          id,
-          name: position.learning.display_name,
-          category: position.system.category,
-          icon: categoryIcons[position.system.category] || "help-circle-outline",
+    const load = () => {
+      const foundationList = databaseService.getFoundations();
+      setFoundations(foundationList);
+      if (selectedFoundation) {
+        const filteredPositions = databaseService.getPositionsByFoundationAndBelt(selectedFoundation, selectedBeltId || null);
+        const list: Array<{ id: string; name: string; category: string; icon: keyof typeof Ionicons.glyphMap }> = [];
+        Object.entries(filteredPositions).forEach(([id, position]) => {
+          list.push({
+            id,
+            name: position.learning.display_name,
+            category: position.system.category,
+            icon: categoryIcons[position.system.category] || "help-circle-outline",
+          });
         });
-      });
-
-      setPositions(positionsList);
-      setCategories(allCategories);
-      setPosScales(positionsList.map(() => new Animated.Value(1)));
+        setPositions(list);
+        setCategories([]);
+        setPosScales(list.map(() => new Animated.Value(1)));
+      } else {
+        setPositions([]);
+        setCategories([]);
+        setPosScales([]);
+      }
     };
-
-    loadPositions();
-  }, [selectedBeltId]);
+    load();
+  }, [selectedBeltId, selectedFoundation]);
 
   // Gesture tracking to differentiate swipes from taps
   const touchStart = useRef<{ x: number; y: number } | null>(null);
@@ -227,39 +231,73 @@ export default function LibraryScreen() {
         })}
       </ScrollView>
 
-      {/* Positions Section */}
-      <Text style={styles.sectionLabel}>Positions</Text>
+      {/* Foundations Section */}
+      <Text style={styles.sectionLabel}>Foundations</Text>
       <View style={styles.positionsGrid}>
-        {positions.map((pos, i) => {
-          const isSelected = selectedPositionId === pos.id;
+        {foundations.map((f, i) => {
+          const isSelected = selectedFoundation === f.id;
+          const scaleRef = posScales[i] || new Animated.Value(1);
+          const iconName: keyof typeof Ionicons.glyphMap = isSelected ? 'shield-checkmark' : 'layers-outline';
           return (
             <TouchableWithoutFeedback
-              key={pos.id}
-              onPressIn={(e) => handlePressIn(posScales[i], e)}
-              onPressOut={(e) =>
-                handlePressOut(posScales[i], e, () =>
-                  handlePositionSelect(pos.id)
-                )
-              }
+              key={f.id}
+              onPressIn={(e) => handlePressIn(scaleRef, e)}
+              onPressOut={(e) => handlePressOut(scaleRef, e, () => {
+                setSelectedFoundation(isSelected ? null : f.id);
+                setSelectedPositionId(null);
+              })}
             >
               <Animated.View
                 style={[
                   styles.positionCard,
                   {
-                    transform: [{ scale: posScales[i] }],
-                    borderColor: isSelected ? "#F18805" : "rgba(255,255,255,0.12)",
-                  },
+                    transform: [{ scale: scaleRef }],
+                    borderColor: isSelected ? '#F18805' : 'rgba(255,255,255,0.12)'
+                  }
                 ]}
               >
-                <Ionicons name={pos.icon} size={26} color={isSelected ? "#F18805" : "#84DCC6"} />
-                <Text style={[styles.posName, isSelected && styles.posNameSelected]}>
-                  {pos.name}
+                <Ionicons name={iconName} size={26} color={isSelected ? '#F18805' : '#84DCC6'} />
+                <Text style={[styles.posName, isSelected && styles.posNameSelected]} numberOfLines={2}>
+                  {f.display}
                 </Text>
               </Animated.View>
             </TouchableWithoutFeedback>
           );
         })}
       </View>
+
+      {selectedFoundation && (
+        <>
+          <Text style={styles.sectionLabel}>Positions in {foundations.find(x => x.id === selectedFoundation)?.display}</Text>
+          <View style={styles.positionsGrid}>
+            {positions.map((pos, i) => {
+              const isSelected = selectedPositionId === pos.id;
+              return (
+                <TouchableWithoutFeedback
+                  key={pos.id}
+                  onPressIn={(e) => handlePressIn(posScales[i], e)}
+                  onPressOut={(e) => handlePressOut(posScales[i], e, () => handlePositionSelect(pos.id))}
+                >
+                  <Animated.View
+                    style={[
+                      styles.positionCard,
+                      {
+                        transform: [{ scale: posScales[i] }],
+                        borderColor: isSelected ? '#F18805' : 'rgba(255,255,255,0.12)'
+                      }
+                    ]}
+                  >
+                    <Ionicons name={pos.icon} size={26} color={isSelected ? '#F18805' : '#84DCC6'} />
+                    <Text style={[styles.posName, isSelected && styles.posNameSelected]}>
+                      {pos.name}
+                    </Text>
+                  </Animated.View>
+                </TouchableWithoutFeedback>
+              );
+            })}
+          </View>
+        </>
+      )}
 
       {/* Techniques Section */}
       {selectedPositionId && (() => {

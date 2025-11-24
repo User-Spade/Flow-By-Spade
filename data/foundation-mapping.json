@@ -1,0 +1,478 @@
+{
+  "generated_at": "2025-11-24T00:34:45.807Z",
+  "foundations": {
+    "standing_neutral": {
+      "position_id": "standing_neutral",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Standing engagement phase"
+    },
+    "collar_tie": {
+      "position_id": "collar_tie",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Standing engagement phase"
+    },
+    "over_under_clinch": {
+      "position_id": "over_under_clinch",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Standing engagement phase"
+    },
+    "double_underhooks": {
+      "position_id": "double_underhooks",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Standing engagement phase"
+    },
+    "single_underhook": {
+      "position_id": "single_underhook",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Standing engagement phase"
+    },
+    "body_lock_standing": {
+      "position_id": "body_lock_standing",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Standing engagement phase"
+    },
+    "wrestling_shot_entry": {
+      "position_id": "wrestling_shot_entry",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Standing engagement phase"
+    },
+    "closed_guard_top": {
+      "position_id": "closed_guard_top",
+      "foundation": "guard_top",
+      "rank": 6
+    },
+    "open_guard_top": {
+      "position_id": "open_guard_top",
+      "foundation": "guard_top",
+      "rank": 6
+    },
+    "half_guard_top": {
+      "position_id": "half_guard_top",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Half guard top considered balanced"
+    },
+    "side_control": {
+      "position_id": "side_control",
+      "foundation": "side_control_top",
+      "rank": 3
+    },
+    "knee_on_belly": {
+      "position_id": "knee_on_belly",
+      "foundation": "knee_on_belly_top",
+      "rank": 4
+    },
+    "mount": {
+      "position_id": "mount",
+      "foundation": "full_mount_top",
+      "rank": 2
+    },
+    "back_control": {
+      "position_id": "back_control",
+      "foundation": "rear_mount_top",
+      "rank": 1
+    },
+    "turtle_top": {
+      "position_id": "turtle_top",
+      "foundation": "turtle_top",
+      "rank": 5
+    },
+    "closed_guard_bottom": {
+      "position_id": "closed_guard_bottom",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "open_guard_bottom": {
+      "position_id": "open_guard_bottom",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "half_guard_bottom": {
+      "position_id": "half_guard_bottom",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Half guard bottom treated as neutral (balanced potential)"
+    },
+    "side_control_bottom": {
+      "position_id": "side_control_bottom",
+      "foundation": "side_control_bottom",
+      "rank": 11
+    },
+    "turtle_bottom": {
+      "position_id": "turtle_bottom",
+      "foundation": "turtle_bottom",
+      "rank": 9
+    },
+    "butterfly_guard": {
+      "position_id": "butterfly_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "de_la_riva": {
+      "position_id": "de_la_riva",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "reverse_de_la_riva": {
+      "position_id": "reverse_de_la_riva",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "spider_guard": {
+      "position_id": "spider_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "lasso_guard": {
+      "position_id": "lasso_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "x_guard": {
+      "position_id": "x_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "collar_sleeve_guard": {
+      "position_id": "collar_sleeve_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "knee_shield_half_guard": {
+      "position_id": "knee_shield_half_guard",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Half guard variant treated as neutral equilibrium"
+    },
+    "z_guard": {
+      "position_id": "z_guard",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Half guard variant treated as neutral equilibrium"
+    },
+    "lockdown": {
+      "position_id": "lockdown",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Lockdown half guard retains equilibrium"
+    },
+    "north_south": {
+      "position_id": "north_south",
+      "foundation": "side_control_top",
+      "rank": 3,
+      "notes": "North-south treated as side control family"
+    },
+    "technical_mount": {
+      "position_id": "technical_mount",
+      "foundation": "full_mount_top",
+      "rank": 2
+    },
+    "side_control_variants": {
+      "position_id": "side_control_variants",
+      "foundation": "side_control_top",
+      "rank": 3
+    },
+    "half_guard_top_variations": {
+      "position_id": "half_guard_top_variations",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Half guard top considered balanced"
+    },
+    "backpack_position": {
+      "position_id": "backpack_position",
+      "foundation": "turtle_top",
+      "rank": 5,
+      "transitional_target": "rear_mount_top",
+      "notes": "Transitional control depth toward rear mount"
+    },
+    "body_triangle": {
+      "position_id": "body_triangle",
+      "foundation": "rear_mount_top",
+      "rank": 1
+    },
+    "turtle_top_variations": {
+      "position_id": "turtle_top_variations",
+      "foundation": "turtle_top",
+      "rank": 5
+    },
+    "turtle_bottom_variations": {
+      "position_id": "turtle_bottom_variations",
+      "foundation": "turtle_bottom",
+      "rank": 9
+    },
+    "single_leg_x": {
+      "position_id": "single_leg_x",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "outside_ashi_garami": {
+      "position_id": "outside_ashi_garami",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "inside_ashi_garami": {
+      "position_id": "inside_ashi_garami",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "50_50_guard": {
+      "position_id": "50_50_guard",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Symmetrical leg entanglement"
+    },
+    "deep_half_guard": {
+      "position_id": "deep_half_guard",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Half guard variant treated as neutral equilibrium"
+    },
+    "tornado_guard": {
+      "position_id": "tornado_guard",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Half guard variant treated as neutral equilibrium"
+    },
+    "rdlr_inverted_entries": {
+      "position_id": "rdlr_inverted_entries",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "modified_x_guard": {
+      "position_id": "modified_x_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "collar_dlr_hybrid": {
+      "position_id": "collar_dlr_hybrid",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "inverted_guard": {
+      "position_id": "inverted_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "crab_ride": {
+      "position_id": "crab_ride",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing / control build-up phase"
+    },
+    "berimbolo_control": {
+      "position_id": "berimbolo_control",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing / control build-up phase"
+    },
+    "matrix_position": {
+      "position_id": "matrix_position",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "headquarters_position": {
+      "position_id": "headquarters_position",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing / control build-up phase"
+    },
+    "smash_pass_position": {
+      "position_id": "smash_pass_position",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing phase rather than established side control"
+    },
+    "leg_drag_control": {
+      "position_id": "leg_drag_control",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing phase rather than established side control"
+    },
+    "k_guard": {
+      "position_id": "k_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "cross_ashi_garami": {
+      "position_id": "cross_ashi_garami",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "butterfly_x": {
+      "position_id": "butterfly_x",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "baby_bolo": {
+      "position_id": "baby_bolo",
+      "foundation": "turtle_top",
+      "rank": 5,
+      "transitional_target": "rear_mount_top",
+      "notes": "Transition toward back control"
+    },
+    "worm_guard": {
+      "position_id": "worm_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "squid_guard": {
+      "position_id": "squid_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "ringworm_guard": {
+      "position_id": "ringworm_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "gubber_guard": {
+      "position_id": "gubber_guard",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "reverse_x": {
+      "position_id": "reverse_x",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "leg_pinning_systems": {
+      "position_id": "leg_pinning_systems",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing / control build-up phase"
+    },
+    "double_under_pass": {
+      "position_id": "double_under_pass",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing / control build-up phase"
+    },
+    "over_under_pass": {
+      "position_id": "over_under_pass",
+      "foundation": "guard_top",
+      "rank": 6,
+      "notes": "Passing / control build-up phase"
+    },
+    "chest_to_chest_half": {
+      "position_id": "chest_to_chest_half",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Default classification fallback"
+    },
+    "tight_waist_hip_ride": {
+      "position_id": "tight_waist_hip_ride",
+      "foundation": "turtle_top",
+      "rank": 5,
+      "transitional_target": "rear_mount_top",
+      "notes": "Hip ride seeks back exposure"
+    },
+    "seatbelt_traps": {
+      "position_id": "seatbelt_traps",
+      "foundation": "turtle_top",
+      "rank": 5,
+      "transitional_target": "rear_mount_top",
+      "notes": "Transitional control depth toward rear mount"
+    },
+    "arm_trapped_back_mount": {
+      "position_id": "arm_trapped_back_mount",
+      "foundation": "full_mount_top",
+      "rank": 2,
+      "notes": "Arm trapped mount treated as dominant mount variation"
+    },
+    "saddle": {
+      "position_id": "saddle",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "double_trouble": {
+      "position_id": "double_trouble",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "4_11_position": {
+      "position_id": "4_11_position",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "honey_hole": {
+      "position_id": "honey_hole",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "truck": {
+      "position_id": "truck",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Default classification fallback"
+    },
+    "twister_side_control": {
+      "position_id": "twister_side_control",
+      "foundation": "side_control_top",
+      "rank": 3
+    },
+    "samurai_roll_positions": {
+      "position_id": "samurai_roll_positions",
+      "foundation": "turtle_top",
+      "rank": 5,
+      "transitional_target": "rear_mount_top",
+      "notes": "Transition toward back control"
+    },
+    "rolling_back_takes": {
+      "position_id": "rolling_back_takes",
+      "foundation": "turtle_top",
+      "rank": 5,
+      "transitional_target": "rear_mount_top",
+      "notes": "Transition toward back control"
+    },
+    "hybrid_lapel_inversion": {
+      "position_id": "hybrid_lapel_inversion",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "reverse_worm_chains": {
+      "position_id": "reverse_worm_chains",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "false_reap": {
+      "position_id": "false_reap",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "cross_collar_double_sleeve_hybrid": {
+      "position_id": "cross_collar_double_sleeve_hybrid",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "front_headlock_web": {
+      "position_id": "front_headlock_web",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Default classification fallback"
+    },
+    "scramble_positions": {
+      "position_id": "scramble_positions",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Chaotic transitional phase"
+    },
+    "half_inverted_retention": {
+      "position_id": "half_inverted_retention",
+      "foundation": "guard_bottom",
+      "rank": 8
+    },
+    "dynamic_leg_entanglement_transitions": {
+      "position_id": "dynamic_leg_entanglement_transitions",
+      "foundation": "neutral",
+      "rank": 7,
+      "notes": "Chaotic transitional phase"
+    }
+  }
+}

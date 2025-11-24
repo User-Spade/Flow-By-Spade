@@ -79,6 +79,37 @@ export interface PositionSystemMetadata {
   hierarchy_score?: number; // Optional relative dominance ranking
 }
 
+// New: High-level foundation layer categories (dominance / strategic buckets)
+export type FoundationCategory =
+  | 'rear_mount_top'
+  | 'full_mount_top'
+  | 'side_control_top'
+  | 'knee_on_belly_top'
+  | 'turtle_top'
+  | 'guard_top'
+  | 'neutral'
+  | 'guard_bottom'
+  | 'turtle_bottom'
+  | 'knee_on_belly_bottom'
+  | 'side_control_bottom'
+  | 'full_mount_bottom'
+  | 'rear_mount_bottom';
+
+export interface FoundationMappingEntry {
+  position_id: string;
+  foundation: FoundationCategory; // Primary bucket
+  rank: number; // Dominance ranking (lower = more dominant for top perspective)
+  transitional_target?: FoundationCategory; // If this position commonly progresses toward a higher control state
+  notes?: string; // Classification rationale / ambiguity explanation
+}
+
+export interface FoundationMappingIndex {
+  generated_at: string;
+  foundations: {
+    [key: string]: FoundationMappingEntry;
+  };
+}
+
 // Human-facing positional learning layer
 export interface PositionLearningMetadata {
   display_name: string;

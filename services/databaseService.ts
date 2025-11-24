@@ -5,14 +5,21 @@
  * Handles loading, filtering, and transforming database content for the UI.
  */
 
-import { BJJDatabase, Position, Technique, BeltLevel } from '../data/types/database.types';
+import { BJJDatabase, Position, Technique, BeltLevel, FoundationMappingIndex, FoundationCategory } from '../data/types/database.types';
 import databaseJson from '../data/bjj-database.json';
+import foundationMappingJson from '../data/foundation-mapping.json';
 
 class DatabaseService {
   private database: BJJDatabase;
+  private foundationMapping: FoundationMappingIndex | null = null;
 
   constructor() {
     this.database = databaseJson as BJJDatabase;
+    try {
+      this.foundationMapping = foundationMappingJson as FoundationMappingIndex;
+    } catch (e) {
+      this.foundationMapping = null;
+    }
   }
 
   /**
@@ -36,6 +43,57 @@ class DatabaseService {
     });
 
     return filtered;
+  }
+
+  /**
+   * FOUNDATION LAYER METHODS
+   */
+  getFoundations(): { id: FoundationCategory; rank: number; display: string }[] {
+    const displayNames: Record<FoundationCategory, string> = {
+      rear_mount_top: 'Rear Mount (Top)',
+      full_mount_top: 'Full Mount (Top)',
+      side_control_top: 'Side Control (Top)',
+      knee_on_belly_top: 'Knee-On-Belly (Top)',
+      turtle_top: 'Turtle (Top)',
+      guard_top: 'Guard (Top)',
+      neutral: 'Neutral',
+      guard_bottom: 'Guard (Bottom)',
+      turtle_bottom: 'Turtle (Bottom)',
+      knee_on_belly_bottom: 'Knee-On-Belly (Bottom)',
+      side_control_bottom: 'Side Control (Bottom)',
+      full_mount_bottom: 'Full Mount (Bottom)',
+      rear_mount_bottom: 'Rear Mount (Bottom)'
+    };
+    if (!this.foundationMapping) return Object.entries(displayNames).map(([id, display], idx) => ({ id: id as FoundationCategory, rank: idx + 1, display }));
+    // Gather ranks from mapping (min per foundation)
+    const rankMap: Record<string, number> = {};
+    Object.values(this.foundationMapping.foundations).forEach(entry => {
+      if (rankMap[entry.foundation] == null || entry.rank < rankMap[entry.foundation]) {
+        rankMap[entry.foundation] = entry.rank;
+      }
+    });
+    return (Object.keys(displayNames) as FoundationCategory[])
+      .map(id => ({ id, rank: rankMap[id] ?? 999, display: displayNames[id] }))
+      .sort((a, b) => a.rank - b.rank);
+  }
+
+  getFoundationForPosition(positionId: string): FoundationCategory | null {
+    if (!this.foundationMapping) return null;
+    const entry = this.foundationMapping.foundations[positionId];
+    return entry ? entry.foundation : null;
+  }
+
+  getPositionsByFoundationAndBelt(foundation: FoundationCategory, beltLevel: BeltLevel | null = null): Record<string, Position> {
+    const positionsByBelt = this.getPositionsByBelt(beltLevel);
+    const result: Record<string, Position> = {};
+    if (!this.foundationMapping) return result;
+    Object.entries(positionsByBelt).forEach(([id, pos]) => {
+      const entry = this.foundationMapping!.foundations[id];
+      if (entry && entry.foundation === foundation) {
+        result[id] = pos;
+      }
+    });
+    return result;
   }
 
   /**
