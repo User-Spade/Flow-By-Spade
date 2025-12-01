@@ -163,22 +163,9 @@
           "double_underhooks",
           "single_underhook",
           "wrestling_shot_entry",
-          "closed_guard_bottom",
-          "closed_guard_top",
-          "open_guard_top",
-          "turtle_top",
-          "open_guard_bottom"
+          "closed_guard_bottom"
         ],
-        "entry_from_position_ids": [
-          "body_lock_standing",
-          "closed_guard_top",
-          "backpack_position",
-          "turtle_bottom_variations",
-          "single_leg_x",
-          "50_50_guard",
-          "side_control_bottom_turtle_chain",
-          "turtle_bottom_granby_wall_chain"
-        ],
+        "entry_from_position_ids": [],
         "risk_level": "low"
       },
       "learning": {
@@ -377,8 +364,7 @@
           "wrestling_shot_entry",
           "over_under_clinch",
           "single_underhook",
-          "closed_guard_bottom",
-          "double_underhooks"
+          "closed_guard_bottom"
         ],
         "entry_from_position_ids": [
           "standing_neutral"
@@ -577,13 +563,11 @@
         "leads_to_position_ids": [
           "body_lock_standing",
           "wrestling_shot_entry",
-          "closed_guard_bottom",
-          "double_underhooks"
+          "closed_guard_bottom"
         ],
         "entry_from_position_ids": [
           "standing_neutral",
-          "collar_tie",
-          "single_underhook"
+          "collar_tie"
         ],
         "risk_level": "medium"
       },
@@ -784,8 +768,7 @@
         "entry_from_position_ids": [
           "standing_neutral",
           "collar_tie",
-          "over_under_clinch",
-          "single_underhook"
+          "over_under_clinch"
         ],
         "risk_level": "low"
       },
@@ -986,8 +969,7 @@
           "double_underhooks",
           "over_under_clinch",
           "wrestling_shot_entry",
-          "closed_guard_bottom",
-          "body_lock_standing"
+          "closed_guard_bottom"
         ],
         "entry_from_position_ids": [
           "standing_neutral",
@@ -1393,15 +1375,12 @@
           "side_control",
           "half_guard_top",
           "turtle_top",
-          "closed_guard_bottom",
-          "closed_guard_top"
+          "closed_guard_bottom"
         ],
         "entry_from_position_ids": [
           "standing_neutral",
           "collar_tie",
-          "single_underhook",
-          "over_under_clinch",
-          "double_underhooks"
+          "single_underhook"
         ],
         "risk_level": "high"
       },
@@ -1607,8 +1586,7 @@
         ],
         "entry_from_position_ids": [
           "wrestling_shot_entry",
-          "standing_neutral",
-          "open_guard_top"
+          "standing_neutral"
         ],
         "risk_level": "high"
       },
@@ -1809,12 +1787,7 @@
           "side_control",
           "half_guard_top",
           "knee_on_belly",
-          "closed_guard_top",
-          "half_guard_top_variations",
-          "headquarters_position",
-          "leg_drag_control",
-          "double_under_pass",
-          "over_under_pass"
+          "closed_guard_top"
         ],
         "entry_from_position_ids": [
           "closed_guard_top",
@@ -2018,24 +1991,12 @@
           "side_control",
           "mount",
           "knee_on_belly",
-          "back_control",
-          "turtle_top",
-          "side_control_variants",
-          "half_guard_top_variations",
-          "headquarters_position",
-          "smash_pass_position",
-          "leg_pinning_systems",
-          "double_under_pass",
-          "over_under_pass",
-          "chest_to_chest_half"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "open_guard_top",
           "closed_guard_top",
-          "side_control",
-          "wrestling_shot_entry",
-          "half_guard_bottom",
-          "headquarters_position"
+          "side_control"
         ],
         "risk_level": "medium"
       },
@@ -2239,56 +2200,13 @@
           "knee_on_belly",
           "north_south",
           "back_control",
-          "half_guard_top",
-          "turtle_top",
-          "technical_mount",
-          "side_control_variants",
-          "turtle_top_variations",
-          "tight_waist_hip_ride",
-          "twister_side_control",
-          "reverse_kesa_side_control",
-          "lapel_staple_side_control"
+          "half_guard_top"
         ],
         "entry_from_position_ids": [
           "open_guard_top",
           "half_guard_top",
           "turtle_top",
-          "wrestling_shot_entry",
-          "body_lock_standing",
-          "closed_guard_top",
-          "knee_on_belly",
-          "mount",
-          "x_guard",
-          "knee_shield_half_guard",
-          "z_guard",
-          "north_south",
-          "side_control_variants",
-          "half_guard_top_variations",
-          "turtle_top_variations",
-          "single_leg_x",
-          "deep_half_guard",
-          "tornado_guard",
-          "modified_x_guard",
-          "headquarters_position",
-          "smash_pass_position",
-          "leg_drag_control",
-          "k_guard",
-          "butterfly_x",
-          "worm_guard",
-          "squid_guard",
-          "ringworm_guard",
-          "gubber_guard",
-          "reverse_x",
-          "leg_pinning_systems",
-          "double_under_pass",
-          "over_under_pass",
-          "chest_to_chest_half",
-          "tight_waist_hip_ride",
-          "twister_side_control",
-          "hybrid_lapel_inversion",
-          "reverse_worm_chains",
-          "cross_collar_double_sleeve_hybrid",
-          "scramble_positions"
+          "wrestling_shot_entry"
         ],
         "risk_level": "low"
       },
@@ -2485,18 +2403,11 @@
         "leads_to_position_ids": [
           "mount",
           "side_control",
-          "back_control",
-          "side_control_bottom_inversion_chain",
-          "reverse_kesa_side_control",
-          "lapel_staple_side_control"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "side_control",
-          "half_guard_top",
-          "open_guard_top",
-          "half_guard_top_variations",
-          "headquarters_position",
-          "leg_pinning_systems"
+          "half_guard_top"
         ],
         "risk_level": "medium"
       },
@@ -2693,33 +2604,13 @@
         "leads_to_position_ids": [
           "technical_mount",
           "back_control",
-          "side_control",
-          "side_control_bottom",
-          "turtle_bottom",
-          "north_south",
-          "arm_trapped_back_mount"
+          "side_control"
         ],
         "entry_from_position_ids": [
           "side_control",
           "half_guard_top",
           "knee_on_belly",
-          "turtle_top",
-          "back_control",
-          "closed_guard_bottom",
-          "open_guard_bottom",
-          "side_control_bottom",
-          "north_south",
-          "technical_mount",
-          "side_control_variants",
-          "half_guard_top_variations",
-          "smash_pass_position",
-          "leg_drag_control",
-          "leg_pinning_systems",
-          "double_under_pass",
-          "over_under_pass",
-          "chest_to_chest_half",
-          "arm_trapped_back_mount",
-          "reverse_kesa_side_control"
+          "turtle_top"
         ],
         "risk_level": "low"
       },
@@ -2910,50 +2801,13 @@
         "allowed_technique_ids": [],
         "leads_to_position_ids": [
           "mount",
-          "back_control",
-          "backpack_position",
-          "body_triangle",
-          "seatbelt_traps",
-          "arm_trapped_back_mount",
-          "truck"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "mount",
           "turtle_top",
           "side_control",
-          "knee_on_belly",
-          "half_guard_top",
-          "back_control",
-          "turtle_bottom",
-          "butterfly_guard",
-          "de_la_riva",
-          "reverse_de_la_riva",
-          "x_guard",
-          "north_south",
-          "technical_mount",
-          "side_control_variants",
-          "backpack_position",
-          "body_triangle",
-          "turtle_top_variations",
-          "tornado_guard",
-          "rdlr_inverted_entries",
-          "inverted_guard",
-          "crab_ride",
-          "berimbolo_control",
-          "leg_drag_control",
-          "baby_bolo",
-          "reverse_x",
-          "tight_waist_hip_ride",
-          "seatbelt_traps",
-          "arm_trapped_back_mount",
-          "truck",
-          "samurai_roll_positions",
-          "rolling_back_takes",
-          "hybrid_lapel_inversion",
-          "front_headlock_web",
-          "scramble_positions",
-          "reverse_kesa_side_control",
-          "lapel_staple_side_control"
+          "knee_on_belly"
         ],
         "risk_level": "low"
       },
@@ -3150,23 +3004,12 @@
         "leads_to_position_ids": [
           "back_control",
           "side_control",
-          "mount",
-          "backpack_position",
-          "turtle_top_variations",
-          "crab_ride",
-          "tight_waist_hip_ride",
-          "samurai_roll_positions",
-          "front_headlock_web"
+          "mount"
         ],
         "entry_from_position_ids": [
           "side_control",
           "half_guard_top",
-          "standing_neutral",
-          "wrestling_shot_entry",
-          "tight_waist_hip_ride",
-          "samurai_roll_positions",
-          "scramble_positions",
-          "turtle_bottom_granby_wall_chain"
+          "standing_neutral"
         ],
         "risk_level": "medium"
       },
@@ -3363,33 +3206,11 @@
           "open_guard_bottom",
           "half_guard_bottom",
           "side_control_bottom",
-          "mount",
-          "butterfly_guard",
-          "de_la_riva",
-          "spider_guard",
-          "collar_sleeve_guard"
+          "mount"
         ],
         "entry_from_position_ids": [
           "standing_neutral",
-          "open_guard_bottom",
-          "collar_tie",
-          "over_under_clinch",
-          "double_underhooks",
-          "single_underhook",
-          "body_lock_standing",
-          "wrestling_shot_entry",
-          "half_guard_bottom",
-          "side_control_bottom",
-          "turtle_bottom",
-          "butterfly_guard",
-          "spider_guard",
-          "collar_sleeve_guard",
-          "knee_shield_half_guard",
-          "turtle_bottom_variations",
-          "half_inverted_retention",
-          "side_control_bottom_underhook_chain",
-          "side_control_bottom_turtle_chain",
-          "turtle_bottom_sitback_guard_recovery"
+          "open_guard_bottom"
         ],
         "risk_level": "low"
       },
@@ -3589,34 +3410,11 @@
           "closed_guard_bottom",
           "half_guard_bottom",
           "side_control_bottom",
-          "mount",
-          "butterfly_guard",
-          "de_la_riva",
-          "reverse_de_la_riva",
-          "spider_guard",
-          "lasso_guard",
-          "collar_sleeve_guard",
-          "knee_shield_half_guard",
-          "tornado_guard",
-          "inverted_guard",
-          "matrix_position",
-          "k_guard",
-          "gubber_guard",
-          "half_inverted_retention"
+          "mount"
         ],
         "entry_from_position_ids": [
           "closed_guard_bottom",
-          "standing_neutral",
-          "half_guard_bottom",
-          "side_control_bottom",
-          "turtle_bottom",
-          "spider_guard",
-          "lasso_guard",
-          "collar_sleeve_guard",
-          "turtle_bottom_variations",
-          "matrix_position",
-          "half_inverted_retention",
-          "turtle_bottom_sitback_guard_recovery"
+          "standing_neutral"
         ],
         "risk_level": "medium"
       },
@@ -3815,22 +3613,12 @@
           "closed_guard_bottom",
           "open_guard_bottom",
           "side_control_bottom",
-          "half_guard_top",
-          "turtle_bottom",
-          "butterfly_guard",
-          "knee_shield_half_guard",
-          "z_guard",
-          "lockdown",
-          "deep_half_guard"
+          "half_guard_top"
         ],
         "entry_from_position_ids": [
           "closed_guard_bottom",
           "open_guard_bottom",
-          "side_control_bottom",
-          "knee_shield_half_guard",
-          "lockdown",
-          "deep_half_guard",
-          "side_control_bottom_underhook_chain"
+          "side_control_bottom"
         ],
         "risk_level": "medium"
       },
@@ -4029,19 +3817,13 @@
           "open_guard_bottom",
           "half_guard_bottom",
           "turtle_bottom",
-          "mount",
-          "turtle_bottom_variations",
-          "side_control_bottom_underhook_chain",
-          "side_control_bottom_turtle_chain",
-          "side_control_bottom_inversion_chain",
-          "turtle_bottom_sitback_guard_recovery"
+          "mount"
         ],
         "entry_from_position_ids": [
           "closed_guard_bottom",
           "open_guard_bottom",
           "half_guard_bottom",
-          "mount",
-          "turtle_bottom"
+          "mount"
         ],
         "risk_level": "high"
       },
@@ -4241,17 +4023,12 @@
           "closed_guard_bottom",
           "open_guard_bottom",
           "side_control_bottom",
-          "back_control",
-          "turtle_bottom_variations",
-          "turtle_bottom_sitback_guard_recovery",
-          "turtle_bottom_granby_wall_chain",
-          "turtle_bottom_leg_entanglement_counters"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "side_control_bottom",
           "half_guard_bottom",
-          "mount",
-          "side_control_bottom_turtle_chain"
+          "mount"
         ],
         "risk_level": "high"
       },
@@ -4451,17 +4228,12 @@
           "x_guard",
           "single_leg_x",
           "closed_guard_bottom",
-          "back_control",
-          "modified_x_guard",
-          "butterfly_x"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "closed_guard_bottom",
           "open_guard_bottom",
-          "half_guard_bottom",
-          "x_guard",
-          "butterfly_x",
-          "turtle_bottom_sitback_guard_recovery"
+          "half_guard_bottom"
         ],
         "risk_level": "medium"
       },
@@ -4660,23 +4432,11 @@
           "x_guard",
           "single_leg_x",
           "reverse_de_la_riva",
-          "back_control",
-          "tornado_guard",
-          "collar_dlr_hybrid",
-          "matrix_position",
-          "leg_drag_control",
-          "baby_bolo",
-          "rolling_back_takes"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "open_guard_bottom",
-          "closed_guard_bottom",
-          "reverse_de_la_riva",
-          "collar_dlr_hybrid",
-          "matrix_position",
-          "baby_bolo",
-          "rolling_back_takes",
-          "half_inverted_retention"
+          "closed_guard_bottom"
         ],
         "risk_level": "medium"
       },
@@ -4875,19 +4635,11 @@
           "back_control",
           "x_guard",
           "de_la_riva",
-          "single_leg_x",
-          "rdlr_inverted_entries",
-          "inverted_guard",
-          "baby_bolo"
+          "single_leg_x"
         ],
         "entry_from_position_ids": [
           "de_la_riva",
-          "open_guard_bottom",
-          "rdlr_inverted_entries",
-          "inverted_guard",
-          "berimbolo_control",
-          "matrix_position",
-          "side_control_bottom_inversion_chain"
+          "open_guard_bottom"
         ],
         "risk_level": "medium"
       },
@@ -5086,21 +4838,11 @@
           "lasso_guard",
           "collar_sleeve_guard",
           "closed_guard_bottom",
-          "open_guard_bottom",
-          "k_guard",
-          "worm_guard",
-          "hybrid_lapel_inversion",
-          "cross_collar_double_sleeve_hybrid"
+          "open_guard_bottom"
         ],
         "entry_from_position_ids": [
           "open_guard_bottom",
-          "closed_guard_bottom",
-          "lasso_guard",
-          "collar_sleeve_guard",
-          "collar_dlr_hybrid",
-          "k_guard",
-          "gubber_guard",
-          "cross_collar_double_sleeve_hybrid"
+          "closed_guard_bottom"
         ],
         "risk_level": "low"
       },
@@ -5300,9 +5042,7 @@
         ],
         "entry_from_position_ids": [
           "spider_guard",
-          "open_guard_bottom",
-          "collar_sleeve_guard",
-          "cross_collar_double_sleeve_hybrid"
+          "open_guard_bottom"
         ],
         "risk_level": "low"
       },
@@ -5502,22 +5242,12 @@
           "single_leg_x",
           "butterfly_guard",
           "side_control",
-          "back_control",
-          "outside_ashi_garami",
-          "tornado_guard",
-          "modified_x_guard",
-          "butterfly_x",
-          "reverse_x"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "butterfly_guard",
           "de_la_riva",
-          "reverse_de_la_riva",
-          "single_leg_x",
-          "tornado_guard",
-          "modified_x_guard",
-          "butterfly_x",
-          "reverse_x"
+          "reverse_de_la_riva"
         ],
         "risk_level": "low"
       },
@@ -5715,19 +5445,11 @@
           "spider_guard",
           "lasso_guard",
           "closed_guard_bottom",
-          "open_guard_bottom",
-          "collar_dlr_hybrid",
-          "gubber_guard",
-          "cross_collar_double_sleeve_hybrid"
+          "open_guard_bottom"
         ],
         "entry_from_position_ids": [
           "open_guard_bottom",
-          "closed_guard_bottom",
-          "spider_guard",
-          "lasso_guard",
-          "collar_dlr_hybrid",
-          "gubber_guard",
-          "cross_collar_double_sleeve_hybrid"
+          "closed_guard_bottom"
         ],
         "risk_level": "low"
       },
@@ -5925,13 +5647,11 @@
           "half_guard_bottom",
           "closed_guard_bottom",
           "deep_half_guard",
-          "side_control",
-          "z_guard"
+          "side_control"
         ],
         "entry_from_position_ids": [
           "half_guard_bottom",
-          "open_guard_bottom",
-          "z_guard"
+          "open_guard_bottom"
         ],
         "risk_level": "low"
       },
@@ -6324,8 +6044,7 @@
         "leads_to_position_ids": [
           "half_guard_bottom",
           "sweep_to_top",
-          "submission",
-          "truck"
+          "submission"
         ],
         "entry_from_position_ids": [
           "half_guard_bottom"
@@ -6521,20 +6240,11 @@
         "leads_to_position_ids": [
           "side_control",
           "mount",
-          "back_control",
-          "side_control_bottom_turtle_chain",
-          "reverse_kesa_side_control",
-          "lapel_staple_side_control"
+          "back_control"
         ],
         "entry_from_position_ids": [
           "side_control",
-          "mount",
-          "side_control_variants",
-          "smash_pass_position",
-          "double_under_pass",
-          "over_under_pass",
-          "reverse_kesa_side_control",
-          "lapel_staple_side_control"
+          "mount"
         ],
         "risk_level": "low"
       },
@@ -7916,9 +7626,7 @@
         "leads_to_position_ids": [
           "closed_guard_bottom",
           "open_guard_bottom",
-          "standing_neutral",
-          "turtle_bottom_sitback_guard_recovery",
-          "turtle_bottom_granby_wall_chain"
+          "standing_neutral"
         ],
         "entry_from_position_ids": [
           "turtle_bottom",
@@ -8117,18 +7825,12 @@
           "x_guard",
           "outside_ashi_garami",
           "standing_neutral",
-          "side_control",
-          "inside_ashi_garami",
-          "reverse_x"
+          "side_control"
         ],
         "entry_from_position_ids": [
           "x_guard",
           "de_la_riva",
-          "reverse_de_la_riva",
-          "butterfly_guard",
-          "modified_x_guard",
-          "butterfly_x",
-          "turtle_bottom_granby_wall_chain"
+          "reverse_de_la_riva"
         ],
         "risk_level": "low"
       },
@@ -8318,26 +8020,11 @@
         "leads_to_position_ids": [
           "inside_ashi_garami",
           "50_50_guard",
-          "submission",
-          "cross_ashi_garami",
-          "saddle",
-          "double_trouble",
-          "4_11_position",
-          "honey_hole",
-          "false_reap"
+          "submission"
         ],
         "entry_from_position_ids": [
           "single_leg_x",
-          "x_guard",
-          "inside_ashi_garami",
-          "50_50_guard",
-          "cross_ashi_garami",
-          "saddle",
-          "double_trouble",
-          "4_11_position",
-          "honey_hole",
-          "false_reap",
-          "dynamic_leg_entanglement_transitions"
+          "x_guard"
         ],
         "risk_level": "medium"
       },
@@ -8527,17 +8214,11 @@
         "leads_to_position_ids": [
           "outside_ashi_garami",
           "50_50_guard",
-          "submission",
-          "cross_ashi_garami",
-          "saddle",
-          "4_11_position"
+          "submission"
         ],
         "entry_from_position_ids": [
           "outside_ashi_garami",
-          "single_leg_x",
-          "50_50_guard",
-          "cross_ashi_garami",
-          "dynamic_leg_entanglement_transitions"
+          "single_leg_x"
         ],
         "risk_level": "low"
       },
@@ -8732,8 +8413,7 @@
         ],
         "entry_from_position_ids": [
           "inside_ashi_garami",
-          "outside_ashi_garami",
-          "dynamic_leg_entanglement_transitions"
+          "outside_ashi_garami"
         ],
         "risk_level": "medium"
       },
@@ -8928,9 +8608,7 @@
         ],
         "entry_from_position_ids": [
           "half_guard_bottom",
-          "knee_shield_half_guard",
-          "z_guard",
-          "side_control_bottom_underhook_chain"
+          "knee_shield_half_guard"
         ],
         "risk_level": "low"
       },
@@ -9897,14 +9575,11 @@
         "leads_to_position_ids": [
           "berimbolo_control",
           "back_control",
-          "reverse_de_la_riva",
-          "half_inverted_retention"
+          "reverse_de_la_riva"
         ],
         "entry_from_position_ids": [
           "reverse_de_la_riva",
-          "open_guard_bottom",
-          "half_inverted_retention",
-          "side_control_bottom_inversion_chain"
+          "open_guard_bottom"
         ],
         "risk_level": "high"
       },
@@ -10287,15 +9962,11 @@
         "leads_to_position_ids": [
           "back_control",
           "crab_ride",
-          "reverse_de_la_riva",
-          "rolling_back_takes"
+          "reverse_de_la_riva"
         ],
         "entry_from_position_ids": [
           "rdlr_inverted_entries",
-          "inverted_guard",
-          "baby_bolo",
-          "rolling_back_takes",
-          "hybrid_lapel_inversion"
+          "inverted_guard"
         ],
         "risk_level": "medium"
       },
@@ -10679,14 +10350,11 @@
         "leads_to_position_ids": [
           "side_control",
           "half_guard_top",
-          "knee_on_belly",
-          "smash_pass_position",
-          "leg_pinning_systems"
+          "knee_on_belly"
         ],
         "entry_from_position_ids": [
           "open_guard_top",
-          "half_guard_top",
-          "leg_pinning_systems"
+          "half_guard_top"
         ],
         "risk_level": "low"
       },
@@ -12032,17 +11700,11 @@
         "leads_to_position_ids": [
           "squid_guard",
           "ringworm_guard",
-          "side_control",
-          "hybrid_lapel_inversion",
-          "reverse_worm_chains"
+          "side_control"
         ],
         "entry_from_position_ids": [
           "spider_guard",
-          "k_guard",
-          "squid_guard",
-          "ringworm_guard",
-          "hybrid_lapel_inversion",
-          "reverse_worm_chains"
+          "k_guard"
         ],
         "risk_level": "low"
       },
@@ -12232,13 +11894,10 @@
           "worm_guard",
           "ringworm_guard",
           "side_control",
-          "triangle_choke",
-          "reverse_worm_chains"
+          "triangle_choke"
         ],
         "entry_from_position_ids": [
-          "worm_guard",
-          "ringworm_guard",
-          "reverse_worm_chains"
+          "worm_guard"
         ],
         "risk_level": "low"
       },
@@ -12425,13 +12084,11 @@
         "leads_to_position_ids": [
           "worm_guard",
           "squid_guard",
-          "side_control",
-          "reverse_worm_chains"
+          "side_control"
         ],
         "entry_from_position_ids": [
           "worm_guard",
-          "squid_guard",
-          "reverse_worm_chains"
+          "squid_guard"
         ],
         "risk_level": "low"
       },
@@ -12814,8 +12471,7 @@
         ],
         "entry_from_position_ids": [
           "x_guard",
-          "single_leg_x",
-          "turtle_bottom_leg_entanglement_counters"
+          "single_leg_x"
         ],
         "risk_level": "low"
       },
@@ -14161,8 +13817,7 @@
         ],
         "entry_from_position_ids": [
           "mount",
-          "back_control",
-          "lapel_staple_side_control"
+          "back_control"
         ],
         "risk_level": "low"
       },
@@ -14350,18 +14005,11 @@
         "leads_to_position_ids": [
           "outside_ashi_garami",
           "honey_hole",
-          "heel_hook_finish",
-          "double_trouble"
+          "heel_hook_finish"
         ],
         "entry_from_position_ids": [
           "outside_ashi_garami",
-          "inside_ashi_garami",
-          "double_trouble",
-          "4_11_position",
-          "honey_hole",
-          "false_reap",
-          "dynamic_leg_entanglement_transitions",
-          "turtle_bottom_leg_entanglement_counters"
+          "inside_ashi_garami"
         ],
         "risk_level": "medium"
       },
@@ -14958,9 +14606,7 @@
         ],
         "entry_from_position_ids": [
           "outside_ashi_garami",
-          "saddle",
-          "4_11_position",
-          "dynamic_leg_entanglement_transitions"
+          "saddle"
         ],
         "risk_level": "medium"
       },
@@ -15153,13 +14799,11 @@
         "leads_to_position_ids": [
           "back_control",
           "twister_finish",
-          "calf_slicer",
-          "twister_side_control"
+          "calf_slicer"
         ],
         "entry_from_position_ids": [
           "back_control",
-          "lockdown",
-          "twister_side_control"
+          "lockdown"
         ],
         "risk_level": "low"
       },
@@ -16353,9 +15997,7 @@
           "straight_ankle_lock"
         ],
         "entry_from_position_ids": [
-          "outside_ashi_garami",
-          "side_control_bottom_inversion_chain",
-          "turtle_bottom_leg_entanglement_counters"
+          "outside_ashi_garami"
         ],
         "risk_level": "low"
       },
@@ -16751,13 +16393,11 @@
           "back_control",
           "guillotine",
           "darce_choke",
-          "anaconda_choke",
-          "samurai_roll_positions"
+          "anaconda_choke"
         ],
         "entry_from_position_ids": [
           "turtle_top",
-          "scramble_positions",
-          "samurai_roll_positions"
+          "scramble_positions"
         ],
         "risk_level": "low"
       },
@@ -16958,8 +16598,7 @@
           "side_control"
         ],
         "entry_from_position_ids": [
-          "any_position",
-          "rolling_back_takes"
+          "any_position"
         ],
         "risk_level": "medium"
       },
@@ -17890,9 +17529,7 @@
           "lateral_shift"
         ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "turtle_bottom_leg_entanglement_counters"
-        ],
+        "leads_to_position_ids": [],
         "entry_from_position_ids": [],
         "risk_level": "high"
       },
@@ -18234,9 +17871,7 @@
           "lateral_shift"
         ],
         "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "side_control_bottom_underhook_chain"
-        ],
+        "leads_to_position_ids": [],
         "entry_from_position_ids": [],
         "risk_level": "high"
       },
@@ -18956,10 +18591,7 @@
         ],
         "allowed_technique_ids": [],
         "leads_to_position_ids": [],
-        "entry_from_position_ids": [
-          "reverse_kesa_side_control",
-          "lapel_staple_side_control"
-        ],
+        "entry_from_position_ids": [],
         "risk_level": "low"
       },
       "learning": {
@@ -20225,2162 +19857,6 @@
         "goals": [
           "Enter false reap / saddle chains",
           "Create immediate sweep threats from inversion"
-        ]
-      }
-    },
-    "seatbelt_straightjacket_top": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Control wrists before attacking neck"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Crossing feet during control"
-          ],
-          "key_details": [
-            "Stay chest-to-back"
-          ],
-          "transitions_available": [
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Pull wrists to belly button to break defense"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Chasing choke without grip dominance"
-          ],
-          "key_details": [
-            "Switch hips when opponent slides to mat"
-          ],
-          "transitions_available": [
-            "body_triangle",
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Layer straightjacket grip with lapel feed"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Allowing wrist to slip out to far side"
-          ],
-          "key_details": [
-            "Use shoulder crunch to expose chin"
-          ],
-          "transitions_available": [
-            "body_triangle",
-            "seatbelt_trap_system_top"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Trap one arm with leg while keeping wrists pinned"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Forgetting to follow hip escapes with hooks"
-          ],
-          "key_details": [
-            "Threaten armbar when opponent straightens arm"
-          ],
-          "transitions_available": [
-            "body_triangle",
-            "rear_triangle_trap_top"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Cycle between straightjacket, short choke, and wrist ride traps"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent re-grip your choking wrist"
-          ],
-          "key_details": [
-            "Float chest-to-head when opponent granbys"
-          ],
-          "transitions_available": [
-            "floating_mount_transitions",
-            "rear_triangle_trap_top"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "seatbelt_straightjacket_top",
-        "min_belt": "purple",
-        "category": "top_control",
-        "opponent_relative": [
-          "behind",
-          "hooks_in"
-        ],
-        "stability_score": 5,
-        "movement_directions_allowed": [
-          "forward_pressure",
-          "rotational"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
-      },
-      "learning": {
-        "display_name": "Straightjacket Seatbelt Control",
-        "alternate_names": [],
-        "description": "Rear control variation emphasizing cross-wrist (straightjacket) grips to expose chokes and armlocks.",
-        "key_concepts": [
-          "Pin both wrists before opening attacks",
-          "Keep chest glued as you feed grips",
-          "Use hip switches to follow escapes"
-        ],
-        "entry_steps": [
-          "From back control, capture opponent’s top wrist with choking hand",
-          "Reach under far arm to grab secondary wrist",
-          "Pull wrists to midline to limit defense"
-        ],
-        "maintenance_steps": [
-          "Shoulders glued behind opponent’s shoulders",
-          "Alternate hip pressure to follow scoots",
-          "Hide choking-arm elbow behind opponent’s shoulder"
-        ],
-        "escape_overview": "Opponent must clear at least one trapped wrist before turning to face you.",
-        "common_mistakes": [
-          "Letting wrists drift away from torso",
-          "Leaning too far over shoulder and falling off"
-        ],
-        "goals": [
-          "Dominate hand fighting battles",
-          "Create predictable reactions for RNC, bow-and-arrow, or armbar entries"
-        ]
-      }
-    },
-    "backpack_latstrap_top": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Maintain chest contact when rolling"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Rolling without grip control"
-          ],
-          "key_details": [
-            "Always keep at least one hook"
-          ],
-          "transitions_available": [
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Use lat grip to pull opponent into lap"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent clear hook before rolling"
-          ],
-          "key_details": [
-            "Follow granby attempts with opposite hook"
-          ],
-          "transitions_available": [
-            "body_triangle",
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Switch from seatbelt to lat strap depending on posture"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Leaving hips too low on mat"
-          ],
-          "key_details": [
-            "Clamp knee behind opponent’s shoulder"
-          ],
-          "transitions_available": [
-            "body_triangle",
-            "seatbelt_straightjacket_top"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Connect lat strap to gift-wrap to expose collar"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Failing to chase head as opponent stands up"
-          ],
-          "key_details": [
-            "Spin to technical mount if opponent turns"
-          ],
-          "transitions_available": [
-            "s_mount_top",
-            "floating_mount_transitions"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Use lat strap to drop into saddle/false reap when opponent posts"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Pausing mid-roll without a hook"
-          ],
-          "key_details": [
-            "Cycle between crab-ride and body triangle seamlessly"
-          ],
-          "transitions_available": [
-            "floating_mount_transitions",
-            "false_reap"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "backpack_latstrap_top",
-        "min_belt": "brown",
-        "category": "top_control",
-        "opponent_relative": [
-          "behind",
-          "hooks_in"
-        ],
-        "stability_score": 5,
-        "movement_directions_allowed": [
-          "forward_pressure",
-          "rotational"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
-      },
-      "learning": {
-        "display_name": "Backpack Lat Strap Ride",
-        "alternate_names": [],
-        "description": "Hybrid between rear mount and body lock where you ride diagonally with a lat strap and one hook, setting up rolling back takes.",
-        "key_concepts": [
-          "Trap the lat line before rolling",
-          "Stay glued to opponent’s far hip",
-          "Switch between single and double hooks dynamically"
-        ],
-        "entry_steps": [
-          "From turtle or standing back exposure, drop hook in and thread arm across lat",
-          "Roll to side keeping chest glued to shoulder line"
-        ],
-        "maintenance_steps": [
-          "Keep far hook active while floating second leg",
-          "Use lat strap to pull opponent into lap",
-          "Switch to double underhooks if opponent sits up"
-        ],
-        "escape_overview": "Opponent must clear lat strap or stand up to shake rider off.",
-        "common_mistakes": [
-          "Rolling without a hook",
-          "Letting lat grip slip to armpit"
-        ],
-        "goals": [
-          "Seamless transition between turtle, mount, and back",
-          "Hunt bow-and-arrow, armbars, or leg entries mid scramble"
-        ]
-      }
-    },
-    "rear_triangle_trap_top": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Keep hooks before attempting leg traps"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Trying submissions without control"
-          ],
-          "key_details": [
-            "Control opponent’s shoulders"
-          ],
-          "transitions_available": [
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Swim foot over shoulder only after seatbelt secure"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Leaving opponent’s far arm free"
-          ],
-          "key_details": [
-            "Angle hips off-center"
-          ],
-          "transitions_available": [
-            "body_triangle",
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Feed lapel or wrist to prevent posture"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Allowing opponent to drop shoulders to mat"
-          ],
-          "key_details": [
-            "Hide foot behind opponent’s spine"
-          ],
-          "transitions_available": [
-            "body_triangle",
-            "seatbelt_straightjacket_top"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Transition between triangle, armbar, and crucifix"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent stack you during finish"
-          ],
-          "key_details": [
-            "Use off-hand to push opponent’s head forward"
-          ],
-          "transitions_available": [
-            "s_mount_top",
-            "floating_mount_transitions"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Float between rear triangle and backside 50/50 entries"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Releasing seatbelt before secondary controls"
-          ],
-          "key_details": [
-            "Switch grips to hunt double trouble finishes"
-          ],
-          "transitions_available": [
-            "floating_mount_transitions",
-            "false_reap"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "rear_triangle_trap_top",
-        "min_belt": "black",
-        "category": "top_control",
-        "opponent_relative": [
-          "behind",
-          "hooks_in"
-        ],
-        "stability_score": 5,
-        "movement_directions_allowed": [
-          "forward_pressure",
-          "rotational"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "low"
-      },
-      "learning": {
-        "display_name": "Rear Triangle Trap",
-        "alternate_names": [],
-        "description": "Hooking both legs around opponent’s shoulder line to trap an arm/neck triangle while maintaining seatbelt pressure.",
-        "key_concepts": [
-          "Isolate shoulder line before locking triangle",
-          "Angle hips diagonally behind opponent’s shoulder",
-          "Control far arm to prevent escapes"
-        ],
-        "entry_steps": [
-          "From back control, feed leg over opponent’s shoulder",
-          "Lock triangle behind opponent’s back while keeping seatbelt"
-        ],
-        "maintenance_steps": [
-          "Squeeze knees to keep arm trapped",
-          "Use overhook arm to lift opponent’s chin",
-          "Adjust angle by posting foot on mat"
-        ],
-        "escape_overview": "Opponent must free trapped arm or rotate under triangle pressure.",
-        "common_mistakes": [
-          "Locking triangle without controlling secondary arm",
-          "Falling off the top side while adjusting angle"
-        ],
-        "goals": [
-          "Finish rear triangle submissions",
-          "Transition to armbar/omoplata flows without losing back"
-        ]
-      }
-    },
-    "body_triangle_escape_bottom": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Protect neck before touching the lock"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Focusing only on the legs"
-          ],
-          "key_details": [
-            "Breathe and stay calm"
-          ],
-          "transitions_available": [
-            "rear_mount_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Grab top foot and peel toward pinky toe"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent re-grab collar mid escape"
-          ],
-          "key_details": [
-            "Bridge toward lock for slack"
-          ],
-          "transitions_available": [
-            "half_guard_bottom",
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Use knee pry with opposite leg"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Ignoring opponent’s secondary grips"
-          ],
-          "key_details": [
-            "Switch between lock-side and safe-side escapes"
-          ],
-          "transitions_available": [
-            "half_guard_bottom",
-            "closed_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Transition directly into leg entanglement counters"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Failing to trap opponent’s arm during escape"
-          ],
-          "key_details": [
-            "Stand when lock breaks to clear hooks"
-          ],
-          "transitions_available": [
-            "standing_neutral",
-            "false_reap"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Exploit lock breaks to enter backside 50/50 or saddle"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Staying static after unlocking legs"
-          ],
-          "key_details": [
-            "Counter-attack immediately once hips clear"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "reverse_x"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "body_triangle_escape_bottom",
-        "min_belt": "blue",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "pinned",
-          "back_taken"
-        ],
-        "stability_score": 3,
-        "movement_directions_allowed": [
-          "backward_retreat",
-          "rotational",
-          "lateral_shift"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Body Triangle Escape Mechanics",
-        "alternate_names": [],
-        "description": "Focused defense against tight body triangles, emphasizing hip clearing and foot battles.",
-        "key_concepts": [
-          "Address choking hand while peeling lock",
-          "Turn toward lock to relieve pressure",
-          "Slide hips below opponent’s knee line"
-        ],
-        "entry_steps": [
-          "Opponent locks body triangle from back control",
-          "Pressure compresses ribs limiting breathing"
-        ],
-        "maintenance_steps": [
-          "Control top foot with both hands",
-          "Bridge toward lock to create slack",
-          "Knee pry to open figure-four"
-        ],
-        "escape_overview": "Free the figure-four, then resume standard back escapes to half guard or turtle.",
-        "common_mistakes": [
-          "Trying to pry with fingers only",
-          "Rolling belly-down while lock is tight"
-        ],
-        "goals": [
-          "Break lock safely",
-          "Return to guard while keeping neck protected"
-        ]
-      }
-    },
-    "straightjacket_defense_bottom": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Grab opponent’s knuckles not fingers"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Panicking and exposing neck"
-          ],
-          "key_details": [
-            "Stay tucked while peeling"
-          ],
-          "transitions_available": [
-            "rear_mount_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Peel top wrist toward opposite pocket"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Trying to spin without hook clearance"
-          ],
-          "key_details": [
-            "Bridge as soon as grips weaken"
-          ],
-          "transitions_available": [
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Use elbow wedge to clear second grip"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent re-grip before shoulders move"
-          ],
-          "key_details": [
-            "Immediately pummel hand inside seatbelt"
-          ],
-          "transitions_available": [
-            "turtle_bottom",
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Trap opponent’s arm with leg once freed"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Ignoring lapel feeds while hand fighting"
-          ],
-          "key_details": [
-            "Turn into them for single-leg finish"
-          ],
-          "transitions_available": [
-            "standing_neutral",
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Counter with immediate wrist control to attack kimuras"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Failing to secure sleeves before standing"
-          ],
-          "key_details": [
-            "Invert when opponent re-reaches for wrists"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "straightjacket_defense_bottom",
-        "min_belt": "purple",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "pinned",
-          "back_taken"
-        ],
-        "stability_score": 3,
-        "movement_directions_allowed": [
-          "backward_retreat",
-          "rotational",
-          "lateral_shift"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Straightjacket Defense System",
-        "alternate_names": [],
-        "description": "Structured counters when opponent traps both wrists (straightjacket) from the back.",
-        "key_concepts": [
-          "Fight top wrist first",
-          "Use elbow flare to break second grip",
-          "Hip escape as soon as one arm frees"
-        ],
-        "entry_steps": [
-          "Opponent controls both wrists at chest",
-          "Choking arm hidden behind shoulder"
-        ],
-        "maintenance_steps": [
-          "Peel top wrist with thumb strip",
-          "Drive elbow to mat to clear second control",
-          "Slide shoulders to mat the moment space opens"
-        ],
-        "escape_overview": "Break double wrist control then resume standard back escapes.",
-        "common_mistakes": [
-          "Trying to free bottom wrist first",
-          "Turning away before wrists are separated"
-        ],
-        "goals": [
-          "Keep neck safe",
-          "Regain individual wrist control quickly"
-        ]
-      }
-    },
-    "rear_mount_granby_chain_bottom": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Clear foot before attempting roll"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Rolling blindly into choke"
-          ],
-          "key_details": [
-            "Protect neck while turning"
-          ],
-          "transitions_available": [
-            "rear_mount_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Trap opponent’s arm before hip heist"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Giving up underhook as you roll"
-          ],
-          "key_details": [
-            "Roll diagonally not straight back"
-          ],
-          "transitions_available": [
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Link granby to sit-up guard upon landing"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent follow with seatbelt intact"
-          ],
-          "key_details": [
-            "Grip pants/ankles during roll"
-          ],
-          "transitions_available": [
-            "turtle_bottom",
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Chain granby into single-leg or kimura trap"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Staying kneeling without underhooks"
-          ],
-          "key_details": [
-            "Use hip heist to force scramble"
-          ],
-          "transitions_available": [
-            "standing_neutral",
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Invert to backside 50/50 when opponent re-hooks mid roll"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Pausing mid roll allowing re-seatbelt"
-          ],
-          "key_details": [
-            "Turn defense into immediate offense"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "rear_mount_granby_chain_bottom",
-        "min_belt": "brown",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "pinned",
-          "back_taken"
-        ],
-        "stability_score": 3,
-        "movement_directions_allowed": [
-          "backward_retreat",
-          "rotational",
-          "lateral_shift"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Granby & Hip Heist Chain",
-        "alternate_names": [],
-        "description": "Advanced sequence combining shoulder rolls, hip heists, and hook clears to turn into the opponent.",
-        "key_concepts": [
-          "Clear hooks before rolling",
-          "Use granby to land on knees, not shoulders",
-          "Connect to single-leg or guard immediately"
-        ],
-        "entry_steps": [
-          "Opponent loses one hook chasing choke",
-          "Space opens near far hip"
-        ],
-        "maintenance_steps": [
-          "Clamp opponent’s arm before rolling",
-          "Roll over near shoulder while tucking chin",
-          "Come up on elbow then knees"
-        ],
-        "escape_overview": "Use granby to face opponent, finishing in turtle, single-leg, or guard.",
-        "common_mistakes": [
-          "Rolling without clearing hook",
-          "Leaving arm trapped leading to armbar"
-        ],
-        "goals": [
-          "Reverse into top position",
-          "Create scramble opportunities versus elite hooks"
-        ]
-      }
-    },
-    "rear_mount_inversion_bottom": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Master basic escapes before advanced spins"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Attempting inversion with hooks in place"
-          ],
-          "key_details": [
-            "Protect neck first"
-          ],
-          "transitions_available": [
-            "rear_mount_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Drill shoulder stand mechanics safely"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Rolling without grips"
-          ],
-          "key_details": [
-            "Only invert once hooks are loose"
-          ],
-          "transitions_available": [
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Control ankle with both hands while tilting hips"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent follow your hips"
-          ],
-          "key_details": [
-            "Aim to land in seated guard"
-          ],
-          "transitions_available": [
-            "false_reap"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Connect inversion to backside 50/50 or crab ride"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Hanging upside down without plan"
-          ],
-          "key_details": [
-            "Switch to single-leg if opponent stands"
-          ],
-          "transitions_available": [
-            "reverse_x",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Invert directly into double-trouble leg locks"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Giving opponent chance to re-seat hooks"
-          ],
-          "key_details": [
-            "Counterattack immediately on landing"
-          ],
-          "transitions_available": [
-            "double_trouble",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "rear_mount_inversion_bottom",
-        "min_belt": "black",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "pinned",
-          "back_taken"
-        ],
-        "stability_score": 3,
-        "movement_directions_allowed": [
-          "backward_retreat",
-          "rotational",
-          "lateral_shift"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [],
-        "entry_from_position_ids": [],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Inversion Backdoor Escape",
-        "alternate_names": [],
-        "description": "Elite-level counter that inverts under opponent’s hooks to enter leg entanglements or scramble out the back door.",
-        "key_concepts": [
-          "Control opponent’s ankles before inverting",
-          "Tuck head to inside hip",
-          "Kick through aggressively once hips clear"
-        ],
-        "entry_steps": [
-          "Opponent posts hands to attack collar",
-          "Hooks loosen creating inside space"
-        ],
-        "maintenance_steps": [
-          "Clamp opponent’s ankle to hip",
-          "Invert on inside shoulder and thread legs",
-          "Spin to seated guard or leg entanglement"
-        ],
-        "escape_overview": "Roll under opponent to exit behind them or attack legs.",
-        "common_mistakes": [
-          "Inverting without ankle control",
-          "Leaving neck exposed to short choke"
-        ],
-        "goals": [
-          "Turn defense into immediate leg attack or scramble",
-          "Exit straight to standing if leg attacks fail"
-        ]
-      }
-    },
-    "side_control_bottom_underhook_chain": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Frame before digging for underhooks",
-            "Stay on your side, not flat"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Reaching with arm while flat",
-            "Turning away from opponent"
-          ],
-          "key_details": [
-            "Slide elbow to mat before reaching",
-            "Use knee-to-elbow connection to shield"
-          ],
-          "transitions_available": [
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Fight crossface before attacking far arm",
-            "Use bridge-then-shrimp timing"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Pummeling without controlling opponent’s hips"
-          ],
-          "key_details": [
-            "Connect elbow to knee before inserting hook"
-          ],
-          "transitions_available": [
-            "half_guard_bottom",
-            "closed_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Chain underhook to knee shield or dogfight",
-            "Monitor whizzer pressure during build up"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent post the far leg to kill hip escape"
-          ],
-          "key_details": [
-            "Head stays tucked under opponent’s chin"
-          ],
-          "transitions_available": [
-            "half_guard_bottom",
-            "deep_half_guard",
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Switch between inside knee shield and reverse de la Riva when space opens"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Coming up without clearing collar grips"
-          ],
-          "key_details": [
-            "Use belt/lat grips to stand once underhook is won"
-          ],
-          "transitions_available": [
-            "half_guard_bottom",
-            "deep_half_guard",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Turn underhook winnings into immediate sweep threats",
-            "Float into backside 50/50 if opponent whizzers hard"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Hanging under opponent’s sprawl without re-guard path"
-          ],
-          "key_details": [
-            "Transition from dogfight to leg entanglements smoothly"
-          ],
-          "transitions_available": [
-            "deep_half_guard",
-            "reverse_x",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "side_control_bottom_underhook_chain",
-        "min_belt": "purple",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "on_bottom",
-          "inside_underhook"
-        ],
-        "stability_score": 3,
-        "movement_directions_allowed": [
-          "hip_movement",
-          "lateral_shift"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "half_guard_bottom",
-          "deep_half_guard",
-          "closed_guard_bottom"
-        ],
-        "entry_from_position_ids": [
-          "side_control_bottom",
-          "kesa_gatame_bottom"
-        ],
-        "risk_level": "medium"
-      },
-      "learning": {
-        "display_name": "Underhook Pummel Reguard",
-        "alternate_names": [],
-        "description": "Escaping side control by digging a far-side underhook, getting on your side, and building up to rechase half guard or a single-leg style dogfight.",
-        "key_concepts": [
-          "Frame first, pummel second",
-          "Elbow-knee connection buys the space to move",
-          "Use the underhook to come up or reguard"
-        ],
-        "entry_steps": [
-          "Create frames on neck and hip to stop pressure",
-          "Turn to your side and dig far-side underhook",
-          "Slide knee inside while walking hips away"
-        ],
-        "maintenance_steps": [
-          "Hide your head under opponent’s chest as you pummel",
-          "Clamp underhook elbow tight to ribs",
-          "Connect elbow to knee before scooting back underneath"
-        ],
-        "escape_overview": "Use the underhook to off-balance, insert your knee line, and recover to half guard, deep half, or seated dogfight situations.",
-        "common_mistakes": [
-          "Trying to pummel while flat on your back",
-          "Leaving frames behind which lets opponent crossface",
-          "Coming up to knees without clearing whizzer"
-        ],
-        "goals": [
-          "Win the far-side underhook battle",
-          "Insert knee shield to recover guard",
-          "Stand up or sweep once underhook established"
-        ]
-      }
-    },
-    "side_control_bottom_turtle_chain": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Protect your neck before turning to turtle",
-            "Knees and elbows stay glued"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Turning away and giving back exposure"
-          ],
-          "key_details": [
-            "Frame with forearms before sitting up"
-          ],
-          "transitions_available": [
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Only roll when you control opponent’s wrist",
-            "Use Granby to land on knees, not shoulders"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Reaching with outside arm during roll"
-          ],
-          "key_details": [
-            "Clear near-side hook before rolling"
-          ],
-          "transitions_available": [
-            "turtle_bottom",
-            "closed_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Combine turtle sit-outs with knee-elbow recovery",
-            "Re-grip collar before initiating granby"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Rolling backwards without blocking hooks"
-          ],
-          "key_details": [
-            "Head hides behind near knee as you roll"
-          ],
-          "transitions_available": [
-            "turtle_bottom",
-            "closed_guard_bottom",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Flow from turtle to sit-up guard, then to single-leg or loop choke threats"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent chase crucifix during granby"
-          ],
-          "key_details": [
-            "Use wrist control to drag opponent past you"
-          ],
-          "transitions_available": [
-            "standing_neutral",
-            "closed_guard_bottom",
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Granby directly into kiss-of-the-dragon or crab-ride chains",
-            "Counter-attack with immediate leg entries"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Trying flashy rolls without clearing grips first"
-          ],
-          "key_details": [
-            "Invert under their posted leg to take back"
-          ],
-          "transitions_available": [
-            "standing_neutral",
-            "false_reap",
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "side_control_bottom_turtle_chain",
-        "min_belt": "brown",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "on_bottom",
-          "transitioning"
-        ],
-        "stability_score": 3,
-        "movement_directions_allowed": [
-          "rolling",
-          "sitting_back"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "turtle_bottom",
-          "standing_neutral",
-          "closed_guard_bottom"
-        ],
-        "entry_from_position_ids": [
-          "side_control_bottom",
-          "north_south"
-        ],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Turtle Granby Recovery",
-        "alternate_names": [],
-        "description": "Chain that turns framed side-control escapes into turtle, granby rolls, or sit-up guard recoveries without conceding hooks.",
-        "key_concepts": [
-          "Protect neck while exposing hips to move",
-          "Use turtle as a waypoint, not the destination",
-          "Roll only after clearing near-side knee"
-        ],
-        "entry_steps": [
-          "Frame and turn toward opponent to create inside space",
-          "Thread near-side knee under their hip",
-          "Build to turtle as you clear crossface"
-        ],
-        "maintenance_steps": [
-          "Hide elbows to prevent seatbelt grabs",
-          "Granby only when their weight is forward",
-          "Sit back to guard the moment hooks appear"
-        ],
-        "escape_overview": "Use turtle to force reactions, then granby or sit through to guard/standing scrambles.",
-        "common_mistakes": [
-          "Rolling while opponent still controls hip",
-          "Leaving arm behind leading to kimura traps",
-          "Pausing in turtle without winning hand fight"
-        ],
-        "goals": [
-          "Convert side control pressure into movement",
-          "Arrive in turtle with frames already established",
-          "Exit turtle into guard, single legs, or leg locks"
-        ]
-      }
-    },
-    "side_control_bottom_inversion_chain": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Master basic shrimp escapes before trying inversions"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Attempting advanced spins without structure"
-          ],
-          "key_details": [
-            "Always protect neck before spinning"
-          ],
-          "transitions_available": [
-            "side_control_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Only invert once crossface is cleared"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Rolling blindly without gripping ankles"
-          ],
-          "key_details": [
-            "Keep elbows tight as you spin"
-          ],
-          "transitions_available": [
-            "turtle_bottom",
-            "open_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Use shin-on-bicep or knee shield before entering inversion"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent follow to north-south"
-          ],
-          "key_details": [
-            "Catch far hip with inside leg as you rotate"
-          ],
-          "transitions_available": [
-            "inverted_guard",
-            "reverse_de_la_riva"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Switch between kiss-of-the-dragon, matrix, or saddle entries mid inversion"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Leaving torso exposed to d’arce attempts"
-          ],
-          "key_details": [
-            "Control opponent’s ankle with both hands before sitting back"
-          ],
-          "transitions_available": [
-            "reverse_de_la_riva",
-            "false_reap",
-            "saddle"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Invert directly into backside 50/50 or double-trouble",
-            "Use leg pummels to chase back takes if opponent retreats"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Settling for guard without immediate attacks"
-          ],
-          "key_details": [
-            "Float between leg entanglement and crab-ride as opponent turns"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "double_trouble",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "side_control_bottom_inversion_chain",
-        "min_belt": "black",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "on_bottom",
-          "inverting"
-        ],
-        "stability_score": 3,
-        "movement_directions_allowed": [
-          "inverting",
-          "hip_movement"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "inverted_guard",
-          "reverse_de_la_riva",
-          "false_reap"
-        ],
-        "entry_from_position_ids": [
-          "side_control_bottom",
-          "knee_on_belly"
-        ],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Inverted Leg Pummel Reguard",
-        "alternate_names": [],
-        "description": "Advanced inversion sequence that threads legs back inside opponent’s hip line to re-enter modern guards or leg entanglements.",
-        "key_concepts": [
-          "Clear crossface and far hip before inverting",
-          "Leg pummels replace frames once shoulders spin",
-          "End inverted but connected to opponent’s leg line"
-        ],
-        "entry_steps": [
-          "Frame and hip escape to create inside space",
-          "Catch far hip with shin while far leg circles overhead",
-          "Invert toward opponent’s legs and reinsert hooks"
-        ],
-        "maintenance_steps": [
-          "Hide head near opponent’s thigh to avoid chokes",
-          "Clamp both ankles before sitting back to guard",
-          "Angle hips to shoot into leg entanglement of choice"
-        ],
-        "escape_overview": "Spin underneath to re-guard or enter leg attacks without absorbing top pressure.",
-        "common_mistakes": [
-          "Inverting without first breaking collar/crossface grips",
-          "Leaving arms behind which exposes kimuras",
-          "Pausing upside down with no leg entanglement planned"
-        ],
-        "goals": [
-          "Return to aggressive guard positions",
-          "Threaten leg locks immediately after inversion",
-          "Use inversion to create back exposure chances"
-        ]
-      }
-    },
-    "reverse_kesa_side_control": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Stabilize regular side control before switching hips"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Jumping to reverse without base"
-          ],
-          "key_details": [
-            "Keep chest glued when rotating"
-          ],
-          "transitions_available": [
-            "side_control"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Control near arm with your lat or hip"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Leaving hips too far from opponent’s shoulder"
-          ],
-          "key_details": [
-            "Post hand near head to balance"
-          ],
-          "transitions_available": [
-            "north_south",
-            "mount"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Use reverse kesa to expose far-side underhook openings"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Allowing opponent to sit up into single-leg"
-          ],
-          "key_details": [
-            "Drive hips toward head to stop reguard"
-          ],
-          "transitions_available": [
-            "mount",
-            "s_mount_top",
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Cycle reverse kesa, north-south, and standard side control based on frames"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Ignoring opponent’s far leg pummels"
-          ],
-          "key_details": [
-            "Feed near arm into gift-wrap before transitioning"
-          ],
-          "transitions_available": [
-            "mount",
-            "s_mount_top",
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Flow to arm triangles, wrist rides, or kneebar traps from reverse orientation"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Staying in reverse kesa after opponent recovers frames"
-          ],
-          "key_details": [
-            "Use hip-switch to bait turtle then chase back"
-          ],
-          "transitions_available": [
-            "s_mount_top",
-            "back_control",
-            "north_south"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "reverse_kesa_side_control",
-        "min_belt": "brown",
-        "category": "top_control",
-        "opponent_relative": [
-          "on_top",
-          "reverse_kesa"
-        ],
-        "stability_score": 4,
-        "movement_directions_allowed": [
-          "lateral_shift",
-          "rotational"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "mount",
-          "back_control",
-          "s_mount_top",
-          "north_south"
-        ],
-        "entry_from_position_ids": [
-          "side_control",
-          "knee_on_belly",
-          "north_south"
-        ],
-        "risk_level": "medium"
-      },
-      "learning": {
-        "display_name": "Reverse Kesa Side Control",
-        "alternate_names": [],
-        "description": "Hip-switch side control variation facing opponent’s legs to trap their near arm while hunting spinning arm locks and mount entries.",
-        "key_concepts": [
-          "Switch hips without letting chest lose contact",
-          "Kill near arm before letting opponent frame",
-          "Rotate back to standard side control when needed"
-        ],
-        "entry_steps": [
-          "From standard side control, windshield-wiper hips to face legs",
-          "Thread far arm under opponent’s near arm to trap it",
-          "Walk hips toward opponent’s head to keep pressure"
-        ],
-        "maintenance_steps": [
-          "Anchor far hip with elbow/lat connection",
-          "Use far-side underhook to monitor opponent’s hip turn",
-          "Float between reverse kesa and north-south to chase reactions"
-        ],
-        "escape_overview": "Opponent must free trapped arm and re-insert knee shield or turn to turtle.",
-        "common_mistakes": [
-          "Switching hips without clearing near-side elbow",
-          "Leaning back and giving space for underhook",
-          "Forgetting to monitor far hip allowing leg recoveries"
-        ],
-        "goals": [
-          "Trap near arm for gift-wrap and armlock chains",
-          "Open paths to S-mount or back exposure",
-          "Force opponent to turn giving north-south d’arce looks"
-        ]
-      }
-    },
-    "lapel_staple_side_control": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Win basic crossface/underhook before trying lapel feeds"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent sit up during lapel setup"
-          ],
-          "key_details": [
-            "Stay heavy while adjusting grips"
-          ],
-          "transitions_available": [
-            "side_control"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Feed lapel only after clearing near elbow",
-            "Keep chest pressure during hand transfer"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Giving lapel slack as you pass it"
-          ],
-          "key_details": [
-            "Use knee posted near hip for base"
-          ],
-          "transitions_available": [
-            "north_south",
-            "knee_on_belly"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Staple the arm then pin hip with shin to completely immobilize"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Reaching far collar and losing chest contact"
-          ],
-          "key_details": [
-            "Switch to paper-cutter or baseball choke when opponent turns"
-          ],
-          "transitions_available": [
-            "s_mount_top",
-            "mount",
-            "back_control"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Layer lapel feed with gift-wrap or wrist control for traps"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Failing to adjust when opponent re-frames near hip"
-          ],
-          "key_details": [
-            "Walk around head to north-south to tighten lapel choke"
-          ],
-          "transitions_available": [
-            "s_mount_top",
-            "back_control",
-            "arm_trapped_back_mount"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Cycle between lapel staple, crucifix, and arm-trap back takes seamlessly"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Neglecting collar tension when transitioning"
-          ],
-          "key_details": [
-            "Use lapel to pull opponent into your knee line for easy mounts"
-          ],
-          "transitions_available": [
-            "arm_trapped_back_mount",
-            "back_control",
-            "north_south"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "lapel_staple_side_control",
-        "min_belt": "black",
-        "category": "top_control",
-        "opponent_relative": [
-          "on_top",
-          "lapel_trap"
-        ],
-        "stability_score": 4,
-        "movement_directions_allowed": [
-          "forward_pressure",
-          "lateral_shift"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "back_control",
-          "arm_trapped_back_mount",
-          "s_mount_top",
-          "north_south"
-        ],
-        "entry_from_position_ids": [
-          "side_control",
-          "north_south",
-          "knee_on_belly"
-        ],
-        "risk_level": "low"
-      },
-      "learning": {
-        "display_name": "Lapel Staple Side Control",
-        "alternate_names": [],
-        "description": "Dominant lapel-feeding side control where you staple opponent’s near arm with their own lapel to open relentless submission chains.",
-        "key_concepts": [
-          "Feed lapel under opponent’s far arm before releasing crossface",
-          "Stapled arm kills frames and exposes neck",
-          "Keep hips mobile to follow shrimp attempts"
-        ],
-        "entry_steps": [
-          "Open near-side lapel and thread it under opponent’s armpit",
-          "Pass lapel to far hand while shoulder driving head away",
-          "Pin lapel to mat, stapling arm across their body"
-        ],
-        "maintenance_steps": [
-          "Keep lapel taut while knees windshield-wiper around hips",
-          "Use free hand to hunt underhook or collar choke",
-          "Switch to mount/back the moment opponent turns"
-        ],
-        "escape_overview": "Opponent must free stapled arm or re-guard before serious attacks arrive.",
-        "common_mistakes": [
-          "Letting lapel slack which frees the arm",
-          "Leaning too far over head and losing base",
-          "Forgetting to block near-side hip while feeding lapel"
-        ],
-        "goals": [
-          "Deny opponent’s frames entirely",
-          "Create layered lapel submissions (paper-cutter, bow-and-arrow, Ezekiel)",
-          "Transition to back or mount when they turn"
-        ]
-      }
-    },
-    "turtle_bottom_sitback_guard_recovery": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Protect neck before sitting"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Dropping hips without frames"
-          ],
-          "key_details": [
-            "Hand on opponent wrist when turning"
-          ],
-          "transitions_available": [
-            "closed_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Sit toward overhook side when safe"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Turning blindly into hooks"
-          ],
-          "key_details": [
-            "Grip trouser cuff before scooting"
-          ],
-          "transitions_available": [
-            "closed_guard_bottom",
-            "open_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Change angle mid-sit to land in butterfly or collar-sleeve"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent follow to body lock"
-          ],
-          "key_details": [
-            "Keep elbow glued to inside thigh"
-          ],
-          "transitions_available": [
-            "open_guard_bottom",
-            "butterfly_guard"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Connect sit-back to sleeve drag or ankle pick"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Leaving collar grip unchecked"
-          ],
-          "key_details": [
-            "Switch grips mid-movement to stay safe"
-          ],
-          "transitions_available": [
-            "open_guard_bottom",
-            "standing_neutral"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Bait seatbelt to fall directly into K guard/false reap"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Waiting in turtle without threatening counters"
-          ],
-          "key_details": [
-            "Invert immediately when opponent overcommits"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "reverse_x"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "turtle_bottom_sitback_guard_recovery",
-        "min_belt": "purple",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "on_bottom",
-          "turtle"
-        ],
-        "stability_score": 2,
-        "movement_directions_allowed": [
-          "rolling",
-          "sitting_back",
-          "hip_movement"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "closed_guard_bottom",
-          "open_guard_bottom",
-          "butterfly_guard"
-        ],
-        "entry_from_position_ids": [
-          "turtle_bottom",
-          "turtle_bottom_variations",
-          "side_control_bottom"
-        ],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Sit-Back Guard Recovery",
-        "alternate_names": [],
-        "description": "Structured sit-back series that turns turtle defense into seated guard rebuilds without conceding back exposure.",
-        "key_concepts": [
-          "Hand fight before sitting back",
-          "Lead elbow connects to hip when you drop",
-          "Sit toward open side to keep hooks out"
-        ],
-        "entry_steps": [
-          "Opponent controls seatbelt or front headlock",
-          "You frame inside wrists and shift hips back",
-          "Drop to a seated angle while clearing hooks"
-        ],
-        "maintenance_steps": [
-          "Hide inside elbow against ribs",
-          "Keep head lower than opponent’s chest",
-          "Grip sleeves or ankles before scooting out"
-        ],
-        "escape_overview": "Win inside ties, sit to your hip, and rebuild collar-and-sleeve or shin-to-shin guard before opponent secures hooks.",
-        "common_mistakes": [
-          "Sitting without clearing grips",
-          "Falling straight back and exposing hooks",
-          "Ignoring the underhook battle on exit"
-        ],
-        "goals": [
-          "Return to closed, open, or shin-to-shin guard",
-          "Force opponent to abandon seatbelt grips",
-          "Set immediate collar-drag or ankle-pick counters"
-        ]
-      }
-    },
-    "turtle_bottom_granby_wall_chain": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Master base before rolling"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Rolling without grip control"
-          ],
-          "key_details": [
-            "Tuck chin before shoulder roll"
-          ],
-          "transitions_available": [
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Trap opponent wrist prior to roll"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Giving up far elbow mid-roll"
-          ],
-          "key_details": [
-            "Aim to land on same side hip"
-          ],
-          "transitions_available": [
-            "turtle_bottom",
-            "closed_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Collect ankle to steer opponent"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent sprawl on your head"
-          ],
-          "key_details": [
-            "Come up on elbow then knee"
-          ],
-          "transitions_available": [
-            "single_leg_x",
-            "half_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Chain roll into sit-up guard or single leg"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Hesitating after creating space"
-          ],
-          "key_details": [
-            "Switch to kiss-of-the-dragon if opponent circles"
-          ],
-          "transitions_available": [
-            "standing_neutral",
-            "single_leg_x",
-            "turtle_top"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Convert failed roll into crab-ride/back exposure"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Rolling without off-balancing first"
-          ],
-          "key_details": [
-            "Invert under opponent for backside 50/50"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "reverse_x",
-            "turtle_top"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "turtle_bottom_granby_wall_chain",
-        "min_belt": "brown",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "on_bottom",
-          "turtle"
-        ],
-        "stability_score": 2,
-        "movement_directions_allowed": [
-          "rolling",
-          "sitting_back",
-          "hip_movement"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "standing_neutral",
-          "single_leg_x",
-          "turtle_top"
-        ],
-        "entry_from_position_ids": [
-          "turtle_bottom",
-          "turtle_bottom_variations"
-        ],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Granby Wall Chain",
-        "alternate_names": [],
-        "description": "Granby-style shoulder roll and wall-walk sequence that escapes tight front headlocks into single-leg or guard entries.",
-        "key_concepts": [
-          "Clear posted knee before rolling",
-          "Use shoulder line as a hinge, not neck",
-          "Land on elbow-knee to recover immediately"
-        ],
-        "entry_steps": [
-          "Opponent snaps you to turtle with front headlock",
-          "Frame inside their thigh and post opposite foot",
-          "Roll over far shoulder toward trapped arm side"
-        ],
-        "maintenance_steps": [
-          "Catch opponent’s ankle during roll",
-          "Come up to knee shield or single-leg",
-          "Re-shoot underhook if they sprawl"
-        ],
-        "escape_overview": "Granby roll to create a scramble, then hit single-leg, sit-up guard, or kiss-of-the-dragon style entries while protecting neck.",
-        "common_mistakes": [
-          "Rolling without controlling wrist",
-          "Leading with head and neck instead of shoulders",
-          "Pausing on back and giving hooks"
-        ],
-        "goals": [
-          "Exit front headlock safely",
-          "Score sweep or reversal from ensuing scramble",
-          "Transition to attacking positions immediately"
-        ]
-      }
-    },
-    "turtle_bottom_leg_entanglement_counters": {
-      "belt_levels": {
-        "white": {
-          "concepts": [
-            "Perfect basics before attacking legs here"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Attempting advanced entries too early"
-          ],
-          "key_details": [
-            "Stay compact to protect neck"
-          ],
-          "transitions_available": [
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Control opponent’s ankle before sitting"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Letting opponent hook second leg"
-          ],
-          "key_details": [
-            "Use shin shield to keep space"
-          ],
-          "transitions_available": [
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Pummel inside knee before inversion"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Leaving far arm behind"
-          ],
-          "key_details": [
-            "Reconnect elbow to knee on landing"
-          ],
-          "transitions_available": [
-            "reverse_x"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Link entries to backside 50/50 or cross ashi"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Allowing opponent to sprawl leg free"
-          ],
-          "key_details": [
-            "Hide heel exposure until you’re tight"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "reverse_x"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Cycle between crab-ride, backside 50/50, and saddle attacks"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Ignoring collar grip as you attack legs"
-          ],
-          "key_details": [
-            "Use immediate off-balancing to finish quickly"
-          ],
-          "transitions_available": [
-            "false_reap",
-            "saddle",
-            "double_trouble"
-          ],
-          "prerequisites": []
-        }
-      },
-      "techniques": [],
-      "transitions": [],
-      "system": {
-        "position_id": "turtle_bottom_leg_entanglement_counters",
-        "min_belt": "black",
-        "category": "bottom_control",
-        "opponent_relative": [
-          "on_bottom",
-          "turtle"
-        ],
-        "stability_score": 2,
-        "movement_directions_allowed": [
-          "rolling",
-          "sitting_back",
-          "hip_movement"
-        ],
-        "allowed_technique_ids": [],
-        "leads_to_position_ids": [
-          "false_reap",
-          "reverse_x",
-          "saddle"
-        ],
-        "entry_from_position_ids": [
-          "turtle_bottom",
-          "rear_mount_bottom"
-        ],
-        "risk_level": "high"
-      },
-      "learning": {
-        "display_name": "Leg-Entry Counter System",
-        "alternate_names": [],
-        "description": "High-level turtle counters that turn back-take attempts into immediate leg entanglements such as backside 50/50 or saddle.",
-        "key_concepts": [
-          "Capture opponent’s posting leg before they hook",
-          "Invert under the near hip with frames ready",
-          "Attack the leg line before they settle seatbelt"
-        ],
-        "entry_steps": [
-          "Opponent steps a leg in to set first hook",
-          "You trap their ankle with both hands and sit back",
-          "Invert toward trapped leg to expose knee line"
-        ],
-        "maintenance_steps": [
-          "Clamp knees on opponent’s shin while turning",
-          "Control toes to prevent them from escaping",
-          "Transition to backside 50/50 or saddle finishes"
-        ],
-        "escape_overview": "Steal the hooking leg, invert, and attack leg locks before opponent establishes full back control.",
-        "common_mistakes": [
-          "Chasing leg entanglement without protecting neck",
-          "Failing to control opponent’s second hook leg",
-          "Inverting without dominating the knee line"
-        ],
-        "goals": [
-          "Deny hooks entirely by turning defense into offense",
-          "Finish false-reap, backside 50/50, or saddle attacks",
-          "Force scrambles that lead to top position"
         ]
       }
     }

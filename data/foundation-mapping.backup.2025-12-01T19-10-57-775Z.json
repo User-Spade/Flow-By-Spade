@@ -628,21 +628,6 @@
       "position_id": "lapel_staple_side_control",
       "foundation": "side_control_top",
       "rank": 3
-    },
-    "turtle_bottom_sitback_guard_recovery": {
-      "position_id": "turtle_bottom_sitback_guard_recovery",
-      "foundation": "turtle_bottom",
-      "rank": 9
-    },
-    "turtle_bottom_granby_wall_chain": {
-      "position_id": "turtle_bottom_granby_wall_chain",
-      "foundation": "turtle_bottom",
-      "rank": 9
-    },
-    "turtle_bottom_leg_entanglement_counters": {
-      "position_id": "turtle_bottom_leg_entanglement_counters",
-      "foundation": "turtle_bottom",
-      "rank": 9
     }
   }
 }

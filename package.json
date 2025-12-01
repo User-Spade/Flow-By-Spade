@@ -6,7 +6,15 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "validate:data": "node scripts/validate-database.js",
+    "fix:transitions": "node scripts/fix-transition-symmetry.js --write",
+    "add:positions:bottom": "node scripts/add-positions.js --write",
+    "fill:belts": "node scripts/fill-belt-content.js --write",
+    "add:full-mount": "node scripts/add-full-mount-expansion.js",
+    "add:kob": "node scripts/add-knee-on-belly-expansion.js",
+    "add:rear-mount": "node scripts/add-rear-mount-expansion.js",
+    "add:side-control": "node scripts/add-side-control-expansion.js"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
