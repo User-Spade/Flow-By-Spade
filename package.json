@@ -14,7 +14,9 @@
     "add:full-mount": "node scripts/add-full-mount-expansion.js",
     "add:kob": "node scripts/add-knee-on-belly-expansion.js",
     "add:rear-mount": "node scripts/add-rear-mount-expansion.js",
-    "add:side-control": "node scripts/add-side-control-expansion.js"
+    "add:side-control": "node scripts/add-side-control-expansion.js",
+    "update:copy": "node scripts/update-position-copy.js --write",
+    "curate:belts": "node scripts/rebuild-belt-content.js --write"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",

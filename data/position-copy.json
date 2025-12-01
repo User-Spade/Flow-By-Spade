@@ -1,0 +1,186 @@
+{
+  "generated_at": "2025-12-01",
+  "positions": {
+    "standing_neutral": {
+      "description": "Adopt an athletic stance that lets you move, pummel, and fight for grips without exposing your neck or balance. Keep posture aligned (head over hips), hands active for hand-fighting, and feet ready for level changes and angle creation. Your first goals are posture, inside position, and distance control—then you can safely enter ties, shoot, or pull guard.",
+      "key_concepts": [
+        "Balanced stance: staggered base, knees soft, weight forward",
+        "Posture alignment: head over hips, spine neutral",
+        "Hand-fighting: win inside position before big movements",
+        "Footwork: step to angles, don’t reach with arms",
+        "Level changes: bend at knees/hips, not the waist",
+        "Kuzushi: off-balance before entries (snap, pull, circle)"
+      ],
+      "common_mistakes": [
+        "Square stance with straight legs",
+        "Reaching for grips without footwork",
+        "Head down, exposing neck and posture",
+        "Static feet—no angles or level changes"
+      ]
+    },
+    "collar_tie": {
+      "description": "Use the collar tie to manage posture and create angles. Control the head with your forearm, keep your elbow down, and combine snaps with footwork to off-balance. Aim to win the inside tie on the other side and connect to takedowns or guard pulls without exposing your neck.",
+      "key_concepts": [
+        "Head control: forearm frames the neck, elbow down",
+        "Inside position: win the opposite biceps tie",
+        "Snap + step: off-balance then change angle",
+        "Posture breaks: head turns, hips follow",
+        "Chain attacks: arm drags, knee taps, guard pulls"
+      ],
+      "common_mistakes": [
+        "Pulling with arms instead of snapping with body",
+        "Elbow flared—weak head control",
+        "Narrow base while snapping, losing balance"
+      ]
+    },
+    "over_under_clinch": {
+      "description": "With one underhook and one overhook, battle to win the inside position and head alignment. Elevate the underhook, whizzer on the overhook, and pummel your feet to angles. Use head position under the chin to steer posture, then connect to throws, trips, or body-lock entries.",
+      "key_concepts": [
+        "Underhook elevation: shoulder-to-shoulder connection",
+        "Whizzer pressure: elbow down, shoulder heavy",
+        "Head position: under chin, eyes forward",
+        "Hip-to-hip connection: deny space",
+        "Foot pummeling: step inside to create angles"
+      ],
+      "common_mistakes": [
+        "Loose elbows—easy to swim inside",
+        "Square hips, no angle creation",
+        "Ignoring head position and posture"
+      ]
+    },
+    "double_underhooks": {
+      "description": "A dominant clinch. Lock your hands high on the back, clamp ribs with your forearms, keep head inside, and step to angles to lift and move. Prioritize posture before squeezing—your structure creates control. Use body locks, knee pinches, and trips without exposing your neck.",
+      "key_concepts": [
+        "Gable grip behind back—not low at the hips",
+        "Rib cage clamp with forearms",
+        "Head inside: protect neck, steer posture",
+        "Hip lock: step-in angles before lifts",
+        "Chain to trips and body lock finishes"
+      ],
+      "common_mistakes": [
+        "Reaching too low—weak control",
+        "Head outside—guillotine risk",
+        "Squeezing without posture and angles"
+      ]
+    },
+    "single_underhook": {
+      "description": "With one underhook, connect your shoulder to their shoulder and turn them. Keep your head in, elbow deep, and step inside to walk them to an angle. Threaten knee taps and body locks; if they whizzer hard, change levels or re-pummel.",
+      "key_concepts": [
+        "Elbow deep underhook—shoulder connected",
+        "Head position protects neck and drives posture",
+        "Walk to angles, don’t push straight",
+        "Chain entries: knee tap, body lock, re-pummel"
+      ],
+      "common_mistakes": [
+        "Shallow underhook—easy to swim",
+        "Square stance—no turning power",
+        "Far hip exposure without head control"
+      ]
+    },
+    "closed_guard_bottom": {
+      "description": "Break posture, win grips, and angle your hips before opening. Climb your legs to control shoulders, use two-on-one or collar-sleeve to isolate arms, and connect attacks in chains (sit-up series, pendulum, armbar/triangle/omoplata). Move your hips—not just your arms—to create threats.",
+      "key_concepts": [
+        "Posture control: head/shoulders broken",
+        "Hip angle before opening guard",
+        "Grip pairs: two-on-one, collar-sleeve",
+        "Leg climb: shoulders trapped for attacks",
+        "Attack chains: sit-up, pendulum, ATA"
+      ],
+      "common_mistakes": [
+        "Lying flat—no hip mobility",
+        "Opening guard without posture control",
+        "Pulling with arms instead of moving hips"
+      ]
+    },
+    "open_guard_bottom": {
+      "description": "Manage distance with frames and hooks, then off-balance before entries. Win inside position with shins and hands, pummel your legs to control the knee line, and use kuzushi (push-pull, angle changes) to create passes or sweep opportunities. Stay mobile—hips lead, feet guide.",
+      "key_concepts": [
+        "Distance management: frames + hooks",
+        "Inside position with shins and hands",
+        "Leg pummeling to control knee line",
+        "Kuzushi before entries: push-pull + angles",
+        "Hip mobility drives the guard"
+      ],
+      "common_mistakes": [
+        "Chasing grips without frames",
+        "Knees collapse—no shin shields",
+        "Feet dangling, no hooks or direction"
+      ]
+    },
+    "half_guard_bottom": {
+      "description": "Build structure first: knee shield or inside frames to deny crossface and underhook. Win the underhook or frame the far hip, keep head position safe, and connect hip-escape chains to sweeps, reversals, or get-ups. Time your entries when their hands are occupied.",
+      "key_concepts": [
+        "Knee shield / inside frames",
+        "Deny crossface; fight for underhook",
+        "Far hip frame when no underhook",
+        "Elbow-knee connection protects core",
+        "Chain: hip escape → sweep/get-up"
+      ],
+      "common_mistakes": [
+        "Hugging the head—gives crossface",
+        "Staying flat—no frames",
+        "Underhook late—stuck in crossface"
+      ]
+    },
+    "side_control_bottom": {
+      "description": "Survive and recover: frame the near-side neck/shoulder, frame the far hip, and connect frames to hip escapes. Remove head control first, then re-guard or get to knees. Push with structure, not straight arms, and time movements when top changes base.",
+      "key_concepts": [
+        "Near-side frame at neck/shoulder",
+        "Far hip frame denies hip switch",
+        "Elbow-knee connection inside",
+        "Hip escape chains to re-guard",
+        "Timing when top shifts weight"
+      ],
+      "common_mistakes": [
+        "Straight-arm pushing—no structure",
+        "Belly-down turns without frames",
+        "Ignoring head control before escaping"
+      ]
+    },
+    "side_control": {
+      "description": "Chest-to-chest control with head and hip management. Crossface to turn the head, block or wedge the far hip, and distribute weight through ribs—not the floor. Use switching bases to isolate the near arm, then progress to knee-on-belly, mount, or submissions.",
+      "key_concepts": [
+        "Crossface: head turned away",
+        "Far hip wedge/block to stop hip escapes",
+        "Weight through chest and ribs",
+        "Switch base to isolate near arm",
+        "Progressions: KOB, mount, submissions"
+      ],
+      "common_mistakes": [
+        "Hovering—light pressure",
+        "Chasing submissions before control",
+        "Allowing inside elbow-knee connection"
+      ]
+    },
+    "mount": {
+      "description": "Stabilize first, then isolate. Use low mount with grapevines or knee ride to settle, then climb to high mount to trap arms and attack. Keep your hips heavy, control the head/shoulders, and connect to s-mount, arm triangles, and back takes as they defend.",
+      "key_concepts": [
+        "Base triangles: hips heavy, hands wide",
+        "Low vs high mount progression",
+        "Arm isolation: walk hands and knees",
+        "S-mount entries and head control",
+        "Chains: armbar, triangle, back take"
+      ],
+      "common_mistakes": [
+        "Too high too early—easy bridges",
+        "Feet crossed—unstable base",
+        "Leaning forward—gives up posts"
+      ]
+    },
+    "back_control": {
+      "description": "Maintain chest-to-back, protect the choking hand, and manage hook retention. Use seatbelt hierarchy (choking arm over), control the hip line, and rotate angles (strong/weak side) to expose the neck. Threaten body triangle when control is secure and hand fight patiently.",
+      "key_concepts": [
+        "Seatbelt hierarchy and hand protection",
+        "Hook retention and hip line control",
+        "Angle changes: strong/weak side",
+        "Head position behind shoulder for choke",
+        "Body triangle when control is secured"
+      ],
+      "common_mistakes": [
+        "Losing chest-to-back during attacks",
+        "Wrong hand-fight priorities",
+        "Crossing feet on belly—heel hook risk"
+      ]
+    }
+  }
+}

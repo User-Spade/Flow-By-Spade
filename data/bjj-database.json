@@ -6,24 +6,67 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Balanced stance with feet shoulder-width apart",
-            "Hands up for defense and grip fighting",
-            "Posture management - stay upright",
-            "Distance management - control engagement range"
+            "Balanced stance: staggered base, knees soft, weight forward",
+            "Posture alignment: head over hips, spine neutral",
+            "Hand-fighting: win inside position before big movements",
+            "Footwork: step to angles, don’t reach with arms"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Standing too upright and stiff",
-            "Reaching for grips without proper footwork",
-            "Dropping hands leaving neck exposed",
-            "Standing square without staggered stance"
+            "Square stance with straight legs",
+            "Reaching for grips without footwork",
+            "Head down, exposing neck and posture"
           ],
-          "key_details": [
-            "Keep knees slightly bent for mobility",
-            "Weight distributed evenly on balls of feet",
-            "Head up, eyes on opponent's chest",
-            "Ready to shoot or defend takedowns"
+          "key_details": [],
+          "transitions_available": [
+            "collar_tie",
+            "over_under_clinch",
+            "double_underhooks"
           ],
+          "prerequisites": []
+        },
+        "blue": {
+          "concepts": [
+            "Balanced stance: staggered base, knees soft, weight forward",
+            "Posture alignment: head over hips, spine neutral",
+            "Hand-fighting: win inside position before big movements",
+            "Footwork: step to angles, don’t reach with arms",
+            "Level changes: bend at knees/hips, not the waist",
+            "Kuzushi: off-balance before entries (snap, pull, circle)"
+          ],
+          "techniques": [],
+          "common_mistakes": [
+            "Square stance with straight legs",
+            "Reaching for grips without footwork",
+            "Head down, exposing neck and posture",
+            "Static feet—no angles or level changes"
+          ],
+          "key_details": [],
+          "transitions_available": [
+            "collar_tie",
+            "over_under_clinch",
+            "double_underhooks",
+            "single_underhook"
+          ],
+          "prerequisites": []
+        },
+        "purple": {
+          "concepts": [
+            "Balanced stance: staggered base, knees soft, weight forward",
+            "Posture alignment: head over hips, spine neutral",
+            "Hand-fighting: win inside position before big movements",
+            "Footwork: step to angles, don’t reach with arms",
+            "Level changes: bend at knees/hips, not the waist",
+            "Kuzushi: off-balance before entries (snap, pull, circle)"
+          ],
+          "techniques": [],
+          "common_mistakes": [
+            "Square stance with straight legs",
+            "Reaching for grips without footwork",
+            "Head down, exposing neck and posture",
+            "Static feet—no angles or level changes"
+          ],
+          "key_details": [],
           "transitions_available": [
             "collar_tie",
             "over_under_clinch",
@@ -34,107 +77,63 @@
           ],
           "prerequisites": []
         },
-        "blue": {
-          "concepts": [
-            "Structure before movement in Standing Neutral",
-            "Frames first, then hips in Standing Neutral"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post"
-          ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight"
-          ],
-          "transitions_available": [
-            "collar_tie",
-            "over_under_clinch"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Structure before movement in Standing Neutral",
-            "Frames first, then hips in Standing Neutral",
-            "Breathe and pace escapes in Standing Neutral"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection"
-          ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery"
-          ],
-          "transitions_available": [
-            "collar_tie",
-            "over_under_clinch",
-            "double_underhooks"
-          ],
-          "prerequisites": []
-        },
         "brown": {
           "concepts": [
-            "Structure before movement in Standing Neutral",
-            "Frames first, then hips in Standing Neutral",
-            "Breathe and pace escapes in Standing Neutral",
-            "Win inside position before big movements"
+            "Balanced stance: staggered base, knees soft, weight forward",
+            "Posture alignment: head over hips, spine neutral",
+            "Hand-fighting: win inside position before big movements",
+            "Footwork: step to angles, don’t reach with arms",
+            "Level changes: bend at knees/hips, not the waist",
+            "Kuzushi: off-balance before entries (snap, pull, circle)"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames"
+            "Square stance with straight legs",
+            "Reaching for grips without footwork",
+            "Head down, exposing neck and posture",
+            "Static feet—no angles or level changes"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical"
-          ],
-          "transitions_available": [
-            "collar_tie",
-            "over_under_clinch",
-            "double_underhooks",
-            "single_underhook"
-          ],
-          "prerequisites": []
-        },
-        "black": {
-          "concepts": [
-            "Structure before movement in Standing Neutral",
-            "Frames first, then hips in Standing Neutral",
-            "Breathe and pace escapes in Standing Neutral",
-            "Win inside position before big movements",
-            "Connect elbows to hips to protect core"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames",
-            "Waiting flat instead of building structure"
-          ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical",
-            "Hand position matters more than strength"
-          ],
+          "key_details": [],
           "transitions_available": [
             "collar_tie",
             "over_under_clinch",
             "double_underhooks",
             "single_underhook",
-            "wrestling_shot_entry"
+            "wrestling_shot_entry",
+            "closed_guard_bottom",
+            "closed_guard_top",
+            "open_guard_top"
+          ],
+          "prerequisites": []
+        },
+        "black": {
+          "concepts": [
+            "Balanced stance: staggered base, knees soft, weight forward",
+            "Posture alignment: head over hips, spine neutral",
+            "Hand-fighting: win inside position before big movements",
+            "Footwork: step to angles, don’t reach with arms",
+            "Level changes: bend at knees/hips, not the waist",
+            "Kuzushi: off-balance before entries (snap, pull, circle)"
+          ],
+          "techniques": [],
+          "common_mistakes": [
+            "Square stance with straight legs",
+            "Reaching for grips without footwork",
+            "Head down, exposing neck and posture",
+            "Static feet—no angles or level changes"
+          ],
+          "key_details": [],
+          "transitions_available": [
+            "collar_tie",
+            "over_under_clinch",
+            "double_underhooks",
+            "single_underhook",
+            "wrestling_shot_entry",
+            "closed_guard_bottom",
+            "closed_guard_top",
+            "open_guard_top",
+            "turtle_top",
+            "open_guard_bottom"
           ],
           "prerequisites": []
         }
@@ -187,12 +186,14 @@
           "Neutral Standing",
           "Standing Position"
         ],
-        "description": "The starting position where both grapplers are standing and facing each other with no grips established. This is where all standing exchanges begin in BJJ.",
+        "description": "Adopt an athletic stance that lets you move, pummel, and fight for grips without exposing your neck or balance. Keep posture aligned (head over hips), hands active for hand-fighting, and feet ready for level changes and angle creation. Your first goals are posture, inside position, and distance control—then you can safely enter ties, shoot, or pull guard.",
         "key_concepts": [
-          "Maintain athletic stance with balanced base",
-          "Keep hands ready for grip fighting",
-          "Control distance to prevent immediate attacks",
-          "Stay mobile and ready to move in any direction"
+          "Balanced stance: staggered base, knees soft, weight forward",
+          "Posture alignment: head over hips, spine neutral",
+          "Hand-fighting: win inside position before big movements",
+          "Footwork: step to angles, don’t reach with arms",
+          "Level changes: bend at knees/hips, not the waist",
+          "Kuzushi: off-balance before entries (snap, pull, circle)"
         ],
         "entry_steps": [
           "Start match or return to feet from ground",
@@ -207,10 +208,10 @@
         ],
         "escape_overview": "Not applicable - this is a neutral starting position",
         "common_mistakes": [
-          "Standing too stiff and upright",
-          "Reaching blindly for grips",
-          "Backing straight up when pressured",
-          "Not protecting neck from collar grips"
+          "Square stance with straight legs",
+          "Reaching for grips without footwork",
+          "Head down, exposing neck and posture",
+          "Static feet—no angles or level changes"
         ],
         "goals": [
           "Establish dominant grips first",
@@ -224,29 +225,22 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Control opponent's head and posture",
-            "Create angle off centerline",
-            "Use elbow as frame to create space",
-            "Pull down to break opponent's posture"
+            "Head control: forearm frames the neck, elbow down",
+            "Inside position: win the opposite biceps tie",
+            "Snap + step: off-balance then change angle",
+            "Posture breaks: head turns, hips follow"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Pulling straight down without angle",
-            "Standing square instead of creating angle",
-            "Gripping without elbow frame on opposite side",
-            "Reaching with straight arm instead of bent elbow"
+            "Pulling with arms instead of snapping with body",
+            "Elbow flared—weak head control",
+            "Narrow base while snapping, losing balance"
           ],
-          "key_details": [
-            "Hand on back of opponent's neck",
-            "Elbow bent, pulling down and toward you",
-            "Opposite arm frames against opponent's shoulder",
-            "Step to side to create angle"
-          ],
+          "key_details": [],
           "transitions_available": [
             "wrestling_shot_entry",
             "over_under_clinch",
-            "single_underhook",
-            "closed_guard_bottom"
+            "single_underhook"
           ],
           "prerequisites": [
             "standing_neutral"
@@ -254,104 +248,96 @@
         },
         "blue": {
           "concepts": [
-            "Structure before movement in Collar Tie",
-            "Frames first, then hips in Collar Tie"
+            "Head control: forearm frames the neck, elbow down",
+            "Inside position: win the opposite biceps tie",
+            "Snap + step: off-balance then change angle",
+            "Posture breaks: head turns, hips follow",
+            "Chain attacks: arm drags, knee taps, guard pulls"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post"
+            "Pulling with arms instead of snapping with body",
+            "Elbow flared—weak head control",
+            "Narrow base while snapping, losing balance"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight"
-          ],
+          "key_details": [],
           "transitions_available": [
             "wrestling_shot_entry",
-            "over_under_clinch"
+            "over_under_clinch",
+            "single_underhook",
+            "closed_guard_bottom"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Structure before movement in Collar Tie",
-            "Frames first, then hips in Collar Tie",
-            "Breathe and pace escapes in Collar Tie"
+            "Head control: forearm frames the neck, elbow down",
+            "Inside position: win the opposite biceps tie",
+            "Snap + step: off-balance then change angle",
+            "Posture breaks: head turns, hips follow",
+            "Chain attacks: arm drags, knee taps, guard pulls"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection"
+            "Pulling with arms instead of snapping with body",
+            "Elbow flared—weak head control",
+            "Narrow base while snapping, losing balance"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery"
-          ],
+          "key_details": [],
           "transitions_available": [
             "wrestling_shot_entry",
             "over_under_clinch",
-            "single_underhook"
+            "single_underhook",
+            "closed_guard_bottom",
+            "double_underhooks"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Structure before movement in Collar Tie",
-            "Frames first, then hips in Collar Tie",
-            "Breathe and pace escapes in Collar Tie",
-            "Win inside position before big movements"
+            "Head control: forearm frames the neck, elbow down",
+            "Inside position: win the opposite biceps tie",
+            "Snap + step: off-balance then change angle",
+            "Posture breaks: head turns, hips follow",
+            "Chain attacks: arm drags, knee taps, guard pulls"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames"
+            "Pulling with arms instead of snapping with body",
+            "Elbow flared—weak head control",
+            "Narrow base while snapping, losing balance"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical"
-          ],
+          "key_details": [],
           "transitions_available": [
             "wrestling_shot_entry",
             "over_under_clinch",
             "single_underhook",
-            "closed_guard_bottom"
+            "closed_guard_bottom",
+            "double_underhooks"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Structure before movement in Collar Tie",
-            "Frames first, then hips in Collar Tie",
-            "Breathe and pace escapes in Collar Tie",
-            "Win inside position before big movements",
-            "Connect elbows to hips to protect core"
+            "Head control: forearm frames the neck, elbow down",
+            "Inside position: win the opposite biceps tie",
+            "Snap + step: off-balance then change angle",
+            "Posture breaks: head turns, hips follow",
+            "Chain attacks: arm drags, knee taps, guard pulls"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames",
-            "Waiting flat instead of building structure"
+            "Pulling with arms instead of snapping with body",
+            "Elbow flared—weak head control",
+            "Narrow base while snapping, losing balance"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical",
-            "Hand position matters more than strength"
-          ],
+          "key_details": [],
           "transitions_available": [
             "wrestling_shot_entry",
             "over_under_clinch",
             "single_underhook",
-            "closed_guard_bottom"
+            "closed_guard_bottom",
+            "double_underhooks"
           ],
           "prerequisites": []
         }
@@ -391,12 +377,13 @@
           "Inside Control",
           "Neck Tie"
         ],
-        "description": "A standing position where you control the back of your opponent's neck with one hand while framing with the other. Creates posture control and sets up takedowns or guard pulls.",
+        "description": "Use the collar tie to manage posture and create angles. Control the head with your forearm, keep your elbow down, and combine snaps with footwork to off-balance. Aim to win the inside tie on the other side and connect to takedowns or guard pulls without exposing your neck.",
         "key_concepts": [
-          "Control opponent's head to control their body",
-          "Create angle off the centerline",
-          "Use opposite hand as frame to create space",
-          "Pull down to break opponent's posture and balance"
+          "Head control: forearm frames the neck, elbow down",
+          "Inside position: win the opposite biceps tie",
+          "Snap + step: off-balance then change angle",
+          "Posture breaks: head turns, hips follow",
+          "Chain attacks: arm drags, knee taps, guard pulls"
         ],
         "entry_steps": [
           "From standing neutral, establish hand on back of opponent's neck",
@@ -412,10 +399,9 @@
         ],
         "escape_overview": "Opponent can swim arm inside, establish own collar tie, or create distance by hand fighting",
         "common_mistakes": [
-          "Pulling straight down without stepping to angle",
-          "Standing square in front of opponent",
-          "Letting opponent get inside control",
-          "Straight-arming instead of keeping elbow bent"
+          "Pulling with arms instead of snapping with body",
+          "Elbow flared—weak head control",
+          "Narrow base while snapping, losing balance"
         ],
         "goals": [
           "Set up single leg or double leg takedown",
@@ -429,24 +415,18 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "One arm over opponent's shoulder, one arm under their armpit",
-            "Drive forward pressure to off-balance",
-            "Keep hips close to control opponent",
-            "Use over hook to control posture"
+            "Underhook elevation: shoulder-to-shoulder connection",
+            "Whizzer pressure: elbow down, shoulder heavy",
+            "Head position: under chin, eyes forward",
+            "Hip-to-hip connection: deny space"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Allowing too much space between hips",
-            "Standing upright instead of driving forward",
-            "Not securing the overhook deep enough",
-            "Letting opponent establish double underhooks"
+            "Loose elbows—easy to swim inside",
+            "Square hips, no angle creation",
+            "Ignoring head position and posture"
           ],
-          "key_details": [
-            "Overhook hand grips behind opponent's back",
-            "Underhook hand cups their lat or reaches for far hip",
-            "Head on overhook side for pressure",
-            "Drive forward with legs to create pressure"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
@@ -458,102 +438,93 @@
         },
         "blue": {
           "concepts": [
-            "Structure before movement in Over Under Clinch",
-            "Frames first, then hips in Over Under Clinch"
+            "Underhook elevation: shoulder-to-shoulder connection",
+            "Whizzer pressure: elbow down, shoulder heavy",
+            "Head position: under chin, eyes forward",
+            "Hip-to-hip connection: deny space",
+            "Foot pummeling: step inside to create angles"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post"
+            "Loose elbows—easy to swim inside",
+            "Square hips, no angle creation",
+            "Ignoring head position and posture"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
-            "wrestling_shot_entry"
+            "wrestling_shot_entry",
+            "closed_guard_bottom",
+            "double_underhooks"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Structure before movement in Over Under Clinch",
-            "Frames first, then hips in Over Under Clinch",
-            "Breathe and pace escapes in Over Under Clinch"
+            "Underhook elevation: shoulder-to-shoulder connection",
+            "Whizzer pressure: elbow down, shoulder heavy",
+            "Head position: under chin, eyes forward",
+            "Hip-to-hip connection: deny space",
+            "Foot pummeling: step inside to create angles"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection"
+            "Loose elbows—easy to swim inside",
+            "Square hips, no angle creation",
+            "Ignoring head position and posture"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
-            "closed_guard_bottom"
+            "closed_guard_bottom",
+            "double_underhooks"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Structure before movement in Over Under Clinch",
-            "Frames first, then hips in Over Under Clinch",
-            "Breathe and pace escapes in Over Under Clinch",
-            "Win inside position before big movements"
+            "Underhook elevation: shoulder-to-shoulder connection",
+            "Whizzer pressure: elbow down, shoulder heavy",
+            "Head position: under chin, eyes forward",
+            "Hip-to-hip connection: deny space",
+            "Foot pummeling: step inside to create angles"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames"
+            "Loose elbows—easy to swim inside",
+            "Square hips, no angle creation",
+            "Ignoring head position and posture"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
-            "closed_guard_bottom"
+            "closed_guard_bottom",
+            "double_underhooks"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Structure before movement in Over Under Clinch",
-            "Frames first, then hips in Over Under Clinch",
-            "Breathe and pace escapes in Over Under Clinch",
-            "Win inside position before big movements",
-            "Connect elbows to hips to protect core"
+            "Underhook elevation: shoulder-to-shoulder connection",
+            "Whizzer pressure: elbow down, shoulder heavy",
+            "Head position: under chin, eyes forward",
+            "Hip-to-hip connection: deny space",
+            "Foot pummeling: step inside to create angles"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames",
-            "Waiting flat instead of building structure"
+            "Loose elbows—easy to swim inside",
+            "Square hips, no angle creation",
+            "Ignoring head position and posture"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical",
-            "Hand position matters more than strength"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
-            "closed_guard_bottom"
+            "closed_guard_bottom",
+            "double_underhooks"
           ],
           "prerequisites": []
         }
@@ -593,12 +564,13 @@
           "Over-Under",
           "Overhook/Underhook"
         ],
-        "description": "A standing clinch position with one arm over the opponent's shoulder (overhook) and one arm under their armpit (underhook). Common in wrestling and BJJ for takedowns.",
+        "description": "With one underhook and one overhook, battle to win the inside position and head alignment. Elevate the underhook, whizzer on the overhook, and pummel your feet to angles. Use head position under the chin to steer posture, then connect to throws, trips, or body-lock entries.",
         "key_concepts": [
-          "Control opponent with asymmetric grips",
-          "Drive forward pressure constantly",
-          "Keep hips close to prevent separation",
-          "Use overhook to break posture"
+          "Underhook elevation: shoulder-to-shoulder connection",
+          "Whizzer pressure: elbow down, shoulder heavy",
+          "Head position: under chin, eyes forward",
+          "Hip-to-hip connection: deny space",
+          "Foot pummeling: step inside to create angles"
         ],
         "entry_steps": [
           "Secure underhook from standing",
@@ -614,10 +586,9 @@
         ],
         "escape_overview": "Opponent can pummel for underhooks, create space with frames, or snap you down",
         "common_mistakes": [
-          "Leaving space between hips",
-          "Not driving forward pressure",
-          "Shallow overhook that can be escaped",
-          "Standing too upright"
+          "Loose elbows—easy to swim inside",
+          "Square hips, no angle creation",
+          "Ignoring head position and posture"
         ],
         "goals": [
           "Execute body lock takedown",
@@ -631,24 +602,18 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Both arms under opponent's armpits",
-            "Dominant clinch position",
-            "Control opponent's hips and posture",
-            "Prevent opponent from achieving underhooks"
+            "Gable grip behind back—not low at the hips",
+            "Rib cage clamp with forearms",
+            "Head inside: protect neck, steer posture",
+            "Hip lock: step-in angles before lifts"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Locking hands too high on back",
-            "Not driving chest into opponent",
-            "Allowing space at hips",
-            "Standing upright without forward pressure"
+            "Reaching too low—weak control",
+            "Head outside—guillotine risk",
+            "Squeezing without posture and angles"
           ],
-          "key_details": [
-            "Hands locked behind opponent's back",
-            "Elbows tight to sides",
-            "Chest drives into opponent",
-            "Head on either side for pressure"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
@@ -660,41 +625,41 @@
         },
         "blue": {
           "concepts": [
-            "Structure before movement in Double Underhooks",
-            "Frames first, then hips in Double Underhooks"
+            "Gable grip behind back—not low at the hips",
+            "Rib cage clamp with forearms",
+            "Head inside: protect neck, steer posture",
+            "Hip lock: step-in angles before lifts",
+            "Chain to trips and body lock finishes"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post"
+            "Reaching too low—weak control",
+            "Head outside—guillotine risk",
+            "Squeezing without posture and angles"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
-            "wrestling_shot_entry"
+            "wrestling_shot_entry",
+            "closed_guard_bottom"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Structure before movement in Double Underhooks",
-            "Frames first, then hips in Double Underhooks",
-            "Breathe and pace escapes in Double Underhooks"
+            "Gable grip behind back—not low at the hips",
+            "Rib cage clamp with forearms",
+            "Head inside: protect neck, steer posture",
+            "Hip lock: step-in angles before lifts",
+            "Chain to trips and body lock finishes"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection"
+            "Reaching too low—weak control",
+            "Head outside—guillotine risk",
+            "Squeezing without posture and angles"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
@@ -704,24 +669,19 @@
         },
         "brown": {
           "concepts": [
-            "Structure before movement in Double Underhooks",
-            "Frames first, then hips in Double Underhooks",
-            "Breathe and pace escapes in Double Underhooks",
-            "Win inside position before big movements"
+            "Gable grip behind back—not low at the hips",
+            "Rib cage clamp with forearms",
+            "Head inside: protect neck, steer posture",
+            "Hip lock: step-in angles before lifts",
+            "Chain to trips and body lock finishes"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames"
+            "Reaching too low—weak control",
+            "Head outside—guillotine risk",
+            "Squeezing without posture and angles"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
@@ -731,27 +691,19 @@
         },
         "black": {
           "concepts": [
-            "Structure before movement in Double Underhooks",
-            "Frames first, then hips in Double Underhooks",
-            "Breathe and pace escapes in Double Underhooks",
-            "Win inside position before big movements",
-            "Connect elbows to hips to protect core"
+            "Gable grip behind back—not low at the hips",
+            "Rib cage clamp with forearms",
+            "Head inside: protect neck, steer posture",
+            "Hip lock: step-in angles before lifts",
+            "Chain to trips and body lock finishes"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames",
-            "Waiting flat instead of building structure"
+            "Reaching too low—weak control",
+            "Head outside—guillotine risk",
+            "Squeezing without posture and angles"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical",
-            "Hand position matters more than strength"
-          ],
+          "key_details": [],
           "transitions_available": [
             "body_lock_standing",
             "wrestling_shot_entry",
@@ -795,12 +747,13 @@
           "Double Unders",
           "Body Lock Position"
         ],
-        "description": "A dominant standing clinch position where you have both arms under your opponent's armpits with hands locked behind their back. Highly advantageous for throws and takedowns.",
+        "description": "A dominant clinch. Lock your hands high on the back, clamp ribs with your forearms, keep head inside, and step to angles to lift and move. Prioritize posture before squeezing—your structure creates control. Use body locks, knee pinches, and trips without exposing your neck.",
         "key_concepts": [
-          "Most dominant standing clinch position",
-          "Control both sides of opponent's body",
-          "Lift and drive to off-balance",
-          "Prevent opponent from getting their own underhooks"
+          "Gable grip behind back—not low at the hips",
+          "Rib cage clamp with forearms",
+          "Head inside: protect neck, steer posture",
+          "Hip lock: step-in angles before lifts",
+          "Chain to trips and body lock finishes"
         ],
         "entry_steps": [
           "Establish first underhook",
@@ -816,10 +769,9 @@
         ],
         "escape_overview": "Opponent must create space and pummel for their own underhooks or frame and push away",
         "common_mistakes": [
-          "Locking hands too high on back",
-          "Creating space at hips",
-          "Not using forward pressure",
-          "Waiting instead of attacking"
+          "Reaching too low—weak control",
+          "Head outside—guillotine risk",
+          "Squeezing without posture and angles"
         ],
         "goals": [
           "Mat return (takedown)",
@@ -833,29 +785,22 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "One arm under opponent's armpit",
-            "Control one side of opponent's body",
-            "Frame with opposite arm",
-            "Create angle for attacks"
+            "Elbow deep underhook—shoulder connected",
+            "Head position protects neck and drives posture",
+            "Walk to angles, don’t push straight",
+            "Chain entries: knee tap, body lock, re-pummel"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Not using opposite arm as frame",
-            "Standing square without angle",
-            "Allowing opponent to get double underhooks",
-            "Underhook too shallow"
+            "Shallow underhook—easy to swim",
+            "Square stance—no turning power",
+            "Far hip exposure without head control"
           ],
-          "key_details": [
-            "Underhook hand reaches for far hip or back",
-            "Opposite hand frames on bicep or shoulder",
-            "Head on underhook side",
-            "Step to angle"
-          ],
+          "key_details": [],
           "transitions_available": [
             "double_underhooks",
             "over_under_clinch",
-            "wrestling_shot_entry",
-            "closed_guard_bottom"
+            "wrestling_shot_entry"
           ],
           "prerequisites": [
             "standing_neutral"
@@ -863,104 +808,92 @@
         },
         "blue": {
           "concepts": [
-            "Structure before movement in Single Underhook",
-            "Frames first, then hips in Single Underhook"
+            "Elbow deep underhook—shoulder connected",
+            "Head position protects neck and drives posture",
+            "Walk to angles, don’t push straight",
+            "Chain entries: knee tap, body lock, re-pummel"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post"
+            "Shallow underhook—easy to swim",
+            "Square stance—no turning power",
+            "Far hip exposure without head control"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight"
-          ],
+          "key_details": [],
           "transitions_available": [
             "double_underhooks",
-            "over_under_clinch"
+            "over_under_clinch",
+            "wrestling_shot_entry",
+            "closed_guard_bottom"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Structure before movement in Single Underhook",
-            "Frames first, then hips in Single Underhook",
-            "Breathe and pace escapes in Single Underhook"
+            "Elbow deep underhook—shoulder connected",
+            "Head position protects neck and drives posture",
+            "Walk to angles, don’t push straight",
+            "Chain entries: knee tap, body lock, re-pummel"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection"
+            "Shallow underhook—easy to swim",
+            "Square stance—no turning power",
+            "Far hip exposure without head control"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery"
-          ],
+          "key_details": [],
           "transitions_available": [
             "double_underhooks",
             "over_under_clinch",
-            "wrestling_shot_entry"
+            "wrestling_shot_entry",
+            "closed_guard_bottom",
+            "body_lock_standing"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Structure before movement in Single Underhook",
-            "Frames first, then hips in Single Underhook",
-            "Breathe and pace escapes in Single Underhook",
-            "Win inside position before big movements"
+            "Elbow deep underhook—shoulder connected",
+            "Head position protects neck and drives posture",
+            "Walk to angles, don’t push straight",
+            "Chain entries: knee tap, body lock, re-pummel"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames"
+            "Shallow underhook—easy to swim",
+            "Square stance—no turning power",
+            "Far hip exposure without head control"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical"
-          ],
+          "key_details": [],
           "transitions_available": [
             "double_underhooks",
             "over_under_clinch",
             "wrestling_shot_entry",
-            "closed_guard_bottom"
+            "closed_guard_bottom",
+            "body_lock_standing"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Structure before movement in Single Underhook",
-            "Frames first, then hips in Single Underhook",
-            "Breathe and pace escapes in Single Underhook",
-            "Win inside position before big movements",
-            "Connect elbows to hips to protect core"
+            "Elbow deep underhook—shoulder connected",
+            "Head position protects neck and drives posture",
+            "Walk to angles, don’t push straight",
+            "Chain entries: knee tap, body lock, re-pummel"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames",
-            "Waiting flat instead of building structure"
+            "Shallow underhook—easy to swim",
+            "Square stance—no turning power",
+            "Far hip exposure without head control"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical",
-            "Hand position matters more than strength"
-          ],
+          "key_details": [],
           "transitions_available": [
             "double_underhooks",
             "over_under_clinch",
             "wrestling_shot_entry",
-            "closed_guard_bottom"
+            "closed_guard_bottom",
+            "body_lock_standing"
           ],
           "prerequisites": []
         }
@@ -1001,12 +934,12 @@
           "Single Under",
           "Underhook"
         ],
-        "description": "A standing clinch position with one arm under the opponent's armpit. Provides control on one side and sets up for advancement to double underhooks or takedowns.",
+        "description": "With one underhook, connect your shoulder to their shoulder and turn them. Keep your head in, elbow deep, and step inside to walk them to an angle. Threaten knee taps and body locks; if they whizzer hard, change levels or re-pummel.",
         "key_concepts": [
-          "Control one side of opponent's body",
-          "Use opposite arm as frame for distance",
-          "Create angle off centerline",
-          "Gateway to better positions"
+          "Elbow deep underhook—shoulder connected",
+          "Head position protects neck and drives posture",
+          "Walk to angles, don’t push straight",
+          "Chain entries: knee tap, body lock, re-pummel"
         ],
         "entry_steps": [
           "From standing, pummel arm inside opponent's arm",
@@ -1022,10 +955,9 @@
         ],
         "escape_overview": "Opponent can whizzer (overhook) the underhook, pummel for their own underhook, or create distance",
         "common_mistakes": [
-          "Shallow underhook easily overpowered",
-          "Not framing with opposite arm",
-          "Standing square in front",
-          "Neglecting footwork and angle"
+          "Shallow underhook—easy to swim",
+          "Square stance—no turning power",
+          "Far hip exposure without head control"
         ],
         "goals": [
           "Advance to double underhooks",
@@ -2083,30 +2015,22 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Pin opponent's shoulders and hips to mat",
-            "Control opponent's near arm and far hip",
-            "Distribute weight to immobilize",
-            "Prevent opponent from creating space"
+            "Crossface: head turned away",
+            "Far hip wedge/block to stop hip escapes",
+            "Weight through chest and ribs",
+            "Switch base to isolate near arm"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Weight too high on opponent's chest",
-            "Not controlling opponent's hips",
-            "Giving space for opponent to escape",
-            "Crossing feet allowing reversal"
+            "Hovering—light pressure",
+            "Chasing submissions before control",
+            "Allowing inside elbow-knee connection"
           ],
-          "key_details": [
-            "Chest pressure on opponent's chest",
-            "Control near arm with your arm or head",
-            "Hips low, sprawled away from opponent",
-            "Head pressure on opponent's face"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
             "knee_on_belly",
-            "north_south",
-            "back_control",
-            "half_guard_top"
+            "north_south"
           ],
           "prerequisites": [
             "open_guard_top"
@@ -2114,68 +2038,19 @@
         },
         "blue": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod"
+            "Crossface: head turned away",
+            "Far hip wedge/block to stop hip escapes",
+            "Weight through chest and ribs",
+            "Switch base to isolate near arm",
+            "Progressions: KOB, mount, submissions"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide"
-          ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm"
-          ],
-          "transitions_available": [
-            "mount",
-            "knee_on_belly"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
-            "Chasing submissions before control"
-          ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control"
-          ],
-          "transitions_available": [
-            "mount",
-            "knee_on_belly",
-            "north_south"
-          ],
-          "prerequisites": []
-        },
-        "brown": {
-          "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line",
-            "Climb to more dominant"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
+            "Hovering—light pressure",
             "Chasing submissions before control",
-            "Forgetting near-side underhook"
+            "Allowing inside elbow-knee connection"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control",
-            "Weight transfer for balance"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
             "knee_on_belly",
@@ -2184,35 +2059,87 @@
           ],
           "prerequisites": []
         },
-        "black": {
+        "purple": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line",
-            "Climb to more dominant",
-            "Anticipate bridge"
+            "Crossface: head turned away",
+            "Far hip wedge/block to stop hip escapes",
+            "Weight through chest and ribs",
+            "Switch base to isolate near arm",
+            "Progressions: KOB, mount, submissions"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
+            "Hovering—light pressure",
             "Chasing submissions before control",
-            "Forgetting near-side underhook",
-            "Leaving elbow space"
+            "Allowing inside elbow-knee connection"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control",
-            "Weight transfer for balance",
-            "Switch sides to follow frames"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
             "knee_on_belly",
             "north_south",
             "back_control",
-            "half_guard_top"
+            "half_guard_top",
+            "turtle_top"
+          ],
+          "prerequisites": []
+        },
+        "brown": {
+          "concepts": [
+            "Crossface: head turned away",
+            "Far hip wedge/block to stop hip escapes",
+            "Weight through chest and ribs",
+            "Switch base to isolate near arm",
+            "Progressions: KOB, mount, submissions"
+          ],
+          "techniques": [],
+          "common_mistakes": [
+            "Hovering—light pressure",
+            "Chasing submissions before control",
+            "Allowing inside elbow-knee connection"
+          ],
+          "key_details": [],
+          "transitions_available": [
+            "mount",
+            "knee_on_belly",
+            "north_south",
+            "back_control",
+            "half_guard_top",
+            "turtle_top",
+            "technical_mount",
+            "side_control_variants"
+          ],
+          "prerequisites": []
+        },
+        "black": {
+          "concepts": [
+            "Crossface: head turned away",
+            "Far hip wedge/block to stop hip escapes",
+            "Weight through chest and ribs",
+            "Switch base to isolate near arm",
+            "Progressions: KOB, mount, submissions"
+          ],
+          "techniques": [],
+          "common_mistakes": [
+            "Hovering—light pressure",
+            "Chasing submissions before control",
+            "Allowing inside elbow-knee connection"
+          ],
+          "key_details": [],
+          "transitions_available": [
+            "mount",
+            "knee_on_belly",
+            "north_south",
+            "back_control",
+            "half_guard_top",
+            "turtle_top",
+            "technical_mount",
+            "side_control_variants",
+            "turtle_top_variations",
+            "tight_waist_hip_ride",
+            "twister_side_control",
+            "reverse_kesa_side_control",
+            "lapel_staple_side_control"
           ],
           "prerequisites": []
         }
@@ -2299,12 +2226,13 @@
           "Cross Side",
           "100 Kilos"
         ],
-        "description": "A dominant top position where you are perpendicular to your opponent, chest-to-chest, pinning them to the mat. One of the fundamental top control positions in BJJ.",
+        "description": "Chest-to-chest control with head and hip management. Crossface to turn the head, block or wedge the far hip, and distribute weight through ribs—not the floor. Use switching bases to isolate the near arm, then progress to knee-on-belly, mount, or submissions.",
         "key_concepts": [
-          "Heavy pressure to immobilize opponent",
-          "Control opponent's near arm and far hip",
-          "Prevent space creation with tight connection",
-          "Foundation for attacks and transitions"
+          "Crossface: head turned away",
+          "Far hip wedge/block to stop hip escapes",
+          "Weight through chest and ribs",
+          "Switch base to isolate near arm",
+          "Progressions: KOB, mount, submissions"
         ],
         "entry_steps": [
           "Pass opponent's guard to the side",
@@ -2320,10 +2248,9 @@
         ],
         "escape_overview": "Opponent must create frames and space to shrimp and recover guard",
         "common_mistakes": [
-          "Weight too high allowing easy bridge",
-          "Hips too close allowing reversal",
-          "Not controlling opponent's arms",
-          "Static position without pressure"
+          "Hovering—light pressure",
+          "Chasing submissions before control",
+          "Allowing inside elbow-knee connection"
         ],
         "goals": [
           "Maintain dominant control",
@@ -2545,24 +2472,18 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Sit high on opponent's chest",
-            "Control opponent's arms and hips",
-            "Maintain balance while attacking",
-            "Weight distribution to prevent escape"
+            "Base triangles: hips heavy, hands wide",
+            "Low vs high mount progression",
+            "Arm isolation: walk hands and knees",
+            "S-mount entries and head control"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Sitting too low allowing bridge escape",
-            "Crossing feet under opponent's butt",
-            "Weight distribution too far forward or back",
-            "Not controlling opponent's arms"
+            "Too high too early—easy bridges",
+            "Feet crossed—unstable base",
+            "Leaning forward—gives up posts"
           ],
-          "key_details": [
-            "Hips tight to opponent's chest",
-            "Feet hooked under opponent's legs or spread wide",
-            "Chest pressure forward",
-            "Hands control opponent's arms or post for balance"
-          ],
+          "key_details": [],
           "transitions_available": [
             "technical_mount",
             "back_control",
@@ -2575,102 +2496,101 @@
         },
         "blue": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod"
+            "Base triangles: hips heavy, hands wide",
+            "Low vs high mount progression",
+            "Arm isolation: walk hands and knees",
+            "S-mount entries and head control",
+            "Chains: armbar, triangle, back take"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide"
+            "Too high too early—easy bridges",
+            "Feet crossed—unstable base",
+            "Leaning forward—gives up posts"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm"
-          ],
+          "key_details": [],
           "transitions_available": [
             "technical_mount",
-            "back_control"
+            "back_control",
+            "side_control",
+            "side_control_bottom"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line"
+            "Base triangles: hips heavy, hands wide",
+            "Low vs high mount progression",
+            "Arm isolation: walk hands and knees",
+            "S-mount entries and head control",
+            "Chains: armbar, triangle, back take"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
-            "Chasing submissions before control"
+            "Too high too early—easy bridges",
+            "Feet crossed—unstable base",
+            "Leaning forward—gives up posts"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control"
-          ],
+          "key_details": [],
           "transitions_available": [
             "technical_mount",
             "back_control",
-            "side_control"
+            "side_control",
+            "side_control_bottom",
+            "turtle_bottom",
+            "north_south"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line",
-            "Climb to more dominant"
+            "Base triangles: hips heavy, hands wide",
+            "Low vs high mount progression",
+            "Arm isolation: walk hands and knees",
+            "S-mount entries and head control",
+            "Chains: armbar, triangle, back take"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
-            "Chasing submissions before control",
-            "Forgetting near-side underhook"
+            "Too high too early—easy bridges",
+            "Feet crossed—unstable base",
+            "Leaning forward—gives up posts"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control",
-            "Weight transfer for balance"
-          ],
+          "key_details": [],
           "transitions_available": [
             "technical_mount",
             "back_control",
-            "side_control"
+            "side_control",
+            "side_control_bottom",
+            "turtle_bottom",
+            "north_south",
+            "arm_trapped_back_mount"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line",
-            "Climb to more dominant",
-            "Anticipate bridge"
+            "Base triangles: hips heavy, hands wide",
+            "Low vs high mount progression",
+            "Arm isolation: walk hands and knees",
+            "S-mount entries and head control",
+            "Chains: armbar, triangle, back take"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
-            "Chasing submissions before control",
-            "Forgetting near-side underhook",
-            "Leaving elbow space"
+            "Too high too early—easy bridges",
+            "Feet crossed—unstable base",
+            "Leaning forward—gives up posts"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control",
-            "Weight transfer for balance",
-            "Switch sides to follow frames"
-          ],
+          "key_details": [],
           "transitions_available": [
             "technical_mount",
             "back_control",
-            "side_control"
+            "side_control",
+            "side_control_bottom",
+            "turtle_bottom",
+            "north_south",
+            "arm_trapped_back_mount"
           ],
           "prerequisites": []
         }
@@ -2729,12 +2649,13 @@
           "Full Mount",
           "Mounted Position"
         ],
-        "description": "The most dominant position in BJJ where you sit on top of your opponent's torso, straddling them. Provides maximum control and numerous submission opportunities.",
+        "description": "Stabilize first, then isolate. Use low mount with grapevines or knee ride to settle, then climb to high mount to trap arms and attack. Keep your hips heavy, control the head/shoulders, and connect to s-mount, arm triangles, and back takes as they defend.",
         "key_concepts": [
-          "High mount position for maximum control",
-          "Grapevine legs or spread base for stability",
-          "Control opponent's arms to prevent escape",
-          "Balance while maintaining pressure"
+          "Base triangles: hips heavy, hands wide",
+          "Low vs high mount progression",
+          "Arm isolation: walk hands and knees",
+          "S-mount entries and head control",
+          "Chains: armbar, triangle, back take"
         ],
         "entry_steps": [
           "From side control, swing leg over opponent's body",
@@ -2750,10 +2671,9 @@
         ],
         "escape_overview": "Opponent must bridge and roll or shrimp to create space",
         "common_mistakes": [
-          "Sitting too low on stomach",
-          "Crossing feet underneath",
-          "Sitting upright when opponent bridges",
-          "Not controlling opponent's arms"
+          "Too high too early—easy bridges",
+          "Feet crossed—unstable base",
+          "Leaning forward—gives up posts"
         ],
         "goals": [
           "Maintain dominant position",
@@ -2767,27 +2687,22 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Hooks in to secure position",
-            "Seatbelt grip for upper body control",
-            "Stay behind opponent's shoulders",
-            "Most dominant position for chokes"
+            "Seatbelt hierarchy and hand protection",
+            "Hook retention and hip line control",
+            "Angle changes: strong/weak side",
+            "Head position behind shoulder for choke"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Crossing feet in front of opponent (ankle lock risk)",
-            "Losing seatbelt grip",
-            "Weight too far back allowing escape",
-            "Not controlling opponent's hands"
+            "Losing chest-to-back during attacks",
+            "Wrong hand-fight priorities",
+            "Crossing feet on belly—heel hook risk"
           ],
-          "key_details": [
-            "Two hooks inside opponent's thighs",
-            "Seatbelt grip (one over shoulder, one under arm)",
-            "Chest tight to opponent's back",
-            "Head beside opponent's head"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
-            "back_control"
+            "back_control",
+            "backpack_position"
           ],
           "prerequisites": [
             "mount",
@@ -2796,99 +2711,101 @@
         },
         "blue": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod"
+            "Seatbelt hierarchy and hand protection",
+            "Hook retention and hip line control",
+            "Angle changes: strong/weak side",
+            "Head position behind shoulder for choke",
+            "Body triangle when control is secured"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide"
+            "Losing chest-to-back during attacks",
+            "Wrong hand-fight priorities",
+            "Crossing feet on belly—heel hook risk"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
-            "back_control"
+            "back_control",
+            "backpack_position",
+            "body_triangle"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line"
+            "Seatbelt hierarchy and hand protection",
+            "Hook retention and hip line control",
+            "Angle changes: strong/weak side",
+            "Head position behind shoulder for choke",
+            "Body triangle when control is secured"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
-            "Chasing submissions before control"
+            "Losing chest-to-back during attacks",
+            "Wrong hand-fight priorities",
+            "Crossing feet on belly—heel hook risk"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
-            "back_control"
+            "back_control",
+            "backpack_position",
+            "body_triangle",
+            "seatbelt_traps",
+            "arm_trapped_back_mount"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line",
-            "Climb to more dominant"
+            "Seatbelt hierarchy and hand protection",
+            "Hook retention and hip line control",
+            "Angle changes: strong/weak side",
+            "Head position behind shoulder for choke",
+            "Body triangle when control is secured"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
-            "Chasing submissions before control",
-            "Forgetting near-side underhook"
+            "Losing chest-to-back during attacks",
+            "Wrong hand-fight priorities",
+            "Crossing feet on belly—heel hook risk"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control",
-            "Weight transfer for balance"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
-            "back_control"
+            "back_control",
+            "backpack_position",
+            "body_triangle",
+            "seatbelt_traps",
+            "arm_trapped_back_mount",
+            "truck"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Chest-to-chest pressure",
-            "Head-hands-hips tripod",
-            "Block hip line",
-            "Climb to more dominant",
-            "Anticipate bridge"
+            "Seatbelt hierarchy and hand protection",
+            "Hook retention and hip line control",
+            "Angle changes: strong/weak side",
+            "Head position behind shoulder for choke",
+            "Body triangle when control is secured"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Too much space at hips",
-            "Knees too wide",
-            "Chasing submissions before control",
-            "Forgetting near-side underhook",
-            "Leaving elbow space"
+            "Losing chest-to-back during attacks",
+            "Wrong hand-fight priorities",
+            "Crossing feet on belly—heel hook risk"
           ],
-          "key_details": [
-            "Crossface to turn head",
-            "Underhook far arm",
-            "Knees pinch to control",
-            "Weight transfer for balance",
-            "Switch sides to follow frames"
-          ],
+          "key_details": [],
           "transitions_available": [
             "mount",
-            "back_control"
+            "back_control",
+            "backpack_position",
+            "body_triangle",
+            "seatbelt_traps",
+            "arm_trapped_back_mount",
+            "truck"
           ],
           "prerequisites": []
         }
@@ -2964,12 +2881,13 @@
           "Taking the Back",
           "Rear Mount"
         ],
-        "description": "The most dominant position in BJJ where you are behind your opponent with hooks in and control of their upper body. Highest point value position with best submission opportunities.",
+        "description": "Maintain chest-to-back, protect the choking hand, and manage hook retention. Use seatbelt hierarchy (choking arm over), control the hip line, and rotate angles (strong/weak side) to expose the neck. Threaten body triangle when control is secure and hand fight patiently.",
         "key_concepts": [
-          "Hooks secure the position",
-          "Seatbelt controls upper body",
-          "Stay tight to opponent's back",
-          "Primary goal is rear naked choke"
+          "Seatbelt hierarchy and hand protection",
+          "Hook retention and hip line control",
+          "Angle changes: strong/weak side",
+          "Head position behind shoulder for choke",
+          "Body triangle when control is secured"
         ],
         "entry_steps": [
           "Get to opponent's back from mount, turtle, or scramble",
@@ -2985,10 +2903,9 @@
         ],
         "escape_overview": "Opponent must clear hooks and turn to face you",
         "common_mistakes": [
-          "Crossing feet (exposes to ankle lock)",
-          "Losing seatbelt grip",
-          "Weight too far back",
-          "Not controlling opponent's hands before choking"
+          "Losing chest-to-back during attacks",
+          "Wrong hand-fight priorities",
+          "Crossing feet on belly—heel hook risk"
         ],
         "goals": [
           "Secure back control with hooks",
@@ -3214,24 +3131,18 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Control opponent's posture - break them down",
-            "Create angles for attacks and sweeps",
-            "Use legs to control distance and posture",
-            "Guard is an attacking position, not defensive"
+            "Posture control: head/shoulders broken",
+            "Hip angle before opening guard",
+            "Grip pairs: two-on-one, collar-sleeve",
+            "Leg climb: shoulders trapped for attacks"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Being flat on back with no angle",
-            "Letting opponent stand up easily",
-            "Not controlling opponent's sleeves or collar",
-            "Keeping guard closed when opponent stands"
+            "Lying flat—no hip mobility",
+            "Opening guard without posture control",
+            "Pulling with arms instead of moving hips"
           ],
-          "key_details": [
-            "Ankles locked behind opponent's back",
-            "Pull opponent down with collar grips",
-            "Angle body to create attack opportunities",
-            "Squeeze knees to limit opponent's movement"
-          ],
+          "key_details": [],
           "transitions_available": [
             "open_guard_bottom",
             "half_guard_bottom",
@@ -3241,104 +3152,103 @@
         },
         "blue": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks"
+            "Posture control: head/shoulders broken",
+            "Hip angle before opening guard",
+            "Grip pairs: two-on-one, collar-sleeve",
+            "Leg climb: shoulders trapped for attacks",
+            "Attack chains: sit-up, pendulum, ATA"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure"
+            "Lying flat—no hip mobility",
+            "Opening guard without posture control",
+            "Pulling with arms instead of moving hips"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance"
-          ],
+          "key_details": [],
           "transitions_available": [
             "open_guard_bottom",
-            "half_guard_bottom"
+            "half_guard_bottom",
+            "side_control_bottom",
+            "mount"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks",
-            "Connect your guard to sweep paths"
+            "Posture control: head/shoulders broken",
+            "Hip angle before opening guard",
+            "Grip pairs: two-on-one, collar-sleeve",
+            "Leg climb: shoulders trapped for attacks",
+            "Attack chains: sit-up, pendulum, ATA"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure",
-            "Forgetting to re-close distance"
+            "Lying flat—no hip mobility",
+            "Opening guard without posture control",
+            "Pulling with arms instead of moving hips"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance",
-            "Climb your guard progressively"
-          ],
+          "key_details": [],
           "transitions_available": [
             "open_guard_bottom",
             "half_guard_bottom",
-            "side_control_bottom"
+            "side_control_bottom",
+            "mount",
+            "butterfly_guard",
+            "de_la_riva"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks",
-            "Connect your guard to sweep paths",
-            "Grip sequence before opening"
+            "Posture control: head/shoulders broken",
+            "Hip angle before opening guard",
+            "Grip pairs: two-on-one, collar-sleeve",
+            "Leg climb: shoulders trapped for attacks",
+            "Attack chains: sit-up, pendulum, ATA"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure",
-            "Forgetting to re-close distance",
-            "Chasing submissions without control"
+            "Lying flat—no hip mobility",
+            "Opening guard without posture control",
+            "Pulling with arms instead of moving hips"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance",
-            "Climb your guard progressively",
-            "Frame before you pivot"
-          ],
+          "key_details": [],
           "transitions_available": [
             "open_guard_bottom",
             "half_guard_bottom",
             "side_control_bottom",
-            "mount"
+            "mount",
+            "butterfly_guard",
+            "de_la_riva",
+            "spider_guard",
+            "collar_sleeve_guard"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks",
-            "Connect your guard to sweep paths",
-            "Grip sequence before opening",
-            "Threaten to create reactions"
+            "Posture control: head/shoulders broken",
+            "Hip angle before opening guard",
+            "Grip pairs: two-on-one, collar-sleeve",
+            "Leg climb: shoulders trapped for attacks",
+            "Attack chains: sit-up, pendulum, ATA"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure",
-            "Forgetting to re-close distance",
-            "Chasing submissions without control",
-            "Ignoring underhook battles"
+            "Lying flat—no hip mobility",
+            "Opening guard without posture control",
+            "Pulling with arms instead of moving hips"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance",
-            "Climb your guard progressively",
-            "Frame before you pivot",
-            "Combine grips not single grabs"
-          ],
+          "key_details": [],
           "transitions_available": [
             "open_guard_bottom",
             "half_guard_bottom",
             "side_control_bottom",
-            "mount"
+            "mount",
+            "butterfly_guard",
+            "de_la_riva",
+            "spider_guard",
+            "collar_sleeve_guard"
           ],
           "prerequisites": []
         }
@@ -3399,12 +3309,13 @@
           "Closed Guard",
           "Full Guard"
         ],
-        "description": "Fundamental guard position where your legs are wrapped around opponent's waist with ankles locked. Provides strong control and numerous attacking options.",
+        "description": "Break posture, win grips, and angle your hips before opening. Climb your legs to control shoulders, use two-on-one or collar-sleeve to isolate arms, and connect attacks in chains (sit-up series, pendulum, armbar/triangle/omoplata). Move your hips—not just your arms—to create threats.",
         "key_concepts": [
-          "Break opponent's posture to control",
-          "Create angles for attacks",
-          "Guard is offensive - attack constantly",
-          "Control opponent's arms and collar"
+          "Posture control: head/shoulders broken",
+          "Hip angle before opening guard",
+          "Grip pairs: two-on-one, collar-sleeve",
+          "Leg climb: shoulders trapped for attacks",
+          "Attack chains: sit-up, pendulum, ATA"
         ],
         "entry_steps": [
           "From standing, pull opponent into your guard",
@@ -3420,10 +3331,9 @@
         ],
         "escape_overview": "Sweep opponent or submit them; if passed, recover guard or escape",
         "common_mistakes": [
-          "Staying flat without angles",
-          "Letting opponent posture up",
-          "Not controlling sleeves/collar",
-          "Keeping guard closed when opponent stands"
+          "Lying flat—no hip mobility",
+          "Opening guard without posture control",
+          "Pulling with arms instead of moving hips"
         ],
         "goals": [
           "Control opponent's posture",
@@ -3437,24 +3347,18 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Manage distance with legs and feet",
-            "Control opponent's sleeves, collar, and posture",
-            "Create angles for sweeps and attacks",
-            "Keep opponent from passing to side"
+            "Distance management: frames + hooks",
+            "Inside position with shins and hands",
+            "Leg pummeling to control knee line",
+            "Kuzushi before entries: push-pull + angles"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Letting opponent control your legs",
-            "Flat on back with no movement",
-            "Not keeping opponent at optimal distance",
-            "Weak grips allowing opponent to break free"
+            "Chasing grips without frames",
+            "Knees collapse—no shin shields",
+            "Feet dangling, no hooks or direction"
           ],
-          "key_details": [
-            "Feet on opponent's hips or biceps",
-            "Strong collar and sleeve grips",
-            "Hips mobile and ready to move",
-            "Constantly adjust distance with legs"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "half_guard_bottom",
@@ -3466,104 +3370,112 @@
         },
         "blue": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks"
+            "Distance management: frames + hooks",
+            "Inside position with shins and hands",
+            "Leg pummeling to control knee line",
+            "Kuzushi before entries: push-pull + angles",
+            "Hip mobility drives the guard"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure"
+            "Chasing grips without frames",
+            "Knees collapse—no shin shields",
+            "Feet dangling, no hooks or direction"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
-            "half_guard_bottom"
+            "half_guard_bottom",
+            "side_control_bottom",
+            "mount"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks",
-            "Connect your guard to sweep paths"
+            "Distance management: frames + hooks",
+            "Inside position with shins and hands",
+            "Leg pummeling to control knee line",
+            "Kuzushi before entries: push-pull + angles",
+            "Hip mobility drives the guard"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure",
-            "Forgetting to re-close distance"
+            "Chasing grips without frames",
+            "Knees collapse—no shin shields",
+            "Feet dangling, no hooks or direction"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance",
-            "Climb your guard progressively"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "half_guard_bottom",
-            "side_control_bottom"
+            "side_control_bottom",
+            "mount",
+            "butterfly_guard",
+            "de_la_riva"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks",
-            "Connect your guard to sweep paths",
-            "Grip sequence before opening"
+            "Distance management: frames + hooks",
+            "Inside position with shins and hands",
+            "Leg pummeling to control knee line",
+            "Kuzushi before entries: push-pull + angles",
+            "Hip mobility drives the guard"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure",
-            "Forgetting to re-close distance",
-            "Chasing submissions without control"
+            "Chasing grips without frames",
+            "Knees collapse—no shin shields",
+            "Feet dangling, no hooks or direction"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance",
-            "Climb your guard progressively",
-            "Frame before you pivot"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "half_guard_bottom",
             "side_control_bottom",
-            "mount"
+            "mount",
+            "butterfly_guard",
+            "de_la_riva",
+            "reverse_de_la_riva",
+            "spider_guard"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Break posture first",
-            "Angle off for attacks",
-            "Connect your guard to sweep paths",
-            "Grip sequence before opening",
-            "Threaten to create reactions"
+            "Distance management: frames + hooks",
+            "Inside position with shins and hands",
+            "Leg pummeling to control knee line",
+            "Kuzushi before entries: push-pull + angles",
+            "Hip mobility drives the guard"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Opening guard with no grips",
-            "Staying square under pressure",
-            "Forgetting to re-close distance",
-            "Chasing submissions without control",
-            "Ignoring underhook battles"
+            "Chasing grips without frames",
+            "Knees collapse—no shin shields",
+            "Feet dangling, no hooks or direction"
           ],
-          "key_details": [
-            "Hip mobility > upper body strain",
-            "Use knee line to control distance",
-            "Climb your guard progressively",
-            "Frame before you pivot",
-            "Combine grips not single grabs"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "half_guard_bottom",
             "side_control_bottom",
-            "mount"
+            "mount",
+            "butterfly_guard",
+            "de_la_riva",
+            "reverse_de_la_riva",
+            "spider_guard",
+            "lasso_guard",
+            "collar_sleeve_guard",
+            "knee_shield_half_guard",
+            "tornado_guard",
+            "inverted_guard",
+            "matrix_position",
+            "k_guard",
+            "gubber_guard",
+            "half_inverted_retention"
           ],
           "prerequisites": []
         }
@@ -3626,12 +3538,13 @@
           "Open Guard",
           "Feet on Hips Guard"
         ],
-        "description": "Guard position where legs are not locked around opponent. Requires active leg and grip management to control distance and create attacking opportunities.",
+        "description": "Manage distance with frames and hooks, then off-balance before entries. Win inside position with shins and hands, pummel your legs to control the knee line, and use kuzushi (push-pull, angle changes) to create passes or sweep opportunities. Stay mobile—hips lead, feet guide.",
         "key_concepts": [
-          "Legs control distance - never flat",
-          "Grips control opponent's ability to pass",
-          "Mobility is key - hip movement essential",
-          "Create angles for sweeps and attacks"
+          "Distance management: frames + hooks",
+          "Inside position with shins and hands",
+          "Leg pummeling to control knee line",
+          "Kuzushi before entries: push-pull + angles",
+          "Hip mobility drives the guard"
         ],
         "entry_steps": [
           "Opponent opens your closed guard or you open it",
@@ -3647,10 +3560,9 @@
         ],
         "escape_overview": "Sweep opponent to top or return to closed guard",
         "common_mistakes": [
-          "Letting opponent grab your legs",
-          "Being flat without hip movement",
-          "Weak or broken grips",
-          "Not managing distance properly"
+          "Chasing grips without frames",
+          "Knees collapse—no shin shields",
+          "Feet dangling, no hooks or direction"
         ],
         "goals": [
           "Execute scissor sweep or hip bump sweep",
@@ -3664,24 +3576,18 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Get underhook on trapped leg side",
-            "Control opponent's crossface arm",
-            "Create frames to prevent flat position",
-            "Recover full guard or sweep to top"
+            "Knee shield / inside frames",
+            "Deny crossface; fight for underhook",
+            "Far hip frame when no underhook",
+            "Elbow-knee connection protects core"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Being flat on back with no frames",
-            "Letting opponent get crossface",
-            "Not fighting for underhook",
-            "Keeping lockdown too long without sweeping"
+            "Hugging the head—gives crossface",
+            "Staying flat—no frames",
+            "Underhook late—stuck in crossface"
           ],
-          "key_details": [
-            "One leg traps opponent's leg",
-            "Underhook is crucial for control",
-            "Frame to prevent being flattened",
-            "Get to side or create angles"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "open_guard_bottom",
@@ -3693,104 +3599,105 @@
         },
         "blue": {
           "concepts": [
-            "Structure before movement in Half Guard Bottom",
-            "Frames first, then hips in Half Guard Bottom"
+            "Knee shield / inside frames",
+            "Deny crossface; fight for underhook",
+            "Far hip frame when no underhook",
+            "Elbow-knee connection protects core",
+            "Chain: hip escape → sweep/get-up"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post"
+            "Hugging the head—gives crossface",
+            "Staying flat—no frames",
+            "Underhook late—stuck in crossface"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
-            "open_guard_bottom"
+            "open_guard_bottom",
+            "side_control_bottom",
+            "half_guard_top"
           ],
           "prerequisites": []
         },
         "purple": {
           "concepts": [
-            "Structure before movement in Half Guard Bottom",
-            "Frames first, then hips in Half Guard Bottom",
-            "Breathe and pace escapes in Half Guard Bottom"
+            "Knee shield / inside frames",
+            "Deny crossface; fight for underhook",
+            "Far hip frame when no underhook",
+            "Elbow-knee connection protects core",
+            "Chain: hip escape → sweep/get-up"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection"
+            "Hugging the head—gives crossface",
+            "Staying flat—no frames",
+            "Underhook late—stuck in crossface"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "open_guard_bottom",
-            "side_control_bottom"
+            "side_control_bottom",
+            "half_guard_top",
+            "turtle_bottom",
+            "butterfly_guard"
           ],
           "prerequisites": []
         },
         "brown": {
           "concepts": [
-            "Structure before movement in Half Guard Bottom",
-            "Frames first, then hips in Half Guard Bottom",
-            "Breathe and pace escapes in Half Guard Bottom",
-            "Win inside position before big movements"
+            "Knee shield / inside frames",
+            "Deny crossface; fight for underhook",
+            "Far hip frame when no underhook",
+            "Elbow-knee connection protects core",
+            "Chain: hip escape → sweep/get-up"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames"
+            "Hugging the head—gives crossface",
+            "Staying flat—no frames",
+            "Underhook late—stuck in crossface"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "open_guard_bottom",
             "side_control_bottom",
-            "half_guard_top"
+            "half_guard_top",
+            "turtle_bottom",
+            "butterfly_guard",
+            "knee_shield_half_guard",
+            "z_guard"
           ],
           "prerequisites": []
         },
         "black": {
           "concepts": [
-            "Structure before movement in Half Guard Bottom",
-            "Frames first, then hips in Half Guard Bottom",
-            "Breathe and pace escapes in Half Guard Bottom",
-            "Win inside position before big movements",
-            "Connect elbows to hips to protect core"
+            "Knee shield / inside frames",
+            "Deny crossface; fight for underhook",
+            "Far hip frame when no underhook",
+            "Elbow-knee connection protects core",
+            "Chain: hip escape → sweep/get-up"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Reaching with straight arms",
-            "Exploding without isolating a post",
-            "Ignoring neck protection",
-            "Turning belly down without frames",
-            "Waiting flat instead of building structure"
+            "Hugging the head—gives crossface",
+            "Staying flat—no frames",
+            "Underhook late—stuck in crossface"
           ],
-          "key_details": [
-            "Head and hips move together for power",
-            "Angle your hips, avoid pushing straight",
-            "Connect knee line before full recovery",
-            "Use diagonal bridges, not vertical",
-            "Hand position matters more than strength"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "open_guard_bottom",
             "side_control_bottom",
-            "half_guard_top"
+            "half_guard_top",
+            "turtle_bottom",
+            "butterfly_guard",
+            "knee_shield_half_guard",
+            "z_guard",
+            "lockdown",
+            "deep_half_guard"
           ],
           "prerequisites": []
         }
@@ -3840,12 +3747,13 @@
           "Half Guard",
           "Bottom Half"
         ],
-        "description": "Guard position where you have one of opponent's legs trapped between yours. Defensive position that can be converted to sweeps or full guard recovery.",
+        "description": "Build structure first: knee shield or inside frames to deny crossface and underhook. Win the underhook or frame the far hip, keep head position safe, and connect hip-escape chains to sweeps, reversals, or get-ups. Time your entries when their hands are occupied.",
         "key_concepts": [
-          "Underhook is gold - fight for it",
-          "Prevent crossface at all costs",
-          "Get to side not flat on back",
-          "Use lockdown or frames to control"
+          "Knee shield / inside frames",
+          "Deny crossface; fight for underhook",
+          "Far hip frame when no underhook",
+          "Elbow-knee connection protects core",
+          "Chain: hip escape → sweep/get-up"
         ],
         "entry_steps": [
           "Opponent passing your guard catches one leg",
@@ -3861,10 +3769,9 @@
         ],
         "escape_overview": "Recover to full guard or sweep to top position",
         "common_mistakes": [
-          "Being flat on your back",
-          "Losing underhook battle",
-          "Accepting crossface control",
-          "Static position without working for improvement"
+          "Hugging the head—gives crossface",
+          "Staying flat—no frames",
+          "Underhook late—stuck in crossface"
         ],
         "goals": [
           "Recover to closed or open guard",
@@ -3878,69 +3785,18 @@
       "belt_levels": {
         "white": {
           "concepts": [
-            "Create frames to prevent submissions",
-            "Shrimp to create space and recover guard",
-            "Protect your neck at all times",
-            "Work methodically - don't panic"
+            "Near-side frame at neck/shoulder",
+            "Far hip frame denies hip switch",
+            "Elbow-knee connection inside",
+            "Hip escape chains to re-guard"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Turning away and giving up back",
-            "Flat on back with no frames",
-            "Pushing on opponent's head",
-            "Using strength without technique"
+            "Straight-arm pushing—no structure",
+            "Belly-down turns without frames",
+            "Ignoring head control before escaping"
           ],
-          "key_details": [
-            "Frame on opponent's neck and hip",
-            "Shrimp hips away to create space",
-            "Knee shield when possible",
-            "Never turn away from opponent"
-          ],
-          "transitions_available": [
-            "closed_guard_bottom",
-            "open_guard_bottom",
-            "half_guard_bottom",
-            "turtle_bottom"
-          ],
-          "prerequisites": []
-        },
-        "blue": {
-          "concepts": [
-            "Frame first, then hip escape",
-            "Bridge with direction"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Pushing straight with arms",
-            "Bridging vertically"
-          ],
-          "key_details": [
-            "Trap post before upa",
-            "Elbow-knee connection to re-guard"
-          ],
-          "transitions_available": [
-            "closed_guard_bottom",
-            "open_guard_bottom"
-          ],
-          "prerequisites": []
-        },
-        "purple": {
-          "concepts": [
-            "Frame first, then hip escape",
-            "Bridge with direction",
-            "Protect elbows and neck"
-          ],
-          "techniques": [],
-          "common_mistakes": [
-            "Pushing straight with arms",
-            "Bridging vertically",
-            "Turning away and giving back"
-          ],
-          "key_details": [
-            "Trap post before upa",
-            "Elbow-knee connection to re-guard",
-            "Diagonal bridge then shrimp"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "open_guard_bottom",
@@ -3948,26 +3804,21 @@
           ],
           "prerequisites": []
         },
-        "brown": {
+        "blue": {
           "concepts": [
-            "Frame first, then hip escape",
-            "Bridge with direction",
-            "Protect elbows and neck",
-            "Create wedges before movement"
+            "Near-side frame at neck/shoulder",
+            "Far hip frame denies hip switch",
+            "Elbow-knee connection inside",
+            "Hip escape chains to re-guard",
+            "Timing when top shifts weight"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Pushing straight with arms",
-            "Bridging vertically",
-            "Turning away and giving back",
-            "Letting arms get isolated"
+            "Straight-arm pushing—no structure",
+            "Belly-down turns without frames",
+            "Ignoring head control before escaping"
           ],
-          "key_details": [
-            "Trap post before upa",
-            "Elbow-knee connection to re-guard",
-            "Diagonal bridge then shrimp",
-            "Anchor before rolling"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "open_guard_bottom",
@@ -3976,35 +3827,84 @@
           ],
           "prerequisites": []
         },
-        "black": {
+        "purple": {
           "concepts": [
-            "Frame first, then hip escape",
-            "Bridge with direction",
-            "Protect elbows and neck",
-            "Create wedges before movement",
-            "Recover knee line"
+            "Near-side frame at neck/shoulder",
+            "Far hip frame denies hip switch",
+            "Elbow-knee connection inside",
+            "Hip escape chains to re-guard",
+            "Timing when top shifts weight"
           ],
           "techniques": [],
           "common_mistakes": [
-            "Pushing straight with arms",
-            "Bridging vertically",
-            "Turning away and giving back",
-            "Letting arms get isolated",
-            "Waiting flat"
+            "Straight-arm pushing—no structure",
+            "Belly-down turns without frames",
+            "Ignoring head control before escaping"
           ],
-          "key_details": [
-            "Trap post before upa",
-            "Elbow-knee connection to re-guard",
-            "Diagonal bridge then shrimp",
-            "Anchor before rolling",
-            "Foot pummel to clear hooks"
-          ],
+          "key_details": [],
           "transitions_available": [
             "closed_guard_bottom",
             "open_guard_bottom",
             "half_guard_bottom",
             "turtle_bottom",
-            "mount"
+            "mount",
+            "turtle_bottom_variations"
+          ],
+          "prerequisites": []
+        },
+        "brown": {
+          "concepts": [
+            "Near-side frame at neck/shoulder",
+            "Far hip frame denies hip switch",
+            "Elbow-knee connection inside",
+            "Hip escape chains to re-guard",
+            "Timing when top shifts weight"
+          ],
+          "techniques": [],
+          "common_mistakes": [
+            "Straight-arm pushing—no structure",
+            "Belly-down turns without frames",
+            "Ignoring head control before escaping"
+          ],
+          "key_details": [],
+          "transitions_available": [
+            "closed_guard_bottom",
+            "open_guard_bottom",
+            "half_guard_bottom",
+            "turtle_bottom",
+            "mount",
+            "turtle_bottom_variations",
+            "side_control_bottom_underhook_chain",
+            "side_control_bottom_turtle_chain"
+          ],
+          "prerequisites": []
+        },
+        "black": {
+          "concepts": [
+            "Near-side frame at neck/shoulder",
+            "Far hip frame denies hip switch",
+            "Elbow-knee connection inside",
+            "Hip escape chains to re-guard",
+            "Timing when top shifts weight"
+          ],
+          "techniques": [],
+          "common_mistakes": [
+            "Straight-arm pushing—no structure",
+            "Belly-down turns without frames",
+            "Ignoring head control before escaping"
+          ],
+          "key_details": [],
+          "transitions_available": [
+            "closed_guard_bottom",
+            "open_guard_bottom",
+            "half_guard_bottom",
+            "turtle_bottom",
+            "mount",
+            "turtle_bottom_variations",
+            "side_control_bottom_underhook_chain",
+            "side_control_bottom_turtle_chain",
+            "side_control_bottom_inversion_chain",
+            "turtle_bottom_sitback_guard_recovery"
           ],
           "prerequisites": []
         }
@@ -4051,12 +3951,13 @@
           "Bottom Side Control",
           "Under Side Control"
         ],
-        "description": "Defensive position where opponent has side control on top of you. Focus is on survival, creating frames, and escaping back to guard or a better position.",
+        "description": "Survive and recover: frame the near-side neck/shoulder, frame the far hip, and connect frames to hip escapes. Remove head control first, then re-guard or get to knees. Push with structure, not straight arms, and time movements when top changes base.",
         "key_concepts": [
-          "Frames prevent weight and submissions",
-          "Shrimping creates the space to escape",
-          "Protect neck - don't give up back",
-          "Breathe and work methodically"
+          "Near-side frame at neck/shoulder",
+          "Far hip frame denies hip switch",
+          "Elbow-knee connection inside",
+          "Hip escape chains to re-guard",
+          "Timing when top shifts weight"
         ],
         "entry_steps": [
           "Opponent passes your guard to side control",
@@ -4072,10 +3973,9 @@
         ],
         "escape_overview": "Shrimp to create space, insert knee, recover to guard",
         "common_mistakes": [
-          "Turning away (gives up back)",
-          "Flat with no frames (easy to submit)",
-          "Pushing opponent's head",
-          "Panicking and using all energy"
+          "Straight-arm pushing—no structure",
+          "Belly-down turns without frames",
+          "Ignoring head control before escaping"
         ],
         "goals": [
           "Survive and breathe",

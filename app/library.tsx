@@ -336,9 +336,30 @@ export default function LibraryScreen() {
         const position = databaseService.getPosition(selectedPositionId);
         if (!position) return null;
 
+        // Build unified, belt-agnostic content for when no belt is selected
         const beltContent = selectedBeltId 
           ? databaseService.getPositionBeltContent(selectedPositionId, selectedBeltId)
-          : position.belt_levels.white; // Default to white belt if no filter
+          : null;
+
+        // Build unified, belt-agnostic content for when no belt is selected
+        const uniq = (arr: string[]) => Array.from(new Set(arr.filter(Boolean)));
+        const beltBlocks = position.belt_levels ? Object.values(position.belt_levels) : [] as any[];
+
+        const learningConcepts = Array.isArray(position.learning.key_concepts) ? position.learning.key_concepts : [];
+        const beltConcepts = beltBlocks.flatMap(b => Array.isArray(b.concepts) ? b.concepts : []);
+        const keyConceptsUnified = uniq([...learningConcepts, ...beltConcepts]);
+
+        const beltKeyDetails = beltBlocks.flatMap(b => Array.isArray(b.key_details) ? b.key_details : []);
+        const keyDetailsUnified = uniq(beltKeyDetails);
+
+        const learningMistakes = Array.isArray((position.learning as any).common_mistakes) ? (position.learning as any).common_mistakes : [];
+        const beltMistakes = beltBlocks.flatMap(b => Array.isArray(b.common_mistakes) ? b.common_mistakes : []);
+        const commonMistakesUnified = uniq([...learningMistakes, ...beltMistakes]);
+
+        // Prefer system-level transitions for consistency; fallback to union of belt transitions
+        const systemTransitions = Array.isArray(position.system.leads_to_position_ids) ? position.system.leads_to_position_ids : [];
+        const beltTransitions = beltBlocks.flatMap(b => Array.isArray(b.transitions_available) ? b.transitions_available : []);
+        const transitionsUnified = Array.from(new Set([...(systemTransitions || []), ...beltTransitions]));
 
         // Get available techniques for this position at current belt level
         const techniques = databaseService.getTechniquesForPosition(selectedPositionId, selectedBeltId || 'white');
@@ -357,37 +378,37 @@ export default function LibraryScreen() {
           <View style={styles.positionInfoCard}>
             <Text style={styles.positionDescription}>{position.learning.description}</Text>
             
-            {beltContent && beltContent.concepts && beltContent.concepts.length > 0 && (
+            {(selectedBeltId ? (beltContent && beltContent.concepts && beltContent.concepts.length > 0) : keyConceptsUnified.length > 0) && (
               <View style={styles.conceptsSection}>
                 <Text style={styles.conceptsTitle}>Key Concepts:</Text>
-                {beltContent.concepts.map((concept, idx) => (
+                {(selectedBeltId ? beltContent!.concepts : keyConceptsUnified).map((concept, idx) => (
                   <Text key={idx} style={styles.conceptItem}>• {concept}</Text>
                 ))}
               </View>
             )}
 
-            {beltContent && beltContent.key_details && beltContent.key_details.length > 0 && (
+            {(selectedBeltId ? (beltContent && beltContent.key_details && beltContent.key_details.length > 0) : keyDetailsUnified.length > 0) && (
               <View style={styles.conceptsSection}>
                 <Text style={styles.conceptsTitle}>Key Details:</Text>
-                {beltContent.key_details.map((detail, idx) => (
+                {(selectedBeltId ? beltContent!.key_details : keyDetailsUnified).map((detail, idx) => (
                   <Text key={idx} style={styles.conceptItem}>• {detail}</Text>
                 ))}
               </View>
             )}
 
-            {beltContent && beltContent.common_mistakes && beltContent.common_mistakes.length > 0 && (
+            {(selectedBeltId ? (beltContent && beltContent.common_mistakes && beltContent.common_mistakes.length > 0) : commonMistakesUnified.length > 0) && (
               <View style={styles.conceptsSection}>
                 <Text style={styles.conceptsTitle}>Common Mistakes:</Text>
-                {beltContent.common_mistakes.map((mistake, idx) => (
+                {(selectedBeltId ? beltContent!.common_mistakes : commonMistakesUnified).map((mistake, idx) => (
                   <Text key={idx} style={styles.mistakeItem}>• {mistake}</Text>
                 ))}
               </View>
             )}
 
-            {beltContent && beltContent.transitions_available && beltContent.transitions_available.length > 0 && (
+            {(selectedBeltId ? (beltContent && beltContent.transitions_available && beltContent.transitions_available.length > 0) : transitionsUnified.length > 0) && (
               <View style={styles.conceptsSection}>
                 <Text style={styles.conceptsTitle}>Available Transitions:</Text>
-                {beltContent.transitions_available.map((transitionId, idx) => {
+                {(selectedBeltId ? beltContent!.transitions_available : transitionsUnified).map((transitionId, idx) => {
                   const transPosition = databaseService.getPosition(transitionId);
                   return transPosition ? (
                     <Text key={idx} style={styles.transitionItem}>
