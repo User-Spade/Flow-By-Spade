@@ -1,10 +1,10 @@
-# Project Reference - Webs by Spade Mobile
+# Project Reference - Flow By Spade
 
 ## 📋 Project Overview
-**Project Name:** Webs by Spade  
+**Project Name:** Flow By Spade  
 **Type:** React Native / Expo Mobile Application  
 **Framework:** Expo with TypeScript and Expo Router
-**Repository:** webs-by-spade-mobile  
+**Repository:** flow-by-spade  
 **Owner:** User-Spade  
 **Branch:** Fresh-Design (clean slate branch)
 
