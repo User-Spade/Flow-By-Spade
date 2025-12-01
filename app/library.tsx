@@ -15,6 +15,7 @@ import { useRouter } from "expo-router";
 import { COLORS } from "../constants/theme";
 import { databaseService } from "../services/databaseService";
 import type { Position, BeltLevel, FoundationCategory } from "../data/types/database.types";
+import { useBelt } from "../contexts/BeltContext";
 
 // ----- DATA -----
 const beltLevels = [
@@ -51,7 +52,11 @@ const categoryNames: Record<string, string> = {
 
 // ----- COMPONENT -----
 export default function LibraryScreen() {
-  const [selectedBeltId, setSelectedBeltId] = useState<BeltLevel | null>(null);
+  const { belt: profileBelt } = useBelt();
+  const normalizedProfileBelt = profileBelt ? (profileBelt.toLowerCase() as BeltLevel) : null;
+
+  const [selectedBeltId, setSelectedBeltId] = useState<BeltLevel | null>(normalizedProfileBelt);
+  const [hasManualBeltSelection, setHasManualBeltSelection] = useState(false);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
   const [selectedFoundation, setSelectedFoundation] = useState<FoundationCategory | null>(null);
   const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
@@ -70,6 +75,13 @@ export default function LibraryScreen() {
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
   const foundationScales = useRef<Animated.Value[]>([]).current;
   const [posScales, setPosScales] = useState<Animated.Value[]>([]);
+
+  // Keep belt filter aligned with profile selection unless user overrides it locally
+  useEffect(() => {
+    if (!hasManualBeltSelection && normalizedProfileBelt !== selectedBeltId) {
+      setSelectedBeltId(normalizedProfileBelt);
+    }
+  }, [normalizedProfileBelt, hasManualBeltSelection, selectedBeltId]);
 
   // Load foundations & positions from database based on selection
   useEffect(() => {
@@ -168,6 +180,11 @@ export default function LibraryScreen() {
     if (page !== currentPage) setCurrentPage(page);
   };
 
+  const handleBeltFilterChange = (beltId: BeltLevel, isSelected: boolean) => {
+    setHasManualBeltSelection(true);
+    setSelectedBeltId(isSelected ? null : beltId);
+  };
+
   return (
     <ScrollView 
       ref={scrollViewRef}
@@ -207,7 +224,7 @@ export default function LibraryScreen() {
               onPressIn={(e) => handlePressIn(beltScales[i], e)}
               onPressOut={(e) =>
                 handlePressOut(beltScales[i], e, () =>
-                  setSelectedBeltId(isSelected ? null : belt.id)
+                  handleBeltFilterChange(belt.id, isSelected)
                 )
               }
             >
