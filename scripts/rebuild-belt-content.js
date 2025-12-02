@@ -15,28 +15,45 @@ function saveJson(p, obj) {
 const belts = ['white', 'blue', 'purple', 'brown', 'black'];
 
 // Slice sizes per belt, assuming lists are ordered from fundamentals → advanced
-const SIZES = {
-  concepts: { white: 4, blue: 6, purple: 8, brown: 10, black: Infinity },
-  key_details: { white: 3, blue: 5, purple: 7, brown: 9, black: Infinity },
-  common_mistakes: { white: 3, blue: 4, purple: 5, brown: 6, black: Infinity },
-  transitions: { white: 3, blue: 4, purple: 6, brown: 8, black: Infinity },
+// Per-belt counts (tier-exclusive). Black gets the remainder.
+const COUNTS = {
+  concepts: { white: 4, blue: 3, purple: 3, brown: 3 },
+  objectives: { white: 3, blue: 3, purple: 3, brown: 3 },
+  common_mistakes: { white: 3, blue: 2, purple: 2, brown: 2 },
+  transitions: { white: 3, blue: 2, purple: 2, brown: 2 },
 };
 
 function uniq(arr) { return Array.from(new Set((arr || []).filter(Boolean))); }
 
-function curateByBelt(list, belt, maxSizes) {
-  const size = maxSizes[belt] ?? Infinity;
+function cumulativeSlice(list, belt, counts) {
+  // Build cumulative content: white gets first N, blue gets white + next M, etc.
   if (!Array.isArray(list)) return [];
-  return list.slice(0, size);
+  const order = ['white', 'blue', 'purple', 'brown', 'black'];
+  const idx = order.indexOf(belt);
+  if (idx < 0) return [];
+  
+  // Calculate total items up to and including this belt
+  let total = 0;
+  for (let i = 0; i <= idx; i++) {
+    if (order[i] === 'black') {
+      // Black gets everything remaining
+      return list;
+    }
+    total += counts[order[i]] || 0;
+  }
+  
+  // Return everything from start up to this belt's total
+  return list.slice(0, total);
 }
 
 function buildUnified(dbPos, copyPos) {
   const learningConcepts = Array.isArray(dbPos.learning?.key_concepts) ? dbPos.learning.key_concepts : [];
   const copyConcepts = Array.isArray(copyPos?.key_concepts) ? copyPos.key_concepts : [];
-  const conceptsUnified = uniq([...copyConcepts, ...learningConcepts]);
-
   const copyDetails = Array.isArray(copyPos?.key_details) ? copyPos.key_details : [];
-  const detailsUnified = uniq(copyDetails);
+  // Merge details into concepts per the new model
+  const conceptsUnified = uniq([...copyConcepts, ...copyDetails, ...learningConcepts]);
+
+  const objectivesUnified = uniq(Array.isArray(copyPos?.key_objectives) ? copyPos.key_objectives : []);
 
   const learningMistakes = Array.isArray(dbPos.learning?.common_mistakes) ? dbPos.learning.common_mistakes : [];
   const copyMistakes = Array.isArray(copyPos?.common_mistakes) ? copyPos.common_mistakes : [];
@@ -49,17 +66,19 @@ function buildUnified(dbPos, copyPos) {
     : [];
   const transitionsUnified = uniq([...(systemTransitions || []), ...beltTransitions]);
 
-  return { conceptsUnified, detailsUnified, mistakesUnified, transitionsUnified };
+  return { conceptsUnified, objectivesUnified, mistakesUnified, transitionsUnified };
 }
 
 function applyCuratedToBelts(dbPos, unified) {
   if (!dbPos.belt_levels) dbPos.belt_levels = {};
   for (const belt of belts) {
     if (!dbPos.belt_levels[belt]) dbPos.belt_levels[belt] = { concepts: [], key_details: [], common_mistakes: [], transitions_available: [] };
-    dbPos.belt_levels[belt].concepts = curateByBelt(unified.conceptsUnified, belt, SIZES.concepts);
-    dbPos.belt_levels[belt].key_details = curateByBelt(unified.detailsUnified, belt, SIZES.key_details);
-    dbPos.belt_levels[belt].common_mistakes = curateByBelt(unified.mistakesUnified, belt, SIZES.common_mistakes);
-    dbPos.belt_levels[belt].transitions_available = curateByBelt(unified.transitionsUnified, belt, SIZES.transitions);
+    dbPos.belt_levels[belt].concepts = cumulativeSlice(unified.conceptsUnified, belt, COUNTS.concepts);
+    dbPos.belt_levels[belt].key_objectives = cumulativeSlice(unified.objectivesUnified, belt, COUNTS.objectives);
+    // keep key_details for backward compatibility but empty (we're merging into concepts)
+    dbPos.belt_levels[belt].key_details = [];
+    dbPos.belt_levels[belt].common_mistakes = cumulativeSlice(unified.mistakesUnified, belt, COUNTS.common_mistakes);
+    dbPos.belt_levels[belt].transitions_available = cumulativeSlice(unified.transitionsUnified, belt, COUNTS.transitions);
   }
 }
 

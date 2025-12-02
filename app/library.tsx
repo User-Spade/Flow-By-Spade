@@ -336,12 +336,12 @@ export default function LibraryScreen() {
         const position = databaseService.getPosition(selectedPositionId);
         if (!position) return null;
 
-        // Build unified, belt-agnostic content for when no belt is selected
+        // Get belt-specific content (now cumulative) or unified content when no belt selected
         const beltContent = selectedBeltId 
           ? databaseService.getPositionBeltContent(selectedPositionId, selectedBeltId)
           : null;
 
-        // Build unified, belt-agnostic content for when no belt is selected
+        // Build unified content for when no belt is selected (all content merged)
         const uniq = (arr: string[]) => Array.from(new Set(arr.filter(Boolean)));
         const beltBlocks = position.belt_levels ? Object.values(position.belt_levels) : [] as any[];
 
@@ -349,14 +349,13 @@ export default function LibraryScreen() {
         const beltConcepts = beltBlocks.flatMap(b => Array.isArray(b.concepts) ? b.concepts : []);
         const keyConceptsUnified = uniq([...learningConcepts, ...beltConcepts]);
 
-        const beltKeyDetails = beltBlocks.flatMap(b => Array.isArray(b.key_details) ? b.key_details : []);
-        const keyDetailsUnified = uniq(beltKeyDetails);
+        const beltObjectives = beltBlocks.flatMap(b => Array.isArray((b as any).key_objectives) ? (b as any).key_objectives : []);
+        const keyObjectivesUnified = uniq(beltObjectives);
 
         const learningMistakes = Array.isArray((position.learning as any).common_mistakes) ? (position.learning as any).common_mistakes : [];
         const beltMistakes = beltBlocks.flatMap(b => Array.isArray(b.common_mistakes) ? b.common_mistakes : []);
         const commonMistakesUnified = uniq([...learningMistakes, ...beltMistakes]);
 
-        // Prefer system-level transitions for consistency; fallback to union of belt transitions
         const systemTransitions = Array.isArray(position.system.leads_to_position_ids) ? position.system.leads_to_position_ids : [];
         const beltTransitions = beltBlocks.flatMap(b => Array.isArray(b.transitions_available) ? b.transitions_available : []);
         const transitionsUnified = Array.from(new Set([...(systemTransitions || []), ...beltTransitions]));
@@ -387,11 +386,11 @@ export default function LibraryScreen() {
               </View>
             )}
 
-            {(selectedBeltId ? (beltContent && beltContent.key_details && beltContent.key_details.length > 0) : keyDetailsUnified.length > 0) && (
+            {(selectedBeltId ? (beltContent && (beltContent as any).key_objectives && (beltContent as any).key_objectives.length > 0) : keyObjectivesUnified.length > 0) && (
               <View style={styles.conceptsSection}>
-                <Text style={styles.conceptsTitle}>Key Details:</Text>
-                {(selectedBeltId ? beltContent!.key_details : keyDetailsUnified).map((detail, idx) => (
-                  <Text key={idx} style={styles.conceptItem}>• {detail}</Text>
+                <Text style={styles.conceptsTitle}>Key Objectives:</Text>
+                {(selectedBeltId ? (beltContent as any).key_objectives : keyObjectivesUnified).map((obj: string, idx: number) => (
+                  <Text key={idx} style={styles.conceptItem}>• {obj}</Text>
                 ))}
               </View>
             )}

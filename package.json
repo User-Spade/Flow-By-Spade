@@ -16,7 +16,9 @@
     "add:rear-mount": "node scripts/add-rear-mount-expansion.js",
     "add:side-control": "node scripts/add-side-control-expansion.js",
     "update:copy": "node scripts/update-position-copy.js --write",
-    "curate:belts": "node scripts/rebuild-belt-content.js --write"
+    "curate:belts": "node scripts/rebuild-belt-content.js --write",
+    "gen:descriptions": "node scripts/generate-descriptions.js --write",
+    "apply:descriptions": "npm run gen:descriptions && npm run update:copy && npm run curate:belts"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
