@@ -29,21 +29,54 @@
 - React Native SVG (for vector graphics)
 - React Native Web (web compatibility)
 
-## 📁 Project Structure (Fresh & Clean)
+## 📁 Project Structure
+
+> **📋 For detailed file organization rules, see [FILE_ORGANIZATION_RULES.md](./FILE_ORGANIZATION_RULES.md)**
+
 ```
-webs-by-spade-mobile/
-├── app/                    # Expo Router pages (file-based routing)
-│   ├── _layout.tsx        # Root layout with Stack navigation
-│   └── index.tsx          # Home screen (clean welcome screen)
-├── assets/                # Static assets (images, fonts, icons)
-├── .expo/                 # Expo configuration (auto-generated)
-├── node_modules/          # Dependencies
-├── App.tsx               # Root component (for non-router setup)
-├── app.config.ts         # Expo app configuration
-├── package.json          # Dependencies and scripts
-├── tsconfig.json         # TypeScript configuration
-├── PROJECT_INFO.md       # This reference file
-└── HOW_TO_RUN.md         # Development instructions
+Flow-By-Spade/
+├── app/                          # Expo Router screens (file-based routing)
+│   ├── _layout.tsx              # Root layout with navigation
+│   ├── index.tsx                # Home/entry screen
+│   ├── home.tsx                 # Main home screen
+│   ├── library.tsx              # BJJ library/catalog
+│   ├── profile.tsx              # User profile
+│   ├── study-flow.tsx           # Study mode
+│   └── free-flow.tsx            # Free practice mode
+│
+├── components/                   # Reusable UI components (to be created)
+│
+├── contexts/                     # React Context providers
+│   └── BeltContext.tsx          # Belt level state management
+│
+├── services/                     # Business logic & data access
+│   └── databaseService.ts       # BJJ database queries
+│
+├── data/                         # Static data & JSON files
+│   ├── bjj-database.json        # Main BJJ position/technique data
+│   ├── foundation-mapping.json  # Foundation categorization
+│   ├── position-copy.json       # Curated position descriptions
+│   └── types/                   # Data-specific TypeScript types
+│       └── database.types.ts    # BJJ data structure types
+│
+├── scripts/                      # Data manipulation & utility scripts
+│   ├── update-position-copy.js  # Merge curated content
+│   ├── rebuild-belt-content.js  # Generate cumulative belt content
+│   ├── generate-descriptions.js # AI description generator
+│   ├── validate-database.js     # Data validation tool
+│   └── [40+ data update scripts]
+│
+├── constants/                    # App-wide constants
+│   └── theme.ts                 # Theme colors & styling
+│
+├── assets/                       # Images, fonts, icons
+│
+├── .gitignore                   # Git exclusions (backups ignored)
+├── app.config.ts                # Expo configuration
+├── package.json                 # Dependencies & npm scripts
+├── tsconfig.json                # TypeScript configuration
+├── PROJECT_INFO.md              # This file (project reference)
+└── FILE_ORGANIZATION_RULES.md   # File structure guidelines (AI enforced)
 ```
 
 ## 🚀 Development Setup
@@ -191,21 +224,35 @@ npm update expo
 
 ## 📞 Quick Reference for AI Assistant
 
-### Key File Paths (Fresh Structure)
-- **Main app entry:** `app/index.tsx` (welcome screen)
-- **Root layout:** `app/_layout.tsx` (Expo Router layout)
-- **Legacy root:** `App.tsx` (not used with Expo Router)
-- **Assets:** `assets/` (images, fonts, icons)
-- **Config:** `app.config.ts`, `tsconfig.json`
-- **Documentation:** `PROJECT_INFO.md`, `HOW_TO_RUN.md`
+### ⚠️ MANDATORY: Follow File Organization Rules
+**Before any file operation, consult**: `FILE_ORGANIZATION_RULES.md`
 
-### Ready to Create:
-- `components/` - Custom UI components
-- `services/` - API and external services
-- `types/` - TypeScript type definitions
-- `utils/` - Helper functions
-- `constants/` - App constants
-- `hooks/` - Custom React hooks
+This document defines:
+- Where every file type belongs
+- Naming conventions for all files
+- Backup file policies
+- Cleanup and maintenance rules
+- AI assistant enforcement checklist
+
+### Key File Paths
+- **Screens:** `app/*.tsx` (route-based screens only)
+- **Components:** `components/*.tsx` (reusable UI - to be expanded)
+- **Services:** `services/*.ts` (business logic & data access)
+- **Data:** `data/*.json` (database & static data)
+- **Scripts:** `scripts/*.js` (data manipulation tools)
+- **Contexts:** `contexts/*Context.tsx` (global state)
+- **Constants:** `constants/*.ts` (theme, config values)
+- **Types:** `data/types/*.ts` (TypeScript definitions)
+- **Config:** `app.config.ts`, `tsconfig.json`
+- **Documentation:** `PROJECT_INFO.md`, `FILE_ORGANIZATION_RULES.md`
+
+### File Creation Rules (AI Must Follow)
+1. **Check `FILE_ORGANIZATION_RULES.md`** for correct directory
+2. **Follow naming conventions** (PascalCase for components, kebab-case for screens, etc.)
+3. **Never create files in root** unless explicitly allowed
+4. **Create timestamped backups** before modifying data files
+5. **Keep max 3 backups** per file (auto-cleanup old ones)
+6. **Verify `.gitignore`** excludes backup files
 
 ### Common Tasks
 - Start development: `npx expo start`

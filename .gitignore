@@ -39,3 +39,23 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Data backups - keep local only
+/data/*.backup.*.json
+*.backup.*.json
+
+# Temporary files
+/tmp/
+tmp_*.json
+temp_*.json
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+desktop.ini

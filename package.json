@@ -18,7 +18,9 @@
     "update:copy": "node scripts/update-position-copy.js --write",
     "curate:belts": "node scripts/rebuild-belt-content.js --write",
     "gen:descriptions": "node scripts/generate-descriptions.js --write",
-    "apply:descriptions": "npm run gen:descriptions && npm run update:copy && npm run curate:belts"
+    "apply:descriptions": "npm run gen:descriptions && npm run update:copy && npm run curate:belts",
+    "cleanup": "node scripts/cleanup-project.js",
+    "precommit": "npm run cleanup"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
