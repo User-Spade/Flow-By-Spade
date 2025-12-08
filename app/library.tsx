@@ -375,7 +375,12 @@ export default function LibraryScreen() {
           
           {/* Display Position Information */}
           <View style={styles.positionInfoCard}>
-            <Text style={styles.positionDescription}>{position.learning.description}</Text>
+            {position.learning.description && (
+              <View style={styles.conceptsSection}>
+                <Text style={styles.conceptsTitle}>Description:</Text>
+                <Text style={styles.positionDescription}>{position.learning.description}</Text>
+              </View>
+            )}
             
             {(selectedBeltId ? (beltContent && beltContent.concepts && beltContent.concepts.length > 0) : keyConceptsUnified.length > 0) && (
               <View style={styles.conceptsSection}>
