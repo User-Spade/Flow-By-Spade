@@ -6,7 +6,15 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "validate:data": "node scripts/validate-database.js",
+    "fix:transitions": "node scripts/fix-transition-symmetry.js --write",
+    "add:positions": "node scripts/add-positions.js --write",
+    "fill:belts": "node scripts/fill-belt-content.js --write",
+    "curate:belts": "node scripts/rebuild-belt-content.js --write",
+    "gen:descriptions": "node scripts/generate-descriptions.js --write",
+    "cleanup": "node scripts/cleanup-project.js",
+    "precommit": "npm run cleanup"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",

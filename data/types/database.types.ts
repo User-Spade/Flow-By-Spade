@@ -10,6 +10,7 @@ export type BeltLevel = 'white' | 'blue' | 'purple' | 'brown' | 'black';
 export interface BeltContent {
   // Human-facing belt-specific learning facets (will be progressively filled)
   concepts: string[]; // Core principles emphasized at this belt for the position
+  key_objectives?: string[]; // What you're trying to achieve at this belt from this position
   techniques: string[]; // Technique IDs unlocked or emphasized at this belt level
   common_mistakes: string[]; // Belt-typical errors
   key_details: string[]; // Crucial refinements appropriate for belt

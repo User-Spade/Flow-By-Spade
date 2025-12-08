@@ -15,6 +15,7 @@ import { useRouter } from "expo-router";
 import { COLORS } from "../constants/theme";
 import { databaseService } from "../services/databaseService";
 import type { Position, BeltLevel, FoundationCategory } from "../data/types/database.types";
+import { useBelt } from "../contexts/BeltContext";
 
 // ----- DATA -----
 const beltLevels = [
@@ -51,7 +52,11 @@ const categoryNames: Record<string, string> = {
 
 // ----- COMPONENT -----
 export default function LibraryScreen() {
-  const [selectedBeltId, setSelectedBeltId] = useState<BeltLevel | null>(null);
+  const { belt: profileBelt } = useBelt();
+  const normalizedProfileBelt = profileBelt ? (profileBelt.toLowerCase() as BeltLevel) : null;
+
+  const [selectedBeltId, setSelectedBeltId] = useState<BeltLevel | null>(normalizedProfileBelt);
+  const [hasManualBeltSelection, setHasManualBeltSelection] = useState(false);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
   const [selectedFoundation, setSelectedFoundation] = useState<FoundationCategory | null>(null);
   const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
@@ -70,6 +75,13 @@ export default function LibraryScreen() {
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
   const foundationScales = useRef<Animated.Value[]>([]).current;
   const [posScales, setPosScales] = useState<Animated.Value[]>([]);
+
+  // Keep belt filter aligned with profile selection unless user overrides it locally
+  useEffect(() => {
+    if (!hasManualBeltSelection && normalizedProfileBelt !== selectedBeltId) {
+      setSelectedBeltId(normalizedProfileBelt);
+    }
+  }, [normalizedProfileBelt, hasManualBeltSelection, selectedBeltId]);
 
   // Load foundations & positions from database based on selection
   useEffect(() => {
@@ -168,6 +180,11 @@ export default function LibraryScreen() {
     if (page !== currentPage) setCurrentPage(page);
   };
 
+  const handleBeltFilterChange = (beltId: BeltLevel, isSelected: boolean) => {
+    setHasManualBeltSelection(true);
+    setSelectedBeltId(isSelected ? null : beltId);
+  };
+
   return (
     <ScrollView 
       ref={scrollViewRef}
@@ -207,7 +224,7 @@ export default function LibraryScreen() {
               onPressIn={(e) => handlePressIn(beltScales[i], e)}
               onPressOut={(e) =>
                 handlePressOut(beltScales[i], e, () =>
-                  setSelectedBeltId(isSelected ? null : belt.id)
+                  handleBeltFilterChange(belt.id, isSelected)
                 )
               }
             >
@@ -319,9 +336,29 @@ export default function LibraryScreen() {
         const position = databaseService.getPosition(selectedPositionId);
         if (!position) return null;
 
+        // Get belt-specific content (now cumulative) or unified content when no belt selected
         const beltContent = selectedBeltId 
           ? databaseService.getPositionBeltContent(selectedPositionId, selectedBeltId)
-          : position.belt_levels.white; // Default to white belt if no filter
+          : null;
+
+        // Build unified content for when no belt is selected (all content merged)
+        const uniq = (arr: string[]) => Array.from(new Set(arr.filter(Boolean)));
+        const beltBlocks = position.belt_levels ? Object.values(position.belt_levels) : [] as any[];
+
+        const learningConcepts = Array.isArray(position.learning.key_concepts) ? position.learning.key_concepts : [];
+        const beltConcepts = beltBlocks.flatMap(b => Array.isArray(b.concepts) ? b.concepts : []);
+        const keyConceptsUnified = uniq([...learningConcepts, ...beltConcepts]);
+
+        const beltObjectives = beltBlocks.flatMap(b => Array.isArray((b as any).key_objectives) ? (b as any).key_objectives : []);
+        const keyObjectivesUnified = uniq(beltObjectives);
+
+        const learningMistakes = Array.isArray((position.learning as any).common_mistakes) ? (position.learning as any).common_mistakes : [];
+        const beltMistakes = beltBlocks.flatMap(b => Array.isArray(b.common_mistakes) ? b.common_mistakes : []);
+        const commonMistakesUnified = uniq([...learningMistakes, ...beltMistakes]);
+
+        const systemTransitions = Array.isArray(position.system.leads_to_position_ids) ? position.system.leads_to_position_ids : [];
+        const beltTransitions = beltBlocks.flatMap(b => Array.isArray(b.transitions_available) ? b.transitions_available : []);
+        const transitionsUnified = Array.from(new Set([...(systemTransitions || []), ...beltTransitions]));
 
         // Get available techniques for this position at current belt level
         const techniques = databaseService.getTechniquesForPosition(selectedPositionId, selectedBeltId || 'white');
@@ -338,39 +375,44 @@ export default function LibraryScreen() {
           
           {/* Display Position Information */}
           <View style={styles.positionInfoCard}>
-            <Text style={styles.positionDescription}>{position.learning.description}</Text>
+            {position.learning.description && (
+              <View style={styles.conceptsSection}>
+                <Text style={styles.conceptsTitle}>Description:</Text>
+                <Text style={styles.positionDescription}>{position.learning.description}</Text>
+              </View>
+            )}
             
-            {beltContent && beltContent.concepts && beltContent.concepts.length > 0 && (
+            {(selectedBeltId ? (beltContent && beltContent.concepts && beltContent.concepts.length > 0) : keyConceptsUnified.length > 0) && (
               <View style={styles.conceptsSection}>
                 <Text style={styles.conceptsTitle}>Key Concepts:</Text>
-                {beltContent.concepts.map((concept, idx) => (
+                {(selectedBeltId ? beltContent!.concepts : keyConceptsUnified).map((concept, idx) => (
                   <Text key={idx} style={styles.conceptItem}>• {concept}</Text>
                 ))}
               </View>
             )}
 
-            {beltContent && beltContent.key_details && beltContent.key_details.length > 0 && (
+            {(selectedBeltId ? (beltContent && (beltContent as any).key_objectives && (beltContent as any).key_objectives.length > 0) : keyObjectivesUnified.length > 0) && (
               <View style={styles.conceptsSection}>
-                <Text style={styles.conceptsTitle}>Key Details:</Text>
-                {beltContent.key_details.map((detail, idx) => (
-                  <Text key={idx} style={styles.conceptItem}>• {detail}</Text>
+                <Text style={styles.conceptsTitle}>Key Objectives:</Text>
+                {(selectedBeltId ? (beltContent as any).key_objectives : keyObjectivesUnified).map((obj: string, idx: number) => (
+                  <Text key={idx} style={styles.conceptItem}>• {obj}</Text>
                 ))}
               </View>
             )}
 
-            {beltContent && beltContent.common_mistakes && beltContent.common_mistakes.length > 0 && (
+            {(selectedBeltId ? (beltContent && beltContent.common_mistakes && beltContent.common_mistakes.length > 0) : commonMistakesUnified.length > 0) && (
               <View style={styles.conceptsSection}>
                 <Text style={styles.conceptsTitle}>Common Mistakes:</Text>
-                {beltContent.common_mistakes.map((mistake, idx) => (
+                {(selectedBeltId ? beltContent!.common_mistakes : commonMistakesUnified).map((mistake, idx) => (
                   <Text key={idx} style={styles.mistakeItem}>• {mistake}</Text>
                 ))}
               </View>
             )}
 
-            {beltContent && beltContent.transitions_available && beltContent.transitions_available.length > 0 && (
+            {(selectedBeltId ? (beltContent && beltContent.transitions_available && beltContent.transitions_available.length > 0) : transitionsUnified.length > 0) && (
               <View style={styles.conceptsSection}>
                 <Text style={styles.conceptsTitle}>Available Transitions:</Text>
-                {beltContent.transitions_available.map((transitionId, idx) => {
+                {(selectedBeltId ? beltContent!.transitions_available : transitionsUnified).map((transitionId, idx) => {
                   const transPosition = databaseService.getPosition(transitionId);
                   return transPosition ? (
                     <Text key={idx} style={styles.transitionItem}>
