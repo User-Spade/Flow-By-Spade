@@ -194,7 +194,6 @@
           "Neutral Standing",
           "Standing Position"
         ],
-        "description": "Adopt an athletic stance that lets you move, pummel, and fight for grips without exposing your neck or balance. Keep posture aligned (head over hips), hands active for hand-fighting, and feet ready for level changes and angle creation. Your first goals are posture, inside position, and distance control—then you can safely enter ties, shoot, or pull guard.",
         "key_concepts": [
           "Balanced stance: staggered base, knees soft, weight forward",
           "Posture alignment: head over hips, spine neutral",
@@ -226,7 +225,8 @@
           "Secure takedown or pull guard",
           "Control distance and pace",
           "Prevent opponent from establishing their grips"
-        ]
+        ],
+        "description": "Standing neutral is the starting point where neither person has control yet. Both fighters are searching for grips, angles, and reactions that lead to advantage. Footwork, posture, and timing matter here — one small opening can turn neutral into dominance."
       }
     },
     "collar_tie": {
@@ -391,7 +391,6 @@
           "Inside Control",
           "Neck Tie"
         ],
-        "description": "Use the collar tie to manage posture and create angles. Control the head with your forearm, keep your elbow down, and combine snaps with footwork to off-balance. Aim to win the inside tie on the other side and connect to takedowns or guard pulls without exposing your neck.",
         "key_concepts": [
           "Head control: forearm frames the neck, elbow down",
           "Inside position: win the opposite biceps tie",
@@ -422,7 +421,8 @@
           "Snap opponent down to front headlock",
           "Create opening for ankle pick",
           "Control posture for guard pull"
-        ]
+        ],
+        "description": "The collar tie gives you direct control of your opponent's posture and head position. With their balance disrupted, you can snap them down, set up shots, or transition into stronger clinches. It's a simple grip that creates immediate leverage."
       }
     },
     "over_under_clinch": {
@@ -583,7 +583,6 @@
           "Over-Under",
           "Overhook/Underhook"
         ],
-        "description": "With one underhook and one overhook, battle to win the inside position and head alignment. Elevate the underhook, whizzer on the overhook, and pummel your feet to angles. Use head position under the chin to steer posture, then connect to throws, trips, or body-lock entries.",
         "key_concepts": [
           "Underhook elevation: shoulder-to-shoulder connection",
           "Whizzer pressure: elbow down, shoulder heavy",
@@ -614,7 +613,8 @@
           "Trip opponent",
           "Pull guard with control",
           "Advance to double underhooks"
-        ]
+        ],
+        "description": "The over-under is a balanced clinch where both fighters have inside and outside control. From here, you can pummel, off-balance, snap down, or attack takedowns. The battle in this position is about hand fighting, hip pressure, and winning the inside space."
       }
     },
     "double_underhooks": {
@@ -771,7 +771,6 @@
           "Double Unders",
           "Body Lock Position"
         ],
-        "description": "A dominant clinch. Lock your hands high on the back, clamp ribs with your forearms, keep head inside, and step to angles to lift and move. Prioritize posture before squeezing—your structure creates control. Use body locks, knee pinches, and trips without exposing your neck.",
         "key_concepts": [
           "Gable grip behind back—not low at the hips",
           "Rib cage clamp with forearms",
@@ -802,7 +801,8 @@
           "Suplex or throw",
           "Pull guard with dominant control",
           "Transition to body lock for trips"
-        ]
+        ],
+        "description": "Double underhooks put you in one of the strongest standing control positions. With both arms underneath theirs, you dominate posture and can drive them, lift them, or lock a body lock. It's a launch point for takedowns and a shut-down for their offense."
       }
     },
     "single_underhook": {
@@ -964,7 +964,6 @@
           "Single Under",
           "Underhook"
         ],
-        "description": "With one underhook, connect your shoulder to their shoulder and turn them. Keep your head in, elbow deep, and step inside to walk them to an angle. Threaten knee taps and body locks; if they whizzer hard, change levels or re-pummel.",
         "key_concepts": [
           "Elbow deep underhook—shoulder connected",
           "Head position protects neck and drives posture",
@@ -994,7 +993,8 @@
           "Execute single leg takedown",
           "Transition to body lock",
           "Pull guard with underhook control"
-        ]
+        ],
+        "description": "A single underhook gives you partial control with strong potential. With one arm inside, you can turn their body, break posture, or set up trips and throws. It's a position that grows more dangerous the deeper your control gets."
       }
     },
     "body_lock_standing": {
@@ -1151,7 +1151,6 @@
           "Bear Hug",
           "Body Lock"
         ],
-        "description": "Body Lock Standing is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Control opponent's center of mass",
           "Lock around waist, not chest",
@@ -1182,7 +1181,8 @@
           "Trip opponent to ground",
           "Mat return to top control",
           "Pull guard with dominant grips"
-        ]
+        ],
+        "description": "A standing body lock clamps their torso and traps their hips. Once locked in, you can run them down, trip, lift, or drag them off balance. It's a tight, smothering clinch that turns standing grappling into your game."
       }
     },
     "wrestling_shot_entry": {
@@ -1351,7 +1351,6 @@
           "Shot",
           "Level Change"
         ],
-        "description": "Wrestling Shot Entry is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Change levels to get under opponent's hips",
           "Explosive penetration step",
@@ -1382,7 +1381,8 @@
           "Complete takedown to top position",
           "Avoid guillotine and sprawl defenses",
           "Land in dominant top position"
-        ]
+        ],
+        "description": "A shot entry is the moment where you commit to taking the fight to the mat. Level change, timing, and angle blend together to attack single legs, doubles, or chain wrestling options. A clean entry creates momentum they can't recover from."
       }
     },
     "closed_guard_top": {
@@ -1544,7 +1544,6 @@
           "Inside Closed Guard",
           "In the Guard"
         ],
-        "description": "Closed Guard Top is posture, patience, and smart dismantling. You clear grips, stack your posture over your hips, and split the guard safely before you think about passing. When you control the hip line and timing, their attacks stall and your pass becomes a formality.",
         "key_concepts": [
           "Posture is king - stay upright to prevent attacks",
           "Control hips to limit opponent's movement",
@@ -1575,7 +1574,8 @@
           "Pass to side control or mount",
           "Avoid submissions and sweeps",
           "Maintain safe posture throughout"
-        ]
+        ],
+        "description": "Closed guard top is a test of posture, patience, and precision. You're stuck between their legs, dealing with grips, angles, and constant threats — but you also hold the gravity and weight that can shut their guard down. The battle is to stay tall enough to stay safe, low enough to break their structure, and disciplined enough not to give them easy attacks. With smart grip fighting, hip positioning, and methodical pressure, you turn their closed guard from an attacking platform into a puzzle you slowly dismantle. Done right, every posture break you resist and every grip you peel brings you one step closer to opening and passing."
       }
     },
     "open_guard_top": {
@@ -1755,7 +1755,6 @@
           "Passing Open Guard",
           "Open Guard Pass Position"
         ],
-        "description": "Open Guard Top is about dismantling structure one frame at a time. You manage distance, win hand fights, and shut down hooks until their hips stop dictating the exchange. When their frames collapse, the pass isn’t forced — it’s timed.",
         "key_concepts": [
           "Control opponent's legs to limit mobility",
           "Maintain balance against guard retention",
@@ -1786,7 +1785,8 @@
           "Avoid sweeps and submissions",
           "Maintain top position throughout",
           "Advance to mount or back"
-        ]
+        ],
+        "description": "Open guard top is controlled chaos — their legs are free, their hooks are active, and every step you take matters. You're threading a path through frames, grips, and angles while denying them the off-balances and entries they're hunting for. The job is to win the distance and the direction: clear grips, staple legs, and force them into predictable guard shapes instead of free-flowing attacks. By combining tight footwork, smart angle changes, and well-timed pressure, you turn their open guard into a passing roadmap instead of a minefield. It's where top players learn to blend mobility with pressure without ever giving up balance."
       }
     },
     "half_guard_top": {
@@ -1977,7 +1977,6 @@
           "Passing Half Guard",
           "Half Guard Pass Position"
         ],
-        "description": "Half Guard Top is the crossface–underhook battle. Pin the shoulder line, win the underhook, and free the knee line with steady pressure. From there you slide, backstep, or climb to mount while their options shrink to defend and hope.",
         "key_concepts": [
           "Control upper body to limit opponent's options",
           "Pressure forward to flatten opponent",
@@ -2008,7 +2007,8 @@
           "Pass to side control or mount",
           "Prevent sweeps and back takes",
           "Maintain top pressure throughout"
-        ]
+        ],
+        "description": "Top half guard is a balanced mix of pressure and movement. You're past one leg, but not both, so your job is to flatten them, free your knee, and advance. Strong top half turns small steps into mount, side control, or submission attacks."
       }
     },
     "side_control": {
@@ -2234,7 +2234,6 @@
           "Cross Side",
           "100 Kilos"
         ],
-        "description": "Chest-to-chest control with head and hip management. Crossface to turn the head, block or wedge the far hip, and distribute weight through ribs—not the floor. Use switching bases to isolate the near arm, then progress to knee-on-belly, mount, or submissions.",
         "key_concepts": [
           "Crossface: head turned away",
           "Far hip wedge/block to stop hip escapes",
@@ -2265,7 +2264,8 @@
           "Transition to mount or back",
           "Attempt submissions (Americana, Kimura, arm triangle)",
           "Prevent opponent's escape"
-        ]
+        ],
+        "description": "Side control gives you heavy, reliable dominance over your opponent's upper body. With their hips pinned and their frames broken, you get to choose the pace while they struggle for space. From here, you can isolate arms, set up chokes, or transition into mount or north-south. It's one of the most stable platforms for advancing and finishing."
       }
     },
     "knee_on_belly": {
@@ -2439,7 +2439,6 @@
           "Knee on Stomach",
           "Knee Mount"
         ],
-        "description": "Knee-on-belly turns mobility into threat. Pin their near hip with your shin, keep your posting foot light, and float your weight through frames rather than into bone. Use the pressure to force predictable reactions—then slide to mount, spin to the back, or isolate an arm for fast finishes.",
         "key_concepts": [
           "Balance is key - distribute weight properly",
           "Control collar and far arm",
@@ -2470,7 +2469,8 @@
           "Transition to mount or back when they escape",
           "Attack submissions (baseball choke, armbars)",
           "Score points and advance position"
-        ]
+        ],
+        "description": "Knee on belly is fast, aggressive pressure that forces your opponent into action. Your weight drives through their core while you stay upright and mobile. They're stuck choosing between bad escapes while you can transition, attack, or push the pace. It's a control point that creates reactions you can capitalize on immediately."
       }
     },
     "mount": {
@@ -2661,7 +2661,6 @@
           "Full Mount",
           "Mounted Position"
         ],
-        "description": "Stabilize first, then isolate. Use low mount with grapevines or knee ride to settle, then climb to high mount to trap arms and attack. Keep your hips heavy, control the head/shoulders, and connect to s-mount, arm triangles, and back takes as they defend.",
         "key_concepts": [
           "Base triangles: hips heavy, hands wide",
           "Low vs high mount progression",
@@ -2692,7 +2691,8 @@
           "Attack with Americana, cross collar choke, or armbar",
           "Transition to technical mount or back",
           "Force opponent to give up back"
-        ]
+        ],
+        "description": "Mount is one of the strongest positions in jiu-jitsu. Sitting on top of your opponent with your weight centered, you control their hips, limit their movement, and force them into predictable escapes. Every attempt they make creates openings for submissions or transitions. A solid mount isn't just control — it's pressure that builds toward the finish."
       }
     },
     "back_control": {
@@ -2920,7 +2920,6 @@
           "Taking the Back",
           "Rear Mount"
         ],
-        "description": "Back control (rear mount) is the apex of jiu‑jitsu positioning. With your chest on their back and your hands controlling the hand fight, you can attack while staying safe. You dictate angles, deny their vision, and force them to defend the choke first. Strong back control isn’t just control — it’s the fastest path to a finish.",
         "key_concepts": [
           "Seatbelt hierarchy and hand protection",
           "Hook retention and hip line control",
@@ -2951,7 +2950,8 @@
           "Attack rear naked choke",
           "Control opponent's defensive hands",
           "Maintain highest point position"
-        ]
+        ],
+        "description": "Back control is the most dominant position in jiu-jitsu. With your hooks in and your chest to their back, you control their movement while staying out of danger yourself. Every escape they try exposes their neck or arms, and every adjustment you make tightens your attacks. It's the position where one mistake from them can immediately end the fight."
       }
     },
     "turtle_top": {
@@ -3136,7 +3136,6 @@
           "Attacking Turtle",
           "Top of Turtle"
         ],
-        "description": "From top turtle you’re hunting hooks and angles, not brute force. Wedge inside space, collapse the elbow-knee connection, and steer their hips so rolls and sit-outs die early. Cycle rides (tight waist, spiral, seatbelt) to open chokes or turn them to their side for clean back exposure.",
         "key_concepts": [
           "Break opponent flat to mat",
           "Insert hooks for back control",
@@ -3167,7 +3166,8 @@
           "Force opponent flat to side control",
           "Prevent opponent escaping to guard",
           "Attack with clock choke or crucifix"
-        ]
+        ],
+        "description": "Turtle top control is about patience and breaking their defense piece by piece. With their elbows tight and posture curled, your job is to create openings without giving them room to escape. You control their hips, block their rolls, and choose the moment to attack the back, choke, or transition to dominant positions."
       }
     },
     "closed_guard_bottom": {
@@ -3359,7 +3359,6 @@
           "Closed Guard",
           "Full Guard"
         ],
-        "description": "Break posture, win grips, and angle your hips before opening. Climb your legs to control shoulders, use two-on-one or collar-sleeve to isolate arms, and connect attacks in chains (sit-up series, pendulum, armbar/triangle/omoplata). Move your hips—not just your arms—to create threats.",
         "key_concepts": [
           "Posture control: head/shoulders broken",
           "Hip angle before opening guard",
@@ -3390,7 +3389,8 @@
           "Attack with triangle, armbar, or kimura",
           "Execute sweeps to top position",
           "Prevent opponent from passing guard"
-        ]
+        ],
+        "description": "Closed guard locks your opponent between your legs and forces them to solve your game. With their posture broken and their movement restricted, you can attack chokes, arm locks, sweeps, or back takes. It's a secure, classic position where patience and timing create openings."
       }
     },
     "open_guard_bottom": {
@@ -3596,7 +3596,6 @@
           "Open Guard",
           "Feet on Hips Guard"
         ],
-        "description": "Manage distance with frames and hooks, then off-balance before entries. Win inside position with shins and hands, pummel your legs to control the knee line, and use kuzushi (push-pull, angle changes) to create passes or sweep opportunities. Stay mobile—hips lead, feet guide.",
         "key_concepts": [
           "Distance management: frames + hooks",
           "Inside position with shins and hands",
@@ -3627,7 +3626,8 @@
           "Return to closed guard when advantageous",
           "Prevent guard passing",
           "Attack with submissions from open guard"
-        ]
+        ],
+        "description": "Open guard trades security for movement and creativity. Without closing your legs, you use hooks, grips, and angles to disrupt their balance and launch attacks. It's a dynamic position that rewards agility, timing, and grip fighting."
       }
     },
     "half_guard_bottom": {
@@ -3813,7 +3813,6 @@
           "Half Guard",
           "Bottom Half"
         ],
-        "description": "Build structure first: knee shield or inside frames to deny crossface and underhook. Win the underhook or frame the far hip, keep head position safe, and connect hip-escape chains to sweeps, reversals, or get-ups. Time your entries when their hands are occupied.",
         "key_concepts": [
           "Knee shield / inside frames",
           "Deny crossface; fight for underhook",
@@ -3844,7 +3843,8 @@
           "Execute half guard sweep to top",
           "Prevent being passed to side control",
           "Get to dog fight position"
-        ]
+        ],
+        "description": "Bottom half guard is a position of strategy and survival. You still have one of their legs trapped, giving you ways to off-balance, frame, and sweep. When played well, half guard bottom isn't stalling — it's a launch pad for reversals and transitions."
       }
     },
     "side_control_bottom": {
@@ -4025,7 +4025,6 @@
           "Bottom Side Control",
           "Under Side Control"
         ],
-        "description": "Survive and recover: frame the near-side neck/shoulder, frame the far hip, and connect frames to hip escapes. Remove head control first, then re-guard or get to knees. Push with structure, not straight arms, and time movements when top changes base.",
         "key_concepts": [
           "Near-side frame at neck/shoulder",
           "Far hip frame denies hip switch",
@@ -4056,7 +4055,8 @@
           "Create frames to maintain space",
           "Shrimp to recover guard",
           "Prevent mount and back control"
-        ]
+        ],
+        "description": "Side control bottom is where pressure meets problem-solving. You're pinned under a heavy cross-body hold, your hips are trapped, and your arms are constantly under threat. Winning here isn't about strength — it's about structure. With smart frames, active hips, and the right timing, you can turn their control into space and their weight into momentum. It's a position that teaches composure under pressure and precision under fire."
       }
     },
     "turtle_bottom": {
@@ -4235,7 +4235,6 @@
           "Bottom Turtle",
           "Referee Position"
         ],
-        "description": "Turtle Bottom is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Temporary position only",
           "Protect neck and prevent back control",
@@ -4266,7 +4265,8 @@
           "Prevent back control",
           "Roll through for sweep if possible",
           "Avoid clock choke and crucifix"
-        ]
+        ],
+        "description": "Turtle bottom is a mixed bag: you're protected, but you're also vulnerable. Your limbs are tucked in and your frames are compact, making it hard for an opponent to instantly submit you — but you can't stay here long. The power of turtle is in its potential energy: explosive stand-ups, sharp guard recoveries, and quick reversals. It's a transitional shell, not a home, and the player who understands that moves first."
       }
     },
     "butterfly_guard": {
@@ -4442,7 +4442,6 @@
           "Hooks Guard",
           "Sitting Guard"
         ],
-        "description": "Butterfly Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Underhooks provide control and sweeping power",
           "Butterfly hooks lift and destabilize opponent",
@@ -4473,7 +4472,8 @@
           "Transition to back control or X-guard",
           "Control opponent's posture",
           "Prevent passes while setting up attacks"
-        ]
+        ],
+        "description": "Butterfly guard puts your hooks inside their legs, giving you instant leverage to elevate, sweep, or off-balance them. It's a guard built on angles and momentum, turning small shifts into powerful reversals. Perfect for creating motion instead of absorbing pressure."
       }
     },
     "de_la_riva": {
@@ -4661,7 +4661,6 @@
           "DLR",
           "De La Riva Hook"
         ],
-        "description": "De La Riva is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hook creates off-balance control",
           "Far sleeve grip prevents posting",
@@ -4692,7 +4691,8 @@
           "Transition to X-guard variations",
           "Take opponent's back",
           "Off-balance and control standing opponent"
-        ]
+        ],
+        "description": "De la Riva guard wraps your outside leg around their lead leg, giving you strong control over their balance and direction. With the right grips, you can spin underneath, sweep, or take the back. It's a foundational open-guard system known for constant off-balancing."
       }
     },
     "reverse_de_la_riva": {
@@ -4875,7 +4875,6 @@
           "Reverse DLR",
           "Inside Hook Guard"
         ],
-        "description": "Reverse De La Riva is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Inside hook creates inversion opportunities",
           "Far leg control prevents escape",
@@ -4906,7 +4905,8 @@
           "Sweep opponent with RDLR sweeps",
           "Transition to X-guard",
           "Develop inversion skills"
-        ]
+        ],
+        "description": "Reverse de la Riva flips the angle and targets the opposite leg. It breaks their posture, blocks forward pressure, and creates clean entries into sweeps and leg entanglements. It's a defensive shield that becomes an offensive weapon."
       }
     },
     "spider_guard": {
@@ -5092,7 +5092,6 @@
           "Spider",
           "Biceps Control"
         ],
-        "description": "Spider Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Sleeve grips are mandatory",
           "Feet create frames on biceps",
@@ -5123,7 +5122,8 @@
           "Transition to triangle or omoplata",
           "Control standing opponent effectively",
           "Prevent guard passing"
-        ]
+        ],
+        "description": "Spider guard uses extended legs and sleeve grips to manipulate posture and spacing. By stretching and retracting their arms, you can break balance, open angles, and chain attacks. It's a guard that thrives on precision and tension."
       }
     },
     "lasso_guard": {
@@ -5291,7 +5291,6 @@
           "Spider Lasso",
           "Threaded Guard"
         ],
-        "description": "Lasso Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Lasso leg threads through arm pit",
           "Creates mechanical advantage for sweeps",
@@ -5322,7 +5321,8 @@
           "Attack with omoplata from lasso",
           "Control and frustrate opponent's passing",
           "Transition to other guard variations"
-        ]
+        ],
+        "description": "Lasso guard wraps your leg around their arm, locking it in place and clogging their movement. With their arm trapped, you gain powerful control for sweeps, triangles, and transitions. It's a frustrating guard for the passer and a playground for the attacker."
       }
     },
     "x_guard": {
@@ -5511,7 +5511,6 @@
           "X-Guard",
           "Cross Guard"
         ],
-        "description": "X Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Legs form X controlling both opponent's legs",
           "Elevation removes opponent's base",
@@ -5542,7 +5541,8 @@
           "Stand up to single leg",
           "Transition to leg entanglements",
           "Control and elevate standing opponent"
-        ]
+        ],
+        "description": "X-guard lifts your opponent's base off the ground using a layered hook system. With their weight floating, you can easily tip, sweep, or transition to leg attacks. It's a highly technical guard known for dominant off-balancing."
       }
     },
     "collar_sleeve_guard": {
@@ -5725,7 +5725,6 @@
           "Collar Sleeve",
           "Cross Collar Sleeve"
         ],
-        "description": "Collar Sleeve Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Collar grip breaks posture",
           "Sleeve grip prevents posting",
@@ -5756,7 +5755,8 @@
           "Attack triangle choke",
           "Set up omoplata",
           "Control and frustrate passing attempts"
-        ]
+        ],
+        "description": "Collar sleeve guard uses asymmetrical grips to force your opponent into awkward posture and angles. With one arm extended and their collar controlled, you can shoot triangles, omoplatas, or dynamic sweeps. It's a sharp, attacking guard built on misalignment."
       }
     },
     "knee_shield_half_guard": {
@@ -5930,7 +5930,6 @@
           "Z-Guard Half Guard",
           "Shield Guard"
         ],
-        "description": "Knee Shield Half Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Knee shield maintains critical distance",
           "Underhook provides offensive control",
@@ -5961,7 +5960,8 @@
           "Recover to full guard",
           "Prevent being flattened",
           "Attack from offensive half guard"
-        ]
+        ],
+        "description": "Knee shield builds space and structure. Your knee blocks their pressure while your hands frame their upper body, giving you time to attack underhooks, sweeps, or transitions into Z-guard. It's one of the best defensive-to-offensive half guard shapes."
       }
     },
     "z_guard": {
@@ -6122,7 +6122,6 @@
           "Z-Guard",
           "93 Guard"
         ],
-        "description": "Z Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Z-shape leg configuration creates frames",
           "Systematic approach to half guard",
@@ -6153,7 +6152,8 @@
           "Maintain superior half guard position",
           "Prevent opponent from passing",
           "Attack systematically from Z-guard"
-        ]
+        ],
+        "description": "Z guard stacks layers of frames that prevent your opponent from smashing in. With your shin blocking and hips angled, you gain strong grips for sweeps, entries, and submissions. It's a technical, flexible variation that slows them down while opening your options."
       }
     },
     "lockdown": {
@@ -6319,7 +6319,6 @@
           "Lockdown Half Guard",
           "10th Planet Lockdown"
         ],
-        "description": "Lockdown is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Leg triangle immobilizes opponent's leg",
           "Creates off-balance for sweeps",
@@ -6350,7 +6349,8 @@
           "Attack electric chair submission",
           "Control and off-balance opponent",
           "Set up 10th Planet sequences"
-        ]
+        ],
+        "description": "Lockdown traps their leg and stretches their base, forcing them into awkward pressure. It pins them in place, disrupts their posture, and gives you time to work sweeps, underhooks, or transitions. It's a restrictive, control-heavy half guard variation."
       }
     },
     "north_south": {
@@ -6529,7 +6529,6 @@
           "N/S",
           "Head-to-Head"
         ],
-        "description": "North-South is chest pressure with clean lanes. You turn the head away, hide your hips, and attack arms and neck without giving underhooks back. It’s a quiet position that forces mistakes without big risks.",
         "key_concepts": [
           "Chest pressure is suffocating",
           "Control opponent's arms",
@@ -6560,7 +6559,8 @@
           "Transition to mount or side control",
           "Maintain heavy pressure",
           "Attack kimura or arm triangle"
-        ]
+        ],
+        "description": "North-south flips the typical angle of control and shuts down their ability to bridge or frame effectively. With their head pinned and their arms stretched, you gain clean access to chokes, kimuras, and fast transitions back to side control. It's a calm but crushing position that collapses their movement and opens the path to submissions."
       }
     },
     "technical_mount": {
@@ -6719,7 +6719,6 @@
           "S-Mount",
           "Modified Mount"
         ],
-        "description": "Technical mount splits your hips to trap their near arm and expose the neck. Keep your knee line high, heel close to their back, and hips heavy over their sternum. Flow between back takes, cross-collar attacks, and a tight armbar without ever giving them both hands back.",
         "key_concepts": [
           "Leg configuration prevents bridge",
           "Excellent armbar setup position",
@@ -6750,7 +6749,8 @@
           "Transition to back control",
           "Maintain superior mount position",
           "Prevent bridge escapes"
-        ]
+        ],
+        "description": "Technical mount locks down one of their arms while giving you a powerful angle to attack from the side. With your foot posted and your knee tight behind their back, you control their ability to turn, shrimp, or bridge. This position makes armbar setups clean and transitions to back control smooth. It's a tactical step between mount and finishing the fight."
       }
     },
     "side_control_variants": {
@@ -6915,7 +6915,6 @@
           "Scarf Hold",
           "Modified Side"
         ],
-        "description": "Side Control Variants are pressure toolkits. You switch bases, wedge the far hip, and turn the head so frames can’t rebuild. Each variation shifts weight differently, but the outcome is the same: their frames collapse and your options multiply.",
         "key_concepts": [
           "Different variants for different situations",
           "Kesa gatame - strong head control",
@@ -6946,7 +6945,8 @@
           "Attack armbars from kesa gatame",
           "Flow between variants",
           "Counter different escape attempts"
-        ]
+        ],
+        "description": "Side control variants are the subtle adjustments that let you adapt to your opponent's reactions. Whether you shift to knee-on-belly, switch your hips, or float to a new angle, each variation adds pressure while shutting down their escapes. These transitions keep you sticky and unpredictable, giving you new setups without losing control."
       }
     },
     "half_guard_top_variations": {
@@ -7101,7 +7101,6 @@
           "Half Guard Passing Variations",
           "Advanced Half Passing"
         ],
-        "description": "Half guard on top is a series of micro-battles—head height, underhook, and knee line. Switch between crossface-underhook, knee-cut bodylocks, and reverse half to keep their frames collapsing. Win the knee line first, then pass clean or settle pressure for controlled submissions.",
         "key_concepts": [
           "Different half guards need different passes",
           "Underhook pass for standard half",
@@ -7132,7 +7131,8 @@
           "Master multiple passing systems",
           "Counter knee shield effectively",
           "Develop systematic passing approach"
-        ]
+        ],
+        "description": "Top half guard variations adjust your pressure depending on the opponent's reactions. Whether you cross-face, tripod, switch your hips, or float, each variation helps you dismantle their frames and pass. It's the art of upgrading pressure step by step."
       }
     },
     "backpack_position": {
@@ -7296,7 +7296,6 @@
           "Standing Back Control",
           "Koala Guard"
         ],
-        "description": "Backpack control keeps your chest glued to their back without giving up height. Hang your weight through a tight seatbelt, pummel hooks as you walk them forward or to a hip, and keep your head hidden behind theirs. Finish standing chokes or mat-return to a safer back mount.",
         "key_concepts": [
           "Maintain hooks as opponent changes levels",
           "Seatbelt grip never releases",
@@ -7327,7 +7326,8 @@
           "Finish rear naked choke standing",
           "Drag opponent back to mat",
           "Develop dynamic back control"
-        ]
+        ],
+        "description": "The backpack position attaches you to your opponent as they move. You stay on their back without needing hooks yet, using grips and hip pressure to stay glued through scrambles. It's a sticky transitional point that lets you follow their movement and upgrade to full back control the second space opens."
       }
     },
     "body_triangle": {
@@ -7501,7 +7501,6 @@
           "Back Triangle",
           "Figure Four Body Lock"
         ],
-        "description": "The body triangle turns back control into a locked cage. By fixing their hip line and compressing the ribs, you trade a bit of mobility for crushing control and patient finishing pressure. It slows escapes, elevates the chin, and makes the rear‑naked choke feel inevitable.",
         "key_concepts": [
           "Lock behind your knee—not the shin—for security",
           "Hip line isolation limits turning and bridging",
@@ -7531,7 +7530,8 @@
           "Attack rear naked choke",
           "Use freed hands for collar chokes",
           "Maintain position indefinitely"
-        ]
+        ],
+        "description": "The body triangle is back control taken to the next level. Locking your legs around their torso crushes their breathing, shuts down their hip movement, and makes escapes incredibly hard. While they're focused on surviving the squeeze, you're free to attack the neck at your own pace. It's a slow, suffocating control that wears opponents down and forces openings."
       }
     },
     "turtle_top_variations": {
@@ -7691,7 +7691,6 @@
           "Advanced Turtle Attacks",
           "Turtle Finishing Positions"
         ],
-        "description": "Use a toolkit of rides—tight waist, spiral, hip ride, seatbelt—to deny turtle escapes before they start. Block the near hip, stuff the elbow-knee seam, and tilt them to a side to win hooks. Threaten clock chokes and front headlocks to force reactions that open the back.",
         "key_concepts": [
           "Clock choke requires lapel control",
           "Crucifix traps both arms",
@@ -7722,7 +7721,8 @@
           "Execute crucifix position",
           "Rolling back takes",
           "Prevent opponent escaping to guard"
-        ]
+        ],
+        "description": "Turtle top variations give you different ways to break down the shell. Whether you go over, under, to the side, or behind, each variation targets their posture and forces reactions. These adjustments let you flow between rides, traps, and back takes without giving them space to escape."
       }
     },
     "turtle_bottom_variations": {
@@ -7895,7 +7895,6 @@
           "Offensive Turtle",
           "Dynamic Turtle"
         ],
-        "description": "Turtle Bottom Variations is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Turtle is transition not destination",
           "Technical standup from turtle",
@@ -7926,7 +7925,8 @@
           "Granby roll to recover guard",
           "Sit to guard safely",
           "Avoid back control and submissions"
-        ]
+        ],
+        "description": "Turtle bottom variations highlight the small adjustments that change everything — elbow posts, hip angles, knee placement, and shoulder alignment. Each variation has its purpose: some defend hooks, others create space, and others set traps for reversals. Understanding these versions gives you a dynamic, flexible turtle instead of a static, defensive curl. It's about shaping the shell to your next move."
       }
     },
     "single_leg_x": {
@@ -8107,7 +8107,6 @@
           "Single Leg X-Guard",
           "One Leg X"
         ],
-        "description": "Single Leg X controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Legs form X on single leg",
           "Stand up to complete sweep",
@@ -8138,7 +8137,8 @@
           "Enter outside ashi garami",
           "Control and off-balance opponent",
           "Develop leg entanglement entries"
-        ]
+        ],
+        "description": "Single leg X locks onto one of their legs and disrupts their balance instantly. You control their base while threatening sweeps, off-balances, and ashi garami transitions. It's one of the cleanest pathways into leg entanglements."
       }
     },
     "outside_ashi_garami": {
@@ -8328,7 +8328,6 @@
           "Standard Ashi",
           "Ashi Garami"
         ],
-        "description": "Outside Ashi Garami controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Perpendicular hip position is key",
           "Outside control of trapped leg",
@@ -8359,7 +8358,8 @@
           "Transition to inside ashi",
           "Control leg completely",
           "Develop modern leg attack system"
-        ]
+        ],
+        "description": "Outside ashi garami secures your opponent's leg on the outside line, giving you tight control over their knee and ankle. With your legs wrapped around theirs, heel hooks and sweeps become immediately accessible. It's a stable, high-danger position."
       }
     },
     "inside_ashi_garami": {
@@ -8535,7 +8535,6 @@
           "Inside Position",
           "Cross Ashi"
         ],
-        "description": "Inside Ashi Garami controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Inside position is dominant",
           "Leg crosses opponent's hip for control",
@@ -8566,7 +8565,8 @@
           "Attack heel hook (where legal)",
           "Prevent opponent's escapes",
           "Develop modern leg lock system"
-        ]
+        ],
+        "description": "Inside ashi garami shifts the control to the inside line, opening direct access to inside heel hooks and strong off-balances. It's one of the most threatening entanglements, demanding respect from even experienced passers."
       }
     },
     "50_50_guard": {
@@ -8728,7 +8728,6 @@
           "Fifty Fifty",
           "5050 Guard"
         ],
-        "description": "50 50 Guard controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Symmetrical entanglement",
           "Inside control is key advantage",
@@ -8759,7 +8758,8 @@
           "Attack from 50/50 position",
           "Escape 50/50 when disadvantaged",
           "Develop modern leg entanglement game"
-        ]
+        ],
+        "description": "50/50 creates a mirrored leg entanglement where both players have shared threats and shared opportunities. You can attack sweeps, submissions, and leg locks, but so can they. It's a strategic, technical position that demands patience and precision."
       }
     },
     "deep_half_guard": {
@@ -8921,7 +8921,6 @@
           "Deep Half",
           "DHG"
         ],
-        "description": "Deep Half Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Deep position under opponent's center",
           "Far leg control is critical",
@@ -8952,7 +8951,8 @@
           "Use as safe defensive position",
           "Develop Bernardo Faria style game",
           "Sweep larger opponents effectively"
-        ]
+        ],
+        "description": "Deep half guard pulls you underneath their hips and gives you powerful leverage. From this low angle, you can tilt, sweep, or use their weight against them. It's a deceptively strong position built on timing and mechanics instead of strength."
       }
     },
     "tornado_guard": {
@@ -9113,7 +9113,6 @@
           "Tornado",
           "Spinning Guard"
         ],
-        "description": "Tornado Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Rotation creates torque",
           "Timing with opponent's movement",
@@ -9144,7 +9143,8 @@
           "Develop dynamic guard game",
           "Master timing and coordination",
           "Create unexpected sweep angles"
-        ]
+        ],
+        "description": "Tornado guard creates explosive sweeps by connecting your legs around their far hip. With rotation and momentum, you can flip them, attack legs, or transition into dominant positions. It's dynamic, surprising, and built for reversals."
       }
     },
     "rdlr_inverted_entries": {
@@ -9300,7 +9300,6 @@
           "Berimbolo Entry",
           "Inverted RDLR"
         ],
-        "description": "Rdlr Inverted Entries is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Inversion creates back exposure",
           "Far leg control prevents escape",
@@ -9331,7 +9330,8 @@
           "Develop inversion skills",
           "Attack back from bottom",
           "Compete in modern sport BJJ"
-        ]
+        ],
+        "description": "Reverse De la Riva inverted entries let you spin underneath your opponent and attack from unexpected angles. These movements lead into leg entanglements, sweeps, or back takes while using their momentum against them. It's a fluid, modern style of guard entry."
       }
     },
     "modified_x_guard": {
@@ -9491,7 +9491,6 @@
           "Modified X",
           "X-Guard Variation"
         ],
-        "description": "Modified X Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Modified configuration prevents escapes",
           "Addresses traditional X weaknesses",
@@ -9522,7 +9521,8 @@
           "Counter specific passing styles",
           "Develop adaptive X-guard game",
           "Master position nuances"
-        ]
+        ],
+        "description": "Modified X-guard adapts the classic X structure to fit different reactions. With hybrid hooks and angled grips, you gain new sweep paths and cleaner entries into single leg X or leg locks. It's a flexible upgrade for staying ahead of the passer."
       }
     },
     "collar_dlr_hybrid": {
@@ -9678,7 +9678,6 @@
           "Collar DLR",
           "Hybrid DLR"
         ],
-        "description": "Collar Dlr Hybrid is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hybrid combines strengths of both",
           "Collar grip + DLR hook",
@@ -9709,7 +9708,8 @@
           "Develop modern guard game",
           "Combine guard elements effectively",
           "Create difficult-to-pass positions"
-        ]
+        ],
+        "description": "This hybrid blends collar control with De la Riva hooks, combining posture-breaking upper-body grips with dynamic leg control. It creates angles that lead to triangles, sweeps, and elegant transitions. It's a fusion guard built for versatility."
       }
     },
     "inverted_guard": {
@@ -9872,7 +9872,6 @@
           "Inversion",
           "Upside Down Guard"
         ],
-        "description": "Inverted Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Inversion creates confusion",
           "Protects back with leg control",
@@ -9903,7 +9902,8 @@
           "Enter berimbolo from inversion",
           "Confuse opponent's passing",
           "Build modern guard game"
-        ]
+        ],
+        "description": "Inverted guard turns your body upside down to create new pathways around, under, or behind your opponent. From this inverted angle, you can set up leg entanglements, back takes, or spinning sweeps. It's a highly mobile position built on creativity and timing."
       }
     },
     "crab_ride": {
@@ -10062,7 +10062,6 @@
           "Crab Ride",
           "Side Ride"
         ],
-        "description": "Crab ride controls both hips with hooks behind the knees, making their sit-outs and granbys predictable. Keep your heels active, knees pinched, and hips chasing their belt line. Tilt them to expose the back or feed into truck entries without losing hip control.",
         "key_concepts": [
           "Control both arms from side",
           "Ride opponent like a crab",
@@ -10093,7 +10092,8 @@
           "Transition to back smoothly",
           "Attack crucifix or submissions",
           "Complete berimbolo sequences"
-        ]
+        ],
+        "description": "Crab ride turns your hooks into a steering wheel for their hips. With your feet threaded inside and your grips clamped to their belt line, you can float behind them as they try to stand, turn, or scramble. Their attempts to shake you off only expose more back takes, leg drags, or matrix-style entries. It's a sticky, chase-oriented control where you stay attached and let their movement fuel your attacks."
       }
     },
     "berimbolo_control": {
@@ -10257,7 +10257,6 @@
           "Berimbolo",
           "Bolo"
         ],
-        "description": "Berimbolo Control is a bridge — a moment where smart pressure and angles turn one control into another. You don’t rush; you exploit reactions.",
         "key_concepts": [
           "Roll under to opponent's back",
           "Inversion to back take",
@@ -10288,7 +10287,8 @@
           "Take back from bottom",
           "Develop modern sport game",
           "Build inversion skills"
-        ]
+        ],
+        "description": "Berimbolo control is the checkpoint in the middle of the spin — the moment where their hips are tilted, their base is broken, and you're latched onto their belt line or far hip. You're not just spinning for the sake of it; you're freezing them mid-rotation while you climb to the back. From here, every adjustment either tightens your harness or opens a clean path to hooks, crab ride, or saddle-style entries. It's the calm eye of the bolo storm where you quietly lock in the finish."
       }
     },
     "matrix_position": {
@@ -10444,7 +10444,6 @@
           "Matrix",
           "Extreme Backward Lean"
         ],
-        "description": "Matrix Position is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Extreme lean avoids passes",
           "Temporary defensive measure",
@@ -10475,7 +10474,8 @@
           "Buy time to recover guard",
           "Develop defensive flexibility",
           "Escape dangerous passing positions"
-        ]
+        ],
+        "description": "The matrix position loads your opponent onto your hips and opens a direct path to the back or sweep. Using a tight leg-threading motion, you expose their balance and turn their reaction into your advantage. It's a modern movement-based position built for sharp transitions."
       }
     },
     "headquarters_position": {
@@ -10643,7 +10643,6 @@
           "HQ Position",
           "Bernardo Pass Setup"
         ],
-        "description": "Headquarters is your staging ground. A knee pins their hips, your grips steer their frames, and you decide whether to staple, split, or circle. It’s calm, heavy control that makes the next pass feel inevitable, not athletic.",
         "key_concepts": [
           "Knee in middle creates control",
           "Heavy pressure prevents movement",
@@ -10674,7 +10673,8 @@
           "Pass various guard types",
           "Develop Bernardo Faria style",
           "Build systematic passing game"
-        ]
+        ],
+        "description": "Headquarters is your staging ground against seated and De la Riva-style guards. With one knee splitting their legs and your weight centered, you blunt their hooks, kill their angles, and force them into slower options. From there you can knee cut, backstep, or smash without ever giving them a clean off-balance. It's a patient, structured hub that turns their open guard into a controlled passing puzzle."
       }
     },
     "smash_pass_position": {
@@ -10829,7 +10829,6 @@
           "Smash Pass",
           "Pressure Pass"
         ],
-        "description": "Smash Pass is folding the guard into the mat. You drive the legs to one side, wedge with shoulder and head, and erase frames until movement dies. It trades speed for certainty — and it delivers side control or mount with very little guesswork.",
         "key_concepts": [
           "Smash legs completely to side",
           "Heavy shoulder pressure",
@@ -10860,7 +10859,8 @@
           "Overwhelm opponent with weight",
           "Pass against flexible guards",
           "Develop heavy passing style"
-        ]
+        ],
+        "description": "The smash pass is pressure weaponized. You fold their knees toward their chest, glue your weight across their hips and ribs, and erase the space their guard needs to function. Their frames feel useless, their breathing gets tighter, and every attempt to shrimp just digs them deeper into the pin. It's not fancy — it's suffocating, relentless forward pressure that turns flexible guards into flattened, passable platforms."
       }
     },
     "leg_drag_control": {
@@ -11016,7 +11016,6 @@
           "Leg Drag",
           "Leg Drag Pass"
         ],
-        "description": "Leg Drag Control is angle theft. You drag the knee line across your center, staple the thigh, and point their hips away so the back and side control open on your terms. It’s passing by turning their direction against them.",
         "key_concepts": [
           "Drag leg across body",
           "Control hip to prevent turn",
@@ -11047,7 +11046,8 @@
           "Beat DLR and modern guards",
           "Create back take opportunities",
           "Develop leg drag system"
-        ]
+        ],
+        "description": "Leg drag control turns their legs into a lever pointed away from safety. Once you pin their knees across their body and staple their hips, their ability to recover guard collapses. Their far hip, back, and near-side underhook all line up in front of you like a menu of options. It's a sideways checkpoint where you freeze their lower body and choose whether to settle, take the back, or flow into mount."
       }
     },
     "k_guard": {
@@ -11207,7 +11207,6 @@
           "K Guard",
           "K-Shape Guard"
         ],
-        "description": "K Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "K-shape leg configuration",
           "Lapel wrapped creates control",
@@ -11238,7 +11237,8 @@
           "Create trapping mechanics",
           "Develop modern guard game",
           "Sweep with lapel control"
-        ]
+        ],
+        "description": "K-guard uses a sharp knee shield angle and inside leg threading to pierce straight into off-balances and leg entries. Your shin blocks pressure while your hooking leg creates openings for sweeps, back takes, or immediate leg attacks. It's a modern, direct way to weaponize inversion without fully committing to it."
       }
     },
     "cross_ashi_garami": {
@@ -11399,7 +11399,6 @@
           "Cross Ashi",
           "Crossing Ashi Garami"
         ],
-        "description": "Cross Ashi Garami controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Crossing angle creates control",
           "Different from standard ashi",
@@ -11430,7 +11429,8 @@
           "Create finishing positions",
           "Develop systematic approach",
           "Finish with heel hooks"
-        ]
+        ],
+        "description": "Cross ashi garami traps your opponent's leg across your body, giving you powerful control over their knee line. This angle opens clean heel hook paths and forces them into defensive reactions. It's a staple entanglement that combines stability with high submission threat."
       }
     },
     "butterfly_x": {
@@ -11596,7 +11596,6 @@
           "Butterfly X",
           "Hybrid X"
         ],
-        "description": "Butterfly X is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hybrid combines both guard strengths",
           "Butterfly and X elements together",
@@ -11627,7 +11626,8 @@
           "Sweep with multiple options",
           "Develop adaptive guard game",
           "Transition fluidly between positions"
-        ]
+        ],
+        "description": "Butterfly X blends butterfly guard elevation with X-guard structure. You lift, off-balance, and thread hooks underneath them in one motion. This hybrid gives you easy transitions into single leg X, back takes, or sweeps while keeping them constantly floating."
       }
     },
     "baby_bolo": {
@@ -11785,7 +11785,6 @@
           "Baby Bolo",
           "Mini Berimbolo"
         ],
-        "description": "Baby Bolo is a bridge — a moment where smart pressure and angles turn one control into another. You don’t rush; you exploit reactions.",
         "key_concepts": [
           "Simplified berimbolo mechanics",
           "Faster than full technique",
@@ -11816,7 +11815,8 @@
           "Develop competition skills",
           "Use modern transitions",
           "Simplify complex techniques"
-        ]
+        ],
+        "description": "The baby bolo is a tight rotational entry that takes you from turtle or seated control directly to the back. Instead of a big spin, it uses compact movement to expose their hips and slip your hook inside. It's fast, efficient, and ideal for catching opponents as they try to stand or turn."
       }
     },
     "worm_guard": {
@@ -11989,7 +11989,6 @@
           "Worm Guard",
           "Lapel Lasso"
         ],
-        "description": "Worm Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Lapel wraps your leg then opponent's",
           "Creates worm-like entanglement",
@@ -12020,7 +12019,8 @@
           "Create unpassable guard",
           "Develop lapel guard expertise",
           "Sweep with lapel control"
-        ]
+        ],
+        "description": "Worm guard wraps your opponent's leg with their own lapel, tying them to you and stripping away their mobility. Once the lapel is threaded, their base becomes unstable, opening pathways for sweeps and transitions. It's a signature gi-control system famous for its leverage and creativity."
       }
     },
     "squid_guard": {
@@ -12193,7 +12193,6 @@
           "Squid Guard",
           "Double Worm"
         ],
-        "description": "Squid Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Both legs in lapel entanglement",
           "Evolution from worm guard",
@@ -12224,7 +12223,8 @@
           "Create unpassable position",
           "Attack from strong control",
           "Develop modern guard game"
-        ]
+        ],
+        "description": "Squid guard uses a deep lapel wrap combined with angled hooks to break posture and shut down passing. With the lapel anchored around their leg, you create strong sweeping mechanics and clean off-balances. It's a playful yet powerful extension of the lapel-guard family."
       }
     },
     "ringworm_guard": {
@@ -12390,7 +12390,6 @@
           "Ringworm Guard",
           "Loop Guard"
         ],
-        "description": "Ringworm Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Lapel creates circular loop",
           "Returns to your control",
@@ -12421,7 +12420,8 @@
           "Create unique control",
           "Develop circular mechanics",
           "Complete Keenan system"
-        ]
+        ],
+        "description": "Ringworm guard blends lapel wrapping with a DLR-style hook to trap their leg in place. The lapel acts like a leash, blocking their ability to rotate or drive pressure. It gives you tight sweeping patterns and easy transitions into the rest of the worm chain."
       }
     },
     "gubber_guard": {
@@ -12581,7 +12581,6 @@
           "Gubber Guard",
           "Reverse Collar Guard"
         ],
-        "description": "Gubber Guard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Collar fed behind back",
           "Reverse grip mechanics",
@@ -12612,7 +12611,8 @@
           "Create powerful breaks",
           "Develop competition guards",
           "Sweep with collar control"
-        ]
+        ],
+        "description": "Gubber guard is a flexible hybrid where you use layered hooks and leg-weaving to disrupt your opponent's base. It creates inverted angles without fully committing your hips, making it great for safe entries into leg entanglements. It thrives on unexpected transitions."
       }
     },
     "reverse_x": {
@@ -12774,7 +12774,6 @@
           "Reverse X",
           "Inverted X Guard"
         ],
-        "description": "Reverse X controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Reverse of standard X configuration",
           "Different mechanical advantages",
@@ -12805,7 +12804,8 @@
           "Take the back efficiently",
           "Develop modern guard game",
           "Use reverse mechanics"
-        ]
+        ],
+        "description": "Reverse X flips the traditional X-guard orientation, putting your hooks behind and underneath their leg. This creates strong off-balancing mechanics and direct pathways to cross ashi or backside entrances. It's a rotational guard designed to catch opponents as they step forward."
       }
     },
     "leg_pinning_systems": {
@@ -12966,7 +12966,6 @@
           "Leg Pins",
           "Leg Weaving Systems"
         ],
-        "description": "Leg pins shut down guard recovery at the source. Staple their thigh across their centerline, glue the knee to the mat, or weave a shin to block the hip turn. Once the knee line is dead, passes become effortless and submissions appear without scrambles.",
         "key_concepts": [
           "Systematic leg control",
           "Use legs to pin opponent's",
@@ -12997,7 +12996,8 @@
           "Control with legs",
           "Develop advanced passing game",
           "Pass safely and efficiently"
-        ]
+        ],
+        "description": "Leg pinning systems are how you tell their guard, \"You don't get to move first.\" Using your shins, grips, and weight, you trap one or both legs to the mat and rob them of their hip mobility. Instead of dancing around their hooks, you lock them in place and pass on your terms. It's a style of top control where every pin buys you time, angles, and cleaner entries into knee cuts, smash passes, or leg drags."
       }
     },
     "double_under_pass": {
@@ -13153,7 +13153,6 @@
           "Double Under",
           "Double Underhook Pass"
         ],
-        "description": "Double Under is stack pressure done right. Both arms thread under the legs, your head pins the line, and their spine stacks until guard mechanics stop working. From there, you choose the side and set them down where you want.",
         "key_concepts": [
           "Both arms under legs",
           "Stack with pressure",
@@ -13184,7 +13183,8 @@
           "Develop wrestling-based game",
           "Use stacking effectively",
           "Pass with control"
-        ]
+        ],
+        "description": "The double under pass is classic stack-and-fold pressure. With both of their legs hoisted onto your shoulders, you compress their hips toward their chest and make their core carry your weight. Their grips weaken, their spine curls, and their ability to frame effectively disappears. From that stacked shell, you walk around, peel the hips, and land in a dominant side control or mount with almost no scramble."
       }
     },
     "over_under_pass": {
@@ -13340,7 +13340,6 @@
           "Over Under",
           "Over Under Pass"
         ],
-        "description": "Over Under is asymmetry on purpose. One leg over, one under, head and shoulder lock the hips while you walk around their guard. It’s a patient pass that bleeds the guard of angles until only the finish remains.",
         "key_concepts": [
           "Asymmetric over/under configuration",
           "Shoulder pressure into hip",
@@ -13371,7 +13370,8 @@
           "Develop pressure game",
           "Use timing effectively",
           "Pass with control and pressure"
-        ]
+        ],
+        "description": "The over-under pass is a wedge built from asymmetry — one leg hugged tight under your armpit, the other stapled and controlled over your thigh. Your head, shoulder, and hips work together to smother their rotation while you inch your way around their guard. It's slow, heavy, and brutally efficient: they feel like they're drowning under pressure long before the pass actually lands. When it does, you arrive in side control with them already tired from defending."
       }
     },
     "chest_to_chest_half": {
@@ -13535,7 +13535,6 @@
           "Chest to Chest",
           "Heavy Half Guard Top"
         ],
-        "description": "Chest-to-chest half is about shoulder line control. Crossface to turn their nose away, lock an underhook to kill the far hip, and drive your trapped knee through the pocket. When their hips flatten and frames melt, the pass is inevitable.",
         "key_concepts": [
           "Full chest contact creates control",
           "Shoulder of justice pressure",
@@ -13566,7 +13565,8 @@
           "Develop shoulder pressure",
           "Submit from top half",
           "Use weight effectively"
-        ]
+        ],
+        "description": "Chest-to-chest half is the smash version of top half guard. You flatten their shoulders, collapse their frames, and pour weight into them. Once you've pinned their upper body, freeing your trapped leg becomes methodical and overwhelming."
       }
     },
     "tight_waist_hip_ride": {
@@ -13723,7 +13723,6 @@
           "Hip Ride",
           "Tight Waist Hip Ride"
         ],
-        "description": "The tight waist hip ride glues you to their core while steering their hips. Keep your chest over their near shoulder, knee blocking the hip, and your outside hand threatening hooks. Spiral them forward or tilt to a side to open chokes and back takes.",
         "key_concepts": [
           "Wrestling control adapted to BJJ",
           "Tight waist creates control",
@@ -13754,7 +13753,8 @@
           "Take the back efficiently",
           "Develop top turtle game",
           "Use hip pressure effectively"
-        ]
+        ],
+        "description": "The tight waist hip ride pins their hips with your weight while keeping one arm locked with your grip. This kills their ability to stand up or roll. From here, you can tilt them, break them down, and transition into chokes, back takes, or leg entries. It's pure control built on pressure and angles."
       }
     },
     "seatbelt_traps": {
@@ -13909,7 +13909,6 @@
           "Seatbelt Traps",
           "Arm Trap Back Control"
         ],
-        "description": "Seatbelt traps isolate their defensive hands so your choking arm works unopposed. Feed cross-wrist grips, capture wrists with your legs, and hide your choking hand under their jaw line. The more their hands are busy, the simpler your finish becomes.",
         "key_concepts": [
           "Seatbelt creates trapping system",
           "Opponent's arms controlled",
@@ -13940,7 +13939,8 @@
           "Trap opponent's defenses",
           "Finish from back reliably",
           "Develop systematic approach"
-        ]
+        ],
+        "description": "Seatbelt traps take the classic seatbelt and add layers of control that shut down their arms before you attack the neck. As you trap an arm and dominate the angle, their defensive options shrink fast. It's an efficient way to turn turtle defense into a back-exposed problem they can't solve."
       }
     },
     "arm_trapped_back_mount": {
@@ -14108,7 +14108,6 @@
           "Back Mount",
           "Trapped Arm Mount"
         ],
-        "description": "Arm-trapped back mount removes half their defense by design. Trap an arm with your leg or gift wrap, keep your head tight to the choking side, and climb your shoulder behind theirs. With one arm gone, the choke path is direct and fast.",
         "key_concepts": [
           "Hybrid mount/back position",
           "Arm trapped creates control",
@@ -14139,7 +14138,8 @@
           "Trap and control opponent",
           "Finish with submissions",
           "Combine position concepts"
-        ]
+        ],
+        "description": "Arm-trapped back mount turns back control into a near checkmate. With one of their arms pinned, their defense drops dramatically, leaving their neck wide open. They're fighting with one arm while you're attacking with both. It creates a tight, brutal pathway to chokes and forces them to deal with a problem they can't solve quickly."
       }
     },
     "saddle": {
@@ -14316,7 +14316,6 @@
           "411",
           "Inside Sankaku"
         ],
-        "description": "Saddle controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Inside sankaku is key configuration",
           "Near leg entanglement creates control",
@@ -14352,7 +14351,8 @@
           "Finish with heel hooks safely",
           "Understand Danaher system",
           "Train under expert instruction"
-        ]
+        ],
+        "description": "The saddle locks your opponent's leg diagonally across your hips, giving you ironclad knee-line control. From here, inside heel hooks and backside attacks come naturally. It's one of the most dominant and secure leg-entanglement systems in modern grappling."
       }
     },
     "double_trouble": {
@@ -14522,7 +14522,6 @@
           "Double Trouble",
           "Both Legs Position"
         ],
-        "description": "Double Trouble controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Both legs controlled creates dominance",
           "Complex entanglement mechanics",
@@ -14558,7 +14557,8 @@
           "Develop complex entanglements",
           "Finish with multiple attacks",
           "Train under expert supervision"
-        ]
+        ],
+        "description": "Double trouble traps both of your opponent's legs while isolating the primary one you want to finish. With both limbs controlled, your attacks become cleaner, safer, and harder to defend. It's the gold-standard setup for finishing lower-body submissions."
       }
     },
     "4_11_position": {
@@ -14730,7 +14730,6 @@
           "Four Eleven",
           "Saddle"
         ],
-        "description": "4 11 Position controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Numeric reference to configuration",
           "Same position as saddle",
@@ -14766,7 +14765,8 @@
           "Finish with heel hooks",
           "Develop systematic approach",
           "Train under expert guidance"
-        ]
+        ],
+        "description": "The 4/11 creates a tight, rotational entanglement where you sit behind your opponent's trapped leg with full inside-line access. It's a launching pad for heel hooks, sweeps, and transitions into saddle-style systems. A highly technical control point designed for finishing efficiency."
       }
     },
     "honey_hole": {
@@ -14934,7 +14934,6 @@
           "Cross Ashi",
           "Far Leg Saddle"
         ],
-        "description": "Honey Hole controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Inside sankaku on far leg",
           "Crossover configuration key",
@@ -14970,7 +14969,8 @@
           "Develop alternative finishing positions",
           "Finish from honey hole",
           "Train with expert instruction"
-        ]
+        ],
+        "description": "Honey hole is a dominant inside-line entanglement that gives you unmatched access to your opponent's legs. With their knee controlled and their base compromised, you can attack submissions or sweep with minimal effort. It's powerful, stable, and built for finishing."
       }
     },
     "truck": {
@@ -15142,7 +15142,6 @@
           "The Truck",
           "Rolling Crucifix"
         ],
-        "description": "The truck isolates one hip and the near leg to control the whole body. Lock your figure-four, keep your toes active behind their knee, and stretch their hip away from their shoulders. Branch to calf slicers, back takes, or the twister while their hip stays pinned.",
         "key_concepts": [
           "Rolling crucifix creates control",
           "Eddie Bravo signature position",
@@ -15178,7 +15177,8 @@
           "Finish with twister",
           "Create unique attacks",
           "Train under qualified instruction"
-        ]
+        ],
+        "description": "The truck is a powerful control position that opens the door to back takes, leg attacks, and twister setups. With their hips controlled and their legs isolated, you can pivot between submissions and transitions with ease. It's the gateway to some of the best attacks in the system."
       }
     },
     "twister_side_control": {
@@ -15343,7 +15343,6 @@
           "Twister Side Control",
           "Side Control Twister Setup"
         ],
-        "description": "Twister side control points your hips toward their legs to trap the far side. Control the near shoulder, hook the far leg when available, and deny their frames from turning in. Use it as a hub to enter the truck, threaten darces, or switch to north-south pressure.",
         "key_concepts": [
           "Side control meets twister",
           "Creates spinal lock opportunities",
@@ -15379,7 +15378,8 @@
           "Combine position concepts",
           "Finish with spinal locks",
           "Train under expert guidance"
-        ]
+        ],
+        "description": "Twister side control twists their spine and traps their hips in a way that makes turning in or out extremely hard. Your weight drives across their body, locking their shoulders while freeing your hands to attack. From here, you can set up the truck, the twister, or a chain of back-take options. It's a control point that thrives on angles and pressure."
       }
     },
     "samurai_roll_positions": {
@@ -15544,7 +15544,6 @@
           "Samurai Roll",
           "Rolling Back Take"
         ],
-        "description": "Samurai Roll Positions is a bridge — a moment where smart pressure and angles turn one control into another. You don’t rush; you exploit reactions.",
         "key_concepts": [
           "Rolling creates back exposure",
           "Wrestling-based transition",
@@ -15580,7 +15579,8 @@
           "Develop timing",
           "Use wrestling techniques",
           "Complete transitions smoothly"
-        ]
+        ],
+        "description": "Samurai roll positions turn their turtle into your opportunity to roll through and land directly on the back. The roll uses momentum to bypass their defenses and land you in a dominant angle before they can adjust. It's fluid, fast, and ideal for catching opponents mid-transition."
       }
     },
     "rolling_back_takes": {
@@ -15753,7 +15753,6 @@
           "Rolling Transitions",
           "Back Take Rolls"
         ],
-        "description": "Rolling Back Takes is a bridge — a moment where smart pressure and angles turn one control into another. You don’t rush; you exploit reactions.",
         "key_concepts": [
           "Multiple rolling techniques",
           "Dynamic back attacks",
@@ -15789,7 +15788,8 @@
           "Use modern transitions",
           "Compete at high level",
           "Take back efficiently"
-        ]
+        ],
+        "description": "Rolling back takes use motion to open their hips and slide your hooks in as you move. Whether they're turtling, standing, or scrambling, the roll allows you to chase the angle and secure the back in one smooth motion. It's a dynamic way to turn chaos into clean control."
       }
     },
     "hybrid_lapel_inversion": {
@@ -15969,7 +15969,6 @@
           "Inverted Lapel Guard",
           "Lapel Inversion System"
         ],
-        "description": "Hybrid Lapel Inversion is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hybrid of lapel and inversion",
           "Complex control system",
@@ -16005,7 +16004,8 @@
           "Develop modern guard game",
           "Compete at highest level",
           "Create complex attacks"
-        ]
+        ],
+        "description": "This guard uses inverted angles combined with lapel anchoring to lock your opponent's posture in place. As you rotate underneath, the lapel acts like a tether, guiding your transitions into sweeps or leg entanglements. It's a creative blend of gi-control and inversion."
       }
     },
     "reverse_worm_chains": {
@@ -16183,7 +16183,6 @@
           "Worm Chain System",
           "Reverse Lapel Chains"
         ],
-        "description": "Reverse Worm Chains is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Reverse worm mechanics",
           "Chaining multiple positions",
@@ -16219,7 +16218,8 @@
           "Create unpredictable attacks",
           "Develop highest level lapel game",
           "Study under Keenan system"
-        ]
+        ],
+        "description": "Reverse worm chains use backward lapel threading to trap their leg while you shift into attacking angles. It opens sweeping patterns that feel circular and hard to defend. This variation adds depth and unpredictability to the worm guard ecosystem."
       }
     },
     "false_reap": {
@@ -16384,7 +16384,6 @@
           "False Reap",
           "Legal Reap Position"
         ],
-        "description": "False Reap controls the knee line and hips to force sweeps and submissions. It’s about angles and attachment: when the knee line is yours, the rest follows.",
         "key_concepts": [
           "Legal position under IBJJF",
           "Resembles reap without illegality",
@@ -16420,7 +16419,8 @@
           "Create control within rules",
           "Compete safely under IBJJF",
           "Develop rule-compliant game"
-        ]
+        ],
+        "description": "False reap gives you the inside-threading angle of a leg reap without breaking the rules in gi or IBJJF settings. It aligns your hips for clean entries into leg entanglements while blocking their ability to posture or step away. It's a smart, efficient way to navigate modern leg attacks."
       }
     },
     "cross_collar_double_sleeve_hybrid": {
@@ -16596,7 +16596,6 @@
           "Collar Sleeve Hybrid",
           "CCDS Guard"
         ],
-        "description": "Cross Collar Double Sleeve Hybrid is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hybrid grip configuration",
           "Cross collar creates breaks",
@@ -16632,7 +16631,8 @@
           "Create versatile game",
           "Compete at highest level",
           "Use multiple attack paths"
-        ]
+        ],
+        "description": "This hybrid uses dominant upper-body grips—collar and double sleeves—to pin your opponent's posture while you build angles with your hips. With both arms controlled, sweeps, triangles, and omoplatas become easier to launch. It's a high-control, high-attack guard."
       }
     },
     "front_headlock_web": {
@@ -16809,7 +16809,6 @@
           "Web System",
           "Front Headlock System"
         ],
-        "description": "The front headlock is a wedge on the neck and a block on the far hip. Sprawl your weight through their jawline, keep your elbows tight, and circle to kill their guard re-entries. Chain guillotine, anaconda, and d’arce threats with clean go-behinds when they posture.",
         "key_concepts": [
           "Multiple control points like web",
           "Systematic front headlock approach",
@@ -16845,7 +16844,8 @@
           "Create multiple attack options",
           "Take back or submit",
           "Use systematic approach"
-        ]
+        ],
+        "description": "The front headlock web is a network of angles and grips that control your opponent's neck and posture. You can snap them down, spin to the back, or attack chokes and guillotines. It's a dominant position that punishes bad shots and slow reactions."
       }
     },
     "scramble_positions": {
@@ -17024,7 +17024,6 @@
           "Scrambling",
           "Chaotic Transitions"
         ],
-        "description": "Scramble Positions is a bridge — a moment where smart pressure and angles turn one control into another. You don’t rush; you exploit reactions.",
         "key_concepts": [
           "Chaos creates opportunities",
           "Reading opponent is key",
@@ -17060,7 +17059,8 @@
           "Read opponent movement",
           "Stay calm in chaos",
           "Win scrambles consistently"
-        ]
+        ],
+        "description": "Scramble positions are the chaotic moments where neither person has control yet — but both are fighting hard to claim it. These are the transitions where speed, instinct, and timing matter most. Winning the scramble often means winning the next dominant position."
       }
     },
     "half_inverted_retention": {
@@ -17236,7 +17236,6 @@
           "Partial Inversion Defense",
           "Inverted Guard Retention"
         ],
-        "description": "Half Inverted Retention is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Partial inversion creates space",
           "Defensive recovery system",
@@ -17272,7 +17271,8 @@
           "Develop defensive systems",
           "Use modern retention",
           "Maintain guard consistently"
-        ]
+        ],
+        "description": "Half-inverted retention keeps you partially inverted to stop your opponent's pass before it stabilizes. With your legs threaded and your hips rotating, you create barriers that force them to reset. It's a defensive retention system that transitions smoothly back into guard attacks."
       }
     },
     "dynamic_leg_entanglement_transitions": {
@@ -17449,7 +17449,6 @@
           "Leg Lock Transitions",
           "Flowing Leg Game"
         ],
-        "description": "Dynamic Leg Entanglement Transitions is a bridge — a moment where smart pressure and angles turn one control into another. You don’t rush; you exploit reactions.",
         "key_concepts": [
           "Flow between positions",
           "Systematic approach essential",
@@ -17485,7 +17484,8 @@
           "Follow opponent's movements",
           "Finish from any entanglement",
           "Train under expert instruction"
-        ]
+        ],
+        "description": "Dynamic leg entanglement transitions are fluid entries into ashi garami, 50/50, cross ashi, and other leg lock systems. You move with their reactions, catching legs while staying safe. These transitions turn openings into immediate submission threats."
       }
     },
     "full_mount_bottom": {
@@ -17624,7 +17624,6 @@
       "learning": {
         "display_name": "Full Mount (Bottom)",
         "alternate_names": [],
-        "description": "Full Mount (Bottom) is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Protect neck and elbows",
           "Create frames before bridging",
@@ -17648,7 +17647,8 @@
         "goals": [
           "Recover half guard or closed guard",
           "Stand up in scramble"
-        ]
+        ],
+        "description": "Full mount bottom is pressure with nowhere to hide. Their weight sinks into your torso, your elbows are constantly being pried open, and every bridge you make risks giving them a better angle. Surviving here is all about patience and structure — framing, keeping your elbows tight, and using your hips to chip away at their balance. With the right timing, you can turn tiny escapes into full reversals or guard recoveries. It's one of the toughest positions to be in, but also one of the most technical to escape."
       }
     },
     "full_mount_bottom_grapevined": {
@@ -17778,7 +17778,6 @@
       "learning": {
         "display_name": "Mount Bottom - Grapevined",
         "alternate_names": [],
-        "description": "Mount Bottom - Grapevined is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Free a leg before bridging",
           "Lower back off the mat first",
@@ -17801,7 +17800,8 @@
         "goals": [
           "Clear grapevines",
           "Recover half guard or closed guard"
-        ]
+        ],
+        "description": "A grapevined mount bottom takes away your foundation before you can even start escaping. Their legs stretch yours out, flattening your hips and locking you to the mat. You feel stuck — that's the point. But the escape isn't about brute force; it's about breaking the leg control first, rebuilding your base, and then working your mount escapes. Once you free a leg and re-engage your hips, the whole position opens back up. It's a battle to get your mobility back one piece at a time."
       }
     },
     "rear_mount_bottom": {
@@ -17967,7 +17967,6 @@
       "learning": {
         "display_name": "Back Control (Bottom)",
         "alternate_names": [],
-        "description": "Bottom of rear mount is all about survival and smart exits. Protect the choking hand, turn to the safe side, and put your back to the mat to shed hooks. The goal isn’t to win the position — it’s to break chest‑to‑back, face them, and get back to guards you can fight from.",
         "key_concepts": [
           "Two-on-one on choking hand before anything else",
           "Head position down and tucked inside their shoulder",
@@ -18130,7 +18129,6 @@
       "learning": {
         "display_name": "Knee-On-Belly (Bottom)",
         "alternate_names": [],
-        "description": "Knee-On-Belly (Bottom) is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Frame on shin and hip",
           "Bridge and hip escape to re-guard",
@@ -18153,7 +18151,8 @@
         "goals": [
           "Recover open or closed guard",
           "Enter single leg"
-        ]
+        ],
+        "description": "Knee-on-belly bottom is the definition of pressure-without-time. You're pinned under weight, your movement is restricted, and the slightest panic gives the top player an easy route to mount or a submission. But the position isn't hopeless — it's about survival through structure. If your frames are sharp and your hips stay alive, you can turn their pressure into space and their balance into mistakes. You're under fire, but you're not out."
       }
     },
     "kesa_gatame_bottom": {
@@ -18294,7 +18293,6 @@
       "learning": {
         "display_name": "Kesa Gatame (Bottom)",
         "alternate_names": [],
-        "description": "Kesa Gatame (Bottom) is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Bridge into them to create space",
           "Leg hook counter to roll",
@@ -18316,7 +18314,8 @@
         ],
         "goals": [
           "Recover guard or come on top via roll"
-        ]
+        ],
+        "description": "Kesa gatame bottom feels like being locked under a lever. Their grip around your head and armpit controls your spine, and their hip angle shuts down most standard escapes. But it's far from a dead end. The key is breaking the frame of their hold — freeing your head, shifting their weight, and using your legs as the engine of your escape. It's a battle of angles, not muscle, where one misalignment from them gives you the opening you need."
       }
     },
     "high_mount_bottom": {
@@ -18463,7 +18462,6 @@
       "learning": {
         "display_name": "High Mount (Bottom)",
         "alternate_names": [],
-        "description": "High Mount (Bottom) is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Rebuild elbow-knee connection",
           "Frame on hips to slide body down",
@@ -18486,7 +18484,8 @@
         "goals": [
           "Return to standard mount lines",
           "Regain half or closed guard"
-        ]
+        ],
+        "description": "High mount bottom feels like being smothered under a wave. Their weight climbs your chest, your arms are under constant attack, and even breathing becomes part of the fight. The goal is simple: get their hips back down. By framing, hip escaping, and slipping your elbows back inside, you can force them out of the high position and give yourself real escape options again. It's a test of composure and micro-movements under maximum pressure."
       }
     },
     "s_mount_bottom": {
@@ -18633,7 +18632,6 @@
       "learning": {
         "display_name": "S-Mount (Bottom)",
         "alternate_names": [],
-        "description": "S-Mount (Bottom) is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hide the isolated arm",
           "Rotate hips to keep shoulder line flat",
@@ -18656,7 +18654,8 @@
         "goals": [
           "Recover guard before submission fully locked",
           "Transition to turtle with immediate hand fighting"
-        ]
+        ],
+        "description": "S-mount bottom is a submission hunter's playground — and your nightmare. Their weight sits diagonally across your chest, one arm is isolated, and the other is barely defending. Armbars, triangles, and transitions appear instantly if you make the wrong move. The escape demands precision: controlling their knee line, keeping your arm safe, and hip escaping just enough to break their angle. Done right, you can slip free and turn danger into space."
       }
     },
     "mounted_crucifix_bottom": {
@@ -18796,7 +18795,6 @@
       "learning": {
         "display_name": "Mounted Crucifix (Bottom)",
         "alternate_names": [],
-        "description": "Mounted Crucifix (Bottom) is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Protect trapped arm and neck simultaneously",
           "Rotate hips to free shoulder line",
@@ -18819,7 +18817,8 @@
         "goals": [
           "Survive initial choke threat",
           "Reclaim elbow line to resume guard recovery"
-        ]
+        ],
+        "description": "Mounted crucifix bottom is full isolation mode. Both of your arms are trapped — one pinned by their legs, the other controlled by their upper body — leaving you exposed to relentless attacks. You're dealing with pressure, immobility, and a constant threat of chokes or armlocks. Escaping starts with freeing anything you can: a trapped elbow, a shoulder, a hip line. Once you break a single connection, the entire control structure weakens, giving you a path back into the fight. It's a position where small victories matter."
       }
     },
     "high_mount_top": {
@@ -18959,7 +18958,6 @@
       "learning": {
         "display_name": "High Mount Control",
         "alternate_names": [],
-        "description": "High mount climbs above the elbows and turns their arms into levers. Walk your knees to the armpits, flare their elbows skyward, and keep your toes active for balance. From here the back, mounted triangles, and arm isolations are one beat away.",
         "key_concepts": [
           "Control head and elbows",
           "Climb gradually to avoid being bridged",
@@ -18982,7 +18980,8 @@
         "goals": [
           "Set up mounted triangle, armbars, or back takes",
           "Dominate hand fighting battles"
-        ]
+        ],
+        "description": "High mount shifts your weight up toward their chest, smothering their breathing and stripping away their defensive frames. Their arms get stretched and exposed, and every escape becomes slower and more desperate. From here, armbars, collar chokes, and arm isolations are right at your fingertips. It's a suffocating version of mount that demands a reaction from them — and rewards you."
       }
     },
     "s_mount_top": {
@@ -19125,7 +19124,6 @@
       "learning": {
         "display_name": "S-Mount Control",
         "alternate_names": [],
-        "description": "S‑mount wraps their shoulder and pins the near arm in your lap. Sit heavy on their sternum, clamp your knees, and turn their thumb to the ceiling when transitioning to the armbar. If they look away, the back is waiting; if they look in, the choke is.",
         "key_concepts": [
           "Trap arm with shin and thigh",
           "Stay heavy toward opponent’s hips",
@@ -19148,7 +19146,8 @@
         "goals": [
           "Finish armbar/triangle",
           "Transition to back or mounted crucifix"
-        ]
+        ],
+        "description": "S-mount is built for breaking down defenses and attacking submissions with precision. Your weight angles onto their chest while one knee tucks tight near their head, trapping an arm and folding their posture. This position gives you crushing pressure and instant access to armbars, transitions, and sweeping finishes. It's focused, controlled, and dangerous."
       }
     },
     "floating_mount_transitions": {
@@ -19291,7 +19290,6 @@
       "learning": {
         "display_name": "Floating Mount Transitions",
         "alternate_names": [],
-        "description": "Floating mount trades pinning for surf-style balance. Keep your hips light, hands posted intelligently, and follow their bridges to step into knee‑on‑belly, technical mount, or the back. You’re always a half-step ahead and never stuck in the squeeze.",
         "key_concepts": [
           "Constant weight shifts",
           "Knee windshield-wipers to follow frames",
@@ -19313,7 +19311,8 @@
         ],
         "goals": [
           "Seamless transitions to back, leg entanglements, or arm isolates"
-        ]
+        ],
+        "description": "Floating mount is mount without settling — staying light, mobile, and reactive as your opponent moves. Instead of pinning them in one spot, you hover above their hips and switch angles fluidly. This keeps them guessing and lets you follow their escapes into even better positions like high mount, S-mount, or back takes. It's dynamic control built on timing and balance."
       }
     },
     "reverse_knee_on_belly_top": {
@@ -19459,7 +19458,6 @@
       "learning": {
         "display_name": "Reverse Knee-On-Belly",
         "alternate_names": [],
-        "description": "Reverse knee-on-belly points your hips toward their legs to pin the near shoulder and hip from the blind side. Use the angle to open kimuras, back steps to mount, and fast transitions when they turn in. Stay mobile—pressure lives through your shin, not your kneecap.",
         "key_concepts": [
           "Switch base without losing hip pressure",
           "Control near arm before spinning",
@@ -19482,7 +19480,8 @@
         "goals": [
           "Open back exposure lanes",
           "Transition to spinning armbar or mount"
-        ]
+        ],
+        "description": "Reverse knee on belly gives you a backward-facing angle that shuts down hip escapes and exposes their far arm. With your knee pointing toward their legs, you create a wedge that's hard for them to frame against. This position opens up armlocks, spinning transitions, and quick jumps to mount or the back."
       }
     },
     "knee_on_belly_lapel_feed_top": {
@@ -19626,7 +19625,6 @@
       "learning": {
         "display_name": "Lapel Feed Knee-On-Belly",
         "alternate_names": [],
-        "description": "Feed the near lapel under their armpit to anchor your knee ride. The lapel turns light pressure into a clamp so you can attack cross-collar chokes, arm locks, or step to mount without wobble. Keep the posting foot active to follow their shrimps.",
         "key_concepts": [
           "Feed lapel before lifting knee",
           "Use far-side underhook to anchor",
@@ -19649,7 +19647,8 @@
         "goals": [
           "Hit bow-and-arrow/cross choke",
           "Force reactions that expose mount or back"
-        ]
+        ],
+        "description": "The lapel feed turns knee on belly into a tethered system of pressure and control. Using the gi, you trap their upper body and keep them pinned while your knee dictates the pace. Their ability to turn or frame disappears, giving you clean pathways to chokes, arm isolations, and seamless mount entries."
       }
     },
     "knee_on_belly_switchbase_top": {
@@ -19795,7 +19794,6 @@
       "learning": {
         "display_name": "Switch-Base Knee Ride",
         "alternate_names": [],
-        "description": "Switch-base knee ride lets you face either direction without losing control. Windshield-wiper your shin, keep your hips floating, and follow their frames to the open side. The switch opens quick back takes, mount slides, and near-side armlocks.",
         "key_concepts": [
           "Staple hip before switching base",
           "Kill near-side underhook",
@@ -19818,7 +19816,8 @@
         "goals": [
           "Enter kimura/armbar chains",
           "Transition to technical mount or back"
-        ]
+        ],
+        "description": "Switchbase is all about stability and angle changes. Rotating your hips lets you shut down their frames and stay heavy even when they try to explode out. This variation makes your knee on belly feel like a pin, giving you the freedom to attack without losing balance or position."
       }
     },
     "knee_on_belly_mobility_top": {
@@ -19964,7 +19963,6 @@
       "learning": {
         "display_name": "Floating Knee-On-Belly Chains",
         "alternate_names": [],
-        "description": "Floating knee-on-belly is about rhythm—touch, threaten, and move before they set frames. Fake one direction to open the other, switch base mid-step, and drop into mount or spin to the back. The pressure is in the timing, not the squeeze.",
         "key_concepts": [
           "Never park knee in one spot",
           "Pulse weight through hands to stay light",
@@ -19986,7 +19984,8 @@
         ],
         "goals": [
           "Cycle into mount/back/leg entries without reset"
-        ]
+        ],
+        "description": "Mobility knee on belly keeps you light, sharp, and constantly adjusting. Instead of holding one spot, you glide from side to side, forcing your opponent to chase your weight. This constant movement breaks their rhythm and sets up rapid entries into mount, back takes, or submissions. It's pressure with speed."
       }
     },
     "knee_on_belly_bottom_frames": {
@@ -20132,7 +20131,6 @@
       "learning": {
         "display_name": "Knee-On-Belly Frame Battle",
         "alternate_names": [],
-        "description": "Knee-On-Belly Frame Battle is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Inside elbow protects ribs",
           "Frame on shin, not thigh",
@@ -20155,7 +20153,8 @@
         "goals": [
           "Return to guard",
           "Prevent mount/back progression"
-        ]
+        ],
+        "description": "Frames are your lifeline here. A well-placed forearm or elbow instantly changes the top player's angle, takes weight off your diaphragm, and gives your hips room to breathe. Good frames don't just block — they redirect pressure, create wedges, and shape the escape path you'll take next. Think of them as your temporary armor while you rebuild your position."
       }
     },
     "knee_on_belly_bottom_underhook": {
@@ -20299,7 +20298,6 @@
       "learning": {
         "display_name": "Underhook Battle vs Knee Ride",
         "alternate_names": [],
-        "description": "Underhook Battle vs Knee Ride is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Elbow-knee connection protects ribs",
           "Underhook leads to coming up",
@@ -20322,7 +20320,8 @@
         "goals": [
           "Arrive in single-leg or dogfight positions",
           "Return to half/open guard"
-        ]
+        ],
+        "description": "An underhook from knee-on-belly bottom is a momentum swing waiting to happen. Once your arm threads inside, you can off-balance the top player, come up to your knees, or start turning the corner for a single-leg–style reversal. It's a proactive escape that turns pressure into leverage. If you get the underhook cleanly, you're no longer defending — you're advancing."
       }
     },
     "knee_on_belly_bottom_shinshield": {
@@ -20463,7 +20462,6 @@
       "learning": {
         "display_name": "Shin Shield Knee Ride Defense",
         "alternate_names": [],
-        "description": "Shin Shield Knee Ride Defense is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Shin across belt line",
           "Opposite hand controls far sleeve or pant",
@@ -20486,7 +20484,8 @@
         "goals": [
           "Return to open guard with strong grips",
           "Enter leg entanglements when opponent steps out"
-        ]
+        ],
+        "description": "The shin shield is your \"space-maker.\" By sliding your shin across their hip line, you create a physical barrier that stops the top player from fully settling their weight. This shield sets up technical get-ups, guard recoveries, and even sweeps if they lean too far. It's a simple mechanic that gives you breathing room and resets the pace of the exchange in your favor."
       }
     },
     "knee_on_belly_bottom_inversion": {
@@ -20630,7 +20629,6 @@
       "learning": {
         "display_name": "Inversion Exits vs Knee Ride",
         "alternate_names": [],
-        "description": "Inversion Exits vs Knee Ride is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hide your head before inverting",
           "Control opponent’s ankle/hip line",
@@ -20653,7 +20651,8 @@
         "goals": [
           "Enter false reap / saddle chains",
           "Create immediate sweep threats from inversion"
-        ]
+        ],
+        "description": "Inversion from knee-on-belly bottom is the escape path they don't expect. By rolling under the pressure instead of away from it, you can slip into leg entanglements, invert back to guard, or even spin behind for back exposure. It's timing-based and requires composure under heat, but when executed well, it's a complete positional reversal. You go from stuck to dynamic in a single turn."
       }
     },
     "seatbelt_straightjacket_top": {
@@ -20820,7 +20819,6 @@
       "learning": {
         "display_name": "Straightjacket Seatbelt Control",
         "alternate_names": [],
-        "description": "Seatbelt + straightjacket is a back take system built on hand dominance. You trap the defending hand, hide the choking hand, and progress your grips without losing chest‑to‑back. It’s simple, reliable, and designed to turn control into high‑percentage finishes.",
         "key_concepts": [
           "Choking arm over; support arm under (seatbelt)",
           "Hand priority: control their top hand first",
@@ -20846,7 +20844,8 @@
         "goals": [
           "Dominate hand fighting battles",
           "Create predictable reactions for RNC, bow-and-arrow, or armbar entries"
-        ]
+        ],
+        "description": "The seatbelt straightjacket ties up their arms before they even think about defending their neck. With one arm trapped and the other controlled, their defense collapses fast. You're attacking the choke while they're still trying to free a limb. This position is all about efficiency — limiting their options while expanding yours."
       }
     },
     "backpack_latstrap_top": {
@@ -21016,7 +21015,6 @@
       "learning": {
         "display_name": "Backpack Lat Strap Ride",
         "alternate_names": [],
-        "description": "The backpack (lat/strap) secures your torso to theirs so your control survives the scramble. By anchoring the chest and managing the hook line, you win the hand fight first, then climb to the neck. It’s a sticky pathway from connection to clean strangles.",
         "key_concepts": [
           "Lat/strap grip anchors your torso to theirs",
           "Knee pinch or hooks manage hip line",
@@ -21041,7 +21039,8 @@
         "goals": [
           "Seamless transition between turtle, mount, and back",
           "Hunt bow-and-arrow, armbars, or leg entries mid scramble"
-        ]
+        ],
+        "description": "The backpack lat strap gives you back control without needing traditional hooks. Your chest stays glued to their back while your strap grip blocks their rotation and keeps you attached through scrambles. It's perfect for staying sticky, following their movement, and setting traps as they try to stand or roll. Wherever they go, you go — and you stay ahead."
       }
     },
     "rear_triangle_trap_top": {
@@ -21211,7 +21210,6 @@
       "learning": {
         "display_name": "Rear Triangle Trap",
         "alternate_names": [],
-        "description": "The rear triangle trap reduces their defense to one hand and bad hope. By trapping an arm with your legs while staying chest‑to‑back, you increase leverage on the neck and remove most counters. It turns back control into a finishing machine.",
         "key_concepts": [
           "Trap an arm with your legs to limit defenses",
           "Angle your body to align the choke",
@@ -21236,7 +21234,8 @@
         "goals": [
           "Finish rear triangle submissions",
           "Transition to armbar/omoplata flows without losing back"
-        ]
+        ],
+        "description": "The rear triangle trap locks their upper body inside a powerful wedge created by your legs. Their posture is broken, their arm is isolated, and their neck is exposed. You can finish the choke, attack the arm, or transition to even more dominant angles. It's a position that overwhelms opponents by combining control, pressure, and multiple submission threats at once."
       }
     },
     "body_triangle_escape_bottom": {
@@ -21410,7 +21409,6 @@
       "learning": {
         "display_name": "Body Triangle Escape Mechanics",
         "alternate_names": [],
-        "description": "Escaping the body triangle means relieving pressure, protecting your neck, and breaking the lock without panic. Turn toward the lock, create slack, and pry at the right joint. Done correctly, you clear a hook, turn to face them, and re‑enter a guard you can fight from.",
         "key_concepts": [
           "Turn to the lock side to relieve pressure",
           "Control choking hand before addressing the lock",
@@ -21603,7 +21601,6 @@
       "learning": {
         "display_name": "Straightjacket Defense System",
         "alternate_names": [],
-        "description": "Straightjacket defense starts with the right priority: the choking hand. Free the trapped wrist, rotate to the safe side, and slide your shoulders to the mat. The aim isn’t to wrestle from a bad spot — it’s to break their attachment and rebuild your guard.",
         "key_concepts": [
           "Identify the choking hand immediately",
           "Free the trapped wrist with hand pummeling",
@@ -21796,7 +21793,6 @@
       "learning": {
         "display_name": "Granby & Hip Heist Chain",
         "alternate_names": [],
-        "description": "The granby chain is a shoulder‑roll escape that clears hooks and turns you to face the fight. Protect the neck first, then roll toward the safe side to break chest‑to‑back. If you keep moving, you’ll recover guard before they can re‑attach.",
         "key_concepts": [
           "Neck safety first, movement second",
           "Roll toward the safe side to clear hooks",
@@ -21992,7 +21988,6 @@
       "learning": {
         "display_name": "Inversion Backdoor Escape",
         "alternate_names": [],
-        "description": "Inversion from back control is a last‑resort space maker. When standard escapes are blocked and your neck is safe, invert to free a hook and turn to face their hips. It’s not about flair — it’s about making enough room to rebuild guard and get back to work.",
         "key_concepts": [
           "Use inversion selectively when standard escapes fail",
           "Hide neck and elbows tight before inverting",
@@ -22169,7 +22164,6 @@
       "learning": {
         "display_name": "Underhook Pummel Reguard",
         "alternate_names": [],
-        "description": "Underhook Pummel Reguard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Frame first, pummel second",
           "Elbow-knee connection buys the space to move",
@@ -22195,7 +22189,8 @@
           "Win the far-side underhook battle",
           "Insert knee shield to recover guard",
           "Stand up or sweep once underhook established"
-        ]
+        ],
+        "description": "The underhook chain is your path back into the fight. Securing that inside arm changes everything — suddenly you're rising to your knees, threatening reversals, and forcing the top player to retreat. Each link in the chain builds off the last: recover your elbow, thread the underhook, get your hips under you, and drive forward. It's an escape that turns defense into offense in a heartbeat."
       }
     },
     "side_control_bottom_turtle_chain": {
@@ -22344,7 +22339,6 @@
       "learning": {
         "display_name": "Turtle Granby Recovery",
         "alternate_names": [],
-        "description": "Turtle Granby Recovery is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Protect neck while exposing hips to move",
           "Use turtle as a waypoint, not the destination",
@@ -22370,7 +22364,8 @@
           "Convert side control pressure into movement",
           "Arrive in turtle with frames already established",
           "Exit turtle into guard, single legs, or leg locks"
-        ]
+        ],
+        "description": "The turtle chain is your emergency exit when side control pressure gets too heavy. Instead of fighting their weight head-on, you redirect it by turning in, building structure, and slipping to your knees. From turtle, you regain mobility, threaten sit-ups, or roll into guard recoveries. It's a sequence built on timing and commitment — once you commit to the turn, you create a whole new set of problems for them to solve."
       }
     },
     "side_control_bottom_inversion_chain": {
@@ -22529,7 +22524,6 @@
       "learning": {
         "display_name": "Inverted Leg Pummel Reguard",
         "alternate_names": [],
-        "description": "Inverted Leg Pummel Reguard is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Clear crossface and far hip before inverting",
           "Leg pummels replace frames once shoulders spin",
@@ -22555,7 +22549,8 @@
           "Return to aggressive guard positions",
           "Threaten leg locks immediately after inversion",
           "Use inversion to create back exposure chances"
-        ]
+        ],
+        "description": "The inversion chain flips the script entirely. By rotating under their control instead of away from it, you escape into leg entries, inversions back to guard, or full backdoor-style recoveries. It's fluid, technical, and catches opponents off guard because it uses their pressure as the fuel for your movement. When done well, it turns one of the worst positions into a launch point for counterattacks."
       }
     },
     "reverse_kesa_side_control": {
@@ -22706,7 +22701,6 @@
       "learning": {
         "display_name": "Reverse Kesa Side Control",
         "alternate_names": [],
-        "description": "Reverse kesa faces their legs and traps the near arm across your hip. Keep your elbow wedged by their far hip, control the near shoulder, and walk your hips to smother their bridge. Back steps, kimuras, and north‑south are all one switch away.",
         "key_concepts": [
           "Switch hips without letting chest lose contact",
           "Kill near arm before letting opponent frame",
@@ -22732,7 +22726,8 @@
           "Trap near arm for gift-wrap and armlock chains",
           "Open paths to S-mount or back exposure",
           "Force opponent to turn giving north-south d’arce looks"
-        ]
+        ],
+        "description": "Reverse kesa puts your body facing their legs instead of their head, giving you tight hip control and unusual submission angles. Their frames become awkward, and many normal escapes stop working. This position opens pathways to armlocks, kimura variations, and smooth transitions to north-south or mount. It's a deceptive form of pressure that feels inescapable."
       }
     },
     "lapel_staple_side_control": {
@@ -22889,7 +22884,6 @@
       "learning": {
         "display_name": "Lapel Staple Side Control",
         "alternate_names": [],
-        "description": "Use their lapel to staple the near arm and freeze their shoulder line. With the scapula trapped, your chest pressure becomes effortless—walk to mount, hunt paper-cutter chokes, or switch to knee‑on‑belly while their frames are tied down.",
         "key_concepts": [
           "Feed lapel under opponent’s far arm before releasing crossface",
           "Stapled arm kills frames and exposes neck",
@@ -22915,7 +22909,8 @@
           "Deny opponent’s frames entirely",
           "Create layered lapel submissions (paper-cutter, bow-and-arrow, Ezekiel)",
           "Transition to back or mount when they turn"
-        ]
+        ],
+        "description": "The lapel staple locks their shoulder and upper body in place using their own gi. Once the fabric is tied around them, your control becomes anchored and hard to shake off. Their frames weaken, their posture collapses, and you gain steady access to chokes, arm isolations, and mount entries. It's a suffocating, technical version of side control built for domination."
       }
     },
     "turtle_bottom_sitback_guard_recovery": {
@@ -23069,7 +23064,6 @@
       "learning": {
         "display_name": "Sit-Back Guard Recovery",
         "alternate_names": [],
-        "description": "Sit-Back Guard Recovery is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Hand fight before sitting back",
           "Lead elbow connects to hip when you drop",
@@ -23095,7 +23089,8 @@
           "Return to closed, open, or shin-to-shin guard",
           "Force opponent to abandon seatbelt grips",
           "Set immediate collar-drag or ankle-pick counters"
-        ]
+        ],
+        "description": "The sit-back guard recovery is your escape hatch. When done right, it feels like you vanish from danger and reappear in guard. You use your hips like a slingshot, dropping back into space the top player can't keep up with. It's one of the cleanest ways to turn a bad moment into a strong offensive platform — especially when your opponent overcommits."
       }
     },
     "turtle_bottom_granby_wall_chain": {
@@ -23253,7 +23248,6 @@
       "learning": {
         "display_name": "Granby Wall Chain",
         "alternate_names": [],
-        "description": "Granby Wall Chain is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Clear posted knee before rolling",
           "Use shoulder line as a hinge, not neck",
@@ -23279,7 +23273,8 @@
           "Exit front headlock safely",
           "Score sweep or reversal from ensuing scramble",
           "Transition to attacking positions immediately"
-        ]
+        ],
+        "description": "Granby-wall chains are the \"rolling engine\" of the turtle. You blend Granby rolls with angled barriers — arms, frames, or the opponent's body — to rebound into space they can't follow. It's momentum-based jiu-jitsu: smooth, circular, and hard to pin down. These chains thrive on rhythm, letting you cycle from turtle to guard to backtakes before the top player understands what happened."
       }
     },
     "turtle_bottom_leg_entanglement_counters": {
@@ -23429,7 +23424,6 @@
       "learning": {
         "display_name": "Leg-Entry Counter System",
         "alternate_names": [],
-        "description": "Leg-Entry Counter System is a position where control, posture, and angles decide the match. Understand what it offers, deny their best counters, and use it to advance or finish.",
         "key_concepts": [
           "Capture opponent’s posting leg before they hook",
           "Invert under the near hip with frames ready",
@@ -23455,7 +23449,8 @@
           "Deny hooks entirely by turning defense into offense",
           "Finish false-reap, backside 50/50, or saddle attacks",
           "Force scrambles that lead to top position"
-        ]
+        ],
+        "description": "These counters flip the script entirely. When the top player reaches too far or steps too close, their legs become exposed — and turtle suddenly becomes a launch point for ashi garami entries, backside attacks, and full leg entanglement control. It's the moment where defense becomes offense in a single beat. If they overextend, you're already on their heel."
       }
     }
   },
