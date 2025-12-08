@@ -7,7 +7,6 @@
 
 import { BJJDatabase, Position, Technique, BeltLevel, FoundationMappingIndex, FoundationCategory } from '../data/types/database.types';
 import databaseJson from '../data/bjj-database.json';
-import foundationMappingJson from '../data/foundation-mapping.json';
 
 class DatabaseService {
   private database: BJJDatabase;
@@ -16,7 +15,8 @@ class DatabaseService {
   constructor() {
     this.database = databaseJson as BJJDatabase;
     try {
-      this.foundationMapping = foundationMappingJson as FoundationMappingIndex;
+      // Foundation mapping is now embedded in the database file
+      this.foundationMapping = (this.database as any).foundation_mapping || null;
     } catch (e) {
       this.foundationMapping = null;
     }
