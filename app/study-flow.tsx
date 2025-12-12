@@ -86,7 +86,7 @@ export default function StudyFlowScreen() {
   const router = useRouter();
   const scrollRef = useRef<ScrollView>(null);
   const [flowSteps, setFlowSteps] = useState<Step[]>([INITIAL_STEP]);
-  const [pathExpanded, setPathExpanded] = useState(true);
+  const [pathExpanded, setPathExpanded] = useState(false);
   const [pressedNext, setPressedNext] = useState<string | null>(null);
 
   const currentStep = flowSteps[flowSteps.length - 1];
@@ -119,9 +119,16 @@ export default function StudyFlowScreen() {
   const handleReset = () => {
     setPressedNext(null);
     setFlowSteps([INITIAL_STEP]);
-    setPathExpanded(true);
+    setPathExpanded(false);
     scrollRef.current?.scrollTo({ y: 0, animated: true });
   };
+
+  // Auto-expand path when flow ends
+  useEffect(() => {
+    if (isFlowEnded) {
+      setPathExpanded(true);
+    }
+  }, [isFlowEnded]);
 
   // Calculate summary stats
   const qualityStats = {
@@ -152,7 +159,9 @@ export default function StudyFlowScreen() {
         {flowSteps.length > 1 && (
           <PathSection>
             <PathHeader onPress={() => setPathExpanded(!pathExpanded)}>
-              <PathTitle>Path so far</PathTitle>
+              <PathTitle>
+                {pathExpanded ? 'Path so far' : `Path so far: ${flowSteps.length - 1} steps – tap to expand`}
+              </PathTitle>
               <CollapseIcon>
                 <Ionicons
                   name={pathExpanded ? 'chevron-up' : 'chevron-down'}
@@ -165,16 +174,24 @@ export default function StudyFlowScreen() {
             {pathExpanded && (
               <PathContent>
                 {flowSteps.slice(0, -1).map((step, index) => (
-                  <PathStep key={`path-${index}`}>
-                    <PathLabel>{step.position}</PathLabel>
-                    <PathArrow>→</PathArrow>
-                    <PathMove>{step.moveLabel}</PathMove>
-                    <PathArrow>→</PathArrow>
-                    <PathEval>
-                      {step.quality && getQualityEmoji(step.quality)}
-                    </PathEval>
-                  </PathStep>
+                  <PathStepContainer key={`path-${index}`}>
+                    <PathStepText>
+                      <PathStepNumber>Step {index + 1}:</PathStepNumber> From <PathPositionName>{step.position}</PathPositionName>, chose{' '}
+                      <PathMoveName>{step.moveLabel}</PathMoveName>
+                    </PathStepText>
+                    {step.quality && (
+                      <PathEvaluationBadge quality={step.quality}>
+                        <PathEvaluationText>
+                          {getQualityEmoji(step.quality)} {getQualityMessage(step.quality)}
+                        </PathEvaluationText>
+                      </PathEvaluationBadge>
+                    )}
+                    <PathArrowDown>↓</PathArrowDown>
+                  </PathStepContainer>
                 ))}
+                <PathFinalPosition>
+                  <PathStepNumber>Now:</PathStepNumber> {flowSteps[flowSteps.length - 1].position}
+                </PathFinalPosition>
               </PathContent>
             )}
           </PathSection>
@@ -182,7 +199,7 @@ export default function StudyFlowScreen() {
 
         {/* YOU ARE HERE - Current Position Card */}
         <YouAreHereSection>
-          <YouAreHereLabel>You are here</YouAreHereLabel>
+          <YouAreHereLabel>Current position</YouAreHereLabel>
           <CurrentCard>
             <CurrentPositionText>{currentStep.position}</CurrentPositionText>
             {currentStep.quality && (
@@ -206,12 +223,6 @@ export default function StudyFlowScreen() {
                 isPressed={pressedNext === option.next}
               >
                 <OptionLabelText>{option.label}</OptionLabelText>
-                <OptionMetaRow>
-                  <QualityIndicator quality={option.quality}>
-                    {getQualityEmoji(option.quality)}
-                  </QualityIndicator>
-                  <OptionNote>{option.note}</OptionNote>
-                </OptionMetaRow>
               </OptionCard>
             ))}
           </YourNextMovesSection>
@@ -315,11 +326,62 @@ const PathContent = styled.View`
   margin-top: 12px;
 `;
 
-const PathStep = styled.View`
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
+const PathStepContainer = styled.View`
+  margin-bottom: 16px;
+`;
+
+const PathStepText = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.text};
+  line-height: 20px;
   margin-bottom: 8px;
+`;
+
+const PathStepNumber = styled.Text`
+  font-weight: 700;
+  color: ${COLORS.accentPrimary};
+`;
+
+const PathPositionName = styled.Text`
+  font-weight: 600;
+  color: ${COLORS.text};
+`;
+
+const PathMoveName = styled.Text`
+  font-weight: 600;
+  color: ${COLORS.accentSecondary};
+`;
+
+const PathEvaluationBadge = styled.View<{ quality: Quality }>`
+  background: ${(props) => getQualityColor(props.quality)}22;
+  border: 1px solid ${(props) => getQualityColor(props.quality)}44;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  align-self: flex-start;
+`;
+
+const PathEvaluationText = styled.Text`
+  font-size: 12px;
+  color: ${COLORS.text};
+  font-weight: 600;
+`;
+
+const PathArrowDown = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.muted};
+  text-align: center;
+  margin-bottom: 4px;
+`;
+
+const PathFinalPosition = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.text};
+  font-weight: 600;
+  margin-top: 8px;
+  padding: 12px;
+  background: ${COLORS.card};
+  border-radius: 8px;
 `;
 
 const PathLabel = styled.Text`
@@ -343,30 +405,39 @@ const PathEval = styled.Text`
   font-size: 14px;
 `;
 
+const PathStep = styled.View`
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+`;
+
 /* YOU ARE HERE SECTION */
 const YouAreHereSection = styled.View`
   margin-bottom: 24px;
 `;
 
 const YouAreHereLabel = styled.Text`
-  font-size: 14px;
+  font-size: 12px;
   color: ${COLORS.muted};
-  margin-bottom: 8px;
-  font-weight: 600;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 `;
 
 const CurrentCard = styled.View`
   background: ${COLORS.card};
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 12px;
+  border: 2px solid ${COLORS.accentPrimary}44;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 32px;
 `;
 
 const CurrentPositionText = styled.Text`
-  font-size: 22px;
+  font-size: 28px;
   color: ${COLORS.text};
   font-weight: 700;
+  margin-bottom: 16px;
 `;
 
 const QualityBadge = styled.View<{ quality: Quality }>`
@@ -399,13 +470,15 @@ const NoteText = styled.Text`
 /* YOUR NEXT MOVES SECTION */
 const YourNextMovesSection = styled.View`
   margin-bottom: 24px;
+  margin-top: 8px;
 `;
 
 const NextMovesLabel = styled.Text`
-  font-size: 14px;
+  font-size: 12px;
   color: ${COLORS.muted};
   margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 `;
 
 const OptionCard = styled(Pressable)<{ isPressed: boolean }>`
@@ -421,7 +494,6 @@ const OptionLabelText = styled.Text`
   font-size: 16px;
   color: ${COLORS.text};
   font-weight: 600;
-  margin-bottom: 8px;
 `;
 
 const OptionMetaRow = styled.View`
