@@ -173,25 +173,50 @@ export default function StudyFlowScreen() {
 
             {pathExpanded && (
               <PathContent>
-                {flowSteps.slice(0, -1).map((step, index) => (
-                  <PathStepContainer key={`path-${index}`}>
-                    <PathStepText>
-                      <PathStepNumber>Step {index + 1}:</PathStepNumber> From <PathPositionName>{step.position}</PathPositionName>, chose{' '}
-                      <PathMoveName>{step.moveLabel}</PathMoveName>
-                    </PathStepText>
-                    {step.quality && (
-                      <PathEvaluationBadge quality={step.quality}>
-                        <PathEvaluationText>
-                          {getQualityEmoji(step.quality)} {getQualityMessage(step.quality)}
-                        </PathEvaluationText>
-                      </PathEvaluationBadge>
-                    )}
-                    <PathArrowDown>↓</PathArrowDown>
-                  </PathStepContainer>
-                ))}
-                <PathFinalPosition>
-                  <PathStepNumber>Now:</PathStepNumber> {flowSteps[flowSteps.length - 1].position}
-                </PathFinalPosition>
+                {flowSteps.map((step, index) => {
+                  // First step: show starting position only
+                  if (index === 0) {
+                    return (
+                      <PathStartPosition key={`path-${index}`}>
+                        <PathStepNumber>Start:</PathStepNumber> {step.position}
+                      </PathStartPosition>
+                    );
+                  }
+
+                  // Subsequent steps: show the complete transition
+                  const fromPosition = flowSteps[index - 1].position;
+                  const moveLabel = step.moveLabel;
+                  const toPosition = step.position;
+                  const quality = step.quality;
+
+                  return (
+                    <PathStepContainer key={`path-${index}`}>
+                      <PathStepHeader>
+                        <PathStepNumber>Step {index}:</PathStepNumber>
+                      </PathStepHeader>
+                      <PathDetailLine>
+                        <PathDetailLabel>From:</PathDetailLabel>
+                        <PathPositionName>{fromPosition}</PathPositionName>
+                      </PathDetailLine>
+                      <PathDetailLine>
+                        <PathDetailLabel>You chose:</PathDetailLabel>
+                        <PathMoveName>{moveLabel}</PathMoveName>
+                      </PathDetailLine>
+                      <PathDetailLine>
+                        <PathDetailLabel>Now in:</PathDetailLabel>
+                        <PathPositionName>{toPosition}</PathPositionName>
+                      </PathDetailLine>
+                      {quality && (
+                        <PathEvaluationLine quality={quality}>
+                          <PathEvaluationText>
+                            {getQualityEmoji(quality)} {getQualityMessage(quality)}
+                          </PathEvaluationText>
+                        </PathEvaluationLine>
+                      )}
+                      {index < flowSteps.length - 1 && <PathArrowDown>↓</PathArrowDown>}
+                    </PathStepContainer>
+                  );
+                })}
               </PathContent>
             )}
           </PathSection>
@@ -326,39 +351,68 @@ const PathContent = styled.View`
   margin-top: 12px;
 `;
 
-const PathStepContainer = styled.View`
-  margin-bottom: 16px;
-`;
-
-const PathStepText = styled.Text`
+const PathStartPosition = styled.Text`
   font-size: 14px;
   color: ${COLORS.text};
-  line-height: 20px;
-  margin-bottom: 8px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: ${COLORS.card};
+  border-radius: 8px;
+`;
+
+const PathStepContainer = styled.View`
+  margin-bottom: 20px;
+  padding: 16px;
+  background: ${COLORS.card};
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+`;
+
+const PathStepHeader = styled.View`
+  margin-bottom: 12px;
 `;
 
 const PathStepNumber = styled.Text`
   font-weight: 700;
   color: ${COLORS.accentPrimary};
+  font-size: 14px;
+`;
+
+const PathDetailLine = styled.View`
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 10px;
+`;
+
+const PathDetailLabel = styled.Text`
+  font-size: 13px;
+  color: ${COLORS.muted};
+  font-weight: 600;
+  margin-right: 8px;
+  min-width: 80px;
 `;
 
 const PathPositionName = styled.Text`
-  font-weight: 600;
+  font-size: 13px;
   color: ${COLORS.text};
+  font-weight: 600;
+  flex: 1;
 `;
 
 const PathMoveName = styled.Text`
-  font-weight: 600;
+  font-size: 13px;
   color: ${COLORS.accentSecondary};
+  font-weight: 600;
+  flex: 1;
 `;
 
-const PathEvaluationBadge = styled.View<{ quality: Quality }>`
-  background: ${(props) => getQualityColor(props.quality)}22;
+const PathEvaluationLine = styled.View<{ quality: Quality }>`
+  margin-top: 12px;
+  padding: 10px;
+  background: ${(props) => getQualityColor(props.quality)}15;
   border: 1px solid ${(props) => getQualityColor(props.quality)}44;
   border-radius: 8px;
-  padding: 6px 10px;
-  margin-bottom: 8px;
-  align-self: flex-start;
 `;
 
 const PathEvaluationText = styled.Text`
@@ -368,10 +422,11 @@ const PathEvaluationText = styled.Text`
 `;
 
 const PathArrowDown = styled.Text`
-  font-size: 14px;
+  font-size: 16px;
   color: ${COLORS.muted};
   text-align: center;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  opacity: 0.5;
 `;
 
 const PathFinalPosition = styled.Text`
