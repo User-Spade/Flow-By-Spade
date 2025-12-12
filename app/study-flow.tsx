@@ -18,6 +18,15 @@ const COLORS = {
 };
 
 type Quality = 'best' | 'ok' | 'risky' | 'bad';
+type Belt = 'white' | 'blue' | 'purple' | 'brown' | 'black';
+
+const beltRank: Record<Belt, number> = {
+  white: 1,
+  blue: 2,
+  purple: 3,
+  brown: 4,
+  black: 5,
+};
 
 interface Position {
   id: string;
@@ -32,6 +41,7 @@ interface Transition {
   label: string;
   quality: Quality;
   note: string;
+  minBelt: Belt;
   isTerminal?: boolean;
 }
 
@@ -64,6 +74,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Hip Bump Sweep',
     quality: 'best',
     note: 'High success rate from this position',
+    minBelt: 'white',
   },
   {
     id: 'closed_guard_armbar',
@@ -72,6 +83,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Closed Guard Armbar',
     quality: 'ok',
     note: 'Solid but requires good setup',
+    minBelt: 'blue',
   },
   {
     id: 'cross_collar_choke',
@@ -80,6 +92,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Cross Collar Choke',
     quality: 'best',
     note: 'Textbook finish, use it!',
+    minBelt: 'white',
     isTerminal: true,
   },
   {
@@ -89,6 +102,7 @@ const TRANSITIONS: Transition[] = [
     label: 'S-Mount Transition',
     quality: 'ok',
     note: 'Defensive but opens more options',
+    minBelt: 'blue',
   },
   {
     id: 'armbar_finish_move',
@@ -97,6 +111,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Armbar Finish',
     quality: 'best',
     note: 'Strong finish from here',
+    minBelt: 'purple',
     isTerminal: true,
   },
   {
@@ -106,6 +121,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Far-Side Armbar',
     quality: 'risky',
     note: 'Can be escaped by experienced opponents',
+    minBelt: 'brown',
     isTerminal: true,
   },
   {
@@ -115,6 +131,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Defend Escape',
     quality: 'ok',
     note: 'End the flow by defending',
+    minBelt: 'white',
     isTerminal: true,
   },
 ];
@@ -162,9 +179,16 @@ export default function StudyFlowScreen() {
   const [currentPositionId, setCurrentPositionId] = useState('closed_guard_bottom');
   const [pathExpanded, setPathExpanded] = useState(false);
   const [pressedNext, setPressedNext] = useState<string | null>(null);
+  const [selectedBelt, setSelectedBelt] = useState<Belt | null>(null);
+  const [selectedStartPositionId, setSelectedStartPositionId] = useState<string | null>(null);
+  const [hasStarted, setHasStarted] = useState(false);
 
   const currentPosition = getPosition(currentPositionId);
-  const availableTransitions = getTransitionsFromPosition(currentPositionId);
+  const allAvailableTransitions = getTransitionsFromPosition(currentPositionId);
+  const availableTransitions =
+    selectedBelt && hasStarted
+      ? allAvailableTransitions.filter((t) => beltRank[t.minBelt] <= beltRank[selectedBelt])
+      : allAvailableTransitions;
   const isFlowEnded = currentPosition?.id === 'submission' || currentPosition?.id === 'escape';
 
   useEffect(() => {
@@ -194,7 +218,18 @@ export default function StudyFlowScreen() {
     setFlowSteps([]);
     setCurrentPositionId('closed_guard_bottom');
     setPathExpanded(false);
+    setHasStarted(false);
     scrollRef.current?.scrollTo({ y: 0, animated: true });
+  };
+
+  const handleStartFlow = () => {
+    if (selectedBelt && selectedStartPositionId) {
+      setFlowSteps([]);
+      setCurrentPositionId(selectedStartPositionId);
+      setHasStarted(true);
+      setPathExpanded(false);
+      scrollRef.current?.scrollTo({ y: 0, animated: true });
+    }
   };
 
   // Auto-expand path when flow ends
@@ -211,6 +246,73 @@ export default function StudyFlowScreen() {
     risky: flowSteps.filter((s) => s.quality === 'risky').length,
     bad: flowSteps.filter((s) => s.quality === 'bad').length,
   };
+
+  // FLOW SETUP UI - shown before hasStarted is true
+  if (!hasStarted) {
+    return (
+      <Container>
+        <StatusBar barStyle="light-content" />
+        <BackButton onPress={() => router.back()}>
+          <Ionicons name="arrow-back" size={28} color={COLORS.text} />
+        </BackButton>
+
+        <Header>
+          <Title>Study Flow</Title>
+        </Header>
+
+        <ScrollArea
+          ref={scrollRef}
+          contentContainerStyle={{ paddingBottom: 24 }}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
+          {/* FLOW SETUP */}
+          <SetupSection>
+            <SetupTitle>Choose your belt level</SetupTitle>
+            <BeltButtonRow>
+              {(['white', 'blue', 'purple', 'brown', 'black'] as Belt[]).map((belt) => (
+                <BeltButton
+                  key={belt}
+                  isSelected={selectedBelt === belt}
+                  onPress={() => setSelectedBelt(belt)}
+                >
+                  <BeltButtonText isSelected={selectedBelt === belt}>
+                    {belt.charAt(0).toUpperCase() + belt.slice(1)}
+                  </BeltButtonText>
+                </BeltButton>
+              ))}
+            </BeltButtonRow>
+
+            <SetupTitle style={{ marginTop: 24 }}>Choose starting position</SetupTitle>
+            <StartPositionList>
+              {POSITIONS.map((position) => (
+                <StartPositionButton
+                  key={position.id}
+                  isSelected={selectedStartPositionId === position.id}
+                  onPress={() => setSelectedStartPositionId(position.id)}
+                >
+                  <StartPositionText isSelected={selectedStartPositionId === position.id}>
+                    {position.name}
+                  </StartPositionText>
+                </StartPositionButton>
+              ))}
+            </StartPositionList>
+
+            <StartFlowButtonWrapper>
+              <StartFlowButton
+                onPress={handleStartFlow}
+                disabled={!selectedBelt || !selectedStartPositionId}
+              >
+                <StartFlowButtonText disabled={!selectedBelt || !selectedStartPositionId}>
+                  Start Flow
+                </StartFlowButtonText>
+              </StartFlowButton>
+            </StartFlowButtonWrapper>
+          </SetupSection>
+        </ScrollArea>
+      </Container>
+    );
+  }
 
   return (
     <Container>
@@ -686,4 +788,73 @@ const ResetButtonText = styled.Text`
   color: ${COLORS.text};
   font-weight: 600;
   margin-left: 8px;
+`;
+
+/* FLOW SETUP SECTION */
+const SetupSection = styled.View`
+  padding: 20px;
+`;
+
+const SetupTitle = styled.Text`
+  font-size: 18px;
+  color: ${COLORS.text};
+  font-weight: 700;
+  margin-bottom: 16px;
+`;
+
+const BeltButtonRow = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 32px;
+`;
+
+const BeltButton = styled(Pressable)`
+  flex: 1;
+  margin-horizontal: 6px;
+  padding: 12px;
+  background: ${(props: any) => (props.isSelected ? COLORS.accentPrimary : COLORS.card)};
+  border: 2px solid ${(props: any) => (props.isSelected ? COLORS.accentPrimary : 'rgba(255, 255, 255, 0.2)')};
+  border-radius: 10px;
+  align-items: center;
+`;
+
+const BeltButtonText = styled.Text`
+  font-size: 13px;
+  font-weight: 700;
+  color: ${(props: any) => (props.isSelected ? COLORS.bg : COLORS.text)};
+`;
+
+const StartPositionList = styled.View`
+  margin-bottom: 32px;
+`;
+
+const StartPositionButton = styled(Pressable)`
+  padding: 16px;
+  margin-bottom: 12px;
+  background: ${COLORS.card};
+  border: 2px solid ${(props: any) => (props.isSelected ? COLORS.accentSecondary : 'rgba(255, 255, 255, 0.1)')};
+  border-radius: 12px;
+`;
+
+const StartPositionText = styled.Text`
+  font-size: 16px;
+  font-weight: ${(props: any) => (props.isSelected ? '700' : '600')};
+  color: ${(props: any) => (props.isSelected ? COLORS.accentSecondary : COLORS.text)};
+`;
+
+const StartFlowButtonWrapper = styled.View`
+  margin-top: 12px;
+`;
+
+const StartFlowButton = styled(Pressable)`
+  padding: 18px;
+  background: ${(props: any) => (props.disabled ? 'rgba(241, 136, 5, 0.3)' : COLORS.accentPrimary)};
+  border-radius: 12px;
+  align-items: center;
+`;
+
+const StartFlowButtonText = styled.Text`
+  font-size: 18px;
+  font-weight: 700;
+  color: ${(props: any) => (props.disabled ? 'rgba(255, 255, 255, 0.4)' : COLORS.bg)};
 `;
