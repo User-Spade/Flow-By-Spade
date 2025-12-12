@@ -1,67 +1,134 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Button, ScrollView, StatusBar } from 'react-native';
+import { ScrollView, StatusBar, Pressable } from 'react-native';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 
 const COLORS = {
   bg: '#222222',
+  card: '#2C2C2C',
   text: '#FFFFFF',
   muted: 'rgba(255, 255, 255, 0.6)',
   accentPrimary: '#F18805',
   accentSecondary: '#0081A7',
+  mint: '#84DCC6',
+  success: '#4CAF50',
+  warning: '#FF9800',
+  error: '#F44336',
 };
 
-type FlowOption = { label: string; next: string };
+type Quality = 'best' | 'ok' | 'risky' | 'bad';
+
+type FlowOption = {
+  label: string;
+  next: string;
+  quality: Quality;
+  note: string;
+};
+
+type Step = {
+  position: string;
+  quality?: Quality;
+  note?: string;
+  moveLabel?: string;
+};
+
 type OptionsMap = Record<string, FlowOption[]>;
 
-const INITIAL_STEP = 'Closed Guard (Bottom)';
+const INITIAL_STEP: Step = { position: 'Closed Guard (Bottom)' };
 
 const OPTIONS: OptionsMap = {
   'Closed Guard (Bottom)': [
-    { label: 'Hip Bump Sweep', next: 'Mount (Top)' },
-    { label: 'Closed Guard Armbar', next: 'Armbar Finish' },
+    { label: 'Hip Bump Sweep', next: 'Mount (Top)', quality: 'best', note: 'High success rate from this position' },
+    { label: 'Closed Guard Armbar', next: 'Armbar Finish', quality: 'ok', note: 'Solid but requires good setup' },
   ],
   'Mount (Top)': [
-    { label: 'Cross Collar Choke', next: 'Submission' },
-    { label: 'S-Mount Transition', next: 'S-Mount (Top)' },
+    { label: 'Cross Collar Choke', next: 'Submission', quality: 'best', note: 'Textbook finish, use it!' },
+    { label: 'S-Mount Transition', next: 'S-Mount (Top)', quality: 'ok', note: 'Defensive but opens more options' },
   ],
   'S-Mount (Top)': [
-    { label: 'Armbar Finish', next: 'Armbar Finish' },
-    { label: 'Far-Side Armbar', next: 'Submission' },
+    { label: 'Armbar Finish', next: 'Submission', quality: 'best', note: 'Strong finish from here' },
+    { label: 'Far-Side Armbar', next: 'Submission', quality: 'risky', note: 'Can be escaped by experienced opponents' },
   ],
-  Submission: [
-    { label: 'Reset to Start', next: INITIAL_STEP },
+  'Armbar Finish': [
+    { label: 'Defend Escape', next: 'Escape', quality: 'ok', note: 'End the flow by defending' },
   ],
 };
+
+function getQualityEmoji(quality: Quality): string {
+  switch (quality) {
+    case 'best': return '✅';
+    case 'ok': return '⭕';
+    case 'risky': return '⚠';
+    case 'bad': return '❌';
+  }
+}
+
+function getQualityMessage(quality: Quality): string {
+  switch (quality) {
+    case 'best': return 'Strong choice';
+    case 'ok': return 'Solid but not optimal';
+    case 'risky': return 'Risky at your level';
+    case 'bad': return 'Bad choice, review this';
+  }
+}
+
+function getQualityColor(quality: Quality): string {
+  switch (quality) {
+    case 'best': return COLORS.success;
+    case 'ok': return COLORS.mint;
+    case 'risky': return COLORS.warning;
+    case 'bad': return COLORS.error;
+  }
+}
 
 export default function StudyFlowScreen() {
   const router = useRouter();
   const scrollRef = useRef<ScrollView>(null);
-  const [steps, setSteps] = useState<string[]>([INITIAL_STEP]);
+  const [flowSteps, setFlowSteps] = useState<Step[]>([INITIAL_STEP]);
+  const [pathExpanded, setPathExpanded] = useState(true);
   const [pressedNext, setPressedNext] = useState<string | null>(null);
 
-  const lastStep = steps[steps.length - 1];
-  const availableOptions = (OPTIONS[lastStep] || []).filter(
-    (option) => !steps.includes(option.next),
+  const currentStep = flowSteps[flowSteps.length - 1];
+  const isFlowEnded = currentStep.position === 'Submission' || currentStep.position === 'Escape';
+
+  const availableOptions = (OPTIONS[currentStep.position] || []).filter(
+    (option) => !flowSteps.some((step) => step.position === option.next),
   );
 
   useEffect(() => {
     requestAnimationFrame(() => {
       scrollRef.current?.scrollToEnd({ animated: true });
     });
-  }, [steps.length]);
+  }, [flowSteps.length]);
 
-  const handleOptionPress = (next: string) => {
-    setPressedNext(next);
-    setSteps((prev) => [...prev, next]);
+  const handleOptionPress = (option: FlowOption) => {
+    setPressedNext(option.next);
+    setFlowSteps((prev) => [
+      ...prev,
+      {
+        position: option.next,
+        quality: option.quality,
+        note: option.note,
+        moveLabel: option.label,
+      },
+    ]);
     setTimeout(() => setPressedNext(null), 220);
   };
 
   const handleReset = () => {
     setPressedNext(null);
-    setSteps([INITIAL_STEP]);
+    setFlowSteps([INITIAL_STEP]);
+    setPathExpanded(true);
     scrollRef.current?.scrollTo({ y: 0, animated: true });
+  };
+
+  // Calculate summary stats
+  const qualityStats = {
+    best: flowSteps.filter((s) => s.quality === 'best').length,
+    ok: flowSteps.filter((s) => s.quality === 'ok').length,
+    risky: flowSteps.filter((s) => s.quality === 'risky').length,
+    bad: flowSteps.filter((s) => s.quality === 'bad').length,
   };
 
   return (
@@ -73,7 +140,6 @@ export default function StudyFlowScreen() {
 
       <Header>
         <Title>Study Flow</Title>
-        <Subtitle>Tap options on the last step to grow the flow.</Subtitle>
       </Header>
 
       <ScrollArea
@@ -82,35 +148,108 @@ export default function StudyFlowScreen() {
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
-        {steps.map((step, index) => (
-          <StepRow key={`${step}-${index}`}>
-            <StepBullet />
-            <StepText>{step}</StepText>
-          </StepRow>
-        ))}
-
-        {availableOptions.length > 0 && (
-          <OptionsBlock>
-            <OptionsLabel>Options</OptionsLabel>
-            {availableOptions.map((option) => (
-              <OptionWrapper key={option.label}>
-                <Button
-                  title={option.label}
-                  onPress={() => handleOptionPress(option.next)}
-                  color={
-                    pressedNext === option.next
-                      ? COLORS.accentSecondary
-                      : COLORS.accentPrimary
-                  }
+        {/* PATH SO FAR - Collapsible Section */}
+        {flowSteps.length > 1 && (
+          <PathSection>
+            <PathHeader onPress={() => setPathExpanded(!pathExpanded)}>
+              <PathTitle>Path so far</PathTitle>
+              <CollapseIcon>
+                <Ionicons
+                  name={pathExpanded ? 'chevron-up' : 'chevron-down'}
+                  size={20}
+                  color={COLORS.muted}
                 />
-              </OptionWrapper>
+              </CollapseIcon>
+            </PathHeader>
+
+            {pathExpanded && (
+              <PathContent>
+                {flowSteps.slice(0, -1).map((step, index) => (
+                  <PathStep key={`path-${index}`}>
+                    <PathLabel>{step.position}</PathLabel>
+                    <PathArrow>→</PathArrow>
+                    <PathMove>{step.moveLabel}</PathMove>
+                    <PathArrow>→</PathArrow>
+                    <PathEval>
+                      {step.quality && getQualityEmoji(step.quality)}
+                    </PathEval>
+                  </PathStep>
+                ))}
+              </PathContent>
+            )}
+          </PathSection>
+        )}
+
+        {/* YOU ARE HERE - Current Position Card */}
+        <YouAreHereSection>
+          <YouAreHereLabel>You are here</YouAreHereLabel>
+          <CurrentCard>
+            <CurrentPositionText>{currentStep.position}</CurrentPositionText>
+            {currentStep.quality && (
+              <QualityBadge quality={currentStep.quality}>
+                <QualityEmoji>{getQualityEmoji(currentStep.quality)}</QualityEmoji>
+                <QualityText>{getQualityMessage(currentStep.quality)}</QualityText>
+              </QualityBadge>
+            )}
+            {currentStep.note && <NoteText>{currentStep.note}</NoteText>}
+          </CurrentCard>
+        </YouAreHereSection>
+
+        {/* YOUR NEXT MOVES - Options */}
+        {!isFlowEnded && availableOptions.length > 0 && (
+          <YourNextMovesSection>
+            <NextMovesLabel>Your next moves</NextMovesLabel>
+            {availableOptions.map((option) => (
+              <OptionCard
+                key={option.label}
+                onPress={() => handleOptionPress(option)}
+                isPressed={pressedNext === option.next}
+              >
+                <OptionLabelText>{option.label}</OptionLabelText>
+                <OptionMetaRow>
+                  <QualityIndicator quality={option.quality}>
+                    {getQualityEmoji(option.quality)}
+                  </QualityIndicator>
+                  <OptionNote>{option.note}</OptionNote>
+                </OptionMetaRow>
+              </OptionCard>
             ))}
-          </OptionsBlock>
+          </YourNextMovesSection>
+        )}
+
+        {/* END OF FLOW SUMMARY */}
+        {isFlowEnded && (
+          <EndFlowSummary>
+            <SummaryTitle>Flow complete!</SummaryTitle>
+            <SummaryStatRow>
+              <SummaryLabel>Total steps:</SummaryLabel>
+              <SummaryValue>{flowSteps.length}</SummaryValue>
+            </SummaryStatRow>
+            <SummaryStatRow>
+              <SummaryLabel>✅ Strong choices:</SummaryLabel>
+              <SummaryValue>{qualityStats.best}</SummaryValue>
+            </SummaryStatRow>
+            <SummaryStatRow>
+              <SummaryLabel>⭕ Solid moves:</SummaryLabel>
+              <SummaryValue>{qualityStats.ok}</SummaryValue>
+            </SummaryStatRow>
+            <SummaryStatRow>
+              <SummaryLabel>⚠ Risky moves:</SummaryLabel>
+              <SummaryValue>{qualityStats.risky}</SummaryValue>
+            </SummaryStatRow>
+            <SummaryStatRow>
+              <SummaryLabel>❌ Bad moves:</SummaryLabel>
+              <SummaryValue>{qualityStats.bad}</SummaryValue>
+            </SummaryStatRow>
+          </EndFlowSummary>
         )}
       </ScrollArea>
 
       <ResetArea>
-        <Button title="Reset Flow" onPress={handleReset} color={COLORS.accentSecondary} />
+        <ResetButton onPress={handleReset}>
+          <Ionicons name="refresh" size={20} color={COLORS.text} />
+          <ResetButtonText>Reset Flow</ResetButtonText>
+        </ResetButton>
       </ResetArea>
     </Container>
   );
@@ -132,63 +271,227 @@ const BackButton = styled.Pressable`
 
 const Header = styled.View`
   margin-top: 12px;
+  margin-bottom: 20px;
 `;
 
 const Title = styled.Text`
   font-size: 28px;
   color: ${COLORS.text};
   font-weight: 700;
-  margin-bottom: 6px;
-`;
-
-const Subtitle = styled.Text`
-  font-size: 16px;
-  color: ${COLORS.muted};
-  line-height: 22px;
 `;
 
 const ScrollArea = styled.ScrollView`
   flex: 1;
-  margin-top: 20px;
 `;
 
-const StepRow = styled.View`
+/* PATH SO FAR SECTION */
+const PathSection = styled.View`
+  background: ${COLORS.card};
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+`;
+
+const PathHeader = styled.Pressable`
   flex-direction: row;
   align-items: center;
-  padding-vertical: 10px;
-  gap: 12px;
+  justify-content: space-between;
 `;
 
-const StepBullet = styled.View`
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background: ${COLORS.accentPrimary};
-`;
-
-const StepText = styled.Text`
+const PathTitle = styled.Text`
+  font-size: 16px;
   color: ${COLORS.text};
-  font-size: 18px;
   font-weight: 600;
 `;
 
-const OptionsBlock = styled.View`
+const CollapseIcon = styled.View`
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const PathContent = styled.View`
   margin-top: 12px;
-  gap: 10px;
 `;
 
-const OptionsLabel = styled.Text`
+const PathStep = styled.View`
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+`;
+
+const PathLabel = styled.Text`
+  font-size: 13px;
   color: ${COLORS.muted};
-  font-size: 15px;
-  margin-bottom: 4px;
+  flex: 1;
 `;
 
-const OptionWrapper = styled.View`
+const PathMove = styled.Text`
+  font-size: 13px;
+  color: ${COLORS.accentPrimary};
+  font-weight: 600;
+`;
+
+const PathArrow = styled.Text`
+  font-size: 13px;
+  color: ${COLORS.muted};
+`;
+
+const PathEval = styled.Text`
+  font-size: 14px;
+`;
+
+/* YOU ARE HERE SECTION */
+const YouAreHereSection = styled.View`
+  margin-bottom: 24px;
+`;
+
+const YouAreHereLabel = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.muted};
+  margin-bottom: 8px;
+  font-weight: 600;
+`;
+
+const CurrentCard = styled.View`
+  background: ${COLORS.card};
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 12px;
+`;
+
+const CurrentPositionText = styled.Text`
+  font-size: 22px;
+  color: ${COLORS.text};
+  font-weight: 700;
+`;
+
+const QualityBadge = styled.View<{ quality: Quality }>`
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: ${(props) => getQualityColor(props.quality)}22;
+  border: 1px solid ${(props) => getQualityColor(props.quality)}44;
+  align-self: flex-start;
+`;
+
+const QualityEmoji = styled.Text`
+  font-size: 16px;
+`;
+
+const QualityText = styled.Text`
+  font-size: 13px;
+  color: ${COLORS.text};
+  font-weight: 600;
+  margin-left: 8px;
+`;
+
+const NoteText = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.muted};
+  line-height: 20px;
+`;
+
+/* YOUR NEXT MOVES SECTION */
+const YourNextMovesSection = styled.View`
+  margin-bottom: 24px;
+`;
+
+const NextMovesLabel = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.muted};
+  margin-bottom: 12px;
+  font-weight: 600;
+`;
+
+const OptionCard = styled(Pressable)<{ isPressed: boolean }>`
+  background: ${COLORS.card};
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  overflow: hidden;
+  padding: 16px;
+  margin-bottom: 12px;
+  opacity: ${(props) => (props.isPressed ? 0.6 : 1)};
 `;
 
+const OptionLabelText = styled.Text`
+  font-size: 16px;
+  color: ${COLORS.text};
+  font-weight: 600;
+  margin-bottom: 8px;
+`;
+
+const OptionMetaRow = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const QualityIndicator = styled.Text<{ quality: Quality }>`
+  font-size: 14px;
+  margin-right: 8px;
+`;
+
+const OptionNote = styled.Text`
+  font-size: 13px;
+  color: ${COLORS.muted};
+  flex: 1;
+  margin-left: 4px;
+`;
+
+/* END OF FLOW SUMMARY */
+const EndFlowSummary = styled.View`
+  background: ${COLORS.card};
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+`;
+
+const SummaryTitle = styled.Text`
+  font-size: 18px;
+  color: ${COLORS.mint};
+  font-weight: 700;
+  margin-bottom: 16px;
+`;
+
+const SummaryStatRow = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 0;
+`;
+
+const SummaryLabel = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.muted};
+`;
+
+const SummaryValue = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.text};
+  font-weight: 700;
+`;
+
+/* RESET BUTTON */
 const ResetArea = styled.View`
-  padding-top: 12px;
-  padding-bottom: 8px;
+  padding: 12px 0 8px 0;
+`;
+
+const ResetButton = styled.Pressable`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: ${COLORS.card};
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px;
+`;
+
+const ResetButtonText = styled.Text`
+  font-size: 16px;
+  color: ${COLORS.text};
+  font-weight: 600;
+  margin-left: 8px;
 `;
