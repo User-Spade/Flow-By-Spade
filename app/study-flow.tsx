@@ -19,41 +19,114 @@ const COLORS = {
 
 type Quality = 'best' | 'ok' | 'risky' | 'bad';
 
-type FlowOption = {
+interface Position {
+  id: string;
+  name: string;
+  description?: string;
+}
+
+interface Transition {
+  id: string;
+  fromPositionId: string;
+  toPositionId: string;
   label: string;
-  next: string;
   quality: Quality;
   note: string;
-};
+  isTerminal?: boolean;
+}
 
-type Step = {
-  position: string;
-  quality?: Quality;
-  note?: string;
-  moveLabel?: string;
-};
+interface FlowStep {
+  id: string;
+  fromPositionId: string;
+  toPositionId: string;
+  transitionId: string;
+  quality: Quality;
+  note: string;
+  label: string;
+}
 
-type OptionsMap = Record<string, FlowOption[]>;
+// Positions data
+const POSITIONS: Position[] = [
+  { id: 'closed_guard_bottom', name: 'Closed Guard (Bottom)' },
+  { id: 'mount_top', name: 'Mount (Top)' },
+  { id: 's_mount_top', name: 'S-Mount (Top)' },
+  { id: 'armbar_finish', name: 'Armbar Finish' },
+  { id: 'submission', name: 'Submission' },
+  { id: 'escape', name: 'Escape' },
+];
 
-const INITIAL_STEP: Step = { position: 'Closed Guard (Bottom)' };
+// Transitions data
+const TRANSITIONS: Transition[] = [
+  {
+    id: 'hip_bump_sweep',
+    fromPositionId: 'closed_guard_bottom',
+    toPositionId: 'mount_top',
+    label: 'Hip Bump Sweep',
+    quality: 'best',
+    note: 'High success rate from this position',
+  },
+  {
+    id: 'closed_guard_armbar',
+    fromPositionId: 'closed_guard_bottom',
+    toPositionId: 'armbar_finish',
+    label: 'Closed Guard Armbar',
+    quality: 'ok',
+    note: 'Solid but requires good setup',
+  },
+  {
+    id: 'cross_collar_choke',
+    fromPositionId: 'mount_top',
+    toPositionId: 'submission',
+    label: 'Cross Collar Choke',
+    quality: 'best',
+    note: 'Textbook finish, use it!',
+    isTerminal: true,
+  },
+  {
+    id: 's_mount_transition',
+    fromPositionId: 'mount_top',
+    toPositionId: 's_mount_top',
+    label: 'S-Mount Transition',
+    quality: 'ok',
+    note: 'Defensive but opens more options',
+  },
+  {
+    id: 'armbar_finish_move',
+    fromPositionId: 's_mount_top',
+    toPositionId: 'submission',
+    label: 'Armbar Finish',
+    quality: 'best',
+    note: 'Strong finish from here',
+    isTerminal: true,
+  },
+  {
+    id: 'far_side_armbar',
+    fromPositionId: 's_mount_top',
+    toPositionId: 'submission',
+    label: 'Far-Side Armbar',
+    quality: 'risky',
+    note: 'Can be escaped by experienced opponents',
+    isTerminal: true,
+  },
+  {
+    id: 'defend_escape',
+    fromPositionId: 'armbar_finish',
+    toPositionId: 'escape',
+    label: 'Defend Escape',
+    quality: 'ok',
+    note: 'End the flow by defending',
+    isTerminal: true,
+  },
+];
 
-const OPTIONS: OptionsMap = {
-  'Closed Guard (Bottom)': [
-    { label: 'Hip Bump Sweep', next: 'Mount (Top)', quality: 'best', note: 'High success rate from this position' },
-    { label: 'Closed Guard Armbar', next: 'Armbar Finish', quality: 'ok', note: 'Solid but requires good setup' },
-  ],
-  'Mount (Top)': [
-    { label: 'Cross Collar Choke', next: 'Submission', quality: 'best', note: 'Textbook finish, use it!' },
-    { label: 'S-Mount Transition', next: 'S-Mount (Top)', quality: 'ok', note: 'Defensive but opens more options' },
-  ],
-  'S-Mount (Top)': [
-    { label: 'Armbar Finish', next: 'Submission', quality: 'best', note: 'Strong finish from here' },
-    { label: 'Far-Side Armbar', next: 'Submission', quality: 'risky', note: 'Can be escaped by experienced opponents' },
-  ],
-  'Armbar Finish': [
-    { label: 'Defend Escape', next: 'Escape', quality: 'ok', note: 'End the flow by defending' },
-  ],
-};
+// Helper functions
+function getPosition(id: string): Position | undefined {
+  return POSITIONS.find((p) => p.id === id);
+}
+
+function getTransitionsFromPosition(positionId: string): Transition[] {
+  return TRANSITIONS.filter((t) => t.fromPositionId === positionId);
+}
 
 function getQualityEmoji(quality: Quality): string {
   switch (quality) {
@@ -85,16 +158,14 @@ function getQualityColor(quality: Quality): string {
 export default function StudyFlowScreen() {
   const router = useRouter();
   const scrollRef = useRef<ScrollView>(null);
-  const [flowSteps, setFlowSteps] = useState<Step[]>([INITIAL_STEP]);
+  const [flowSteps, setFlowSteps] = useState<FlowStep[]>([]);
+  const [currentPositionId, setCurrentPositionId] = useState('closed_guard_bottom');
   const [pathExpanded, setPathExpanded] = useState(false);
   const [pressedNext, setPressedNext] = useState<string | null>(null);
 
-  const currentStep = flowSteps[flowSteps.length - 1];
-  const isFlowEnded = currentStep.position === 'Submission' || currentStep.position === 'Escape';
-
-  const availableOptions = (OPTIONS[currentStep.position] || []).filter(
-    (option) => !flowSteps.some((step) => step.position === option.next),
-  );
+  const currentPosition = getPosition(currentPositionId);
+  const availableTransitions = getTransitionsFromPosition(currentPositionId);
+  const isFlowEnded = currentPosition?.id === 'submission' || currentPosition?.id === 'escape';
 
   useEffect(() => {
     requestAnimationFrame(() => {
@@ -102,23 +173,26 @@ export default function StudyFlowScreen() {
     });
   }, [flowSteps.length]);
 
-  const handleOptionPress = (option: FlowOption) => {
-    setPressedNext(option.next);
-    setFlowSteps((prev) => [
-      ...prev,
-      {
-        position: option.next,
-        quality: option.quality,
-        note: option.note,
-        moveLabel: option.label,
-      },
-    ]);
+  const handleTransitionPress = (transition: Transition) => {
+    setPressedNext(transition.id);
+    const newStep: FlowStep = {
+      id: `step-${Date.now()}`,
+      fromPositionId: currentPositionId,
+      toPositionId: transition.toPositionId,
+      transitionId: transition.id,
+      quality: transition.quality,
+      note: transition.note,
+      label: transition.label,
+    };
+    setFlowSteps((prev) => [...prev, newStep]);
+    setCurrentPositionId(transition.toPositionId);
     setTimeout(() => setPressedNext(null), 220);
   };
 
   const handleReset = () => {
     setPressedNext(null);
-    setFlowSteps([INITIAL_STEP]);
+    setFlowSteps([]);
+    setCurrentPositionId('closed_guard_bottom');
     setPathExpanded(false);
     scrollRef.current?.scrollTo({ y: 0, animated: true });
   };
@@ -156,11 +230,11 @@ export default function StudyFlowScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* PATH SO FAR - Collapsible Section */}
-        {flowSteps.length > 1 && (
+        {flowSteps.length > 0 && (
           <PathSection>
             <PathHeader onPress={() => setPathExpanded(!pathExpanded)}>
               <PathTitle>
-                {pathExpanded ? 'Path so far' : `Path so far: ${flowSteps.length - 1} steps – tap to expand`}
+                {pathExpanded ? 'Path so far' : `Path so far: ${flowSteps.length} steps – tap to expand`}
               </PathTitle>
               <CollapseIcon>
                 <Ionicons
@@ -173,46 +247,35 @@ export default function StudyFlowScreen() {
 
             {pathExpanded && (
               <PathContent>
+                <PathStartPosition>
+                  <PathStepNumber>Start:</PathStepNumber> {getPosition('closed_guard_bottom')?.name}
+                </PathStartPosition>
                 {flowSteps.map((step, index) => {
-                  // First step: show starting position only
-                  if (index === 0) {
-                    return (
-                      <PathStartPosition key={`path-${index}`}>
-                        <PathStepNumber>Start:</PathStepNumber> {step.position}
-                      </PathStartPosition>
-                    );
-                  }
-
-                  // Subsequent steps: show the complete transition
-                  const fromPosition = flowSteps[index - 1].position;
-                  const moveLabel = step.moveLabel;
-                  const toPosition = step.position;
-                  const quality = step.quality;
+                  const fromPos = getPosition(step.fromPositionId);
+                  const toPos = getPosition(step.toPositionId);
 
                   return (
-                    <PathStepContainer key={`path-${index}`}>
+                    <PathStepContainer key={step.id}>
                       <PathStepHeader>
-                        <PathStepNumber>Step {index}:</PathStepNumber>
+                        <PathStepNumber>Step {index + 1}:</PathStepNumber>
                       </PathStepHeader>
                       <PathDetailLine>
                         <PathDetailLabel>From:</PathDetailLabel>
-                        <PathPositionName>{fromPosition}</PathPositionName>
+                        <PathPositionName>{fromPos?.name}</PathPositionName>
                       </PathDetailLine>
                       <PathDetailLine>
                         <PathDetailLabel>You chose:</PathDetailLabel>
-                        <PathMoveName>{moveLabel}</PathMoveName>
+                        <PathMoveName>{step.label}</PathMoveName>
                       </PathDetailLine>
                       <PathDetailLine>
                         <PathDetailLabel>Now in:</PathDetailLabel>
-                        <PathPositionName>{toPosition}</PathPositionName>
+                        <PathPositionName>{toPos?.name}</PathPositionName>
                       </PathDetailLine>
-                      {quality && (
-                        <PathEvaluationLine quality={quality}>
-                          <PathEvaluationText>
-                            {getQualityEmoji(quality)} {getQualityMessage(quality)}
-                          </PathEvaluationText>
-                        </PathEvaluationLine>
-                      )}
+                      <PathEvaluationLine quality={step.quality}>
+                        <PathEvaluationText>
+                          {getQualityEmoji(step.quality)} {getQualityMessage(step.quality)}
+                        </PathEvaluationText>
+                      </PathEvaluationLine>
                       {index < flowSteps.length - 1 && <PathArrowDown>↓</PathArrowDown>}
                     </PathStepContainer>
                   );
@@ -226,28 +289,30 @@ export default function StudyFlowScreen() {
         <YouAreHereSection>
           <YouAreHereLabel>Current position</YouAreHereLabel>
           <CurrentCard>
-            <CurrentPositionText>{currentStep.position}</CurrentPositionText>
-            {currentStep.quality && (
-              <QualityBadge quality={currentStep.quality}>
-                <QualityEmoji>{getQualityEmoji(currentStep.quality)}</QualityEmoji>
-                <QualityText>{getQualityMessage(currentStep.quality)}</QualityText>
+            <CurrentPositionText>{currentPosition?.name}</CurrentPositionText>
+            {flowSteps.length > 0 && flowSteps[flowSteps.length - 1].quality && (
+              <QualityBadge quality={flowSteps[flowSteps.length - 1].quality}>
+                <QualityEmoji>{getQualityEmoji(flowSteps[flowSteps.length - 1].quality)}</QualityEmoji>
+                <QualityText>{getQualityMessage(flowSteps[flowSteps.length - 1].quality)}</QualityText>
               </QualityBadge>
             )}
-            {currentStep.note && <NoteText>{currentStep.note}</NoteText>}
+            {flowSteps.length > 0 && flowSteps[flowSteps.length - 1].note && (
+              <NoteText>{flowSteps[flowSteps.length - 1].note}</NoteText>
+            )}
           </CurrentCard>
         </YouAreHereSection>
 
         {/* YOUR NEXT MOVES - Options */}
-        {!isFlowEnded && availableOptions.length > 0 && (
+        {!isFlowEnded && availableTransitions.length > 0 && (
           <YourNextMovesSection>
             <NextMovesLabel>Your next moves</NextMovesLabel>
-            {availableOptions.map((option) => (
+            {availableTransitions.map((transition) => (
               <OptionCard
-                key={option.label}
-                onPress={() => handleOptionPress(option)}
-                isPressed={pressedNext === option.next}
+                key={transition.id}
+                onPress={() => handleTransitionPress(transition)}
+                isPressed={pressedNext === transition.id}
               >
-                <OptionLabelText>{option.label}</OptionLabelText>
+                <OptionLabelText>{transition.label}</OptionLabelText>
               </OptionCard>
             ))}
           </YourNextMovesSection>
@@ -410,8 +475,8 @@ const PathMoveName = styled.Text`
 const PathEvaluationLine = styled.View<{ quality: Quality }>`
   margin-top: 12px;
   padding: 10px;
-  background: ${(props) => getQualityColor(props.quality)}15;
-  border: 1px solid ${(props) => getQualityColor(props.quality)}44;
+  background: ${(props: any) => getQualityColor(props.quality)}15;
+  border: 1px solid ${(props: any) => getQualityColor(props.quality)}44;
   border-radius: 8px;
 `;
 
@@ -500,8 +565,8 @@ const QualityBadge = styled.View<{ quality: Quality }>`
   align-items: center;
   padding: 8px 12px;
   border-radius: 8px;
-  background: ${(props) => getQualityColor(props.quality)}22;
-  border: 1px solid ${(props) => getQualityColor(props.quality)}44;
+  background: ${(props: any) => getQualityColor(props.quality)}22;
+  border: 1px solid ${(props: any) => getQualityColor(props.quality)}44;
   align-self: flex-start;
 `;
 
@@ -542,7 +607,7 @@ const OptionCard = styled(Pressable)<{ isPressed: boolean }>`
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 12px;
-  opacity: ${(props) => (props.isPressed ? 0.6 : 1)};
+  opacity: ${(props: any) => (props.isPressed ? 0.6 : 1)};
 `;
 
 const OptionLabelText = styled.Text`
