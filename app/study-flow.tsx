@@ -239,6 +239,25 @@ export default function StudyFlowScreen() {
     }
   }, [isFlowEnded]);
 
+  // Ensure scroll is at top when in setup mode
+  useEffect(() => {
+    if (!hasStarted) {
+      // Use setTimeout to ensure DOM is ready
+      setTimeout(() => {
+        scrollRef.current?.scrollTo({ y: 0, animated: false });
+      }, 0);
+    }
+  }, [hasStarted]);
+
+  // Scroll to top on initial mount if in setup
+  useEffect(() => {
+    if (!hasStarted) {
+      setTimeout(() => {
+        scrollRef.current?.scrollTo({ y: 0, animated: false });
+      }, 0);
+    }
+  }, []);
+
   // Calculate summary stats
   const qualityStats = {
     best: flowSteps.filter((s) => s.quality === 'best').length,
