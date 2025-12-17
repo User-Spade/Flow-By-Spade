@@ -83,7 +83,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Closed Guard Armbar',
     quality: 'ok',
     note: 'Solid but requires good setup',
-    minBelt: 'blue',
+    minBelt: 'white',
   },
   {
     id: 'cross_collar_choke',
@@ -102,7 +102,7 @@ const TRANSITIONS: Transition[] = [
     label: 'S-Mount Transition',
     quality: 'ok',
     note: 'Defensive but opens more options',
-    minBelt: 'blue',
+    minBelt: 'white',
   },
   {
     id: 'armbar_finish_move',
@@ -111,7 +111,7 @@ const TRANSITIONS: Transition[] = [
     label: 'Armbar Finish',
     quality: 'best',
     note: 'Strong finish from here',
-    minBelt: 'purple',
+    minBelt: 'white',
     isTerminal: true,
   },
   {
