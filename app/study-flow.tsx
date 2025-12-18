@@ -1,8 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ScrollView, StatusBar, Pressable } from 'react-native';
+import { ScrollView, StatusBar, Pressable, Animated } from 'react-native';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+
+const glowKeyframes = `
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(132, 220, 198, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(132, 220, 198, 0); }
+  }
+`;
 
 const COLORS = {
   bg: '#222222',
@@ -43,6 +50,12 @@ interface Transition {
   note: string;
   minBelt: Belt;
   isTerminal?: boolean;
+  opponentResponses?: Array<{
+    label: string;
+    toPositionId: string;
+    quality: Quality;
+    note: string;
+  }>;
 }
 
 interface FlowStep {
@@ -53,6 +66,7 @@ interface FlowStep {
   quality: Quality;
   note: string;
   label: string;
+  actor: 'you' | 'opponent';
 }
 
 // Positions data
@@ -75,6 +89,20 @@ const TRANSITIONS: Transition[] = [
     quality: 'best',
     note: 'High success rate from this position',
     minBelt: 'white',
+    opponentResponses: [
+      {
+        label: 'Post arm to block',
+        toPositionId: 'closed_guard_bottom',
+        quality: 'ok',
+        note: 'Opponent posts arm and re-guards',
+      },
+      {
+        label: 'Shrimp escape',
+        toPositionId: 'escape',
+        quality: 'risky',
+        note: 'Opponent escapes to feet',
+      },
+    ],
   },
   {
     id: 'closed_guard_armbar',
@@ -84,6 +112,20 @@ const TRANSITIONS: Transition[] = [
     quality: 'ok',
     note: 'Solid but requires good setup',
     minBelt: 'white',
+    opponentResponses: [
+      {
+        label: 'Stack pass',
+        toPositionId: 'escape',
+        quality: 'best',
+        note: 'Opponent stacks and passes guard',
+      },
+      {
+        label: 'Defend and re-guard',
+        toPositionId: 'closed_guard_bottom',
+        quality: 'ok',
+        note: 'Opponent defends the armbar setup',
+      },
+    ],
   },
   {
     id: 'cross_collar_choke',
@@ -182,6 +224,8 @@ export default function StudyFlowScreen() {
   const [selectedBelt, setSelectedBelt] = useState<Belt | null>(null);
   const [selectedStartPositionId, setSelectedStartPositionId] = useState<string | null>(null);
   const [hasStarted, setHasStarted] = useState(false);
+  const [turn, setTurn] = useState<'you' | 'opponent'>('you');
+  const pulseAnim = useRef(new Animated.Value(0)).current;
 
   const currentPosition = getPosition(currentPositionId);
   const allAvailableTransitions = getTransitionsFromPosition(currentPositionId);
@@ -207,10 +251,44 @@ export default function StudyFlowScreen() {
       quality: transition.quality,
       note: transition.note,
       label: transition.label,
+      actor: 'you',
     };
     setFlowSteps((prev) => [...prev, newStep]);
     setCurrentPositionId(transition.toPositionId);
     setTimeout(() => setPressedNext(null), 220);
+
+    // Handle turn transition
+    if (transition.isTerminal) {
+      // Flow ends, stay on end state
+    } else if (transition.opponentResponses && transition.opponentResponses.length > 0) {
+      setTurn('opponent');
+    } else {
+      setTurn('you');
+    }
+  };
+
+  const handleOpponentResponse = (response: { label: string; toPositionId: string; quality: Quality; note: string }) => {
+    setPressedNext(response.label);
+    const newStep: FlowStep = {
+      id: `step-${Date.now()}`,
+      fromPositionId: currentPositionId,
+      toPositionId: response.toPositionId,
+      transitionId: `opponent-response-${Date.now()}`,
+      quality: response.quality,
+      note: response.note,
+      label: response.label,
+      actor: 'opponent',
+    };
+    setFlowSteps((prev) => [...prev, newStep]);
+    setCurrentPositionId(response.toPositionId);
+    setTimeout(() => setPressedNext(null), 220);
+
+    // Check if terminal
+    if (response.toPositionId === 'submission' || response.toPositionId === 'escape') {
+      // Flow ends
+    } else {
+      setTurn('you');
+    }
   };
 
   const handleReset = () => {
@@ -219,6 +297,7 @@ export default function StudyFlowScreen() {
     setCurrentPositionId('closed_guard_bottom');
     setPathExpanded(false);
     setHasStarted(false);
+    setTurn('you');
     scrollRef.current?.scrollTo({ y: 0, animated: true });
   };
 
@@ -228,6 +307,7 @@ export default function StudyFlowScreen() {
       setCurrentPositionId(selectedStartPositionId);
       setHasStarted(true);
       setPathExpanded(false);
+      setTurn('you');
       scrollRef.current?.scrollTo({ y: 0, animated: true });
     }
   };
@@ -257,6 +337,28 @@ export default function StudyFlowScreen() {
       }, 0);
     }
   }, []);
+
+  // Pulse animation for opponent turn
+  useEffect(() => {
+    if (turn === 'opponent') {
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(pulseAnim, {
+            toValue: 1,
+            duration: 800,
+            useNativeDriver: false,
+          }),
+          Animated.timing(pulseAnim, {
+            toValue: 0,
+            duration: 800,
+            useNativeDriver: false,
+          }),
+        ])
+      ).start();
+    } else {
+      pulseAnim.setValue(0);
+    }
+  }, [turn]);
 
   // Calculate summary stats
   const qualityStats = {
@@ -376,16 +478,16 @@ export default function StudyFlowScreen() {
                   const toPos = getPosition(step.toPositionId);
 
                   return (
-                    <PathStepContainer key={step.id}>
+                    <PathStepContainer key={step.id} isOpponentStep={step.actor === 'opponent'}>
                       <PathStepHeader>
-                        <PathStepNumber>Step {index + 1}:</PathStepNumber>
+                        <PathStepNumber>{step.actor === 'opponent' ? 'Opponent — ' : ''}Step {index + 1}:</PathStepNumber>
                       </PathStepHeader>
                       <PathDetailLine>
                         <PathDetailLabel>From:</PathDetailLabel>
                         <PathPositionName>{fromPos?.name}</PathPositionName>
                       </PathDetailLine>
                       <PathDetailLine>
-                        <PathDetailLabel>You chose:</PathDetailLabel>
+                        <PathDetailLabel>{step.actor === 'opponent' ? 'They did:' : 'You chose:'}</PathDetailLabel>
                         <PathMoveName>{step.label}</PathMoveName>
                       </PathDetailLine>
                       <PathDetailLine>
@@ -407,10 +509,12 @@ export default function StudyFlowScreen() {
         )}
 
         {/* YOU ARE HERE - Current Position Card */}
-        <YouAreHereSection>
-          <YouAreHereLabel>Current position</YouAreHereLabel>
-          <CurrentCard>
-            <CurrentPositionText>{currentPosition?.name}</CurrentPositionText>
+        <YouAreHereSection isOpponentTurn={turn === 'opponent'}>
+          <YouAreHereLabel isOpponentTurn={turn === 'opponent'}>
+            {turn === 'you' ? "Your turn — choose your move" : "Opponent's turn — their response"}
+          </YouAreHereLabel>
+          <CurrentCard isOpponentTurn={turn === 'opponent'}>
+            <CurrentPositionText isOpponentTurn={turn === 'opponent'}>{currentPosition?.name}</CurrentPositionText>
             {flowSteps.length > 0 && flowSteps[flowSteps.length - 1].quality && (
               <QualityBadge quality={flowSteps[flowSteps.length - 1].quality}>
                 <QualityEmoji>{getQualityEmoji(flowSteps[flowSteps.length - 1].quality)}</QualityEmoji>
@@ -424,7 +528,7 @@ export default function StudyFlowScreen() {
         </YouAreHereSection>
 
         {/* YOUR NEXT MOVES - Options */}
-        {!isFlowEnded && availableTransitions.length > 0 && (
+        {!isFlowEnded && turn === 'you' && availableTransitions.length > 0 && (
           <YourNextMovesSection>
             <NextMovesLabel>Your next moves</NextMovesLabel>
             {availableTransitions.map((transition) => (
@@ -436,6 +540,32 @@ export default function StudyFlowScreen() {
                 <OptionLabelText>{transition.label}</OptionLabelText>
               </OptionCard>
             ))}
+          </YourNextMovesSection>
+        )}
+
+        {/* OPPONENT RESPONSES */}
+        {!isFlowEnded && turn === 'opponent' && flowSteps.length > 0 && (
+          <YourNextMovesSection>
+            <NextMovesLabel>Opponent responds</NextMovesLabel>
+            {(() => {
+              const lastUserMove = flowSteps
+                .slice()
+                .reverse()
+                .find((s) => s.actor === 'you');
+              if (!lastUserMove) return null;
+              const transition = TRANSITIONS.find((t) => t.id === lastUserMove.transitionId);
+              if (!transition || !transition.opponentResponses) return null;
+              return transition.opponentResponses.map((response, idx) => (
+                <OptionCard
+                  key={`opponent-${idx}`}
+                  onPress={() => handleOpponentResponse(response)}
+                  isPressed={pressedNext === response.label}
+                  isOpponentOption={true}
+                >
+                  <OptionLabelText isOpponentOption={true}>Opponent: {response.label}</OptionLabelText>
+                </OptionCard>
+              ));
+            })()}
           </YourNextMovesSection>
         )}
 
@@ -547,12 +677,12 @@ const PathStartPosition = styled.Text`
   border-radius: 8px;
 `;
 
-const PathStepContainer = styled.View`
+const PathStepContainer = styled.View<{ isOpponentStep?: boolean }>`
   margin-bottom: 20px;
   padding: 16px;
-  background: ${COLORS.card};
+  background: ${(props: any) => props.isOpponentStep ? 'rgba(132, 220, 198, 0.08)' : COLORS.card};
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid ${(props: any) => props.isOpponentStep ? 'rgba(132, 220, 198, 0.2)' : 'rgba(255, 255, 255, 0.08)'};
 `;
 
 const PathStepHeader = styled.View`
@@ -654,29 +784,34 @@ const PathStep = styled.View`
 `;
 
 /* YOU ARE HERE SECTION */
-const YouAreHereSection = styled.View`
+const YouAreHereSection = styled.View<{ isOpponentTurn?: boolean }>`
   margin-bottom: 24px;
+  padding: ${(props: any) => (props.isOpponentTurn ? '16px' : '0px')};
+  border-radius: ${(props: any) => (props.isOpponentTurn ? '12px' : '0px')};
+  background: ${(props: any) => (props.isOpponentTurn ? 'rgba(132, 220, 198, 0.06)' : 'transparent')};
+  border: ${(props: any) => (props.isOpponentTurn ? `1px solid rgba(132, 220, 198, 0.2)` : 'none')};
 `;
 
-const YouAreHereLabel = styled.Text`
+const YouAreHereLabel = styled.Text<{ isOpponentTurn?: boolean }>`
   font-size: 12px;
-  color: ${COLORS.muted};
+  color: ${(props: any) => (props.isOpponentTurn ? COLORS.mint : COLORS.muted)};
   margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
 `;
 
-const CurrentCard = styled.View`
-  background: ${COLORS.card};
-  border: 2px solid ${COLORS.accentPrimary}44;
+const CurrentCard = styled.View<{ isOpponentTurn?: boolean }>`
+  background: ${(props: any) => (props.isOpponentTurn ? 'rgba(132, 220, 198, 0.08)' : COLORS.card)};
+  border: 2px solid ${(props: any) => (props.isOpponentTurn ? COLORS.mint : COLORS.accentPrimary + '44')};
   border-radius: 16px;
   padding: 28px;
   margin-bottom: 32px;
+  ${(props: any) => (props.isOpponentTurn ? `animation: glow 2.5s infinite;` : '')};
 `;
 
-const CurrentPositionText = styled.Text`
+const CurrentPositionText = styled.Text<{ isOpponentTurn?: boolean }>`
   font-size: 28px;
-  color: ${COLORS.text};
+  color: ${(props: any) => (props.isOpponentTurn ? COLORS.mint : COLORS.text)};
   font-weight: 700;
   margin-bottom: 16px;
 `;
@@ -722,19 +857,20 @@ const NextMovesLabel = styled.Text`
   letter-spacing: 0.5px;
 `;
 
-const OptionCard = styled(Pressable)<{ isPressed: boolean }>`
-  background: ${COLORS.card};
-  border: 1px solid rgba(255, 255, 255, 0.1);
+const OptionCard = styled(Pressable)<{ isPressed: boolean; isOpponentOption?: boolean }>`
+  background: ${(props: any) => (props.isOpponentOption ? 'rgba(132, 220, 198, 0.1)' : COLORS.card)};
+  border: 2px solid ${(props: any) => (props.isOpponentOption ? COLORS.mint : 'rgba(255, 255, 255, 0.1)')};
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 12px;
   opacity: ${(props: any) => (props.isPressed ? 0.6 : 1)};
+  ${(props: any) => (props.isOpponentOption ? `animation: glow 2s infinite;` : '')};
 `;
 
-const OptionLabelText = styled.Text`
+const OptionLabelText = styled.Text<{ isOpponentOption?: boolean }>`
   font-size: 16px;
-  color: ${COLORS.text};
-  font-weight: 600;
+  color: ${(props: any) => (props.isOpponentOption ? COLORS.mint : COLORS.text)};
+  font-weight: ${(props: any) => (props.isOpponentOption ? '700' : '600')};
 `;
 
 const OptionMetaRow = styled.View`
