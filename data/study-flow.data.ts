@@ -1,0 +1,120 @@
+import { Belt, Position, Transition } from "./types/study-flow.types";
+
+export const beltRank: Record<Belt, number> = {
+  white: 1,
+  blue: 2,
+  purple: 3,
+  brown: 4,
+  black: 5,
+};
+
+export const POSITIONS: Position[] = [
+  { id: 'closed_guard_bottom', name: 'Closed Guard (Bottom)' },
+  { id: 'mount_top', name: 'Mount (Top)' },
+  { id: 's_mount_top', name: 'S-Mount (Top)' },
+  { id: 'armbar_finish', name: 'Armbar Finish' },
+  { id: 'submission', name: 'Submission' },
+  { id: 'escape', name: 'Escape' },
+];
+
+export const TRANSITIONS: Transition[] = [
+  {
+    id: 'hip_bump_sweep',
+    fromPositionId: 'closed_guard_bottom',
+    toPositionId: 'mount_top',
+    label: 'Hip Bump Sweep',
+    quality: 'best',
+    note: 'High success rate from this position',
+    minBelt: 'white',
+    opponentResponses: [
+      {
+        id: 'hip_bump_sweep_post_arm',
+        label: 'Post arm to block',
+        toPositionId: 'closed_guard_bottom',
+        quality: 'ok',
+        note: 'Opponent posts arm and re-guards',
+      },
+      {
+        id: 'hip_bump_sweep_shrimp',
+        label: 'Shrimp escape',
+        toPositionId: 'escape',
+        quality: 'risky',
+        note: 'Opponent escapes to feet',
+      },
+    ],
+  },
+  {
+    id: 'closed_guard_armbar',
+    fromPositionId: 'closed_guard_bottom',
+    toPositionId: 'armbar_finish',
+    label: 'Closed Guard Armbar',
+    quality: 'ok',
+    note: 'Solid but requires good setup',
+    minBelt: 'white',
+    opponentResponses: [
+      {
+        id: 'closed_guard_armbar_stack',
+        label: 'Stack pass',
+        toPositionId: 'escape',
+        quality: 'best',
+        note: 'Opponent stacks and passes guard',
+      },
+      {
+        id: 'closed_guard_armbar_defend',
+        label: 'Defend and re-guard',
+        toPositionId: 'closed_guard_bottom',
+        quality: 'ok',
+        note: 'Opponent defends the armbar setup',
+      },
+    ],
+  },
+  {
+    id: 'cross_collar_choke',
+    fromPositionId: 'mount_top',
+    toPositionId: 'submission',
+    label: 'Cross Collar Choke',
+    quality: 'best',
+    note: 'Textbook finish, use it!',
+    minBelt: 'white',
+    isTerminal: true,
+  },
+  {
+    id: 's_mount_transition',
+    fromPositionId: 'mount_top',
+    toPositionId: 's_mount_top',
+    label: 'S-Mount Transition',
+    quality: 'ok',
+    note: 'Defensive but opens more options',
+    minBelt: 'white',
+  },
+  {
+    id: 'armbar_finish_move',
+    fromPositionId: 's_mount_top',
+    toPositionId: 'submission',
+    label: 'Armbar Finish',
+    quality: 'best',
+    note: 'Strong finish from here',
+    minBelt: 'white',
+    isTerminal: true,
+  },
+  {
+    id: 'far_side_armbar',
+    fromPositionId: 's_mount_top',
+    toPositionId: 'submission',
+    label: 'Far-Side Armbar',
+    quality: 'risky',
+    note: 'Can be escaped by experienced opponents',
+    minBelt: 'brown',
+    isTerminal: true,
+  },
+  {
+    id: 'defend_escape',
+    fromPositionId: 'armbar_finish',
+    toPositionId: 'escape',
+    label: 'Defend Escape',
+    quality: 'ok',
+    note: 'End the flow by defending',
+    minBelt: 'white',
+    isTerminal: true,
+  },
+];
