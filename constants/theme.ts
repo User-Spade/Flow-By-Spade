@@ -7,6 +7,7 @@ export const COLORS = {
   accentPrimary: '#F18805', // amber
   accentSecondary: '#0081A7', // aqua
   mint: '#84DCC6',
+  paleRose: '#D4A5A5', // opponent turn indicator
 } as const;
 
 // Belt levels for the welcome screen
