@@ -3,6 +3,8 @@ import { ScrollView, StatusBar, Pressable, Animated } from 'react-native';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useBelt } from '../contexts/BeltContext';
+import type { BeltLevel } from '../constants/theme';
 
 const glowKeyframes = `
   @keyframes glow {
@@ -215,8 +217,9 @@ function getQualityColor(quality: Quality): string {
   }
 }
 
-export default function StudyFlowScreen() {
+function StudyFlow() {
   const router = useRouter();
+  const { belt: profileBelt } = useBelt();
   const scrollRef = useRef<ScrollView>(null);
   const [flowSteps, setFlowSteps] = useState<FlowStep[]>([]);
   const [currentPositionId, setCurrentPositionId] = useState('closed_guard_bottom');
@@ -227,6 +230,12 @@ export default function StudyFlowScreen() {
   const [hasStarted, setHasStarted] = useState(false);
   const [turn, setTurn] = useState<'you' | 'opponent'>('you');
   const pulseAnim = useRef(new Animated.Value(0)).current;
+
+  // Sync selectedBelt with profile belt
+  useEffect(() => {
+    const profileBeltLower = (profileBelt?.toLowerCase() || 'white') as Belt;
+    setSelectedBelt(profileBeltLower);
+  }, [profileBelt]);
 
   const currentPosition = getPosition(currentPositionId);
   const allAvailableTransitions = getTransitionsFromPosition(currentPositionId);
@@ -1014,3 +1023,5 @@ const StartFlowButtonText = styled.Text`
   font-weight: 700;
   color: ${(props: any) => (props.disabled ? 'rgba(255, 255, 255, 0.4)' : COLORS.bg)};
 `;
+
+export default StudyFlow;
