@@ -3,8 +3,11 @@ import { ScrollView, StatusBar, Pressable, Animated } from 'react-native';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useBelt } from '../contexts/BeltContext';
 import type { BeltLevel } from '../constants/theme';
+import { databaseService } from '../services/databaseService';
+import type { FoundationCategory } from '../data/types/database.types';
 
 const glowKeyframes = `
   @keyframes glow {
@@ -221,14 +224,17 @@ function StudyFlow() {
   const router = useRouter();
   const { belt: profileBelt } = useBelt();
   const scrollRef = useRef<ScrollView>(null);
+  const foundationScrollRef = useRef<ScrollView>(null);
   const [flowSteps, setFlowSteps] = useState<FlowStep[]>([]);
   const [currentPositionId, setCurrentPositionId] = useState('closed_guard_bottom');
   const [pathExpanded, setPathExpanded] = useState(false);
   const [pressedNext, setPressedNext] = useState<string | null>(null);
   const [selectedBelt, setSelectedBelt] = useState<Belt | null>(null);
+  const [selectedFoundation, setSelectedFoundation] = useState<FoundationCategory>('neutral');
   const [selectedStartPositionId, setSelectedStartPositionId] = useState<string | null>(null);
   const [hasStarted, setHasStarted] = useState(false);
   const [turn, setTurn] = useState<'you' | 'opponent'>('you');
+  const [foundations, setFoundations] = useState<Array<{ id: FoundationCategory; display: string }>>([]);
   const pulseAnim = useRef(new Animated.Value(0)).current;
 
   // Sync selectedBelt with profile belt
@@ -237,6 +243,45 @@ function StudyFlow() {
     setSelectedBelt(profileBeltLower);
   }, [profileBelt]);
 
+  // Load foundations on mount
+  useEffect(() => {
+    const foundationsList = databaseService.getFoundations();
+    setFoundations(foundationsList);
+  }, []);
+
+  // Auto-scroll to neutral foundation on load
+  useEffect(() => {
+    if (foundations.length > 0 && foundationScrollRef.current) {
+      const neutralIndex = foundations.findIndex(f => f.id === 'neutral');
+      if (neutralIndex !== -1) {
+        setTimeout(() => {
+          foundationScrollRef.current?.scrollTo({ y: neutralIndex * 80, animated: false });
+        }, 100);
+      }
+    }
+  }, [foundations]);
+
+  // Handle foundation carousel snap to center
+  const handleFoundationScroll = (event: any) => {
+    const y = event.nativeEvent.contentOffset.y;
+  };
+
+  const handleFoundationScrollEnd = (event: any) => {
+    const y = event.nativeEvent.contentOffset.y;
+    const itemHeight = 80; // Height of each foundation button + margin
+    const centerIndex = Math.round(y / itemHeight);
+    const snapY = centerIndex * itemHeight;
+    
+    if (Math.abs(y - snapY) > 5) {
+      foundationScrollRef.current?.scrollTo({ y: snapY, animated: true });
+    }
+
+    // Update selected foundation based on center item
+    if (centerIndex < foundations.length) {
+      setSelectedFoundation(foundations[centerIndex].id);
+    }
+  };
+
   const currentPosition = getPosition(currentPositionId);
   const allAvailableTransitions = getTransitionsFromPosition(currentPositionId);
   const availableTransitions =
@@ -244,6 +289,13 @@ function StudyFlow() {
       ? allAvailableTransitions.filter((t) => beltRank[t.minBelt] <= beltRank[selectedBelt])
       : allAvailableTransitions;
   const isFlowEnded = currentPosition?.id === 'submission' || currentPosition?.id === 'escape';
+
+  // Filter positions by selected foundation
+  const filteredPositions = POSITIONS.filter((position) => {
+    if (!selectedFoundation) return true;
+    const positionFoundation = databaseService.getFoundationForPosition(position.id);
+    return positionFoundation === selectedFoundation;
+  });
 
   useEffect(() => {
     requestAnimationFrame(() => {
@@ -414,9 +466,67 @@ function StudyFlow() {
               ))}
             </BeltButtonRow>
 
+            <SetupTitle style={{ marginTop: 24 }}>Choose foundation</SetupTitle>
+            <FoundationCarouselContainer>
+              <ScrollView
+                ref={foundationScrollRef}
+                scrollEventThrottle={16}
+                onScroll={handleFoundationScroll}
+                onMomentumScrollEnd={handleFoundationScrollEnd}
+                snapToInterval={80}
+                decelerationRate="fast"
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ paddingVertical: 60 }}
+              >
+                {foundations.map((foundation, index) => {
+                  const isCenter = selectedFoundation === foundation.id;
+                  return (
+                    <FoundationCarouselItem key={foundation.id} isCenter={isCenter}>
+                      <FoundationButton
+                        isCenter={isCenter}
+                        onPress={() => {
+                          const targetY = index * 80;
+                          foundationScrollRef.current?.scrollTo({ y: targetY, animated: true });
+                          setSelectedFoundation(foundation.id);
+                        }}
+                      >
+                        <FoundationButtonText isCenter={isCenter}>
+                          {foundation.display}
+                        </FoundationButtonText>
+                      </FoundationButton>
+                    </FoundationCarouselItem>
+                  );
+                })}
+              </ScrollView>
+              <LinearGradient
+                colors={['#222222', 'rgba(34, 34, 34, 0)']}
+                style={{
+                  position: 'absolute',
+                  width: '100%',
+                  height: 60,
+                  top: 0,
+                  left: 0,
+                  zIndex: 1,
+                  pointerEvents: 'none'
+                }}
+              />
+              <LinearGradient
+                colors={['rgba(34, 34, 34, 0)', '#222222']}
+                style={{
+                  position: 'absolute',
+                  width: '100%',
+                  height: 60,
+                  bottom: 0,
+                  left: 0,
+                  zIndex: 1,
+                  pointerEvents: 'none'
+                }}
+              />
+            </FoundationCarouselContainer>
+
             <SetupTitle style={{ marginTop: 24 }}>Choose starting position</SetupTitle>
             <StartPositionList>
-              {POSITIONS.map((position) => (
+              {filteredPositions.map((position) => (
                 <StartPositionButton
                   key={position.id}
                   isSelected={selectedStartPositionId === position.id}
@@ -987,6 +1097,41 @@ const BeltButtonText = styled.Text`
   font-size: 13px;
   font-weight: 700;
   color: ${(props: any) => (props.isSelected ? COLORS.bg : COLORS.text)};
+`;
+
+const FoundationCarouselContainer = styled.View`
+  height: 200px;
+  margin-bottom: 32px;
+  background: ${COLORS.card};
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+`;
+
+const FoundationCarouselItem = styled.View`
+  height: 80px;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: center;
+  opacity: ${(props: any) => (props.isCenter ? 1 : 0.4)};
+`;
+
+const FoundationButton = styled(Pressable)`
+  width: 100%;
+  padding: 12px 16px;
+  background: ${(props: any) => (props.isCenter ? COLORS.accentPrimary : 'rgba(255, 255, 255, 0.05)')};
+  border: 2px solid ${(props: any) => (props.isCenter ? COLORS.accentPrimary : 'rgba(255, 255, 255, 0.1)')};
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const FoundationButtonText = styled.Text`
+  font-size: ${(props: any) => (props.isCenter ? '14px' : '12px')};
+  font-weight: ${(props: any) => (props.isCenter ? '700' : '600')};
+  color: ${(props: any) => (props.isCenter ? COLORS.bg : COLORS.text)};
+  text-align: center;
 `;
 
 const StartPositionList = styled.View`
