@@ -6,8 +6,8 @@ import { useRouter } from 'expo-router';
 
 const glowKeyframes = `
   @keyframes glow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(132, 220, 198, 0.7); }
-    50% { box-shadow: 0 0 0 8px rgba(132, 220, 198, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 165, 165, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(212, 165, 165, 0); }
   }
 `;
 
@@ -19,6 +19,7 @@ const COLORS = {
   accentPrimary: '#F18805',
   accentSecondary: '#0081A7',
   mint: '#84DCC6',
+  paleRose: '#D4A5A5',
   success: '#4CAF50',
   warning: '#FF9800',
   error: '#F44336',
@@ -680,9 +681,9 @@ const PathStartPosition = styled.Text`
 const PathStepContainer = styled.View<{ isOpponentStep?: boolean }>`
   margin-bottom: 20px;
   padding: 16px;
-  background: ${(props: any) => props.isOpponentStep ? 'rgba(132, 220, 198, 0.08)' : COLORS.card};
+  background: ${(props: any) => props.isOpponentStep ? 'rgba(212, 165, 165, 0.08)' : COLORS.card};
   border-radius: 12px;
-  border: 1px solid ${(props: any) => props.isOpponentStep ? 'rgba(132, 220, 198, 0.2)' : 'rgba(255, 255, 255, 0.08)'};
+  border: 1px solid ${(props: any) => props.isOpponentStep ? 'rgba(212, 165, 165, 0.2)' : 'rgba(255, 255, 255, 0.08)'};
 `;
 
 const PathStepHeader = styled.View`
@@ -788,21 +789,21 @@ const YouAreHereSection = styled.View<{ isOpponentTurn?: boolean }>`
   margin-bottom: 24px;
   padding: ${(props: any) => (props.isOpponentTurn ? '16px' : '0px')};
   border-radius: ${(props: any) => (props.isOpponentTurn ? '12px' : '0px')};
-  background: ${(props: any) => (props.isOpponentTurn ? 'rgba(132, 220, 198, 0.06)' : 'transparent')};
-  border: ${(props: any) => (props.isOpponentTurn ? `1px solid rgba(132, 220, 198, 0.2)` : 'none')};
+  background: ${(props: any) => (props.isOpponentTurn ? 'rgba(212, 165, 165, 0.06)' : 'transparent')};
+  border: ${(props: any) => (props.isOpponentTurn ? `1px solid rgba(212, 165, 165, 0.2)` : 'none')};
 `;
 
 const YouAreHereLabel = styled.Text<{ isOpponentTurn?: boolean }>`
   font-size: 12px;
-  color: ${(props: any) => (props.isOpponentTurn ? COLORS.mint : COLORS.muted)};
+  color: ${(props: any) => (props.isOpponentTurn ? COLORS.paleRose : COLORS.muted)};
   margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
 `;
 
 const CurrentCard = styled.View<{ isOpponentTurn?: boolean }>`
-  background: ${(props: any) => (props.isOpponentTurn ? 'rgba(132, 220, 198, 0.08)' : COLORS.card)};
-  border: 2px solid ${(props: any) => (props.isOpponentTurn ? COLORS.mint : COLORS.accentPrimary + '44')};
+  background: ${(props: any) => (props.isOpponentTurn ? 'rgba(212, 165, 165, 0.08)' : COLORS.card)};
+  border: 2px solid ${(props: any) => (props.isOpponentTurn ? COLORS.paleRose : COLORS.accentPrimary + '44')};
   border-radius: 16px;
   padding: 28px;
   margin-bottom: 32px;
@@ -811,7 +812,7 @@ const CurrentCard = styled.View<{ isOpponentTurn?: boolean }>`
 
 const CurrentPositionText = styled.Text<{ isOpponentTurn?: boolean }>`
   font-size: 28px;
-  color: ${(props: any) => (props.isOpponentTurn ? COLORS.mint : COLORS.text)};
+  color: ${(props: any) => (props.isOpponentTurn ? COLORS.paleRose : COLORS.text)};
   font-weight: 700;
   margin-bottom: 16px;
 `;
@@ -858,8 +859,8 @@ const NextMovesLabel = styled.Text`
 `;
 
 const OptionCard = styled(Pressable)<{ isPressed: boolean; isOpponentOption?: boolean }>`
-  background: ${(props: any) => (props.isOpponentOption ? 'rgba(132, 220, 198, 0.1)' : COLORS.card)};
-  border: 2px solid ${(props: any) => (props.isOpponentOption ? COLORS.mint : 'rgba(255, 255, 255, 0.1)')};
+  background: ${(props: any) => (props.isOpponentOption ? 'rgba(212, 165, 165, 0.1)' : COLORS.card)};
+  border: 2px solid ${(props: any) => (props.isOpponentOption ? COLORS.paleRose : 'rgba(255, 255, 255, 0.1)')};
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 12px;
@@ -869,7 +870,7 @@ const OptionCard = styled(Pressable)<{ isPressed: boolean; isOpponentOption?: bo
 
 const OptionLabelText = styled.Text<{ isOpponentOption?: boolean }>`
   font-size: 16px;
-  color: ${(props: any) => (props.isOpponentOption ? COLORS.mint : COLORS.text)};
+  color: ${(props: any) => (props.isOpponentOption ? COLORS.paleRose : COLORS.text)};
   font-weight: ${(props: any) => (props.isOpponentOption ? '700' : '600')};
 `;
 
