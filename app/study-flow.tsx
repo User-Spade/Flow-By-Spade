@@ -225,6 +225,7 @@ function StudyFlow() {
   const { belt: profileBelt } = useBelt();
   const scrollRef = useRef<ScrollView>(null);
   const foundationScrollRef = useRef<ScrollView>(null);
+  const beltScrollRef = useRef<ScrollView>(null);
   const [flowSteps, setFlowSteps] = useState<FlowStep[]>([]);
   const [currentPositionId, setCurrentPositionId] = useState('closed_guard_bottom');
   const [pathExpanded, setPathExpanded] = useState(false);
@@ -243,11 +244,48 @@ function StudyFlow() {
     setSelectedBelt(profileBeltLower);
   }, [profileBelt]);
 
+  // Auto-scroll to selected belt on load
+  useEffect(() => {
+    if (selectedBelt && beltScrollRef.current) {
+      const belts: Belt[] = ['white', 'blue', 'purple', 'brown', 'black'];
+      const beltIndex = belts.indexOf(selectedBelt);
+      if (beltIndex !== -1) {
+        setTimeout(() => {
+          beltScrollRef.current?.scrollTo({ y: beltIndex * 80, animated: false });
+        }, 100);
+      }
+    }
+  }, [selectedBelt]);
+
   // Load foundations on mount
   useEffect(() => {
     const foundationsList = databaseService.getFoundations();
     setFoundations(foundationsList);
   }, []);
+
+  // Handle belt carousel snap to center
+  const handleBeltScroll = (event: any) => {
+    const y = event.nativeEvent.contentOffset.y;
+  };
+
+  const handleBeltScrollEnd = (event: any) => {
+    const y = event.nativeEvent.contentOffset.y;
+    const itemHeight = 80;
+    const centerIndex = Math.round(y / itemHeight);
+    const snapY = centerIndex * itemHeight;
+    
+    if (Math.abs(y - snapY) > 5) {
+      beltScrollRef.current?.scrollTo({ y: snapY, animated: true });
+    }
+
+    // Update selected belt based on center item
+    const belts: Belt[] = ['white', 'blue', 'purple', 'brown', 'black'];
+    if (centerIndex < belts.length) {
+      setSelectedBelt(belts[centerIndex]);
+    }
+  };
+
+  // Handle 
 
   // Auto-scroll to neutral foundation on load
   useEffect(() => {
@@ -452,19 +490,62 @@ function StudyFlow() {
           {/* FLOW SETUP */}
           <SetupSection>
             <SetupTitle>Choose your belt level</SetupTitle>
-            <BeltButtonRow>
-              {(['white', 'blue', 'purple', 'brown', 'black'] as Belt[]).map((belt) => (
-                <BeltButton
-                  key={belt}
-                  isSelected={selectedBelt === belt}
-                  onPress={() => setSelectedBelt(belt)}
-                >
-                  <BeltButtonText isSelected={selectedBelt === belt}>
-                    {belt.charAt(0).toUpperCase() + belt.slice(1)}
-                  </BeltButtonText>
-                </BeltButton>
-              ))}
-            </BeltButtonRow>
+            <BeltCarouselContainer>
+              <ScrollView
+                ref={beltScrollRef}
+                scrollEventThrottle={16}
+                onScroll={handleBeltScroll}
+                onMomentumScrollEnd={handleBeltScrollEnd}
+                snapToInterval={80}
+                decelerationRate="fast"
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ paddingVertical: 60 }}
+              >
+                {(['white', 'blue', 'purple', 'brown', 'black'] as Belt[]).map((belt, index) => {
+                  const isCenter = selectedBelt === belt;
+                  return (
+                    <BeltCarouselItem key={belt} isCenter={isCenter}>
+                      <BeltButton
+                        isCenter={isCenter}
+                        onPress={() => {
+                          const targetY = index * 80;
+                          beltScrollRef.current?.scrollTo({ y: targetY, animated: true });
+                          setSelectedBelt(belt);
+                        }}
+                      >
+                        <BeltButtonText isCenter={isCenter}>
+                          {belt.charAt(0).toUpperCase() + belt.slice(1)}
+                        </BeltButtonText>
+                      </BeltButton>
+                    </BeltCarouselItem>
+                  );
+                })}
+              </ScrollView>
+              <LinearGradient
+                colors={['#222222', 'rgba(34, 34, 34, 0)']}
+                style={{
+                  position: 'absolute',
+                  width: '100%',
+                  height: 60,
+                  top: 0,
+                  left: 0,
+                  zIndex: 1,
+                  pointerEvents: 'none'
+                }}
+              />
+              <LinearGradient
+                colors={['rgba(34, 34, 34, 0)', '#222222']}
+                style={{
+                  position: 'absolute',
+                  width: '100%',
+                  height: 60,
+                  bottom: 0,
+                  left: 0,
+                  zIndex: 1,
+                  pointerEvents: 'none'
+                }}
+              />
+            </BeltCarouselContainer>
 
             <SetupTitle style={{ marginTop: 24 }}>Choose foundation</SetupTitle>
             <FoundationCarouselContainer>
@@ -1077,26 +1158,39 @@ const SetupTitle = styled.Text`
   margin-bottom: 16px;
 `;
 
-const BeltButtonRow = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
+const BeltCarouselContainer = styled.View`
+  height: 200px;
   margin-bottom: 32px;
+  background: ${COLORS.card};
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+`;
+
+const BeltCarouselItem = styled.View`
+  height: 80px;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: center;
+  opacity: ${(props: any) => (props.isCenter ? 1 : 0.4)};
 `;
 
 const BeltButton = styled(Pressable)`
-  flex: 1;
-  margin-horizontal: 6px;
-  padding: 12px;
-  background: ${(props: any) => (props.isSelected ? COLORS.accentPrimary : COLORS.card)};
-  border: 2px solid ${(props: any) => (props.isSelected ? COLORS.accentPrimary : 'rgba(255, 255, 255, 0.2)')};
+  width: 100%;
+  padding: 12px 16px;
+  background: ${(props: any) => (props.isCenter ? COLORS.accentPrimary : 'rgba(255, 255, 255, 0.05)')};
+  border: 2px solid ${(props: any) => (props.isCenter ? COLORS.accentPrimary : 'rgba(255, 255, 255, 0.1)')};
   border-radius: 10px;
   align-items: center;
+  justify-content: center;
 `;
 
 const BeltButtonText = styled.Text`
-  font-size: 13px;
-  font-weight: 700;
-  color: ${(props: any) => (props.isSelected ? COLORS.bg : COLORS.text)};
+  font-size: ${(props: any) => (props.isCenter ? '14px' : '12px')};
+  font-weight: ${(props: any) => (props.isCenter ? '700' : '600')};
+  color: ${(props: any) => (props.isCenter ? COLORS.bg : COLORS.text)};
+  text-align: center;
 `;
 
 const FoundationCarouselContainer = styled.View`
