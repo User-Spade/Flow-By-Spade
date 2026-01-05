@@ -59,8 +59,6 @@ export default function LibraryScreen() {
   const [hasManualBeltSelection, setHasManualBeltSelection] = useState(false);
   const [selectedPositionId, setSelectedPositionId] = useState<string | null>(null);
   const [selectedFoundation, setSelectedFoundation] = useState<FoundationCategory | null>(null);
-  const [showPositions, setShowPositions] = useState(false);
-  const [showSubmissions, setShowSubmissions] = useState(false);
   const [selectedTechniqueId, setSelectedTechniqueId] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [pageWidth, setPageWidth] = useState<number>(0);
@@ -75,7 +73,6 @@ export default function LibraryScreen() {
 
   // Dynamic animated scales
   const beltScales = useRef(beltLevels.map(() => new Animated.Value(1))).current;
-  const typeScales = useRef([new Animated.Value(1), new Animated.Value(1)]).current;
   const foundationScales = useRef<Animated.Value[]>([]).current;
   const [posScales, setPosScales] = useState<Animated.Value[]>([]);
 
@@ -94,7 +91,7 @@ export default function LibraryScreen() {
       if (foundationScales.length === 0 && foundationList.length > 0) {
         foundationList.forEach(() => foundationScales.push(new Animated.Value(1)));
       }
-      if (selectedFoundation && (showPositions || showSubmissions)) {
+      if (selectedFoundation) {
         const filteredPositions = databaseService.getPositionsByFoundationAndBelt(selectedFoundation, selectedBeltId || null);
         const list: Array<{ id: string; name: string; category: string; icon: keyof typeof Ionicons.glyphMap }> = [];
         Object.entries(filteredPositions).forEach(([id, position]) => {
@@ -115,7 +112,7 @@ export default function LibraryScreen() {
       }
     };
     load();
-  }, [selectedBeltId, selectedFoundation, showPositions, showSubmissions]);
+  }, [selectedBeltId, selectedFoundation]);
 
   // Gesture tracking to differentiate swipes from taps
   const touchStart = useRef<{ x: number; y: number } | null>(null);
@@ -253,71 +250,6 @@ export default function LibraryScreen() {
             </TouchableWithoutFeedback>
           );
         })}
-      </ScrollView>
-
-      {/* Type Filter Section (Position/Submission) */}
-      <Text style={styles.sectionLabel}>Type Filter</Text>
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.beltScroll}
-        contentContainerStyle={{ paddingRight: 20 }}
-      >
-        <TouchableWithoutFeedback
-          onPressIn={(e) => handlePressIn(typeScales[0], e)}
-          onPressOut={(e) =>
-            handlePressOut(typeScales[0], e, () => setShowPositions(!showPositions))
-          }
-        >
-          <Animated.View
-            style={[
-              styles.foundationChip,
-              {
-                transform: [{ scale: typeScales[0] }],
-                backgroundColor: showPositions ? '#2E3B4E' : 'rgba(44,44,49,0.82)',
-                borderColor: showPositions ? '#F18805' : 'rgba(255,255,255,0.12)'
-              }
-            ]}
-          >
-            <Ionicons name={showPositions ? 'git-network' : 'git-network-outline'} size={22} color={showPositions ? '#F18805' : '#84DCC6'} />
-            <Text
-              style={[
-                styles.foundationLabel,
-                { color: showPositions ? '#F18805' : '#AEB0B5' }
-              ]}
-            >
-              Position
-            </Text>
-          </Animated.View>
-        </TouchableWithoutFeedback>
-
-        <TouchableWithoutFeedback
-          onPressIn={(e) => handlePressIn(typeScales[1], e)}
-          onPressOut={(e) =>
-            handlePressOut(typeScales[1], e, () => setShowSubmissions(!showSubmissions))
-          }
-        >
-          <Animated.View
-            style={[
-              styles.foundationChip,
-              {
-                transform: [{ scale: typeScales[1] }],
-                backgroundColor: showSubmissions ? '#2E3B4E' : 'rgba(44,44,49,0.82)',
-                borderColor: showSubmissions ? '#F18805' : 'rgba(255,255,255,0.12)'
-              }
-            ]}
-          >
-            <Ionicons name={showSubmissions ? 'hand-left' : 'hand-left-outline'} size={22} color={showSubmissions ? '#F18805' : '#84DCC6'} />
-            <Text
-              style={[
-                styles.foundationLabel,
-                { color: showSubmissions ? '#F18805' : '#AEB0B5' }
-              ]}
-            >
-              Submission
-            </Text>
-          </Animated.View>
-        </TouchableWithoutFeedback>
       </ScrollView>
 
       {/* Foundation Filter Section */}
