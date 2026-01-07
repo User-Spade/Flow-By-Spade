@@ -1,6 +1,4 @@
 {
-  "version": "1.0.0",
-  "last_updated": "2025-12-08",
   "positions": {
     "standing_neutral": {
       "belt_levels": {
@@ -11,20 +9,20 @@
             "Hand-fighting: win inside position before big movements",
             "Footwork: step to angles, don’t reach with arms"
           ],
-          "techniques": [],
           "common_mistakes": [
             "Square stance with straight legs",
             "Reaching for grips without footwork",
             "Head down, exposing neck and posture"
           ],
-          "key_details": [],
           "transitions_available": [
             "collar_tie",
             "over_under_clinch",
             "double_underhooks"
           ],
           "prerequisites": [],
-          "key_objectives": []
+          "key_objectives": [],
+          "key_details": [],
+          "techniques": []
         },
         "blue": {
           "concepts": [
@@ -148,6 +146,7 @@
       },
       "techniques": [],
       "transitions": [],
+      
       "system": {
         "position_id": "standing_neutral",
         "min_belt": "white",
@@ -23453,6 +23452,48 @@
         "description": "These counters flip the script entirely. When the top player reaches too far or steps too close, their legs become exposed — and turtle suddenly becomes a launch point for ashi garami entries, backside attacks, and full leg entanglement control. It's the moment where defense becomes offense in a single beat. If they overextend, you're already on their heel."
       }
     }
+  },
+  "techniques": {
+    "Guard (Top)": [],
+    "neutral": [
+      {"label": "",
+    "id": "",
+    "fromPositionId": "standing_neutral",
+    "toPositionId": "",
+    "passiveToPositionId": "true/false",
+    "failedToPositionId": "",
+    "Nature": "Proactive/Reactive",
+    "note": "",
+    "minBelt": "white",
+    "ReactiveResponses": [
+      {
+        "id": "",
+        "label": "",
+        "minBelt": "white",
+        "toPositionId": "",
+        "defenseQuality": "Optimal",
+        "note": ""
+      },
+      {
+        "id": "",
+        "label": "",
+        "minBelt": "white",
+        "toPositionId": "",
+        "defenseQuality": "Suboptimal",
+        "note": ""
+      },
+      {
+        "id": "",
+        "label": "",
+        "minBelt": "white",
+        "toPositionId": "",
+        "defenseQuality": "Unlikely",
+        "note": ""
+      }
+    ]
+    }
+    ],
+    "Guard (Bottom)": [] 
   },
   "foundation_mapping": {
     "generated_at": "2025-11-24T00:34:45.807Z",
