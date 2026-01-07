@@ -7,6 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useBelt } from '../contexts/BeltContext';
 import type { BeltLevel } from '../constants/theme';
 import { databaseService } from '../services/databaseService';
+import databaseJson from '../data/bjj-database.json';
 import type { FoundationCategory } from '../data/types/database.types';
 
 const glowKeyframes = `
@@ -32,6 +33,26 @@ const COLORS = {
 
 type Quality = 'best' | 'ok' | 'risky' | 'bad';
 type Belt = 'white' | 'blue' | 'purple' | 'brown' | 'black';
+type ActionCategory = 'Advancement' | 'Regression' | 'Submission';
+
+interface DbTechnique {
+  id: string;
+  label: string;
+  fromPositionId: string;
+  toPositionId: string;
+  Nature: ActionCategory;
+  note: string;
+  minBelt: Belt;
+  ReactiveResponses?: Array<{
+    id: string;
+    label: string;
+    toPositionId: string;
+    outcomeClass: string;
+    perspective: string;
+    note: string;
+    minBelt: Belt;
+  }>;
+}
 
 const beltRank: Record<Belt, number> = {
   white: 1,
@@ -190,7 +211,88 @@ function getPosition(id: string): Position | undefined {
 }
 
 function getTransitionsFromPosition(positionId: string): Transition[] {
-  return TRANSITIONS.filter((t) => t.fromPositionId === positionId);
+  // First try hardcoded transitions (for backwards compatibility)
+  const hardcodedTransitions = TRANSITIONS.filter((t) => t.fromPositionId === positionId);
+  if (hardcodedTransitions.length > 0) {
+    return hardcodedTransitions;
+  }
+  
+  // Fallback to database transitions
+  const dbPositions = databaseService.getTransitionsFrom(positionId);
+  return dbPositions.map((toPos): Transition => ({
+    id: `${positionId}_to_${toPos.system.position_id}`,
+    fromPositionId: positionId,
+    toPositionId: toPos.system.position_id,
+    label: toPos.learning.display_name,
+    quality: 'ok', // Default quality for now
+    note: '',
+    minBelt: toPos.system.min_belt as Belt,
+  }));
+}
+
+function mapOutcomeToQuality(outcomeClass: string): Quality {
+  switch (outcomeClass) {
+    case 'Win': return 'risky'; // Win for opponent = bad for user
+    case 'Loss': return 'best'; // Loss for opponent = good for user
+    case 'Neutral':
+    default:
+      return 'ok';
+  }
+}
+
+function mapOutcomeToColor(outcomeClass: string): string {
+  switch (outcomeClass) {
+    case 'Win': return COLORS.error; // Red for opponent win
+    case 'Loss': return COLORS.success; // Green for opponent loss
+    case 'Neutral':
+    default:
+      return COLORS.warning; // Orange for neutral
+  }
+}
+
+function getTechniquesFromDatabase(positionId: string, category: ActionCategory, beltLevel: Belt): DbTechnique[] {
+  try {
+    const db = databaseJson as any;
+    if (!db.techniques) return [];
+    
+    // Get the foundation for this position
+    const foundation = databaseService.getFoundationForPosition(positionId);
+    if (!foundation) return [];
+    
+    // Map foundation to technique key
+    const foundationKeyMap: Record<string, string> = {
+      'neutral': 'neutral',
+      'guard_top': 'Guard (Top)',
+      'guard_bottom': 'Guard (Bottom)',
+      'side_control_top': 'Side Control (Top)',
+      'side_control_bottom': 'Side Control (Bottom)',
+      'full_mount_top': 'Mount (Top)',
+      'full_mount_bottom': 'Mount (Bottom)',
+      'rear_mount_top': 'Back (Top)',
+      'rear_mount_bottom': 'Back (Bottom)',
+      'turtle_top': 'Turtle (Top)',
+      'turtle_bottom': 'Turtle (Bottom)',
+      'knee_on_belly_top': 'Knee-On-Belly (Top)',
+      'knee_on_belly_bottom': 'Knee-On-Belly (Bottom)',
+    };
+    
+    const techniqueKey = foundationKeyMap[foundation] || foundation;
+    const techniques = db.techniques[techniqueKey] || [];
+    
+    // Filter by category, belt level, and position
+    const beltRankOrder = { white: 1, blue: 2, purple: 3, brown: 4, black: 5 };
+    const currentBeltRank = beltRankOrder[beltLevel];
+    
+    return techniques.filter((tech: DbTechnique) => {
+      const techBeltRank = beltRankOrder[tech.minBelt] || 1;
+      return tech.Nature === category && 
+             tech.fromPositionId === positionId &&
+             techBeltRank <= currentBeltRank;
+    });
+  } catch (e) {
+    console.error('Error getting techniques:', e);
+    return [];
+  }
 }
 
 function getQualityEmoji(quality: Quality): string {
@@ -236,6 +338,7 @@ function StudyFlow() {
   const [hasStarted, setHasStarted] = useState(false);
   const [turn, setTurn] = useState<'you' | 'opponent'>('you');
   const [foundations, setFoundations] = useState<Array<{ id: FoundationCategory; display: string }>>([]);
+  const [selectedCategory, setSelectedCategory] = useState<ActionCategory | null>(null);
   const pulseAnim = useRef(new Animated.Value(0)).current;
 
   // Sync selectedBelt with profile belt
@@ -320,7 +423,9 @@ function StudyFlow() {
     }
   };
 
+  // For legacy transitions we keep local positions, but display uses DB
   const currentPosition = getPosition(currentPositionId);
+  const currentDbPosition = databaseService.getPosition(currentPositionId);
   const allAvailableTransitions = getTransitionsFromPosition(currentPositionId);
   const availableTransitions =
     selectedBelt && hasStarted
@@ -328,12 +433,14 @@ function StudyFlow() {
       : allAvailableTransitions;
   const isFlowEnded = currentPosition?.id === 'submission' || currentPosition?.id === 'escape';
 
-  // Filter positions by selected foundation
-  const filteredPositions = POSITIONS.filter((position) => {
-    if (!selectedFoundation) return true;
-    const positionFoundation = databaseService.getFoundationForPosition(position.id);
-    return positionFoundation === selectedFoundation;
-  });
+  // Build DB-backed start positions for selected belt + foundation
+  const dbStartPositions = React.useMemo(() => {
+    if (!selectedFoundation || !selectedBelt) return [] as { id: string; name: string }[];
+    const byFoundation = databaseService.getPositionsByFoundationAndBelt(selectedFoundation, selectedBelt);
+    const items = Object.entries(byFoundation).map(([id, pos]) => ({ id, name: pos.learning.display_name }));
+    items.sort((a, b) => a.name.localeCompare(b.name));
+    return items;
+  }, [selectedFoundation, selectedBelt]);
 
   useEffect(() => {
     requestAnimationFrame(() => {
@@ -398,6 +505,7 @@ function StudyFlow() {
     setPathExpanded(false);
     setHasStarted(false);
     setTurn('you');
+    setSelectedCategory(null);
     scrollRef.current?.scrollTo({ y: 0, animated: true });
   };
 
@@ -410,6 +518,59 @@ function StudyFlow() {
       setTurn('you');
       scrollRef.current?.scrollTo({ y: 0, animated: true });
     }
+  };
+
+  const handleTechniquePress = (technique: DbTechnique) => {
+    setPressedNext(technique.id);
+    const newStep: FlowStep = {
+      id: `step-${Date.now()}`,
+      fromPositionId: currentPositionId,
+      toPositionId: technique.toPositionId,
+      transitionId: technique.id,
+      quality: 'ok', // Technique is an attempt, quality depends on opponent response
+      note: technique.note,
+      label: technique.label,
+      actor: 'you',
+    };
+    setFlowSteps((prev) => [...prev, newStep]);
+    setSelectedCategory(null);
+    setTimeout(() => setPressedNext(null), 220);
+
+    // Switch to opponent turn if technique has reactive responses
+    if (technique.ReactiveResponses && technique.ReactiveResponses.length > 0) {
+      setTurn('opponent');
+    } else {
+      // No responses, stay your turn
+      setTurn('you');
+    }
+  };
+
+  const handleOpponentResponseFromTechnique = (response: NonNullable<DbTechnique['ReactiveResponses']>[0]) => {
+    if (!response) return;
+    
+    const quality = mapOutcomeToQuality(response.outcomeClass);
+    setPressedNext(response.id);
+    const newStep: FlowStep = {
+      id: `step-${Date.now()}`,
+      fromPositionId: currentPositionId,
+      toPositionId: response.toPositionId,
+      transitionId: response.id,
+      quality: quality,
+      note: response.note,
+      label: response.label,
+      actor: 'opponent',
+    };
+    setFlowSteps((prev) => [...prev, newStep]);
+    setCurrentPositionId(response.toPositionId);
+    setTimeout(() => setPressedNext(null), 220);
+
+    // Always return to user turn after opponent responds
+    setTurn('you');
+
+    // Scroll to show the new position
+    setTimeout(() => {
+      scrollRef.current?.scrollToEnd({ animated: true });
+    }, 250);
   };
 
   // Auto-expand path when flow ends
@@ -607,17 +768,23 @@ function StudyFlow() {
 
             <SetupTitle style={{ marginTop: 24 }}>Choose starting position</SetupTitle>
             <StartPositionList>
-              {filteredPositions.map((position) => (
-                <StartPositionButton
-                  key={position.id}
-                  isSelected={selectedStartPositionId === position.id}
-                  onPress={() => setSelectedStartPositionId(position.id)}
-                >
-                  <StartPositionText isSelected={selectedStartPositionId === position.id}>
-                    {position.name}
-                  </StartPositionText>
-                </StartPositionButton>
-              ))}
+              {dbStartPositions.length === 0 ? (
+                <StartPositionText isSelected={false}>
+                  No positions for this belt + foundation
+                </StartPositionText>
+              ) : (
+                dbStartPositions.map((position) => (
+                  <StartPositionButton
+                    key={position.id}
+                    isSelected={selectedStartPositionId === position.id}
+                    onPress={() => setSelectedStartPositionId(position.id)}
+                  >
+                    <StartPositionText isSelected={selectedStartPositionId === position.id}>
+                      {position.name}
+                    </StartPositionText>
+                  </StartPositionButton>
+                ))
+              )}
             </StartPositionList>
 
             <StartFlowButtonWrapper>
@@ -715,7 +882,7 @@ function StudyFlow() {
             {turn === 'you' ? "Your turn — choose your move" : "Opponent's turn — their response"}
           </YouAreHereLabel>
           <CurrentCard isOpponentTurn={turn === 'opponent'}>
-            <CurrentPositionText isOpponentTurn={turn === 'opponent'}>{currentPosition?.name}</CurrentPositionText>
+            <CurrentPositionText isOpponentTurn={turn === 'opponent'}>{currentDbPosition?.learning.display_name || currentPosition?.name}</CurrentPositionText>
             {flowSteps.length > 0 && flowSteps[flowSteps.length - 1].quality && (
               <QualityBadge quality={flowSteps[flowSteps.length - 1].quality}>
                 <QualityEmoji>{getQualityEmoji(flowSteps[flowSteps.length - 1].quality)}</QualityEmoji>
@@ -728,32 +895,147 @@ function StudyFlow() {
           </CurrentCard>
         </YouAreHereSection>
 
-        {/* YOUR NEXT MOVES - Options */}
+        {/* CATEGORY SELECTION OR TECHNIQUES */}
         {!isFlowEnded && turn === 'you' && availableTransitions.length > 0 && (
           <YourNextMovesSection>
-            <NextMovesLabel>Your next moves</NextMovesLabel>
-            {availableTransitions.map((transition) => (
-              <OptionCard
-                key={transition.id}
-                onPress={() => handleTransitionPress(transition)}
-                isPressed={pressedNext === transition.id}
-              >
-                <OptionLabelText>{transition.label}</OptionLabelText>
-              </OptionCard>
-            ))}
+            {!selectedCategory ? (
+              <>
+                <NextMovesLabel>Choose your action</NextMovesLabel>
+                <CategoryButtonsContainer>
+                  <CategoryButtonRow>
+                    <CategoryButton
+                      onPress={() => setSelectedCategory('Advancement')}
+                      isSelected={false}
+                    >
+                      <CategoryButtonText isSelected={false}>
+                        Advance
+                      </CategoryButtonText>
+                    </CategoryButton>
+                    <CategoryButton
+                      onPress={() => setSelectedCategory('Regression')}
+                      isSelected={false}
+                    >
+                      <CategoryButtonText isSelected={false}>
+                        Regress
+                      </CategoryButtonText>
+                    </CategoryButton>
+                  </CategoryButtonRow>
+                  <CategoryButton
+                    onPress={() => setSelectedCategory('Submission')}
+                    isSelected={false}
+                    isCentered
+                  >
+                    <CategoryButtonText isSelected={false}>
+                      Submit
+                    </CategoryButtonText>
+                  </CategoryButton>
+                </CategoryButtonsContainer>
+              </>
+            ) : (
+              <>
+                <CategoryBackButton onPress={() => setSelectedCategory(null)}>
+                  <Ionicons name="arrow-back" size={20} color={COLORS.text} />
+                  <BackButtonText>Back to categories</BackButtonText>
+                </CategoryBackButton>
+                <NextMovesLabel>
+                  {selectedCategory === 'Advancement' ? 'Advancing moves' : 
+                   selectedCategory === 'Regression' ? 'Defensive moves' : 
+                   'Submission attempts'}
+                </NextMovesLabel>
+                {(() => {
+                  const techniques = getTechniquesFromDatabase(currentPositionId, selectedCategory, selectedBelt || 'white');
+                  if (techniques.length === 0) {
+                    return (
+                      <NoTechniquesMessage>
+                        No {selectedCategory.toLowerCase()} techniques available at this belt level from this position.
+                      </NoTechniquesMessage>
+                    );
+                  }
+                  return techniques.map((technique) => (
+                    <OptionCard
+                      key={technique.id}
+                      onPress={() => handleTechniquePress(technique)}
+                      isPressed={pressedNext === technique.id}
+                    >
+                      <OptionLabelText>{technique.label}</OptionLabelText>
+                      {technique.note && <OptionNote>{technique.note}</OptionNote>}
+                    </OptionCard>
+                  ));
+                })()}
+              </>
+            )}
           </YourNextMovesSection>
         )}
+
 
         {/* OPPONENT RESPONSES */}
         {!isFlowEnded && turn === 'opponent' && flowSteps.length > 0 && (
           <YourNextMovesSection>
-            <NextMovesLabel>Opponent responds</NextMovesLabel>
+            <NextMovesLabel>Opponent responds — choose their reaction</NextMovesLabel>
             {(() => {
               const lastUserMove = flowSteps
                 .slice()
                 .reverse()
                 .find((s) => s.actor === 'you');
               if (!lastUserMove) return null;
+
+              // First check if it's a database technique with ReactiveResponses
+              const dbResponses = (() => {
+                try {
+                  const db = databaseJson as any;
+                  if (!db.techniques) return null;
+                  
+                  const foundation = databaseService.getFoundationForPosition(currentPositionId);
+                  if (!foundation) return null;
+                  
+                  const foundationKeyMap: Record<string, string> = {
+                    'neutral': 'neutral',
+                    'guard_top': 'Guard (Top)',
+                    'guard_bottom': 'Guard (Bottom)',
+                    'side_control_top': 'Side Control (Top)',
+                    'side_control_bottom': 'Side Control (Bottom)',
+                    'full_mount_top': 'Mount (Top)',
+                    'full_mount_bottom': 'Mount (Bottom)',
+                    'rear_mount_top': 'Back (Top)',
+                    'rear_mount_bottom': 'Back (Bottom)',
+                    'turtle_top': 'Turtle (Top)',
+                    'turtle_bottom': 'Turtle (Bottom)',
+                    'knee_on_belly_top': 'Knee-On-Belly (Top)',
+                    'knee_on_belly_bottom': 'Knee-On-Belly (Bottom)',
+                  };
+                  
+                  const techniqueKey = foundationKeyMap[foundation] || foundation;
+                  const techniques = db.techniques[techniqueKey] || [];
+                  
+                  const technique = techniques.find((t: DbTechnique) => t.id === lastUserMove.transitionId);
+                  return technique?.ReactiveResponses || null;
+                } catch (e) {
+                  return null;
+                }
+              })();
+
+              if (dbResponses) {
+                return dbResponses.map((response: NonNullable<DbTechnique['ReactiveResponses']>[0]) => {
+                  const outcomeColor = mapOutcomeToColor(response.outcomeClass);
+                  return (
+                    <OptionCard
+                      key={response.id}
+                      onPress={() => handleOpponentResponseFromTechnique(response)}
+                      isPressed={pressedNext === response.id}
+                    >
+                      <OptionLabelText>{response.label}</OptionLabelText>
+                      <OutcomeLabel outcomeClass={response.outcomeClass}>
+                        {response.outcomeClass === 'Win' ? '⚠ Opponent wins this exchange' :
+                         response.outcomeClass === 'Loss' ? '✅ You win this exchange' :
+                         '⭕ Stalemate – neutral position'}
+                      </OutcomeLabel>
+                      {response.note && <OptionNote>{response.note}</OptionNote>}
+                    </OptionCard>
+                  );
+                });
+              }
+
+              // Fallback to hardcoded transitions for legacy support
               const transition = TRANSITIONS.find((t) => t.id === lastUserMove.transitionId);
               if (!transition || !transition.opponentResponses) return null;
               return transition.opponentResponses.map((response, idx) => (
@@ -1088,7 +1370,40 @@ const OptionNote = styled.Text`
   font-size: 13px;
   color: ${COLORS.muted};
   flex: 1;
-  margin-left: 4px;
+  margin-top: 8px;
+`;
+
+const CategoryBackButton = styled.Pressable`
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+`;
+
+const BackButtonText = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.text};
+  margin-left: 8px;
+  font-weight: 600;
+`;
+
+const NoTechniquesMessage = styled.Text`
+  font-size: 14px;
+  color: ${COLORS.muted};
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+`;
+
+const OutcomeLabel = styled.Text<{ outcomeClass: string }>`
+  font-size: 12px;
+  color: ${(props: any) => {
+    if (props.outcomeClass === 'Win') return COLORS.error;
+    if (props.outcomeClass === 'Loss') return COLORS.success;
+    return COLORS.warning;
+  }};
+  margin-top: 8px;
+  font-weight: 600;
 `;
 
 /* END OF FLOW SUMMARY */
@@ -1144,6 +1459,33 @@ const ResetButtonText = styled.Text`
   color: ${COLORS.text};
   font-weight: 600;
   margin-left: 8px;
+`;
+
+/* CATEGORY BUTTONS */
+const CategoryButtonsContainer = styled.View`
+  gap: 12px;
+`;
+
+const CategoryButtonRow = styled.View`
+  flex-direction: row;
+  gap: 12px;
+`;
+
+const CategoryButton = styled(Pressable)<{ isSelected: boolean; isCentered?: boolean }>`
+  flex: ${(props: any) => (props.isCentered ? '0' : '1')};
+  padding: 20px;
+  background: ${(props: any) => (props.isSelected ? COLORS.accentPrimary : COLORS.card)};
+  border: 2px solid ${(props: any) => (props.isSelected ? COLORS.accentPrimary : 'rgba(255, 255, 255, 0.1)')};
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  ${(props: any) => (props.isCentered ? 'align-self: center; min-width: 200px;' : '')}
+`;
+
+const CategoryButtonText = styled.Text<{ isSelected: boolean }>`
+  font-size: 18px;
+  font-weight: 700;
+  color: ${(props: any) => (props.isSelected ? COLORS.bg : COLORS.text)};
 `;
 
 /* FLOW SETUP SECTION */

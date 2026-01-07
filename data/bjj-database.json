@@ -23456,39 +23456,45 @@
   "techniques": {
     "Guard (Top)": [],
     "neutral": [
-      {"label": "",
-    "id": "",
+      {"label": "Grip and pull closed guard",
+    "id": "wb_standing_pull_closed_guard",
     "fromPositionId": "standing_neutral",
-    "toPositionId": "",
+    "toPositionId": "closed_guard_bottom",
     "passiveToPositionId": "true/false",
-    "failedToPositionId": "",
-    "Nature": "Proactive/Reactive",
-    "note": "",
+    "failedToPositionId": "side_control_bottom",
+    "Nature": "Advancement",
+    "note": "A deliberate guard pull that resolves standing neutral into a known position. Prioritizes control and predictability over takedown risk.",
     "minBelt": "white",
     "ReactiveResponses": [
-      {
-        "id": "",
-        "label": "",
-        "minBelt": "white",
-        "toPositionId": "",
-        "defenseQuality": "Optimal",
-        "note": ""
+      {"minBelt": "white",
+        "label": "Posture up and immediately open + pass",
+        "id": "wb_rx_pull_closed_guard_turn_tables",
+        "responseToTransitionId": "wb_standing_pull_closed_guard",
+        "toPositionId": "side_control",
+        "outcomeClass": "Win",
+        "perspective": "opponent",
+        "note": "Best-case reaction: denies the guard pull from becoming stable offense and converts it into top control by quickly breaking the closed guard and passing.",
+        
       },
-      {
-        "id": "",
-        "label": "",
-        "minBelt": "white",
-        "toPositionId": "",
-        "defenseQuality": "Suboptimal",
-        "note": ""
+      {"minBelt": "white",
+        "label": "Accept guard but maintain posture and base",
+        "id": "wb_rx_pull_closed_guard_stalemate_posture",
+        "responseToTransitionId": "wb_standing_pull_closed_guard",
+        "toPositionId": "closed_guard_top",
+        "outcomeClass": "Neutral",
+        "perspective": "opponent",
+        "note": "Safe defense: avoids being broken down or swept, but does not improve position. Results in a stable closed-guard stalemate.",
+        
       },
-      {
-        "id": "",
-        "label": "",
-        "minBelt": "white",
-        "toPositionId": "",
-        "defenseQuality": "Unlikely",
-        "note": ""
+      {"minBelt": "white",
+        "label": "Let posture get broken and give up control",
+        "id": "wb_rx_pull_closed_guard_bad_reaction_get_controlled",
+        "toPositionId": "closed_guard_bottom",
+        "responseToTransitionId": "wb_standing_pull_closed_guard",
+        "outcomeClass": "Loss",
+        "perspective": "opponent",
+        "note": "Poor defense: allows the guard pull to succeed cleanly with strong bottom control and initiative.",
+        
       }
     ]
     }
