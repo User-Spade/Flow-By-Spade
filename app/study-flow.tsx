@@ -253,7 +253,10 @@ function mapOutcomeToColor(outcomeClass: string): string {
 function getTechniquesFromDatabase(positionId: string, category: ActionCategory, beltLevel: Belt): DbTechnique[] {
   try {
     const db = databaseJson as any;
-    if (!db.techniques) return [];
+    if (!db || !db.techniques) {
+      console.warn('Database or techniques not found');
+      return [];
+    }
     
     // Get the foundation for this position
     const foundation = databaseService.getFoundationForPosition(positionId);
