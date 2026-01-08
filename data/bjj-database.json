@@ -1538,7 +1538,7 @@
         "risk_level": "high"
       },
       "learning": {
-        "display_name": "Closed Guard Top",
+        "display_name": "Closed Guard (Top)",
         "alternate_names": [
           "Inside Closed Guard",
           "In the Guard"
@@ -2010,7 +2010,7 @@
         "description": "Top half guard is a balanced mix of pressure and movement. You're past one leg, but not both, so your job is to flatten them, free your knee, and advance. Strong top half turns small steps into mount, side control, or submission attacks."
       }
     },
-    "side_control": {
+    "side_control_top": {
       "belt_levels": {
         "white": {
           "concepts": [
@@ -2154,7 +2154,7 @@
       "techniques": [],
       "transitions": [],
       "system": {
-        "position_id": "side_control",
+        "position_id": "side_control_top",
         "min_belt": "white",
         "category": "top_control",
         "opponent_relative": [
@@ -2227,7 +2227,7 @@
         "risk_level": "low"
       },
       "learning": {
-        "display_name": "Side Control",
+        "display_name": "Side Control (Top)",
         "alternate_names": [
           "Side Mount",
           "Cross Side",
@@ -3353,7 +3353,7 @@
         "risk_level": "low"
       },
       "learning": {
-        "display_name": "Closed Guard Bottom",
+        "display_name": "Closed Guard (Bottom)",
         "alternate_names": [
           "Closed Guard",
           "Full Guard"
@@ -4019,7 +4019,7 @@
         "risk_level": "high"
       },
       "learning": {
-        "display_name": "Side Control Bottom",
+        "display_name": "Side Control (Bottom)",
         "alternate_names": [
           "Bottom Side Control",
           "Under Side Control"
@@ -23467,7 +23467,7 @@
         "label": "Posture up and immediately open + pass",
         "id": "wb_rx_pull_closed_guard_turn_tables",
         "responseToTransitionId": "wb_standing_pull_closed_guard",
-        "toPositionId": "side_control",
+        "toPositionId": "side_control_bottom",
         "outcomeClass": "Win",
         "note": "Best-case reaction: denies the guard pull from becoming stable offense and converts it into top control by quickly breaking the closed guard and passing."
       },
@@ -23625,8 +23625,8 @@
         "rank": 7,
         "notes": "Half guard top considered balanced"
       },
-      "side_control": {
-        "position_id": "side_control",
+      "side_control_top": {
+        "position_id": "side_control_top",
         "foundation": "side_control_top",
         "rank": 3
       },
