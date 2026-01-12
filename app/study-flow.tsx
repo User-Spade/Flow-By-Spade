@@ -391,6 +391,24 @@ function StudyFlow() {
     }
   };
 
+  // Rewind one step: remove last flow step and restore prior state
+  const handleRewind = () => {
+    setFlowSteps((prev) => {
+      if (!prev || prev.length === 0) {
+        return prev;
+      }
+      const next = prev.slice(0, -1);
+      const newCurrentPositionId =
+        next.length > 0 ? next[next.length - 1].toPositionId : (selectedStartPositionId || 'closed_guard_bottom');
+      setCurrentPositionId(newCurrentPositionId);
+      const newTurn: 'you' | 'opponent' =
+        next.length === 0 ? 'you' : (next[next.length - 1].actor === 'you' ? 'opponent' : 'you');
+      setTurn(newTurn);
+      setSelectedCategory(null);
+      return next;
+    });
+  };
+
   // Handle 
 
   // Auto-scroll to neutral foundation on load
@@ -925,15 +943,25 @@ function StudyFlow() {
                       </CategoryButtonText>
                     </CategoryButton>
                   </CategoryButtonRow>
-                  <CategoryButton
-                    onPress={() => setSelectedCategory('Submission')}
-                    isSelected={false}
-                    isCentered
-                  >
-                    <CategoryButtonText isSelected={false}>
-                      Submit
-                    </CategoryButtonText>
-                  </CategoryButton>
+                  <CategoryButtonRow>
+                    <CategoryButton
+                      onPress={() => setSelectedCategory('Submission')}
+                      isSelected={false}
+                    >
+                      <CategoryButtonText isSelected={false}>
+                        Submit
+                      </CategoryButtonText>
+                    </CategoryButton>
+                    <CategoryButton
+                      onPress={handleRewind}
+                      isSelected={false}
+                      disabled={flowSteps.length === 0}
+                    >
+                      <CategoryButtonText isSelected={false}>
+                        Rewind
+                      </CategoryButtonText>
+                    </CategoryButton>
+                  </CategoryButtonRow>
                 </CategoryButtonsContainer>
               </>
             ) : (
@@ -977,6 +1005,14 @@ function StudyFlow() {
         {!isFlowEnded && turn === 'opponent' && flowSteps.length > 0 && (
           <YourNextMovesSection>
             <NextMovesLabel>Opponent responds — choose their reaction</NextMovesLabel>
+            <CategoryButton
+              onPress={handleRewind}
+              isSelected={false}
+              isCentered
+              style={{ marginBottom: 16 }}
+            >
+              <CategoryButtonText isSelected={false}>Rewind</CategoryButtonText>
+            </CategoryButton>
             {(() => {
               const lastUserMove = flowSteps
                 .slice()
