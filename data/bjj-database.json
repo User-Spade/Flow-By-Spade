@@ -23456,13 +23456,42 @@
   "techniques": {
     "Rear Mount (Top)": [],
     "Full Mount (Top)": [],
-    "Side Control (Top)": [],
+    "Side Control (Top)": [
+    {"minBelt":"white","fromPositionId":"side_control_top","Nature":"Advancement",
+  "label": "Apply pressure and advance to mount",
+  "id": "wb_side_control_top_mount_advance",
+  "toPositionId": "mount_top",
+  "failedToPositionId": "closed_guard_bottom",
+  "note": "Primary white belt advancement from side control top. Focuses on pressure, balance, and control to climb into mount rather than chasing submissions.",
+  "ReactiveResponses": [
+    {"minBelt": "white","outcomeClass": "Win",
+      "label": "Frames collapse and mount is secured",
+      "id": "wb_rx_side_control_mount_success",
+      "responseToTransitionId": "wb_side_control_top_mount_advance",
+      "toPositionId": "mount_top",
+      "note": "Opponent fails to maintain frames, allowing a controlled transition into mount."
+    },
+    {"minBelt": "white","outcomeClass": "Neutral",
+      "label": "Opponent frames well and blocks the mount",
+      "id": "wb_rx_side_control_mount_stalemate",
+      "responseToTransitionId": "wb_side_control_top_mount_advance",
+      "toPositionId": "side_control_top", 
+      "note": "Opponent maintains structure and prevents advancement, resulting in a stable side control stalemate."
+    },
+    {"minBelt": "white","outcomeClass": "Loss",
+      "label": "Pressure overcommits and guard is recovered",
+      "id": "wb_rx_side_control_mount_failed_guard_recovery",
+      "toPositionId": "closed_guard_bottom",
+      "responseToTransitionId": "wb_side_control_top_mount_advance",
+      "note": "Loss of balance or space allows the opponent to recover guard, putting the user back on bottom."
+    }
+  ]
+}
+    ],
     "Knee on Belly (Top)": [],
     "Turtle (Top)": [],
     "Guard (Top)": [
-      {"fromPositionId": "closed_guard_top",
-      "Nature": "Advancement",
-      "minBelt": "white",
+      {"minBelt": "white","fromPositionId": "closed_guard_top","Nature": "Advancement",
       "label": "Break posture and open closed guard to begin passing",
       "id": "wb_closed_guard_top_open_guard_entry",
       "toPositionId": "open_guard_top",
@@ -23497,7 +23526,7 @@
 }
     ],
     "neutral": [
-      {"fromPositionId": "standing_neutral","Nature": "Advancement","minBelt": "white",
+      {"minBelt": "white","fromPositionId": "standing_neutral","Nature": "Advancement",
       "label": "Grip and pull closed guard",
       "id": "wb_standing_pull_closed_guard",
       "toPositionId": "closed_guard_bottom",
@@ -23527,7 +23556,7 @@
       }
     ]
     },
-      {"fromPositionId": "standing_neutral","Nature": "Regression","minBelt": "white",
+      {"minBelt": "white","fromPositionId": "standing_neutral","Nature": "Regression",
     "label": "",
     "id": "",
     "toPositionId": "",
@@ -23599,7 +23628,38 @@
     ], 
     "Turtle (Bottom)": [],
     "Knee on Belly (Bottom)": [],
-    "Side Control (Bottom)": [],
+    "Side Control (Bottom)": [
+      {"minBelt": "white","fromPositionId": "side_control_bottom","Nature": "Regression",
+  "label": "Frame, shrimp, and recover guard",
+  "id": "wb_side_control_bottom_guard_recovery",
+  "toPositionId": "closed_guard_bottom",
+  "failedToPositionId": "mount_bottom",
+  "note": "Primary white belt defensive objective from side control bottom. Uses frames and hip movement to recover guard rather than attempting reversals.",
+  "ReactiveResponses": [
+    { "minBelt": "white","outcomeClass": "Win",
+      "label": "Frames hold and guard is recovered",
+      "id": "wb_rx_side_control_escape_success",
+      "responseToTransitionId": "wb_side_control_bottom_guard_recovery",
+      "toPositionId": "closed_guard_bottom",
+      "note": "Effective framing and hip movement create space to reestablish guard."
+    },
+    {"minBelt": "white","outcomeClass": "Neutral",
+      "label": "Opponent maintains pressure and blocks escape",
+      "id": "wb_rx_side_control_escape_stalemate",
+      "responseToTransitionId": "wb_side_control_bottom_guard_recovery",
+      "toPositionId": "side_control_bottom",
+      "note": "Opponent shuts down hip movement and frames, resulting in continued pressure without positional change."
+    },
+    {"minBelt": "white","outcomeClass": "Loss",
+      "label": "Frames collapse and mount is taken",
+      "id": "wb_rx_side_control_escape_failed_mount",
+      "toPositionId": "mount_bottom",
+      "responseToTransitionId": "wb_side_control_bottom_guard_recovery",
+      "note": "Poor structure or timing allows the opponent to advance to mount."
+    }
+    ]
+}
+    ],
     "Full Mount (Bottom)": [],
     "Rear Mount (Bottom)": []
   },
