@@ -23564,7 +23564,39 @@
     ]
     },
     ],
-    "Guard (Bottom)": [], 
+    "Guard (Bottom)": [
+      {"minBelt": "white","fromPositionId": "closed_guard_bottom","Nature": "Advancement",
+  "label": "Break posture and off-balance to sweep",
+  "id": "wb_closed_guard_bottom_sweep_attempt",
+  "toPositionId": "side_control_top",
+  "failedToPositionId": "side_control_bottom",
+  "note": "Primary white belt advancement from closed guard bottom. Focuses on breaking posture and creating imbalance to come up on top rather than forcing submissions.",
+  "ReactiveResponses": [
+    {"minBelt": "white","outcomeClass": "Win",
+      "label": "Opponent loses balance and gets swept",
+      "id": "wb_rx_closed_guard_sweep_success",
+      "responseToTransitionId": "wb_closed_guard_bottom_sweep_attempt",
+      "toPositionId": "side_control_top",
+      "note": "Best-case outcome: posture is broken, balance is compromised, and the user completes a sweep into top control."
+    },
+    {"minBelt": "white","outcomeClass": "Neutral",
+      "label": "Opponent regains posture and stabilizes",
+      "id": "wb_rx_closed_guard_sweep_stalemate",
+      "responseToTransitionId": "wb_closed_guard_bottom_sweep_attempt",
+      "toPositionId": "closed_guard_bottom",
+      "note": "Opponent defends correctly, regaining posture and base. Guard remains closed with no positional change."
+    },
+    {"minBelt": "white","outcomeClass": "Loss",
+      "label": "Posture break attempt fails and guard is passed",
+      "id": "wb_rx_closed_guard_sweep_failed_pass",
+      "toPositionId": "side_control_bottom",
+      "responseToTransitionId": "wb_closed_guard_bottom_sweep_attempt",
+      "note": "Poor timing or control allows the opponent to open the guard and immediately pass to side control."
+    }
+  ]
+}
+
+    ], 
     "Turtle (Bottom)": [],
     "Knee on Belly (Bottom)": [],
     "Side Control (Bottom)": [],
