@@ -1026,7 +1026,8 @@ function StudyFlow() {
                   const db = databaseJson as any;
                   if (!db.techniques) return null;
                   
-                  const foundation = databaseService.getFoundationForPosition(currentPositionId);
+                  // Use the position WHERE the technique was executed from, not current position
+                  const foundation = databaseService.getFoundationForPosition(lastUserMove.fromPositionId);
                   if (!foundation) return null;
                   
                   const foundationKeyMap: Record<string, string> = {
