@@ -1749,7 +1749,7 @@
         "risk_level": "medium"
       },
       "learning": {
-        "display_name": "Open Guard Top",
+        "display_name": "Open Guard (Top)",
         "alternate_names": [
           "Passing Open Guard",
           "Open Guard Pass Position"
@@ -23460,7 +23460,41 @@
     "Knee on Belly (Top)": [],
     "Turtle (Top)": [],
     "Guard (Top)": [
-      
+      {"fromPositionId": "closed_guard_top",
+      "Nature": "Advancement",
+      "minBelt": "white",
+      "label": "Break posture and open closed guard to begin passing",
+      "id": "wb_closed_guard_top_open_guard_entry",
+      "toPositionId": "open_guard_top",
+      "failedToPositionId": "closed_guard_bottom",
+      "note": "White belt advancement goal from inside closed guard: stay balanced, break posture, open the guard, and transition into a passing phase without getting swept.",
+      "ReactiveResponses": [
+    {"minBelt": "white","outcomeClass": "Win",
+      "label": "Off-balance and sweep as you try to open",
+      "id": "wb_rx_open_guard_entry_swept",
+      "responseToTransitionId": "wb_closed_guard_top_open_guard_entry",
+      "toPositionId": "closed_guard_bottom",
+      "perspective": "opponent",
+      "note": "Best defense: uses your posture break or overcommitment to reverse the position and put you on bottom."
+    },
+    {"minBelt": "white","outcomeClass": "Neutral",
+      "label": "Clamp closed guard and stall the opening attempt",
+      "id": "wb_rx_open_guard_entry_stalemate",
+      "responseToTransitionId": "wb_closed_guard_top_open_guard_entry",
+      "toPositionId": "closed_guard_top",
+      "perspective": "opponent",
+      "note": "Safe defense: prevents immediate opening or passing but does not improve position. The exchange stays in closed guard."
+    },
+    {"minBelt": "white","outcomeClass": "Loss",
+      "label": "Open guard but lose control as you do",
+      "id": "wb_rx_open_guard_entry_opened_no_control",
+      "toPositionId": "open_guard_top",
+      "responseToTransitionId": "wb_closed_guard_top_open_guard_entry",
+      "perspective": "opponent",
+      "note": "Poor defense: opens the guard without maintaining frames or control, allowing you to stabilize in open guard top and start passing."
+    }
+  ]
+}
     ],
     "neutral": [
       {"fromPositionId": "standing_neutral","Nature": "Advancement","minBelt": "white",
@@ -23470,28 +23504,25 @@
       "failedToPositionId": "side_control_bottom",
       "note": "A deliberate guard pull that resolves standing neutral into a known position. Prioritizes control and predictability over takedown risk.",
       "ReactiveResponses": [
-      {"minBelt": "white",
+      {"minBelt": "white","outcomeClass": "Win",
         "label": "Posture up and immediately open + pass",
         "id": "wb_rx_pull_closed_guard_turn_tables",
         "responseToTransitionId": "wb_standing_pull_closed_guard",
         "toPositionId": "side_control_bottom",
-        "outcomeClass": "Win",
         "note": "Best-case reaction: denies the guard pull from becoming stable offense and converts it into top control by quickly breaking the closed guard and passing."
       },
-      {"minBelt": "white",
+      {"minBelt": "white","outcomeClass": "Neutral",
         "label": "Accept guard but maintain posture and base",
         "id": "wb_rx_pull_closed_guard_stalemate_posture",
         "responseToTransitionId": "wb_standing_pull_closed_guard",
         "toPositionId": "closed_guard_top",
-        "outcomeClass": "Neutral",
         "note": "Safe defense: avoids being broken down or swept, but does not improve position. Results in a stable closed-guard stalemate."
       },
-      {"minBelt": "white",
+      {"minBelt": "white","outcomeClass": "Loss",
         "label": "Let posture get broken and give up control",
         "id": "wb_rx_pull_closed_guard_bad_reaction_get_controlled",
         "toPositionId": "closed_guard_bottom",
-        "responseToTransitionId": "wb_standing_pull_closed_guard",
-        "outcomeClass": "Loss",
+        "responseToTransitionId": "wb_standing_pull_closed_guard",  
         "note": "Poor defense: allows the guard pull to succeed cleanly with strong bottom control and initiative."
       }
     ]
@@ -23532,6 +23563,56 @@
       }
     ]
     },
+    ],
+    "Guard (Bottom)": [], 
+    "Turtle (Bottom)": [],
+    "Knee on Belly (Bottom)": [],
+    "Side Control (Bottom)": [],
+    "Full Mount (Bottom)": [],
+    "Rear Mount (Bottom)": []
+  },
+  "submissions": {
+    "Rear Mount (Top)": [],
+    "Full Mount (Top)": [],
+    "Side Control (Top)": [],
+    "Knee on Belly (Top)": [],
+    "Turtle (Top)": [],
+    "Guard (Top)": [
+      {"fromPositionId":"closed_guard_top","Nature": "Submission","minBelt": "white",
+      "label": "",
+      "id": "",
+      "toPositionId": "",
+      "failedToPositionId": "",
+      "note": "",
+      "ReactiveResponses": [
+    {"minBelt": "white","outcomeClass": "Win",
+      "label": "",
+      "id": "",
+      "responseToTransitionId": "",
+      "toPositionId": "",
+      "perspective": "",
+      "note": ""
+    },
+    {"minBelt": "white","outcomeClass": "Neutral",
+      "label": "",
+      "id": "",
+      "responseToTransitionId": "",
+      "toPositionId": "",
+      "perspective": "",
+      "note": ""
+    },
+    {"minBelt": "white","outcomeClass": "Loss",
+      "label": "",
+      "id": "",
+      "toPositionId": "",
+      "responseToTransitionId": "",
+      "perspective": "",
+      "note": ""
+    }
+  ]
+}
+    ],
+    "neutral": [
       {"fromPositionId": "standing_neutral","Nature": "Submission","minBelt": "white",
     "label": "",
     "id": "",
@@ -23539,31 +23620,25 @@
     "failedToPositionId": "",
     "note": "",
     "ReactiveResponses": [
-      {"minBelt": "white",
+      {"minBelt": "white","outcomeClass": "Win",
         "label": "",
         "id": "",
         "responseToTransitionId": "",
         "toPositionId": "",
-        "outcomeClass": "Win",
-        "perspective": "opponent",
         "note": ""
       },
-      {"minBelt": "white",
+      {"minBelt": "white","outcomeClass": "Neutral",
         "label": "",
         "id": "",
         "responseToTransitionId": "",
         "toPositionId": "",
-        "outcomeClass": "Neutral",
-        "perspective": "opponent",
         "note": ""
       },
-      {"minBelt": "white",
+      {"minBelt": "white","outcomeClass": "Loss",
         "label": "",
         "id": "",
         "toPositionId": "",
         "responseToTransitionId": "",
-        "outcomeClass": "Loss",
-        "perspective": "opponent",
         "note": ""
       }
     ]
