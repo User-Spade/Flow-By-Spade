@@ -440,7 +440,9 @@ function StudyFlow() {
   const dbStartPositions = React.useMemo(() => {
     if (!selectedFoundation || !selectedBelt) return [] as { id: string; name: string }[];
     const byFoundation = databaseService.getPositionsByFoundationAndBelt(selectedFoundation, selectedBelt);
-    const items = Object.entries(byFoundation).map(([id, pos]) => ({ id, name: pos.learning.display_name }));
+    const items = Object.entries(byFoundation)
+      .filter(([id]) => databaseService.getOutgoingTechniques(id).length > 0)
+      .map(([id, pos]) => ({ id, name: pos.learning.display_name }));
     items.sort((a, b) => a.name.localeCompare(b.name));
     return items;
   }, [selectedFoundation, selectedBelt]);

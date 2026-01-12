@@ -140,6 +140,26 @@ class DatabaseService {
   }
 
   /**
+   * Get all global techniques that start from a given position (belt-agnostic)
+   * Falls back to the top-level techniques collection in the DB.
+   */
+  getOutgoingTechniques(positionId: string): any[] {
+    const root = (this.database as any).techniques;
+    if (!root || typeof root !== 'object') return [];
+
+    const buckets = Object.values(root) as any[];
+    const flat = buckets.flatMap((bucket: any) => (Array.isArray(bucket) ? bucket : []));
+
+    return flat.filter((t: any) => {
+      if (!t) return false;
+      const fromMatch = t.fromPositionId === positionId;
+      const hasLabel = typeof t.label === 'string' && t.label.trim().length > 0;
+      const hasId = typeof t.id === 'string' && t.id.trim().length > 0;
+      return fromMatch && (hasLabel || hasId);
+    });
+  }
+
+  /**
    * Search positions by name or description
    */
   searchPositions(query: string): Record<string, Position> {

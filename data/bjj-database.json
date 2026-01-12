@@ -23454,7 +23454,14 @@
     }
   },
   "techniques": {
-    "Guard (Top)": [],
+    "Rear Mount (Top)": [],
+    "Full Mount (Top)": [],
+    "Side Control (Top)": [],
+    "Knee on Belly (Top)": [],
+    "Turtle (Top)": [],
+    "Guard (Top)": [
+      
+    ],
     "neutral": [
       {"fromPositionId": "standing_neutral","Nature": "Advancement","minBelt": "white",
       "label": "Grip and pull closed guard",
@@ -23562,7 +23569,12 @@
     ]
     }
     ],
-    "Guard (Bottom)": [] 
+    "Guard (Bottom)": [], 
+    "Turtle (Bottom)": [],
+    "Knee on Belly (Bottom)": [],
+    "Side Control (Bottom)": [],
+    "Full Mount (Bottom)": [],
+    "Rear Mount (Bottom)": []
   },
   "foundation_mapping": {
     "generated_at": "2025-11-24T00:34:45.807Z",
