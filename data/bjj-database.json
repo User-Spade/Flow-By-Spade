@@ -23556,7 +23556,7 @@
       }
     ]
     },
-      {"minBelt": "white","fromPositionId": "standing_neutral","Nature": "Regression",
+      {"minBelt": "white","fromPositionId": "standing_neutral","Nature": "Recovery",
     "label": "",
     "id": "",
     "toPositionId": "",
@@ -23629,7 +23629,7 @@
     "Turtle (Bottom)": [],
     "Knee on Belly (Bottom)": [],
     "Side Control (Bottom)": [
-      {"minBelt": "white","fromPositionId": "side_control_bottom","Nature": "Regression",
+      {"minBelt": "white","fromPositionId": "side_control_bottom","Nature": "Recovery",
   "label": "Frame, shrimp, and recover guard",
   "id": "wb_side_control_bottom_guard_recovery",
   "toPositionId": "closed_guard_bottom",

@@ -33,7 +33,7 @@ const COLORS = {
 
 type Quality = 'best' | 'ok' | 'risky' | 'bad';
 type Belt = 'white' | 'blue' | 'purple' | 'brown' | 'black';
-type ActionCategory = 'Advancement' | 'Regression' | 'Submission';
+type ActionCategory = 'Advancement' | 'Recovery' | 'Submission';
 
 interface DbTechnique {
   id: string;
@@ -935,11 +935,11 @@ function StudyFlow() {
                       </CategoryButtonText>
                     </CategoryButton>
                     <CategoryButton
-                      onPress={() => setSelectedCategory('Regression')}
+                      onPress={() => setSelectedCategory('Recovery')}
                       isSelected={false}
                     >
                       <CategoryButtonText isSelected={false}>
-                        Regress
+                        Recover
                       </CategoryButtonText>
                     </CategoryButton>
                   </CategoryButtonRow>
@@ -972,7 +972,7 @@ function StudyFlow() {
                 </CategoryBackButton>
                 <NextMovesLabel>
                   {selectedCategory === 'Advancement' ? 'Advancing moves' : 
-                   selectedCategory === 'Regression' ? 'Defensive moves' : 
+                   selectedCategory === 'Recovery' ? 'Recovery moves' : 
                    'Submission attempts'}
                 </NextMovesLabel>
                 {(() => {
