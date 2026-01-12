@@ -1058,6 +1058,8 @@ function StudyFlow() {
               if (dbResponses) {
                 return dbResponses.map((response: NonNullable<DbTechnique['ReactiveResponses']>[0]) => {
                   const outcomeColor = mapOutcomeToColor(response.outcomeClass);
+                  const responsePosition = databaseService.getPosition(response.toPositionId);
+                  const positionName = responsePosition?.learning.display_name || 'Unknown Position';
                   return (
                     <OptionCard
                       key={response.id}
@@ -1070,6 +1072,7 @@ function StudyFlow() {
                          response.outcomeClass === 'Loss' ? '✅ You win this exchange' :
                          '⭕ Stalemate – neutral position'}
                       </OutcomeLabel>
+                      <PositionLabel>→ {positionName}</PositionLabel>
                       {response.note && <OptionNote>{response.note}</OptionNote>}
                     </OptionCard>
                   );
@@ -1079,16 +1082,21 @@ function StudyFlow() {
               // Fallback to hardcoded transitions for legacy support
               const transition = TRANSITIONS.find((t) => t.id === lastUserMove.transitionId);
               if (!transition || !transition.opponentResponses) return null;
-              return transition.opponentResponses.map((response, idx) => (
-                <OptionCard
-                  key={`opponent-${idx}`}
-                  onPress={() => handleOpponentResponse(response)}
-                  isPressed={pressedNext === response.label}
-                  isOpponentOption={true}
-                >
-                  <OptionLabelText isOpponentOption={true}>Opponent: {response.label}</OptionLabelText>
-                </OptionCard>
-              ));
+              return transition.opponentResponses.map((response, idx) => {
+                const responsePos = getPosition(response.toPositionId);
+                const posName = responsePos?.name || 'Unknown Position';
+                return (
+                  <OptionCard
+                    key={`opponent-${idx}`}
+                    onPress={() => handleOpponentResponse(response)}
+                    isPressed={pressedNext === response.label}
+                    isOpponentOption={true}
+                  >
+                    <OptionLabelText isOpponentOption={true}>Opponent: {response.label}</OptionLabelText>
+                    <PositionLabel>→ {posName}</PositionLabel>
+                  </OptionCard>
+                );
+              });
             })()}
           </YourNextMovesSection>
         )}
@@ -1412,6 +1420,13 @@ const OptionNote = styled.Text`
   color: ${COLORS.muted};
   flex: 1;
   margin-top: 8px;
+`;
+
+const PositionLabel = styled.Text`
+  font-size: 12px;
+  color: ${COLORS.mint};
+  font-weight: 600;
+  margin-top: 6px;
 `;
 
 const CategoryBackButton = styled.Pressable`
