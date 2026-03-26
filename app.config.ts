@@ -6,6 +6,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   slug: 'Flow-By-Spade',
   plugins: [
     'expo-font',
+    'expo-router',
   ],
   extra: {
     // For development: set EXPO_PUBLIC_GEMINI_API_KEY in .env

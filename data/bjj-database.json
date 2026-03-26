@@ -23591,7 +23591,7 @@
         "note": ""
       }
     ]
-    },
+    }
     ],
     "Guard (Bottom)": [
       {"minBelt": "white","fromPositionId": "closed_guard_bottom","Nature": "Advancement",
